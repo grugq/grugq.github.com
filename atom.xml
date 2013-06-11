@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-06-11T08:53:23+07:00</updated>
+  <updated>2013-06-11T08:54:43+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -18,13 +18,13 @@
     <link href="http://grugq.github.com/blog/2013/06/10/good-luck-with-that/"/>
     <updated>2013-06-10T12:30:00+07:00</updated>
     <id>http://grugq.github.com/blog/2013/06/10/good-luck-with-that</id>
-    <content type="html"><![CDATA[<h1>Story time</h1>
+    <content type="html"><![CDATA[<h2>Story time</h2>
 
 <p>Back in the day we used to have AOL for internet access. If you&#8217;ve never suffered AOL, then you probably don&#8217;t know that it would disconnect you if the service didn&#8217;t detect any traffic for some period of time. It popped up an alert that said something like &#8220;no activity detected for 30 minutes. If there is no activity in the next 10 minutes, you will be disconnected&#8221;. When this dialog popped up my father would try to stay connected by moving the mouse around a bit. Obviously, this was completely ineffective.</p>
 
 <p>The problem was his understanding of the problem was misguided and wrong. His mental model of how the whole system worked was so flawed, he was unable to realize how to actually solve his problem.</p>
 
-<h1>I lolled</h1>
+<h2>I lolled</h2>
 
 <p>When I read articles and blog posts on &#8220;how to avoid surveillance&#8221;, or &#8220;how to stay anonymous online&#8221;, I am reminded of my father waving his mouse around to appease the dialog box, never understanding how out of his depth he was.</p>
 
@@ -34,7 +34,7 @@
 
 <p>Basically, all I am trying to say is that the surveillance capability of the adversary (if you pick a nationstate for an adversary) exceeds the evasion capability of the existing public tools. And we don&#8217;t even know what we should be doing to evade their surveillance.</p>
 
-<h1>Concluding remarks</h1>
+<h2>Concluding remarks</h2>
 
 <p>Pick better adversaries.</p>
 ]]></content>
