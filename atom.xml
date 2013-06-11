@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Hacker OPSEC]]></title>
+  <link href="http://grugq.github.com/atom.xml" rel="self"/>
+  <link href="http://grugq.github.com/"/>
+  <updated>2013-06-11T08:51:34+07:00</updated>
+  <id>http://grugq.github.com/</id>
+  <author>
+    <name><![CDATA[the grugq]]></name>
+    <email><![CDATA[the.grugq@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[good luck with that]]></title>
+    <link href="http://grugq.github.com/blog/2013/06/10/good-luck-with-that/"/>
+    <updated>2013-06-10T12:30:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/06/10/good-luck-with-that</id>
+    <content type="html"><![CDATA[<h1>Story time</h1>
+
+<p>Back in the day we used to have AOL for internet access. If you&#8217;ve never suffered AOL, then you probably don&#8217;t know that it would disconnect you if the service didn&#8217;t detect any traffic for some period of time. It popped up an alert that said something like &#8220;no activity detected for 30 minutes. If there is no activity in the next 10 minutes, you will be disconnected&#8221;. When this dialog popped up my father would try to stay connected by moving the mouse around a bit. Obviously, this was completely ineffective.</p>
+
+<p>The problem was his understanding of the problem was misguided and wrong. His mental model of how the whole system worked was so flawed, he was unable to realize how to actually solve his problem.</p>
+
+<h1>I lolled</h1>
+
+<p>When I read articles and blog posts on &#8220;how to avoid surveillance&#8221;, or &#8220;how to stay anonymous online&#8221;, I am reminded of my father waving his mouse around to appease the dialog box, never understanding how out of his depth he was.</p>
+
+<p>The publicly available tools for making yourself anonymous and free from surveillance are woefully ineffective when faced with a nationstate adversary. We don&#8217;t even know how flawed our mental model is, let alone what our counter-surveillance actions actually achieve. As an example, the Tor network has only 3000 nodes, of which 1000 are exit nodes. Over a 24hr time period a connection will use approximately 10% of those exit nodes (under the default settings). If I were a gambling man, I&#8217;d wager money that there are at least 100 malicious Tor exit nodes doing passive monitoring. A nation state could double the number of Tor exit nodes for less than the cost of a smart bomb. A nation state can compromise enough ISPs to have monitoring capability over the majority of Tor entrance and exit nodes.</p>
+
+<p>Other solutions are just as fragile, if not more so.</p>
+
+<p>Basically, all I am trying to say is that the surveillance capability of the adversary (if you pick a nationstate for an adversary) exceeds the evasion capability of the existing public tools. And we don&#8217;t even know what we should be doing to evade their surveillance.</p>
+
+<h1>Concluding remarks</h1>
+
+<p>Pick better adversaries.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[the paddy factor]]></title>
+    <link href="http://grugq.github.com/blog/2013/03/18/the-paddy-factor/"/>
+    <updated>2013-03-18T09:51:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/03/18/the-paddy-factor</id>
+    <content type="html"><![CDATA[<p>The <strong>Paddy Factor</strong> was a disparaging term used by the British security
+forces to refer to poor OPSEC practices by the Provisional IRA (PIRA)
+in the early 1970s. Much of this terrible counter intelligence posture was due
+to a limited number of easily avoidable activities that combined to compromise
+many Provos:</p>
+
+<ul>
+<li><p><strong>Self incrimination</strong></p>
+
+<ul>
+<li>PIRA members would congregate in pubs and sing IRA songs.</li>
+<li>They would boast about their IRA operations while drunk in pubs.</li>
+<li>They would reply with a nod and a wink to friendly inquiries about their
+activities, making it easy for informants to identify them.</li>
+<li>They would march in pro-IRA rallies.</li>
+</ul>
+
+
+<p>  <strong>Problem:</strong> The adversary was able to easily identify (some) PIRA
+  members. Once the adversary identifies members of an organisation,
+  they will investigate and monitor them to uncover other members.</p></li>
+<li><p><strong>Contamination</strong>
+  PIRA members would associate with each other when not on operations.
+  In intel parlance this is called &#8220;pre-operational contact&#8221;, and it is
+  to be avoided. The reason is that any surveillance on one member will
+  reveal the other members of the group. This is a form of <em>contamination</em>.</p></li>
+</ul>
+
+
+<p>In short, some (many?) members of the Provisional IRA made their affiliation
+publically known by bragging about their operations in public places. This
+made them known to the adversary (the British security forces), who were then
+able to monitor those known PIRA members. Later, at political events such as
+rallies, these known PIRA members would hang out and chat with their unknown
+underground brethren. This made the underground members known to the adversary,
+with the obvious negative consequences.</p>
+
+<h2>Link Analysis and You</h2>
+
+<p>Knowing only a single node in a network, e.g. one member of an organisation,
+and monitoring which other nodes it contacts with gives insight into
+membership of the graph. The police, for example, use a variety of monitoring
+techniques to build up <em>phone trees</em> which map out organisational relationships.</p>
+
+<p>This form of analysis, mapping associations between nodes in a network (e.g.
+membership in an organisation) is called link analysis. It can be used against
+communication end points (e.g. mobile phones, email addresses), which are then
+associated with individuals. For example, link analysis of mobile phone numbers
+and contact address books of drug dealers is used to determine hierarchical
+information about their distribution networks. Link analysis is a very powerful
+method of understanding relationships and being able to link &#8220;chatter&#8221; between
+nodes as activity related to an organisation.</p>
+
+<h2>How to unlink</h2>
+
+<p>One solution to making link analysis harder and less useful is to create
+unique nodes for each connection. Done successfuly, this creates link graph is
+only 2 nodes and 1 edge. In practise, this means that every connection between
+peers should be unique to that connection, i.e. create a new jabber identity for
+each associate you have. Do not share these jabber IDs between different <em>friends</em>.
+The rule is simple: 1 friend, 1 jabber ID.</p>
+
+<p>These node to node links should be changed regularly as well. The old nodes
+must never contact the new nodes. That will contaminate them, create a link
+that associates them together. New clean break each time.</p>
+
+<h2>Conclusion</h2>
+
+<p>It is possible to defeat link analysis, but it takes discipline and is hard to
+do successfully. Every single communications end point must be unique and
+dedicated to only one other end point. These end points must never contaminate
+each other by interacting or mentioning other end points. This will inhibit
+creating a <em>phone tree</em>, or link analysis chart of organisation membership.</p>
+
+<p><strong>Warning:</strong> unlinking will not prevent traffic flow analysis, fingerprinting,
+or many other techniques from linking comms end points. But it is square one.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[anonymity is hard]]></title>
+    <link href="http://grugq.github.com/blog/2013/03/12/anonymity-is-hard/"/>
+    <updated>2013-03-12T21:05:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/03/12/anonymity-is-hard</id>
+    <content type="html"><![CDATA[<h2>Anonymity in the real world is very hard</h2>
+
+<p>In late 2011 Hezbollah rolled up a CIA spy ring in Lebanon. This provides an
+interesting lesson in CIA tradecraft and real world counterintelligence. Close
+examination of the techniques used to track down the agents will reveal some
+serious problems with many systems designed to provide security for
+anti-government groups.</p>
+
+<p>This post is partially in a response to <a href="http://blog.cryptographyengineering.com/2013/03/here-come-encryption-apps.html">Matt Green&#8217;s</a>
+post about encryption apps. The secrecy provided by encryption applications,
+primarily privacy of communication content, is not sufficient to protect against
+even minimal monitoring. Any anti-government activity in a modern environment, e.g.
+one involving mobile phones and the internet, needs to include anonymity first and
+foremost.</p>
+
+<h2>The Sources</h2>
+
+<p><a href="http://www.guardian.co.uk/world/feedarticle/9958834">This article</a> provides
+some of the details about the tradecraft of the spy network, and how it
+failed. The focus is on how the agents were contacted by their handlers and
+how this was used to uncover the whole network. <a href="http://www.ufppc.org/us-a-world-news-mainmenu-35/10702-news-three-us-spy-rings-broken-in-lebanon-a-iran.html">Another site</a>
+provides a large collection of related articles which fills in some additional
+details.</p>
+
+<h2>The Tradecraft (Probably, maybe)</h2>
+
+<p><strong>NOTE:</strong> This information is based on newspaper articles, so it is of limited
+accuracy. However, it seems like reasonable tradecraft practices that even
+amateurs would devise and is thus presented for analysis here.</p>
+
+<ul>
+<li><p><strong>Dedicated mobile phone</strong>
+  The agents had a mobile phone used specifically for communication with
+  their handler. This phone was kept in a static location waiting for
+  contact, and possibly spent a lot of time switched off.</p></li>
+<li><p><strong>Pre-arranged meeting place</strong>
+  The agents had a meeting location (allegedly at a Pizza Hut) where
+  they met their handlers. This location was (allegedly) reused for
+  multiple agents and multiple meetings.</p></li>
+<li><p><strong>Signalling code word</strong>
+  Contact by the handler to the agent was via a code word (allegedly: &#8220;PIZZA!&#8221;),
+  which was meaningless by itself but also contextually anomalous.</p></li>
+</ul>
+
+
+<h2>Well, thats one way to do it</h2>
+
+<p>The adversary, Hezbollah, used access to the telephone company logs (they have those),
+and searched for atypical mobile phone usage patterns:</p>
+
+<ul>
+<li>phones that only receive a few calls / messages over long periods of time</li>
+<li>mobile phones that are never mobile</li>
+<li>weird / unusual messages (PIZZA!!)</li>
+</ul>
+
+
+<p>That is, they were looking for phones that were kept at home, turned on
+occasionally, and only received calls/sms infrequently. The exact usage pattern
+one would expect for a mobile that is used exclusively for a handler to contact
+an agent.</p>
+
+<p>This data gave Hezbollah a general location (down to the apartment complex) of
+where the agents were located. Next, the adversary correlated the location
+data with the home addresses of members who had access to secret information.
+They conducted surveillance on those members and discovered they were using a
+Pizza Hut to meet with their handlers.</p>
+
+<p><strong>Speculation</strong>
+Finally, the adversary was able to continually monitor the meeting location
+and detect other members of the spy network meeting with their handlers. The
+CIA is known for over using the same locations for meetings [1].</p>
+
+<p>[1] <a href="http://www.amazon.com/The-C-I-Desk-Counterintelligence-Cubicle/dp/1608447391">The C.I. Desk</a></p>
+
+<h2>Computer says No</h2>
+
+<p>The problems with these tradecraft practises are pretty obvious from a
+counterintelligence analysis. They are anomalous (atypical mobile phone use)
+and they are rigidly predictable (reusing the same meeting location).</p>
+
+<p>For encryption applications used by anti-government forces this provides a
+clear blueprint for action - look normal. Even basic monitoring of traffic
+will reveal anomalous activity which can be used to identify who needs to be
+watched more closely.</p>
+
+<h2>Conclusion</h2>
+
+<p>Hiding anomalous activity is hard, but vitally important. The problem with
+many security systems based purely on secrecy is that their usage is itself
+anomalous. It singles out and attracts attention to the users. If the
+adversary doesn&#8217;t know who those users are initially, they can cross correlate
+real world data with the suspicious activity and narrow their focus to real
+people. Those people can, and will, end up dead.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Resevoir Dogs: Lessons in OPSEC]]></title>
+    <link href="http://grugq.github.com/blog/2013/03/11/opsec-lessons-from-resevoir-dogs/"/>
+    <updated>2013-03-11T00:00:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/03/11/opsec-lessons-from-resevoir-dogs</id>
+    <content type="html"><![CDATA[<h2>Introduction </h2>
+
+<p>The cult movie classic Reservoir Dogs distills and imparts a number of important
+operational security (OPSEC) lessons. Although a work of fiction, the counter
+intelligence measures enacted by the gang were real standard operating procedure
+(SOP) for terrorist groups such as Fatah and the Black September Organisation
+(BSO). These OPSEC methods provide effective protection against informants
+participating in the operation. The weakness for this SOP is from informants at
+a higher level who have oversight of the operation.</p>
+
+<h2>The Reservoir Dogs OPSEC SOP</h2>
+
+<h3>Procedure 1: Assigned Operational Aliases</h3>
+
+<ul>
+<li><p><strong>Operational aliases for the duration of the op assigned by the organisation</strong></p>
+
+<p>  Using random aliases unique to the operation reduces the information
+  available to informants who are involved in the op.</p></li>
+</ul>
+
+
+<h3>Procedure 2: Rapidly assembled cherry picked team</h3>
+
+<ul>
+<li><p><strong>Just In Time team formation</strong></p>
+
+<p>  Creating the team just when it is needed reduces the time available for
+  informants to find out about an operation and report it back to their
+  handlers.</p></li>
+</ul>
+
+
+<h3>Procedure 3: Dedicated operational support teams</h3>
+
+<ul>
+<li><p><strong>Dedicated Independant Operational Teams</strong></p>
+
+<p>  Dedicated teams conducting operational support roles ensures that each
+  team, and its members, knows only their own small portion of the plan.
+  For example, the pre-operational intelligence and surveillance are
+  conducted by dedicated teams, separate from the team that conducts the
+  operation.</p></li>
+</ul>
+
+
+<h2>Strengths:</h2>
+
+<p>This SOP provides a number of important protections against monitoring and
+infiltration by security forces.</p>
+
+<h3>Secret Agents</h3>
+
+<p>The agents are kept undercover until they are required to fulfill mission
+objectives. This both protects them against discovery by security forces, and
+also limits the quantity and quality of information available to any
+informants. For maximum effectiveness team is formed immediately prior to
+preoperational training and then kept isolated until after the operation is
+complete.</p>
+
+<h3>Mr Pink</h3>
+
+<p>Using assigned aliases limits the information that an informant can gather
+during an operation. Because the aliases are assigned rather than chosen, it
+is not possible for an agent to develop a preference for a particular alias and
+thus create an identity.</p>
+
+<h2>Weaknesses:</h2>
+
+<p>The Reservoir Dogs OPSEC SOP has a number of inherent weaknesses which can:
+limit its effectiveness; expose large numbers of agents to capture, and even
+directly lead to mission failure.</p>
+
+<h3>Inefficient Teams</h3>
+
+<p>Ad Hoc hastily assembled teams are less effecient, and possibly less
+effective, than long standing teams. The team lifecycle of:
+Forming-Storming-Norming-Performing is compacted into a reduced timeframe
+which inhibits achieving the higher levels of efficiency.</p>
+
+<h3>High Value Targets</h3>
+
+<p>Talent pool exposed to high level members. Knowledge of the group&#8217;s membership
+is heavily concentrated in a few individuals, rather than dispersed amongst
+the rank-and-file. These select individuals become high value targets in
+position to cause significant damage to the group if compromised.</p>
+
+<h3>Single Point of Failure</h3>
+
+<p>Single point of failure. The operational team captain is the only member of
+the team who knows the complete operation plan. The individual team members
+are unable to carry on the mission should the captain be eliminated.</p>
+
+<h2>Conclusion:</h2>
+
+<p>The Reservoir Dogs OPSEC SOP is an effective collection of techniques to protect
+a large group of agents against internal informants. The threat of a compromised
+internal member of a group is very likely the single greatest threat facing an
+underground organisation. This is demonstrated by the extreme lengths the PIRA
+went to hunting down informants, the dismantling of Lulzsec via a highly placed
+penetration, the extreme violence visited upon criminal informants (&#8220;snitches&#8221;,
+and &#8220;rats&#8221;), etc. etc. The Resevoir Dogs SOP provides a methodology to mitigate
+against all but the highest level penetrations.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>the paddy factor - Hacker OPSEC</title>
+  <meta name="author" content="the grugq">
+
+  
+  <meta name="description" content="The Paddy Factor was a disparaging term used by the British security
+forces to refer to poor OPSEC practices by the Provisional IRA (PIRA)
+in the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://grugq.github.com/blog/2013/03/18/the-paddy-factor">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Hacker OPSEC" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Hacker OPSEC</a></h1>
+  
+    <h2>STFU is the best policy.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:grugq.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">The Paddy Factor</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-18T09:51:00+07:00" pubdate data-updated="true">Mar 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The <strong>Paddy Factor</strong> was a disparaging term used by the British security
+forces to refer to poor OPSEC practices by the Provisional IRA (PIRA)
+in the early 1970s. Much of this terrible counter intelligence posture was due
+to a limited number of easily avoidable activities that combined to compromise
+many Provos:</p>
+
+<ul>
+<li><p><strong>Self incrimination</strong></p>
+
+<ul>
+<li>PIRA members would congregate in pubs and sing IRA songs.</li>
+<li>They would boast about their IRA operations while drunk in pubs.</li>
+<li>They would reply with a nod and a wink to friendly inquiries about their
+activities, making it easy for informants to identify them.</li>
+<li>They would march in pro-IRA rallies.</li>
+</ul>
+
+
+<p>  <strong>Problem:</strong> The adversary was able to easily identify (some) PIRA
+  members. Once the adversary identifies members of an organisation,
+  they will investigate and monitor them to uncover other members.</p></li>
+<li><p><strong>Contamination</strong>
+  PIRA members would associate with each other when not on operations.
+  In intel parlance this is called &#8220;pre-operational contact&#8221;, and it is
+  to be avoided. The reason is that any surveillance on one member will
+  reveal the other members of the group. This is a form of <em>contamination</em>.</p></li>
+</ul>
+
+
+<p>In short, some (many?) members of the Provisional IRA made their affiliation
+publically known by bragging about their operations in public places. This
+made them known to the adversary (the British security forces), who were then
+able to monitor those known PIRA members. Later, at political events such as
+rallies, these known PIRA members would hang out and chat with their unknown
+underground brethren. This made the underground members known to the adversary,
+with the obvious negative consequences.</p>
+
+<h2>Link Analysis and You</h2>
+
+<p>Knowing only a single node in a network, e.g. one member of an organisation,
+and monitoring which other nodes it contacts with gives insight into
+membership of the graph. The police, for example, use a variety of monitoring
+techniques to build up <em>phone trees</em> which map out organisational relationships.</p>
+
+<p>This form of analysis, mapping associations between nodes in a network (e.g.
+membership in an organisation) is called link analysis. It can be used against
+communication end points (e.g. mobile phones, email addresses), which are then
+associated with individuals. For example, link analysis of mobile phone numbers
+and contact address books of drug dealers is used to determine hierarchical
+information about their distribution networks. Link analysis is a very powerful
+method of understanding relationships and being able to link &#8220;chatter&#8221; between
+nodes as activity related to an organisation.</p>
+
+<h2>How to unlink</h2>
+
+<p>One solution to making link analysis harder and less useful is to create
+unique nodes for each connection. Done successfuly, this creates link graph is
+only 2 nodes and 1 edge. In practise, this means that every connection between
+peers should be unique to that connection, i.e. create a new jabber identity for
+each associate you have. Do not share these jabber IDs between different <em>friends</em>.
+The rule is simple: 1 friend, 1 jabber ID.</p>
+
+<p>These node to node links should be changed regularly as well. The old nodes
+must never contact the new nodes. That will contaminate them, create a link
+that associates them together. New clean break each time.</p>
+
+<h2>Conclusion</h2>
+
+<p>It is possible to defeat link analysis, but it takes discipline and is hard to
+do successfully. Every single communications end point must be unique and
+dedicated to only one other end point. These end points must never contaminate
+each other by interacting or mentioning other end points. This will inhibit
+creating a <em>phone tree</em>, or link analysis chart of organisation membership.</p>
+
+<p><strong>Warning:</strong> unlinking will not prevent traffic flow analysis, fingerprinting,
+or many other techniques from linking comms end points. But it is square one.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">the grugq</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-18T09:51:00+07:00" pubdate data-updated="true">Mar 18<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ci/'>CI</a>, <a class='category' href='/blog/categories/opsec/'>OPSEC</a>, <a class='category' href='/blog/categories/link-analysis/'>link analysis</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/12/anonymity-is-hard/" title="Previous Post: anonymity is hard">&laquo; anonymity is hard</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/06/10/good-luck-with-that/" title="Next Post: good luck with that">good luck with that &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/10/good-luck-with-that/">Good Luck With That</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/18/the-paddy-factor/">The Paddy Factor</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/12/anonymity-is-hard/">Anonymity Is Hard</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/11/opsec-lessons-from-resevoir-dogs/">Resevoir Dogs: Lessons in OPSEC</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/grugq">@grugq</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'grugq',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - the grugq -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
