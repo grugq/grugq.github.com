@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>docs - Hacker OPSEC</title>
+  <meta name="author" content="the grugq">
+
+  
+  <meta name="description" content="Docs Apr 1st, 2013 The paper&#8217;s I&#8217;ve written over the years. Cheating the ELF: Subversive Dynamic Linking A paper explaining the ELF &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://grugq.github.com/docs">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Hacker OPSEC" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Hacker OPSEC</a></h1>
+  
+    <h2>STFU is the best policy.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:grugq.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Docs</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-01T04:39:00+07:00" pubdate data-updated="true">Apr 1<span>st</span>, 2013</time></p>
+  </header>
+  
+  <p>The paper&#8217;s I&#8217;ve written over the years.</p>
+
+<ul>
+<li><p><strong><a href="subversiveld.pdf">Cheating the ELF: Subversive Dynamic Linking</a></strong>
+  A paper explaining the ELF format and how to abuse the dynamic linker
+  to access library code.</p></li>
+<li><p><strong><a href="phrack-58-05.txt">Armouring the ELF: binary encryption on UNIX platforms</a></strong>
+  My first article for Phrack. Describes some techniques for encrypting
+  binaries on Linux. This was an important issue at the time as hacker
+  groups were trying to stem the leak of private exploits. There was
+  also the problem of exploit code being discovered in the wild and the
+  bugs dying. This was an attempt to lock down access to the exploits,
+  as well as the information (i.e. the vulnerability) contained within
+  the exploit. My implementation used the subversive linking technique
+  from the previous paper.</p></li>
+<li><p><strong><a href="phrack-59-06.txt">The Art of Defiling: Defeating forensics analysis on Unix file systesm</a></strong>
+  The ur-text of anti-forensics. Few people seem to have understood what
+  was actually in here. After the publication of this article I was
+  forced to resign from @stake. The techniques in here are still valid
+  against some modern forensics tools. The core take aways though should
+  be the basic strategies of anti-forensics.</p></li>
+<li><p><strong><a href="phrack-62-05.txt">Bypassing 3rd party Windows buffer overflow protections</a></strong>
+  This paper explores a large number of ways to bypass HIPS systems that
+  are bolted onto an operating system, rather than baked in. Mostly
+  techniques for skipping the hooks which transfer execution into the
+  HIPS logic. This article was written by myself and Eugene, with the
+  NT syscall shellcode provided by jamie butler. We&#8217;d all done similar
+  research, so decided to collaborate on a paper. At the time, Eugene
+  and I both worked for HIPS companies so we decided to publish
+  anonymously to avoid any problems.</p></li>
+<li><p><strong><a href="phrack-62-08.txt">FIST FIST FIST Its all in the wrist</a></strong>
+  This was my final anti-forensics paper. I don&#8217;t believe there has been
+  anything which advances the core theory of anti-forensics beyond this
+  paper. I now know that I was developing counterintelligence theory from
+  first principles. Slow going. This paper deals primarily with in memory
+  execution techniques for Linux. It covers some important anti-forensic
+  principles as well, in particular minimizing the operational fingerprint.</p></li>
+<li><p><strong><a href="ul_exec.txt">Userland Exec</a></strong>
+  A quick little paper for a quick little project. At the time someone
+  had posted an implementation of userland exec to bugtraq which simply
+  copied a binary into the stack and jumped to the entry point. Mark Dowd
+  asked me how this would be done &#8220;properly&#8221;, and in the process of
+  explaining it to him, I decided it would be easier to just write a PoC.
+  So, that weekend I banged out a PoC of ul_exec() and wrote up a paper
+  on how it worked. It was a useful technique for anti-forensic tools as
+  well as it enabled pulling a program out of an encrypted data store and
+  executing it without creating a clear text version on disk.</p></li>
+</ul>
+
+
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-01T04:39:00+07:00" pubdate data-updated="true">Apr 1<span>st</span>, 2013</time>
+        
+      </p>
+      
+        <div class="sharing">
+  
+  
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/10/good-luck-with-that/">Good Luck With That</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/18/the-paddy-factor/">The Paddy Factor</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/12/anonymity-is-hard/">Anonymity Is Hard</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/11/opsec-lessons-from-resevoir-dogs/">Resevoir Dogs: Lessons in OPSEC</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/grugq">@grugq</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'grugq',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - the grugq -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
