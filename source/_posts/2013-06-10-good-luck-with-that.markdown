@@ -3,21 +3,21 @@ layout: post
 title: "good luck with that"
 date: 2013-06-10 12:30
 comments: true
-categories: 
+categories: [surveillance]
 ---
 
 Story time
-==========
+----------
 
 Back in the day we used to have AOL for internet access. If you've never suffered AOL, then you probably don't know that it would disconnect you if the service didn't detect any traffic for some period of time. It popped up an alert that said something like "no activity detected for 30 minutes. If there is no activity in the next 10 minutes, you will be disconnected". When this dialog popped up my father would try to stay connected by moving the mouse around a bit. Obviously, this was completely ineffective. 
 
 
-The problem was his understanding of the problem was misguided and wrong. His mental model of how the whole system worked was so flawed, he was unable to realize how to actually solve his problem. 
+The problem was his understanding of the problem was completely wrong. His mental model of how the whole system worked was so flawed, he was unable to identify the steps he had to take to actually solve his problem. 
 
 I lolled
-========
+--------
 
-When I read articles and blog posts on "how to avoid surveillance", or "how to stay anonymous online", I am reminded of my father waving his mouse around to appease the dialog box, never understanding how out of his depth he was. 
+When I read articles and blog posts on "how to avoid surveillance", or "how to stay anonymous online", I am reminded of my father waving his mouse around to appease the dialog box, never understanding how completely wrong he was.
 
 The publicly available tools for making yourself anonymous and free from surveillance are woefully ineffective when faced with a nationstate adversary. We don't even know how flawed our mental model is, let alone what our counter-surveillance actions actually achieve. As an example, the Tor network has only 3000 nodes, of which 1000 are exit nodes. Over a 24hr time period a connection will use approximately 10% of those exit nodes (under the default settings). If I were a gambling man, I'd wager money that there are at least 100 malicious Tor exit nodes doing passive monitoring. A nation state could double the number of Tor exit nodes for less than the cost of a smart bomb. A nation state can compromise enough ISPs to have monitoring capability over the majority of Tor entrance and exit nodes. 
 
@@ -27,6 +27,6 @@ Basically, all I am trying to say is that the surveillance capability of the adv
 
 
 Concluding remarks
-==================
+------------------
 
-Pick better adversaries.
+Practicing effective counterintelligence on the internet is an extremely difficult process and requires planning, evaluating options, capital investment in hardware, and a clear goal in mind. If you just want to "stay anonymous from the NSA", or whomeever... good luck with that. My advice? Pick different adversaries.
