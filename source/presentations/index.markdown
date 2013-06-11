@@ -35,3 +35,6 @@ footer: true
 
 - **[OPSEC for Hackers: Because Jail is for wuftpd](Keynote_The_Grugq_-_OPSEC_for_Russians.pdf)** 2012
 	[Video](http://www.youtube.com/watch?v=9XaYdCdwiWU)
+
+- **[An Underground Education: Lessons in Counterintelligence from History's Underworld](http://www.slideshare.net/grugq/underground-education-21151795)** 2013
+	[Audio](http://www.itweb.co.za/index.php?option=com_jukebox&view=category&id=755:security-summit-2013)
