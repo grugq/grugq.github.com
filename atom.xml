@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-06-13T02:42:31+07:00</updated>
+  <updated>2013-06-13T02:48:31+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -28,11 +28,11 @@
 
 <p>Guerrillas, terrorists, narcos and spooks the world over have learned the hard
 way how to keep their illicit activity safe from their opponents. The same principles
-of counterintelligence (CI) that help protect guerrillas, narcos and spooks can
-be applied to protect yourself from your adversary. If you engage in behavior
+of counterintelligence (CI) that help protect them from death can
+be applied to protect you from your adversary. If you engage in behavior
 that carries the risk of negative consequences from an adversary, you will need
-to develop and implement robust CI. This post will explain the foundations of
-strong OPSEC, a critical part of a robust CI program.</p>
+to develop and implement robust a CI program. This post will explain the foundations of
+strong OPSEC, a critical part of just such a program.</p>
 
 <h2>Establish Cells, or Live in One</h2>
 
