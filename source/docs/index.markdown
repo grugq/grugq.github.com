@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "docs"
+title: "Docs"
 date: 2013-04-01 04:39
-comments: true
+comments: false
 sharing: true
 footer: true
 ---
