@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>anonymity is hard - Hacker OPSEC</title>
+  <meta name="author" content="the grugq">
+
+  
+  <meta name="description" content="Anonymity in the real world is very hard In late 2011 Hezbollah rolled up a CIA spy ring in Lebanon. This provides an
+interesting lesson in CIA &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://grugq.github.com/blog/2013/03/12/anonymity-is-hard">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Hacker OPSEC" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Hacker OPSEC</a></h1>
+  
+    <h2>STFU is the best policy.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:grugq.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/docs/">Docs</a></li>
+  <li><a href="/presentations/">Presentations</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Anonymity Is Hard</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-12T21:05:00+07:00" pubdate data-updated="true">Mar 12<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>Anonymity in the real world is very hard</h2>
+
+<p>In late 2011 Hezbollah rolled up a CIA spy ring in Lebanon. This provides an
+interesting lesson in CIA tradecraft and real world counterintelligence. Close
+examination of the techniques used to track down the agents will reveal some
+serious problems with many systems designed to provide security for
+anti-government groups.</p>
+
+<p>This post is partially in a response to <a href="http://blog.cryptographyengineering.com/2013/03/here-come-encryption-apps.html">Matt Green&#8217;s</a>
+post about encryption apps. The secrecy provided by encryption applications,
+primarily privacy of communication content, is not sufficient to protect against
+even minimal monitoring. Any anti-government activity in a modern environment, e.g.
+one involving mobile phones and the internet, needs to include anonymity first and
+foremost.</p>
+
+<h2>The Sources</h2>
+
+<p><a href="http://www.guardian.co.uk/world/feedarticle/9958834">This article</a> provides
+some of the details about the tradecraft of the spy network, and how it
+failed. The focus is on how the agents were contacted by their handlers and
+how this was used to uncover the whole network. <a href="http://www.ufppc.org/us-a-world-news-mainmenu-35/10702-news-three-us-spy-rings-broken-in-lebanon-a-iran.html">Another site</a>
+provides a large collection of related articles which fills in some additional
+details.</p>
+
+<h2>The Tradecraft (Probably, maybe)</h2>
+
+<p><strong>NOTE:</strong> This information is based on newspaper articles, so it is of limited
+accuracy. However, it seems like reasonable tradecraft practices that even
+amateurs would devise and is thus presented for analysis here.</p>
+
+<ul>
+<li><p><strong>Dedicated mobile phone</strong>
+  The agents had a mobile phone used specifically for communication with
+  their handler. This phone was kept in a static location waiting for
+  contact, and possibly spent a lot of time switched off.</p></li>
+<li><p><strong>Pre-arranged meeting place</strong>
+  The agents had a meeting location (allegedly at a Pizza Hut) where
+  they met their handlers. This location was (allegedly) reused for
+  multiple agents and multiple meetings.</p></li>
+<li><p><strong>Signalling code word</strong>
+  Contact by the handler to the agent was via a code word (allegedly: &#8220;PIZZA!&#8221;),
+  which was meaningless by itself but also contextually anomalous.</p></li>
+</ul>
+
+
+<h2>Well, thats one way to do it</h2>
+
+<p>The adversary, Hezbollah, used access to the telephone company logs (they have those),
+and searched for atypical mobile phone usage patterns:</p>
+
+<ul>
+<li>phones that only receive a few calls / messages over long periods of time</li>
+<li>mobile phones that are never mobile</li>
+<li>weird / unusual messages (PIZZA!!)</li>
+</ul>
+
+
+<p>That is, they were looking for phones that were kept at home, turned on
+occasionally, and only received calls/sms infrequently. The exact usage pattern
+one would expect for a mobile that is used exclusively for a handler to contact
+an agent.</p>
+
+<p>This data gave Hezbollah a general location (down to the apartment complex) of
+where the agents were located. Next, the adversary correlated the location
+data with the home addresses of members who had access to secret information.
+They conducted surveillance on those members and discovered they were using a
+Pizza Hut to meet with their handlers.</p>
+
+<p><strong>Speculation</strong>
+Finally, the adversary was able to continually monitor the meeting location
+and detect other members of the spy network meeting with their handlers. The
+CIA is known for over using the same locations for meetings [1].</p>
+
+<p>[1] <a href="http://www.amazon.com/The-C-I-Desk-Counterintelligence-Cubicle/dp/1608447391">The C.I. Desk</a></p>
+
+<h2>Computer says No</h2>
+
+<p>The problems with these tradecraft practises are pretty obvious from a
+counterintelligence analysis. They are anomalous (atypical mobile phone use)
+and they are rigidly predictable (reusing the same meeting location).</p>
+
+<p>For encryption applications used by anti-government forces this provides a
+clear blueprint for action - look normal. Even basic monitoring of traffic
+will reveal anomalous activity which can be used to identify who needs to be
+watched more closely.</p>
+
+<h2>Conclusion</h2>
+
+<p>Hiding anomalous activity is hard, but vitally important. The problem with
+many security systems based purely on secrecy is that their usage is itself
+anomalous. It singles out and attracts attention to the users. If the
+adversary doesn&#8217;t know who those users are initially, they can cross correlate
+real world data with the suspicious activity and narrow their focus to real
+people. Those people can, and will, end up dead.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">the grugq</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-12T21:05:00+07:00" pubdate data-updated="true">Mar 12<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/opsec/'>OPSEC</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/11/opsec-lessons-from-resevoir-dogs/" title="Previous Post: Resevoir Dogs: Lessons in OPSEC">&laquo; Resevoir Dogs: Lessons in OPSEC</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/03/18/the-paddy-factor/" title="Next Post: the paddy factor">the paddy factor &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/14/you-cant-get-there-from-here/">You Can't Get There From Here</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/13/ignorance-is-strength/">Ignorance Is Strength</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/10/good-luck-with-that/">Good Luck With That</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/18/the-paddy-factor/">The Paddy Factor</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/12/anonymity-is-hard/">Anonymity Is Hard</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/grugq">@grugq</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'grugq',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - the grugq -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

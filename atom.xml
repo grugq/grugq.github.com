@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Hacker OPSEC]]></title>
+  <link href="http://grugq.github.com/atom.xml" rel="self"/>
+  <link href="http://grugq.github.com/"/>
+  <updated>2013-06-16T08:56:55+07:00</updated>
+  <id>http://grugq.github.com/</id>
+  <author>
+    <name><![CDATA[the grugq]]></name>
+    <email><![CDATA[the.grugq@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[you can't get there from here]]></title>
+    <link href="http://grugq.github.com/blog/2013/06/14/you-cant-get-there-from-here/"/>
+    <updated>2013-06-14T10:06:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/06/14/you-cant-get-there-from-here</id>
+    <content type="html"><![CDATA[<p>There have been some responses to my <a href="http://grugq.github.io/blog/2013/06/10/good-luck-with-that/">post</a> about the limitations of public
+countersurveillance tools. Most of them have focused on my statements about
+the limitations of the Tor network. I started to write a comment addressing one of the more coherent
+<a href="http://www.reddit.com/r/onions/comments/1g437b/the_surveillance_capability_of_the/cagw3vb">replies</a>
+but then decided to simply post it here instead.</p>
+
+<h2>Rebuttal</h2>
+
+<p>The responses all wandered slightly off topic from what my post was about. The point was that simply installing and running off the shelf counter-surveillance software is not sufficient against a nation state level adversary. Saying &#8220;Install Tor&#8221; or &#8220;Install I2P&#8221; is not the correct way to develop a counterintelligence program. It is not even the correct place to start. While those tools may be components of a CI program, but they are not sufficient in and of themselves.</p>
+
+<p>To expand on what I was getting at in the post, the core issue is that when Tor and I2P and other countersurveillance solutions are developed, they are developed with certain assumptions about the capabilities of the adversary. For example, Tor does not work against an adversary who has total information awareness about the traffic on the Internet. The assumption for Tor is &#8220;adversary can monitor a subset of all IP traffic&#8221;, where subset usually equals &#8220;a single country&#8221;. Because we, the public, do not know the real capabilities of the adversary, those assumptions might be (and in some cases, likely are) completely incorrect. In this example, it is widely suspected that the US has the capability to monitor a significant portion of global IP traffic, not just limited to a single country. At a minimum we can assume that they will be able to get traffic logs for 5 eyes members, and most likely for all of NATO.</p>
+
+<p>My article makes the claim that these off the shelf countersurveillance networks are insufficiently secure against nation state level adversaries. I also claim that we don&#8217;t know the capabilities of those adversaries, and therefore cannot know what technology would evade their surveillance capabilities. I stand by both claims.</p>
+
+<p>My point regarding the cost of doubling the count of Tor exit nodes is simply that the financial cost of compromising the Tor network is not even a rounding error in a nation state budget. It is the equivalent of a portion  of the change found in the couch. Further more, Tor is not new. It isn&#8217;t as if nation state level adversaries just woke up last week, &#8220;holy shit, this Tor thing! we better get on that!&#8221;. It is conceivable that a nation state has been setting up cover organisations, using agents, and compromising existing hosts for years with the sole goal of subverting the security of the Tor system. We have no way of knowing this because we have limited/no knowledge of their capabilities. Which was exactly my point.</p>
+
+<h2>Evil Exit Nodes Unmasked me, and all I got was this lousy jail term</h2>
+
+<p>To address the specific objections about &#8220;all smart Tor users know to encrypt traffic to combat malicious exit nodes&#8221;: yes malicious snooping nodes can be evaded provided you are using encryption to another termination point. This is why I&#8217;ve recommended using a VPN over Tor to mitigate against the monitoring that <em>is</em> done by evil exit nodes. However, an additional problem with a malicious exit node is simple traffic analysis, where the content of the data is irrelevant, but unmasking the end user is still possible. There are cases where unmasking an end user is sufficient, if they are going to &#8220;www.how-do-I-wage-jihad-in-the-usa.com.ir&#8221;, for example. If we take the case of a nation state level adversary who can monitor all IP traffic within their country, and we combine that with the same adversary operating (or monitoring) a significant percentage of exit nodes, then that adversary can trivially unmask Tor users. The cost of this operation would be well within the budget of any respectable intelligence agency.</p>
+
+<h2>Backlash caused severe pain in my lower nonspecific</h2>
+
+<p>Regarding risk of backlash if it is known that a nation state has compromised all (or many) ISPs: Firstly, we can all agree that the compromise of an ISP is well within the scope of an intelligence agency. If you have been around the underground long enough, you know how many different people and groups have compromised Tier 1 ISPs. But regarding the &#8220;backlash&#8221;, a nation state adversary will classify everything that could leak their tools, techniques and procedures. The means by which they collect information is usually as classified, or even more classified, than the information they collect. It is not likely that they would ever willingly allow this information to become known. Frequently intelligence agencies will classify information simply because revealing that they know it would reveal their collection capability, and thus compromise their ability to exploit that capability in the future.</p>
+
+<p>Which is what brings me back to the point I was getting at in the post. If you are engaged in activities which will put you up against a nation state level adversary, you have no knowledge of what their capabilities are. Fortunately for just about everyone (reading this), you do not have a nation state level adversary. A law enforcement agency, such as the FBI, will have access to some nation state level capabilities in certain circumstances. For example, if it was known that a trained al Quaida cell was operating in the continental US and using Tor for their communications platform, the NSA would very likely use whatever Tor unmasking capability they have to assist the FBI. They would do this in a blackbox fashion: get a request -> send a response. They would not reveal <em>how</em> they performed the unmasking because the FBI would not have people who are cleared for that information. (This is compartmentation in action.)</p>
+
+<p>As a thought experiment, imagine that Osama bin Laden was still alive and that he used the Tor network to do a Reddit AMA once a month. How long do you imagine it would take for the US to find and neutralize him? I posted <a href="https://twitter.com/thegrugq/status/344492461432926208">this question</a> on Twitter and, while responses varied, ex-NSA Global Network Exploitation Analyst Charlie Miller guessed <a href="https://twitter.com/0xcharlie/status/344498844161155072">one to two months</a>. I would be very surprised if it took more than three. This is because OBL <em>had</em> a <strong>nation state level adversary</strong>. You (probably) do not.</p>
+
+<h2>Good news everyone, nobody gives a fuck</h2>
+
+<p>There is good news, of course. Nation state level adversaries are concerned about nation state actors (and some non-nation state actors). They really don&#8217;t have the resources to spend monitoring law enforcement issues. Unless you are a policy maker, a ranking military official, an intelligence officer/agent, a member of a known terrorist organisation, or have somehow otherwise ended up on a targeting list, the Intelligence Community (IC) really doesn&#8217;t give a fuck about you. The product they produce for their clients - security cleared government officials - is documentation and analysis that helps these officials make informed policy decisions (or at least, that is the intention).</p>
+
+<h2>You Should OPSEC anyway</h2>
+
+<p>Now, as I advocate elsewhere, it is best to start your counterintelligence program early, because after you are targeted it is (usually) too late.</p>
+
+<p>My central recommendation on how to operate safely, whether you are a hacker, a spy, a whistleblower, or whatever, is to implement compartmentation first. Classify the data which is sensitive (e.g. your real identity and anything linked to your real identity) and segregate it from everything related to your illicit activity. Preferably, by physically separating onto different machines. When conducting the illicit activity, use your illicit activity equipment, and do it over an internet link that cannot be linked to you. By all means, use Tor, or I2P, or a VPN, or whatever. But that technology must not be your primary and only line of defence.</p>
+
+<p>This is how you do good CI. Develop a SOP that will protect your sensitive data even when things fail.
+That said, most of what will sink people is poor OPSEC, not poor SIGSEC. The more people that know about your illicit activity the higher the chance that Murphy will raise his head and it&#8217;ll all end in tears.</p>
+
+<h2>Counterintelligence Cliff Notes</h2>
+
+<p>So, to reiterate, choosing a technology first and then relying on it for security is completely ass backwards. To do things properly, operate in this order. Figure out what you are trying to protect (and from whom), separate it from everything else, and then select tools, techniques and procedures that will enable you to protect it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ignorance is strength]]></title>
+    <link href="http://grugq.github.com/blog/2013/06/13/ignorance-is-strength/"/>
+    <updated>2013-06-13T01:02:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/06/13/ignorance-is-strength</id>
+    <content type="html"><![CDATA[<blockquote><p>Seven, this rule is so underrated</p>
+
+<p>Keep your family and business completely separated</p></blockquote>
+
+<p>&#8211; Biggie Smalls, <em>Counterintelligence Theory and Practice for Crack Dealers</em></p>
+
+<h2>Guerrillas, Terrorists, Narcos, Spooks, and You</h2>
+
+<p>Guerrillas, terrorists, narcos and spooks the world over have learned the hard
+way how to keep their illicit activity safe from their opponents. The same principles
+of counterintelligence (CI) that help protect them from death can
+be applied to protect you from your adversary. If you engage in behavior
+that carries the risk of negative consequences from an adversary, you will need
+to develop and implement a robust CI program. This post will explain the foundations of
+strong OPSEC, a critical part of just such a program.</p>
+
+<h2>Establish Cells, or Live in One</h2>
+
+<p>The cornerstone of any solid counterintelligence program is <strong>compartmentation</strong>.
+Compartmentation is the separation of information, including people and activities,
+into discreet cells. These cells must have no interaction, access, or knowledge
+of each other. Enforcing ignorance between different cells prevents any one
+compartment from containing too much sensitive information. If any single cell
+is compromised, such as by an informant, the limitats of the damage will be at
+the boundaries of the cell.</p>
+
+<p>Now, compartmenting an entire organisation is a difficult feat, and can
+seriously impede the ability of the organisation to learn and adapt to changing circumstance.
+However, these are are not concerns that we need to address for an individual
+who is compartmenting their personal life from their illicit activity.</p>
+
+<p>Spooks, such as CIA case officiers, or KGB illegals, compartment their illicit
+activity (spying) from their &#8220;regular&#8221; lives. The first part of this is, of course,
+keeping their mouths shut about their illicit activities! There are many other
+important parts of tradecraft which are beyond the scope of this post. But remember,
+when you are compartmenting your life, the <strong>first rule</strong> is to never discuss your
+illicit activities with anyone outside of that <strong>compartment</strong>.</p>
+
+<h2>Compartmentation For Dummies</h2>
+
+<p>This will cover a basic set of guidelines for compartmenting a particular online
+activity. In our hypothetical scenario there are two people, Alice and Bob (natch),
+who want to exchange information with each other. They are deathly afraid that
+the adversary will learn (in ascending order of risk to Alice):</p>
+
+<ul>
+<li>Two people have been in contact (low risk)</li>
+<li>Bob has been in contact with someone (medium risk)</li>
+<li>Alice has been in contact with someone (high risk)</li>
+<li>Alice has been in contact with Bob (extreme risk)</li>
+</ul>
+
+
+<p>While this guideline is a starting point for someone who seeks to conduct illicit
+activity under hostile internet surveillance it is not concrete set of rules.
+When developing a CI program you must evaluate the threats and risks to yourself
+and create a custom set of tools and procedures that address your needs. The
+specific SOP that you develop for will differ from the outline below, but if it
+is to be resilient against the adversary it must be based on some form of compartmentation.</p>
+
+<h2>Step 1: Cleanliness is Next to Not-Being-in-Jailiness.</h2>
+
+<p>Alice must purchase new dedicated equipment used exclusively for communicating
+with Bob. This means, buy a new laptop. Don&#8217;t bother with a new virtual machine,
+that isn&#8217;t sufficiently compartmented. Any existing equipment that Alice owns
+might already be compromised and is therefore not safe against potential monitoring.</p>
+
+<p>The software installed should be the bare minimum of generic utilities required
+to do the communications. Here is an example setup:</p>
+
+<ul>
+<li>Laptop (cover the webcam with tape, disable the mic if possible)</li>
+<li>Virtualization Software (VBox, VMware, Parallels, etc)</li>
+<li>Ubuntu installed in the VM (disable all the logging + reporting)</li>
+<li>Recommended Software:
+
+<ul>
+<li>Tor Browser bundle</li>
+<li>PGP (generate and store new keys on a USB drive)</li>
+<li>OTR enabled chat client</li>
+</ul>
+</li>
+<li>Snapshot the VM</li>
+</ul>
+
+
+<p>This is the base platform that Alice will use when contacting Bob. Obviously,
+Bob should go through the same process (if he faces similar risks, or is concerned
+about Alice&#8217;s wellbeing).</p>
+
+<p>The usernames and hostnames used should be generic, not associated with Alice&#8217;s
+real name, location, place of work, etc. If the VM is compromised, there will be
+no identifying information, or keys that can be used to decrypt previous comms.
+If the VM is escaped and the adversary has access to the host, again, there will
+be no identifying information. The host machine has only the virtualization software
+on it. Use full disk encryption on the host machine, probably on the VM, use
+different passwords between the two, and keep the machine fully powered off when
+not in immediate active use.</p>
+
+<h2>Step 2: Take a Trip</h2>
+
+<blockquote><p>Number 5: never sell no crack where you rest at</p>
+
+<p>I don&#8217;t care if they want a ounce, tell &#8216;em &#8220;bounce!&#8221;</p></blockquote>
+
+<p>&#8211; Biggie Smalls, <em>Counterintelligence Theory and Practice for Crack Dealers</em></p>
+
+<p>Alice must ensure that every single time she contacts Bob, or checks for contact
+from Bob, she is in a location which is not linked to her. Additionally, she must
+use an internet connection which is not linked to her, for example a public WiFi
+or a prepaid 3G card.</p>
+
+<p>When Alice goes to contact Bob, she must ensure that she does not carry any device
+which will transmit her physical location. For example, her mobile phone(s). Leave
+it at home.</p>
+
+<h2>Step 3: UnlinkedIn</h2>
+
+<p>After Alice has used her dedicated machine to communicate with Bob, she should
+revert the VM snapshot to the pristine state from right after she installed. This
+should limit the ability of the adversary to persist after a compromise (provided
+they didn&#8217;t escape the VM).</p>
+
+<p>The <em>converse-with-Bob</em> machine must be used with new accounts created specifically
+for, and exclusively to, converse with Bob. These accounts must be created from
+the new machine, and never be used for anything else except Bob related activity.
+Alice must create new accounts that don&#8217;t have any links to her real identity.
+For email, one option is a <a href="http://www.tormail.net">TorMail</a> account. For instant
+messaging there is either Cryptocat over Tor, or create a new Jabber
+account such as with <a href="http://jabber.ccc.de">jabber.ccc.de</a>.</p>
+
+<h2>Concluding Thoughts</h2>
+
+<p>The core concept to take away here is: separate identity, with equipment and
+accounts, used only for one activity. The essense of compartmentation is separation
+without contamination. My strong recommendation is to use: a virgin machine, with
+virgin accounts, to contact the target. This machine is used exclusively for this one
+activity: it is <strong>compartmented</strong>. Associating the activity of that online entity,
+even with full and complete global internet monitoring (and 0day attacks) with a
+specific individual should be difficult. [NOTE: don&#8217;t count on this if you
+happen to be the new al Quaida #3].</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[good luck with that]]></title>
+    <link href="http://grugq.github.com/blog/2013/06/10/good-luck-with-that/"/>
+    <updated>2013-06-10T12:30:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/06/10/good-luck-with-that</id>
+    <content type="html"><![CDATA[<h2>Story time</h2>
+
+<p>Back in the day we used to have AOL for internet access. If you&#8217;ve never suffered AOL, then you probably don&#8217;t know that it would disconnect you if the service didn&#8217;t detect any traffic for some period of time. It popped up an alert that said something like &#8220;no activity detected for 30 minutes. If there is no activity in the next 10 minutes, you will be disconnected&#8221;. When this dialog popped up my father would try to stay connected by moving the mouse around a bit. Obviously, this was completely ineffective.</p>
+
+<p>The problem was his understanding of the problem was completely wrong. His mental model of how the whole system worked was so flawed, he was unable to identify the steps he had to take to actually solve his problem.</p>
+
+<h2>I lolled</h2>
+
+<p>When I read articles and blog posts on &#8220;how to avoid surveillance&#8221;, or &#8220;how to stay anonymous online&#8221;, I am reminded of my father waving his mouse around to appease the dialog box, never understanding how completely wrong he was.</p>
+
+<p>The publicly available tools for making yourself anonymous and free from surveillance are woefully ineffective when faced with a nationstate adversary. We don&#8217;t even know how flawed our mental model is, let alone what our counter-surveillance actions actually achieve. As an example, the Tor network has only 3000 nodes, of which 1000 are exit nodes. Over a 24hr time period a connection will use approximately 10% of those exit nodes (under the default settings). If I were a gambling man, I&#8217;d wager money that there are at least 100 malicious Tor exit nodes doing passive monitoring. A nation state could double the number of Tor exit nodes for less than the cost of a smart bomb. A nation state can compromise enough ISPs to have monitoring capability over the majority of Tor entrance and exit nodes.</p>
+
+<p>Other solutions are just as fragile, if not more so.</p>
+
+<p>Basically, all I am trying to say is that the surveillance capability of the adversary (if you pick a nationstate for an adversary) exceeds the evasion capability of the existing public tools. And we don&#8217;t even know what we should be doing to evade their surveillance.</p>
+
+<h2>Concluding remarks</h2>
+
+<p>Practicing effective counterintelligence on the internet is an extremely difficult process and requires planning, evaluating options, capital investment in hardware, and a clear goal in mind. If you just want to &#8220;stay anonymous from the NSA&#8221;, or whomeever&#8230; good luck with that. My advice? Pick different adversaries.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[the paddy factor]]></title>
+    <link href="http://grugq.github.com/blog/2013/03/18/the-paddy-factor/"/>
+    <updated>2013-03-18T09:51:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/03/18/the-paddy-factor</id>
+    <content type="html"><![CDATA[<p>The <strong>Paddy Factor</strong> was a disparaging term used by the British security
+forces to refer to poor OPSEC practices by the Provisional IRA (PIRA)
+in the early 1970s. Much of this terrible counter intelligence posture was due
+to a limited number of easily avoidable activities that combined to compromise
+many Provos:</p>
+
+<ul>
+<li><p><strong>Self incrimination</strong></p>
+
+<ul>
+<li>PIRA members would congregate in pubs and sing IRA songs.</li>
+<li>They would boast about their IRA operations while drunk in pubs.</li>
+<li>They would reply with a nod and a wink to friendly inquiries about their
+activities, making it easy for informants to identify them.</li>
+<li>They would march in pro-IRA rallies.</li>
+</ul>
+
+
+<p>  <strong>Problem:</strong> The adversary was able to easily identify (some) PIRA
+  members. Once the adversary identifies members of an organisation,
+  they will investigate and monitor them to uncover other members.</p></li>
+<li><p><strong>Contamination</strong>
+  PIRA members would associate with each other when not on operations.
+  In intel parlance this is called &#8220;pre-operational contact&#8221;, and it is
+  to be avoided. The reason is that any surveillance on one member will
+  reveal the other members of the group. This is a form of <em>contamination</em>.</p></li>
+</ul>
+
+
+<p>In short, some (many?) members of the Provisional IRA made their affiliation
+publically known by bragging about their operations in public places. This
+made them known to the adversary (the British security forces), who were then
+able to monitor those known PIRA members. Later, at political events such as
+rallies, these known PIRA members would hang out and chat with their unknown
+underground brethren. This made the underground members known to the adversary,
+with the obvious negative consequences.</p>
+
+<h2>Link Analysis and You</h2>
+
+<p>Knowing only a single node in a network, e.g. one member of an organisation,
+and monitoring which other nodes it contacts with gives insight into
+membership of the graph. The police, for example, use a variety of monitoring
+techniques to build up <em>phone trees</em> which map out organisational relationships.</p>
+
+<p>This form of analysis, mapping associations between nodes in a network (e.g.
+membership in an organisation) is called link analysis. It can be used against
+communication end points (e.g. mobile phones, email addresses), which are then
+associated with individuals. For example, link analysis of mobile phone numbers
+and contact address books of drug dealers is used to determine hierarchical
+information about their distribution networks. Link analysis is a very powerful
+method of understanding relationships and being able to link &#8220;chatter&#8221; between
+nodes as activity related to an organisation.</p>
+
+<h2>How to unlink</h2>
+
+<p>One solution to making link analysis harder and less useful is to create
+unique nodes for each connection. Done successfuly, this creates link graph is
+only 2 nodes and 1 edge. In practise, this means that every connection between
+peers should be unique to that connection, i.e. create a new jabber identity for
+each associate you have. Do not share these jabber IDs between different <em>friends</em>.
+The rule is simple: 1 friend, 1 jabber ID.</p>
+
+<p>These node to node links should be changed regularly as well. The old nodes
+must never contact the new nodes. That will contaminate them, create a link
+that associates them together. New clean break each time.</p>
+
+<h2>Conclusion</h2>
+
+<p>It is possible to defeat link analysis, but it takes discipline and is hard to
+do successfully. Every single communications end point must be unique and
+dedicated to only one other end point. These end points must never contaminate
+each other by interacting or mentioning other end points. This will inhibit
+creating a <em>phone tree</em>, or link analysis chart of organisation membership.</p>
+
+<p><strong>Warning:</strong> unlinking will not prevent traffic flow analysis, fingerprinting,
+or many other techniques from linking comms end points. But it is square one.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[anonymity is hard]]></title>
+    <link href="http://grugq.github.com/blog/2013/03/12/anonymity-is-hard/"/>
+    <updated>2013-03-12T21:05:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/03/12/anonymity-is-hard</id>
+    <content type="html"><![CDATA[<h2>Anonymity in the real world is very hard</h2>
+
+<p>In late 2011 Hezbollah rolled up a CIA spy ring in Lebanon. This provides an
+interesting lesson in CIA tradecraft and real world counterintelligence. Close
+examination of the techniques used to track down the agents will reveal some
+serious problems with many systems designed to provide security for
+anti-government groups.</p>
+
+<p>This post is partially in a response to <a href="http://blog.cryptographyengineering.com/2013/03/here-come-encryption-apps.html">Matt Green&#8217;s</a>
+post about encryption apps. The secrecy provided by encryption applications,
+primarily privacy of communication content, is not sufficient to protect against
+even minimal monitoring. Any anti-government activity in a modern environment, e.g.
+one involving mobile phones and the internet, needs to include anonymity first and
+foremost.</p>
+
+<h2>The Sources</h2>
+
+<p><a href="http://www.guardian.co.uk/world/feedarticle/9958834">This article</a> provides
+some of the details about the tradecraft of the spy network, and how it
+failed. The focus is on how the agents were contacted by their handlers and
+how this was used to uncover the whole network. <a href="http://www.ufppc.org/us-a-world-news-mainmenu-35/10702-news-three-us-spy-rings-broken-in-lebanon-a-iran.html">Another site</a>
+provides a large collection of related articles which fills in some additional
+details.</p>
+
+<h2>The Tradecraft (Probably, maybe)</h2>
+
+<p><strong>NOTE:</strong> This information is based on newspaper articles, so it is of limited
+accuracy. However, it seems like reasonable tradecraft practices that even
+amateurs would devise and is thus presented for analysis here.</p>
+
+<ul>
+<li><p><strong>Dedicated mobile phone</strong>
+  The agents had a mobile phone used specifically for communication with
+  their handler. This phone was kept in a static location waiting for
+  contact, and possibly spent a lot of time switched off.</p></li>
+<li><p><strong>Pre-arranged meeting place</strong>
+  The agents had a meeting location (allegedly at a Pizza Hut) where
+  they met their handlers. This location was (allegedly) reused for
+  multiple agents and multiple meetings.</p></li>
+<li><p><strong>Signalling code word</strong>
+  Contact by the handler to the agent was via a code word (allegedly: &#8220;PIZZA!&#8221;),
+  which was meaningless by itself but also contextually anomalous.</p></li>
+</ul>
+
+
+<h2>Well, thats one way to do it</h2>
+
+<p>The adversary, Hezbollah, used access to the telephone company logs (they have those),
+and searched for atypical mobile phone usage patterns:</p>
+
+<ul>
+<li>phones that only receive a few calls / messages over long periods of time</li>
+<li>mobile phones that are never mobile</li>
+<li>weird / unusual messages (PIZZA!!)</li>
+</ul>
+
+
+<p>That is, they were looking for phones that were kept at home, turned on
+occasionally, and only received calls/sms infrequently. The exact usage pattern
+one would expect for a mobile that is used exclusively for a handler to contact
+an agent.</p>
+
+<p>This data gave Hezbollah a general location (down to the apartment complex) of
+where the agents were located. Next, the adversary correlated the location
+data with the home addresses of members who had access to secret information.
+They conducted surveillance on those members and discovered they were using a
+Pizza Hut to meet with their handlers.</p>
+
+<p><strong>Speculation</strong>
+Finally, the adversary was able to continually monitor the meeting location
+and detect other members of the spy network meeting with their handlers. The
+CIA is known for over using the same locations for meetings [1].</p>
+
+<p>[1] <a href="http://www.amazon.com/The-C-I-Desk-Counterintelligence-Cubicle/dp/1608447391">The C.I. Desk</a></p>
+
+<h2>Computer says No</h2>
+
+<p>The problems with these tradecraft practises are pretty obvious from a
+counterintelligence analysis. They are anomalous (atypical mobile phone use)
+and they are rigidly predictable (reusing the same meeting location).</p>
+
+<p>For encryption applications used by anti-government forces this provides a
+clear blueprint for action - look normal. Even basic monitoring of traffic
+will reveal anomalous activity which can be used to identify who needs to be
+watched more closely.</p>
+
+<h2>Conclusion</h2>
+
+<p>Hiding anomalous activity is hard, but vitally important. The problem with
+many security systems based purely on secrecy is that their usage is itself
+anomalous. It singles out and attracts attention to the users. If the
+adversary doesn&#8217;t know who those users are initially, they can cross correlate
+real world data with the suspicious activity and narrow their focus to real
+people. Those people can, and will, end up dead.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Resevoir Dogs: Lessons in OPSEC]]></title>
+    <link href="http://grugq.github.com/blog/2013/03/11/opsec-lessons-from-resevoir-dogs/"/>
+    <updated>2013-03-11T00:00:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/03/11/opsec-lessons-from-resevoir-dogs</id>
+    <content type="html"><![CDATA[<h2>Introduction </h2>
+
+<p>The cult movie classic Reservoir Dogs distills and imparts a number of important
+operational security (OPSEC) lessons. Although a work of fiction, the counter
+intelligence measures enacted by the gang were real standard operating procedure
+(SOP) for terrorist groups such as Fatah and the Black September Organisation
+(BSO). These OPSEC methods provide effective protection against informants
+participating in the operation. The weakness for this SOP is from informants at
+a higher level who have oversight of the operation.</p>
+
+<h2>The Reservoir Dogs OPSEC SOP</h2>
+
+<h3>Procedure 1: Assigned Operational Aliases</h3>
+
+<ul>
+<li><p><strong>Operational aliases for the duration of the op assigned by the organisation</strong></p>
+
+<p>  Using random aliases unique to the operation reduces the information
+  available to informants who are involved in the op.</p></li>
+</ul>
+
+
+<h3>Procedure 2: Rapidly assembled cherry picked team</h3>
+
+<ul>
+<li><p><strong>Just In Time team formation</strong></p>
+
+<p>  Creating the team just when it is needed reduces the time available for
+  informants to find out about an operation and report it back to their
+  handlers.</p></li>
+</ul>
+
+
+<h3>Procedure 3: Dedicated operational support teams</h3>
+
+<ul>
+<li><p><strong>Dedicated Independant Operational Teams</strong></p>
+
+<p>  Dedicated teams conducting operational support roles ensures that each
+  team, and its members, knows only their own small portion of the plan.
+  For example, the pre-operational intelligence and surveillance are
+  conducted by dedicated teams, separate from the team that conducts the
+  operation.</p></li>
+</ul>
+
+
+<h2>Strengths:</h2>
+
+<p>This SOP provides a number of important protections against monitoring and
+infiltration by security forces.</p>
+
+<h3>Secret Agents</h3>
+
+<p>The agents are kept undercover until they are required to fulfill mission
+objectives. This both protects them against discovery by security forces, and
+also limits the quantity and quality of information available to any
+informants. For maximum effectiveness team is formed immediately prior to
+preoperational training and then kept isolated until after the operation is
+complete.</p>
+
+<h3>Mr Pink</h3>
+
+<p>Using assigned aliases limits the information that an informant can gather
+during an operation. Because the aliases are assigned rather than chosen, it
+is not possible for an agent to develop a preference for a particular alias and
+thus create an identity.</p>
+
+<h2>Weaknesses:</h2>
+
+<p>The Reservoir Dogs OPSEC SOP has a number of inherent weaknesses which can:
+limit its effectiveness; expose large numbers of agents to capture, and even
+directly lead to mission failure.</p>
+
+<h3>Inefficient Teams</h3>
+
+<p>Ad Hoc hastily assembled teams are less effecient, and possibly less
+effective, than long standing teams. The team lifecycle of:
+Forming-Storming-Norming-Performing is compacted into a reduced timeframe
+which inhibits achieving the higher levels of efficiency.</p>
+
+<h3>High Value Targets</h3>
+
+<p>Talent pool exposed to high level members. Knowledge of the group&#8217;s membership
+is heavily concentrated in a few individuals, rather than dispersed amongst
+the rank-and-file. These select individuals become high value targets in
+position to cause significant damage to the group if compromised.</p>
+
+<h3>Single Point of Failure</h3>
+
+<p>Single point of failure. The operational team captain is the only member of
+the team who knows the complete operation plan. The individual team members
+are unable to carry on the mission should the captain be eliminated.</p>
+
+<h2>Conclusion:</h2>
+
+<p>The Reservoir Dogs OPSEC SOP is an effective collection of techniques to protect
+a large group of agents against internal informants. The threat of a compromised
+internal member of a group is very likely the single greatest threat facing an
+underground organisation. This is demonstrated by the extreme lengths the PIRA
+went to hunting down informants, the dismantling of Lulzsec via a highly placed
+penetration, the extreme violence visited upon criminal informants (&#8220;snitches&#8221;,
+and &#8220;rats&#8221;), etc. etc. The Resevoir Dogs SOP provides a methodology to mitigate
+against all but the highest level penetrations.</p>
+]]></content>
+  </entry>
+  
+</feed>
