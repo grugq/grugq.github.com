@@ -1,0 +1,6 @@
+[submodule ".themes/octoflat"]
+	path = .themes/octoflat
+	url = https://github.com/alexgaribay/octoflat
+[submodule ".themes/greyshade"]
+	path = .themes/greyshade
+	url = https://github.com/shashankmehta/greyshade.git
