@@ -60,6 +60,8 @@
   <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/docs/">Docs</a></li>
   <li><a href="/presentations/">Presentations</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><a href="/contact/">Contact</a></li>
 </ul>
 
 </nav>
@@ -106,6 +108,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/10/05/thru-a-portal-darkly/">Thru a PORTAL Darkly</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/14/you-cant-get-there-from-here/">You Can't Get There From Here</a>
       </li>
     
@@ -113,20 +119,25 @@
         <a href="/blog/2013/06/13/ignorance-is-strength/">Ignorance Is Strength</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/06/10/good-luck-with-that/">Good Luck With That</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/18/the-paddy-factor/">The Paddy Factor</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/12/anonymity-is-hard/">Anonymity Is Hard</a>
-      </li>
-    
   </ul>
 </section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("thegrugq", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/thegrugq">@thegrugq</a></p>
+  
+</section>
+
 
 <section>
   <h1>GitHub Repos</h1>
@@ -148,7 +159,7 @@
 
         github.showRepos({
             user: 'grugq',
-            count: 0,
+            count: 3,
             skip_forks: true,
             target: '#gh_repos'
         });
@@ -156,9 +167,6 @@
   </script>
   <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
-
-
-
 
 
   

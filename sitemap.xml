@@ -2,46 +2,74 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://grugq.github.com/blog/2013/03/11/opsec-lessons-from-resevoir-dogs/</loc>
-        <lastmod>2013-06-11T08:50:37+07:00</lastmod>
+        <lastmod>2013-07-25T17:52:30+07:00</lastmod>
     </url>
     <url>
         <loc>http://grugq.github.com/blog/2013/03/12/anonymity-is-hard/</loc>
-        <lastmod>2013-06-11T08:50:37+07:00</lastmod>
+        <lastmod>2013-07-25T17:52:30+07:00</lastmod>
     </url>
     <url>
         <loc>http://grugq.github.com/blog/2013/03/18/the-paddy-factor/</loc>
-        <lastmod>2013-06-11T08:50:37+07:00</lastmod>
+        <lastmod>2013-07-25T17:52:30+07:00</lastmod>
     </url>
     <url>
         <loc>http://grugq.github.com/blog/2013/06/10/good-luck-with-that/</loc>
-        <lastmod>2013-06-11T17:57:39+07:00</lastmod>
+        <lastmod>2013-07-25T17:52:30+07:00</lastmod>
     </url>
     <url>
         <loc>http://grugq.github.com/blog/2013/06/13/ignorance-is-strength/</loc>
-        <lastmod>2013-06-13T05:42:47+07:00</lastmod>
+        <lastmod>2013-07-25T18:40:55+07:00</lastmod>
     </url>
     <url>
         <loc>http://grugq.github.com/blog/2013/06/14/you-cant-get-there-from-here/</loc>
-        <lastmod>2013-06-16T08:56:50+07:00</lastmod>
+        <lastmod>2013-07-25T17:52:30+07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://grugq.github.com/blog/2013/10/05/thru-a-portal-darkly/</loc>
+        <lastmod>2013-10-05T15:17:31+07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://grugq.github.com/404.html</loc>
+        <lastmod>2013-07-25T17:52:30+07:00</lastmod>
     </url>
     <url>
         <loc>http://grugq.github.com/blog/archives/</loc>
-        <lastmod>2013-06-16T08:56:50+07:00</lastmod>
+        <lastmod>2013-10-05T15:17:31+07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://grugq.github.com/blog/</loc>
+        <lastmod>2013-10-05T15:17:31+07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://grugq.github.com/contact/</loc>
+        <lastmod>2013-07-25T18:19:23+07:00</lastmod>
     </url>
     <url>
         <loc>http://grugq.github.com/docs/</loc>
-        <lastmod>2013-06-11T08:52:58+07:00</lastmod>
+        <lastmod>2013-07-25T17:52:30+07:00</lastmod>
     </url>
     <url>
         <loc>http://grugq.github.com/</loc>
-        <lastmod>2013-06-16T08:56:50+07:00</lastmod>
+        <lastmod>2013-10-05T15:17:31+07:00</lastmod>
     </url>
     <url>
         <loc>http://grugq.github.com/presentations/</loc>
-        <lastmod>2013-06-11T22:00:35+07:00</lastmod>
+        <lastmod>2013-07-25T17:52:30+07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://grugq.github.com/resources/covert_orgs/</loc>
+        <lastmod>2013-10-05T15:20:51+07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://grugq.github.com/resources/</loc>
+        <lastmod>2013-10-05T15:20:51+07:00</lastmod>
     </url>
     <url>
         <loc>http://grugq.github.com/robots.txt</loc>
-        <lastmod>2013-06-11T08:45:19+07:00</lastmod>
+        <lastmod>2013-07-25T17:52:30+07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://grugq.github.com/thegrugq.asc</loc>
+        <lastmod>2013-07-09T19:41:59+07:00</lastmod>
     </url>
 </urlset>

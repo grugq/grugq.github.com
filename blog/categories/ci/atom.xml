@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CI | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/ci/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-06-16T08:56:55+07:00</updated>
+  <updated>2013-10-05T15:21:39+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -70,11 +70,7 @@ That said, most of what will sink people is poor OPSEC, not poor SIGSEC. The mor
     <link href="http://grugq.github.com/blog/2013/06/13/ignorance-is-strength/"/>
     <updated>2013-06-13T01:02:00+07:00</updated>
     <id>http://grugq.github.com/blog/2013/06/13/ignorance-is-strength</id>
-    <content type="html"><![CDATA[<blockquote><p>Seven, this rule is so underrated</p>
-
-<p>Keep your family and business completely separated</p></blockquote>
-
-<p>-- Biggie Smalls, <em>Counterintelligence Theory and Practice for Crack Dealers</em></p>
+    <content type="html"><![CDATA[<p><blockquote><p>Seven, this rule is so underrated<br/>Keep your family and business completely separated</p><footer><strong>Biggie Smalls</strong> <cite>Counterintelligence Theory and Practice for Crack Dealers</cite></footer></blockquote></p>
 
 <h2>Guerrillas, Terrorists, Narcos, Spooks, and You</h2>
 
@@ -171,11 +167,7 @@ not in immediate active use.</p>
 
 <h2>Step 2: Take a Trip</h2>
 
-<blockquote><p>Number 5: never sell no crack where you rest at</p>
-
-<p>I don't care if they want a ounce, tell 'em "bounce!"</p></blockquote>
-
-<p>-- Biggie Smalls, <em>Counterintelligence Theory and Practice for Crack Dealers</em></p>
+<p><blockquote><p>Number 5: never sell no crack where you rest at<br/>I don't care if they want a ounce, tell 'em "bounce!"</p><footer><strong>Biggie Smalls</strong> <cite>Counterintelligence Theory and Practice for Crack Dealers</cite></footer></blockquote></p>
 
 <p>Alice must ensure that every single time she contacts Bob, or checks for contact
 from Bob, she is in a location which is not linked to her. Additionally, she must
@@ -209,8 +201,8 @@ without contamination. My strong recommendation is to use: a virgin machine, wit
 virgin accounts, to contact the target. This machine is used exclusively for this one
 activity: it is <strong>compartmented</strong>. Associating the activity of that online entity,
 even with full and complete global internet monitoring (and 0day attacks) with a
-specific individual should be difficult. [NOTE: don't count on this if you
-happen to be the new al Quaida #3].</p>
+specific individual should be difficult. [<strong>NOTE:</strong> don't count on this if you
+happen to be the new <em>al Quaida</em> #3].</p>
 ]]></content>
   </entry>
   

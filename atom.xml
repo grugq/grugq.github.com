@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-06-16T08:56:55+07:00</updated>
+  <updated>2013-10-05T15:21:39+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,144 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Thru a PORTAL Darkly]]></title>
+    <link href="http://grugq.github.com/blog/2013/10/05/thru-a-portal-darkly/"/>
+    <updated>2013-10-05T15:08:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/10/05/thru-a-portal-darkly</id>
+    <content type="html"><![CDATA[<h2>The Design and Implementation of P.O.R.T.A.L</h2>
+
+<p>The <strong>P</strong>ersonal <strong>O</strong>nion <strong>R</strong>outer <strong>T</strong>o <strong>A</strong>ssure <strong>L</strong>iberty is designed
+to protect the user by isolating their computer behind a router that forces all
+traffic over the Tor network.</p>
+
+<h2>PORTAL Gooooooooooooooaaaaaaaaaaals!!!!!!</h2>
+
+<p>The goal of the PORTAL project is to create a compartmented network segment
+that can <strong>only</strong> send data to the Tor network. To accomplish this the PORTAL
+device itself is physically isolated and locked down to prevent malicious
+tampering originating from the protected network. So if the user&#8217;s computer is
+compromised by malware, the malware is unable to modify the Tor software or
+configuration, nor can it directly access the Internet (completely
+preventing IP address leakage). Additionally, the PORTAL is configured to fail
+close &#8211; if the connection to Tor drops, the user loses their Internet access.
+Finally, the PORTAL is &#8220;idiot proof&#8221;, simply turn it on and it works.</p>
+
+<h2>The Implementation, the Pain, the Horror</h2>
+
+<p>The initial requirement was to develop PORTAL for a small personal sized router,
+such as the TP-Link 703N, 3040, or M1U. All of these devices are small, portable
+and support the OpenWRT open source router firmware. Unfortunately, it turns out
+that &#8220;small&#8221; and &#8220;portable&#8221; is synonymous with &#8220;weak&#8221; and &#8220;underpowered&#8221;.</p>
+
+<p>Unfortunately, Tor is quite resource intensive for an embedded device. Tor uses 16MB of RAM
+and for complete functionality (requiring the GeoIP database) it occupies slightly
+over 1.2MB of <code>squashfs</code> space. The stock TP-LINK routers have only 4MB of flash
+and 16MB of RAM (later models have increased RAM). This caused a lot of problems
+when building early versions. A bare bones OpenWRT system stripped down to just
+support an Internet uplink USB device occupies 3.2MB of <code>squashfs</code> space. Using
+the power of math we see: <code>3.2 + 1.2 &gt; 4.0</code>. Fuck.</p>
+
+<h3>Enter The Dragon, or Chinese Hackers to the Rescue</h3>
+
+<p>Fortunately, the TP-LINK routers are not just small, they are also extremely hackable. They are very popular
+with hackers who have modified the hardware and expanded the capabilities of the
+stock device. I got in contact with a Chinese hacker who has upgraded the
+TP-LINK 703N to 16MB of flash and 64MB of RAM. Sweet. Using these modified routers
+development of the PORTAL became much much easier.</p>
+
+<h2>PORTAL System Architecture</h2>
+
+<p>The PORTAL requires a minimum of two network interfaces: one for the Internet
+uplink, and one for the isolated network segment. In order to protect the PORTAL from
+tampering from malware (or malicious users), it also requires a third administration
+interface. This can be either a serial console, or physical connection. The reason
+not to use WiFi for the administration network is that that would expose the
+administration interface to anyone within WiFi range, including potentially the
+user&#8217;s compromised laptop&#8217;s WiFi card.</p>
+
+<h3>Three Interfaces to Rule Them All</h3>
+
+<p>The requirement to protect the PORTAL from a malicious user caused some problems
+since the device hardware has very limited interfaces. The TP-LINK 703N has only:</p>
+
+<pre><code>* 1 x USB 2.0
+* 1 x 100MB ethernet
+* 1 x onboard wifi
+</code></pre>
+
+<p>All available interfaces are required to get us to the three networks we need:</p>
+
+<pre><code>* Tor: isolated proxy interface
+    * Tor SOCKS proxy
+    * Tor Transparent TCP proxy
+    * Tor Transparent DNS proxy
+    * DHCP (optional)
+* Admin: configuration management interface
+    * ssh
+    * https (optional)
+    * DHCP (optional)
+* Internet: uplink connection interface
+    * No services
+</code></pre>
+
+<h2>Operational PORTAL</h2>
+
+<p>After the user has configured the <code>Internet</code>, and whatever other adjustments they
+wish to make, they shouldn&#8217;t need to connect to the <code>Admin</code> interface again. This
+leaves us with a very hard target for any attacker who wishes to unmask us
+(modulo any issues with Tor itself).</p>
+
+<p>The PORTAL has been hardened to make it significantly more difficult for the user
+to make a mistake, or for an attacker to subvert the Tor protections. From the
+<code>Tor</code> network the only exposed ports are Tor&#8217;s DNS proxy, TCP proxy, and SOCKS.
+Optionally, you can use DHCP on this network.</p>
+
+<p>If, somehow, the firewall doesn&#8217;t work properly, you&#8217;re still safe because the
+PORTAL doesn&#8217;t actually route packets. The <em>only</em> way you can reach the Internet
+(regardless of which interface you&#8217;re connected to) is via Tor. This stops stupid
+mistakes, such as connecting to the <code>Admin</code> interface and forgetting to swap to
+the <code>Tor</code> network. Don&#8217;t worry, you can&#8217;t do that, it won&#8217;t work, you&#8217;re welcome.</p>
+
+<p>Final hardening is left up to the user who will have to assign the <code>Admin</code> and
+<code>Tor</code> networks to physical interfaces. There are security trade offs either way.</p>
+
+<ul>
+<li><p>Medium Security:</p>
+
+<ul>
+<li><code>Tor</code> = WiFi</li>
+<li><code>Admin</code> = Ethernet</li>
+<li>pros: ease of use</li>
+<li>cons: pre-Tor plaintext will be broadcast over the AEther (see: Hammond)</li>
+</ul>
+</li>
+<li><p>Maximum Security:</p>
+
+<ul>
+<li><code>Tor</code> = Ethernet</li>
+<li><code>Admin</code> = WiFi</li>
+<li>pros: ultra secure</li>
+<li>cons: if an attacker cracks your WPA2 PSK, they&#8217;ll have access to your
+    management sshd. Of course, they&#8217;ll be so physically close to you
+    at that point, leaking your IP is the least of your worries.</li>
+<li><strong>NOTE:</strong> remote the WiFi card from your computer to block access via
+      malware compromise</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Just Do It</h2>
+
+<p>The PORTAL project has been migrated to the RaspberryPi, which has more power
+to support Tor. It requires more configuration, which is something I&#8217;ll work on,
+however the ease of acquisition of the RPi makes this the current platform of
+choice. So go install <a href="http://github.com/grugq/PORTALforPi">PORTAL for Pi</a> and
+compartment all of your sensitive operational activities inside an isolated Tor network.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[you can't get there from here]]></title>
@@ -70,11 +208,8 @@ That said, most of what will sink people is poor OPSEC, not poor SIGSEC. The mor
     <link href="http://grugq.github.com/blog/2013/06/13/ignorance-is-strength/"/>
     <updated>2013-06-13T01:02:00+07:00</updated>
     <id>http://grugq.github.com/blog/2013/06/13/ignorance-is-strength</id>
-    <content type="html"><![CDATA[<blockquote><p>Seven, this rule is so underrated</p>
+    <content type="html"><![CDATA[<blockquote><p>Seven, this rule is so underrated<br/>Keep your family and business completely separated</p><footer><strong>Biggie Smalls</strong> <cite>Counterintelligence Theory and Practice for Crack Dealers</cite></footer></blockquote>
 
-<p>Keep your family and business completely separated</p></blockquote>
-
-<p>&#8211; Biggie Smalls, <em>Counterintelligence Theory and Practice for Crack Dealers</em></p>
 
 <h2>Guerrillas, Terrorists, Narcos, Spooks, and You</h2>
 
@@ -171,11 +306,8 @@ not in immediate active use.</p>
 
 <h2>Step 2: Take a Trip</h2>
 
-<blockquote><p>Number 5: never sell no crack where you rest at</p>
+<blockquote><p>Number 5: never sell no crack where you rest at <br/>I don&#8217;t care if they want a ounce, tell &#8216;em &#8220;bounce!&#8221;</p><footer><strong>Biggie Smalls</strong> <cite>Counterintelligence Theory and Practice for Crack Dealers</cite></footer></blockquote>
 
-<p>I don&#8217;t care if they want a ounce, tell &#8216;em &#8220;bounce!&#8221;</p></blockquote>
-
-<p>&#8211; Biggie Smalls, <em>Counterintelligence Theory and Practice for Crack Dealers</em></p>
 
 <p>Alice must ensure that every single time she contacts Bob, or checks for contact
 from Bob, she is in a location which is not linked to her. Additionally, she must
@@ -209,8 +341,8 @@ without contamination. My strong recommendation is to use: a virgin machine, wit
 virgin accounts, to contact the target. This machine is used exclusively for this one
 activity: it is <strong>compartmented</strong>. Associating the activity of that online entity,
 even with full and complete global internet monitoring (and 0day attacks) with a
-specific individual should be difficult. [NOTE: don&#8217;t count on this if you
-happen to be the new al Quaida #3].</p>
+specific individual should be difficult. [<strong>NOTE:</strong> don&#8217;t count on this if you
+happen to be the new <em>al Quaida</em> #3].</p>
 ]]></content>
   </entry>
   
