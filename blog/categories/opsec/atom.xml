@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OPSEC | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/opsec/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-10-05T15:21:39+07:00</updated>
+  <updated>2013-10-05T16:00:31+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -146,7 +146,7 @@ the <code>Tor</code> network. Don't worry, you can't do that, it won't work, you
 <p>The PORTAL project has been migrated to the RaspberryPi, which has more power
 to support Tor. It requires more configuration, which is something I'll work on,
 however the ease of acquisition of the RPi makes this the current platform of
-choice. So go install <a href="http://github.com/grugq/PORTALforPi">PORTAL for Pi</a> and
+choice. So go install <a href="http://github.com/grugq/PORTALofPi">PORTAL of Pi</a> and
 compartment all of your sensitive operational activities inside an isolated Tor network.</p>
 ]]></content>
   </entry>
