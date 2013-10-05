@@ -109,7 +109,8 @@ task :new_post, :title do |t, args|
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
-    post.puts "comments: true"
+    post.puts "comments: false"
+    post.puts "published: false"
     post.puts "categories: "
     post.puts "---"
   end
@@ -144,7 +145,7 @@ task :new_page, :filename do |t, args|
       page.puts "layout: page"
       page.puts "title: \"#{title}\""
       page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
-      page.puts "comments: true"
+      page.puts "comments: false"
       page.puts "sharing: true"
       page.puts "footer: true"
       page.puts "---"
@@ -380,4 +381,73 @@ desc "list tasks"
 task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
+end
+
+desc "Publish draft"
+task :publish_draft do
+  posts_path = "#{source_dir}/#{posts_dir}"
+  puts "Listing drafts in #{posts_path}..."
+
+  drafts = Array.new()
+  Dir.glob("#{posts_path}/*.*").each_with_index do |post, idx|
+    yaml = Preamble.load(post)
+    published = yaml[0]["published"]
+    if published == false
+      post_shortname = post.gsub(/#{posts_path}\//, '')
+      drafts.push(post_shortname)
+    end
+  end
+
+  if drafts.length == 0
+    puts "### There are no drafts at present."
+    exit 0
+  end
+
+  post_options = Array.new(drafts.length)
+  drafts.each_with_index do |draft_post, idx|
+    post_options[idx] = "#{idx}"
+    puts "  [#{idx}]  #{draft_post}"
+  end
+
+  publish_index = ask("Which post would you like to publish", post_options)
+
+  post_shortname = drafts[publish_index.to_i]
+  post_path = "#{posts_path}/#{post_shortname}"
+  yaml = Preamble.load(post_path);
+  puts "  Post details:"
+  puts "    Title:\t#{yaml[0]["title"]}"
+  puts "    Date:\t#{yaml[0]["date"]}"
+  puts
+  publish_option = ask("Publish with current date (p), existing date (e) or cancel (c)", ['p', 'e', 'c'])
+
+  if publish_option == 'c'
+    exit 0
+  elsif publish_option == 'p'
+    puts "Publishing with current date"
+    yaml[0]["published"] = true
+    yaml[0]["date"] = Time.now.strftime('%Y-%m-%d %H:%M')
+
+    matchData = post_shortname.match(/^\d{4}-\d{1,2}-\d{1,2}-(.*)$/)
+    title_from_filename = matchData[1];
+
+    new_post_path = "#{posts_path}/#{Time.now.strftime('%Y-%m-%d')}-#{title_from_filename}"
+    File::delete(post_path)
+
+    open(new_post_path, 'w') do |write_post|
+      write_post.puts yaml[0].to_yaml
+      write_post.puts "---"
+      write_post.puts yaml[1]
+    end
+
+    puts "The post has been published as #{new_post_path}"
+
+  elsif publish_option == 'e'
+    puts "Publishing with existing date"
+    yaml[0]["published"] = true
+    open(post_path, 'w') do |write_post|
+      write_post.puts yaml[0].to_yaml
+      write_post.puts "---"
+      write_post.puts yaml[1]
+    end
+  end
 end
