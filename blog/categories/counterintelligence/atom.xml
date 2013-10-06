@@ -4,7 +4,7 @@
   <title><![CDATA[Category: counterintelligence | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/counterintelligence/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-10-07T06:43:54+07:00</updated>
+  <updated>2013-10-07T06:44:51+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -18,9 +18,7 @@
     <link href="http://grugq.github.com/blog/2013/10/07/drug-delivery-service-opsec/"/>
     <updated>2013-10-07T06:41:00+07:00</updated>
     <id>http://grugq.github.com/blog/2013/10/07/drug-delivery-service-opsec</id>
-    <content type="html"><![CDATA[<h1>Drug Delivery Service Operational Security</h1>
-
-<p>Some interesting lessons on how a modern New York City drug delivery service
+    <content type="html"><![CDATA[<p>Some interesting lessons on how a modern New York City drug delivery service
 uses basic tradecraft to create a reasonable security posture.</p>
 
 <h2>The Source</h2>
