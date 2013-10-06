@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OPSEC | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/opsec/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-10-05T16:00:31+07:00</updated>
+  <updated>2013-10-07T06:43:54+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,139 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Drug Delivery Service OPSEC]]></title>
+    <link href="http://grugq.github.com/blog/2013/10/07/drug-delivery-service-opsec/"/>
+    <updated>2013-10-07T06:41:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/10/07/drug-delivery-service-opsec</id>
+    <content type="html"><![CDATA[<h1>Drug Delivery Service Operational Security</h1>
+
+<p>Some interesting lessons on how a modern New York City drug delivery service
+uses basic tradecraft to create a reasonable security posture.</p>
+
+<h2>The Source</h2>
+
+<p>This <a href="http://www.vice.com/read/confessions-of-a-drug-dealers-delivery-service-guy">Vice article</a>
+provides the source of the information for this blog post. Using some
+basic background knowledge on how covert groups operate, it is simple to parse
+and analyze the drug delivery service tradecraft.</p>
+
+<h2>Recruitment</h2>
+
+<blockquote><p>a friend of mine solicited hardcore drugs for a Manhattan drug kingpin, who was looking for a new pot delivery guy. My friend encouraged me to try out for the job.</p></blockquote>
+
+<p>As with many covert groups, the recruitment process relied on personal connections.
+This <strong>social network</strong> grounded approach to expanding a covert organisation
+is generally good for initial security. The recruits are unlikely to be agents
+sent to infiltrate the organistation as the long standing social ties between
+members and recruits both establishes trust and serves as <strong>vetting</strong>.</p>
+
+<p>Developing a covert organisation based on <strong>social network</strong> ties provides a
+means of rapid expansion and easy security clearance. The downside is that once
+a single member of the organisation is compromised, the adversarial security forces
+can easily roll up the whole network. The poor compartmentation of a <strong>social network</strong>
+based covert organisation is its Achilles heel. The security of the organisation
+is critically dependent on the security of each individual member.</p>
+
+<p><strong>ProTip:</strong> Expand your covert network with individuals who are passionate about
+your ideological beliefs. Ensure strong compartmentation, starting with recruitment.</p>
+
+<h2>Leverage</h2>
+
+<blockquote><p>He asked me to provide documentation of my current address and phone number as an insurance policy. If I ran out on him, he warned me he’d hold my friends responsible for the deficit funds and/or drugs.</p></blockquote>
+
+<p>The principal of the organisation "Nathan" requires that the recruit provide
+a verifiable address and means of contact, along with dire warnings of consequences
+in the case of infractions. This is very basic control principles, typical of
+covert organisations.</p>
+
+<p>The major security problem with this approach, of course, is that the records
+maintained by the network's principal are a high value target for the adversary.
+Compromise of the principal's records will lead to total collapse of the network,
+and interdiction for every member involved. There is chance of escape.</p>
+
+<p><strong>ProTip:</strong> No logs, no crime. Do not keep records of the members of your covert
+organisation. These records are extremely sensitive.</p>
+
+<h2>Operational Actions</h2>
+
+<blockquote><p> the transaction and exit should be as swift as possible. “You aren't here to hang out,” she said. “It's not a social call, and they aren't your friends. You want to walk in and be friendly and make conversation but also get to the business at hand and get out of there quickly.”</p></blockquote>
+
+<p>The illicit operation, the drug sale, is kept intended to be rapid and minimize
+the period of vulnerability for both parties. Interestingly, this is possibly a
+poor choice if the threat is surveillance. There are few reasons a random individual
+would enter a domicile for a short duration. Also of note, the covert organisation
+provides no reasonable cover story for why the agent (the drug courier) is entering
+the residence of the client. A simple "what were you doing?" type question would
+likely completely blow the whole operation.</p>
+
+<p><strong>ProTip:</strong> Minimising the period of vulnerability improves the chances of operational
+success. Always make sure your agents are capable of delivering plausible cover
+stories. <strong>Cover for action</strong></p>
+
+<h2>Cover for Status</h2>
+
+<blockquote><p>Nathan forced me to wear a button-up shirt and slacks, shave my face, and keep my hair conservatively short. He believed this uniform would attract little attention as I walked around with thousands of dollars worth of pot in a laptop case slung over my shoulder.</p></blockquote>
+
+<p>The covert organisation has, surprisingly enough, chosen to enforce a uniform
+that makes their agents blend in with the mainstream. This is completely inline
+with the typical operational disguises employed by covert organistations operating
+in controlled territory the world over. (See: Moscow Rules <code>go with the flow</code>;
+Murphy's Laws of War: <code>don't stand out, it draws fire</code>)</p>
+
+<p><strong>ProTip:</strong> They got this one exactly right.</p>
+
+<h2>All phones are bugged</h2>
+
+<blockquote><p>Although I used my flip-phone constantly at work, I was never given clients' addresses over the phone. Clients calls would go to a dispatcher—a third party who took the call, traced the number through a database of numbers, and then returned the call from a different phone to confirm their request for drugs. After their request was confirmed, I received a call from another phone. The dispatcher only told me, “You got Nick,” or “You got Lucy.” I was banned from responding with anything besides a murmured “OK.”</p></blockquote>
+
+<h2>OPSEC FAIL: attracting attention</h2>
+
+<blockquote><p>Each day I was given a stipend of $40 for cabs. No one knew if I didn’t spend the $40. Instead of taking cabs, I ran around in a frantic state that negated every other measure I took to not draw unwanted attention</p></blockquote>
+
+<p>This is an instance of <strong>preference divergence</strong>, a common problem for covert
+organisations. The financial resources provided to the agent of the principal
+are siphoned off and directed towards non-operational uses (the drug courier
+skims and pockets his cab stipend.) There doesn't appear to be any consequence
+to this operational security failure, however it jeopardizes the entire organisation.
+If "Nathan" were a more disciplined principal he would monitor his agents more
+closely and ensure they are conforming to the organisational security requirements.
+Strangely, drug dealers are not strict disciplinarians.</p>
+
+<p><strong>ProTip:</strong> if the securit of the entire organisation is dependent on the security
+of each individual agent -- enforce the operational security requirements strictly!</p>
+
+<h2>Aliases</h2>
+
+<blockquote><p> I shook his hand and said, “I'm Jack.” He gave me a knowing grin. “So that's the name you're using?” he asked.</p></blockquote>
+
+<p>The agent is using an alias to provide pseudonymity from malicious clients. This
+provides some minimal level of security. It is definitely better than not having
+any cover at all. However, as noted above, it should be combined with a robust
+cover story for why the agent is visiting a residential home for a brief period.</p>
+
+<h2>Discharging the agent</h2>
+
+<p>After a promotion, the drug courier decides to find a new line of work. If the
+organisation was stricter in their OPSEC practices, the departure of an agent
+wouldn't place anyone else in jeopardy. As it stands, it seems clear that the
+agent who is now drawing attention to himself by writing about his experience
+in a national magazine(!) still retains sufficiently sensitive information to
+unravel the network.</p>
+
+<p><strong>ProTip:</strong> compartment early, compartment often. It is safer than any alternative.</p>
+
+<h2>TL;DR</h2>
+
+<p>Compartment your covert organisation from recruitment through to operational
+action so that when your agents leave or are compromised they are unable
+to compromise the organisation. Ensure that your operational activities have
+good <strong>cover for status</strong> (e.g. a disguise) and <strong>cover for action</strong> (e.g. a strong cover story).
+Strong compartmentation, strong cover, and be aware of the risks of using social networks
+for building a covert organisation.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Thru a PORTAL Darkly]]></title>
@@ -425,108 +558,6 @@ creating a <em>phone tree</em>, or link analysis chart of organisation membershi
 
 <p><strong>Warning:</strong> unlinking will not prevent traffic flow analysis, fingerprinting,
 or many other techniques from linking comms end points. But it is square one.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[anonymity is hard]]></title>
-    <link href="http://grugq.github.com/blog/2013/03/12/anonymity-is-hard/"/>
-    <updated>2013-03-12T21:05:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/03/12/anonymity-is-hard</id>
-    <content type="html"><![CDATA[<h2>Anonymity in the real world is very hard</h2>
-
-<p>In late 2011 Hezbollah rolled up a CIA spy ring in Lebanon. This provides an
-interesting lesson in CIA tradecraft and real world counterintelligence. Close
-examination of the techniques used to track down the agents will reveal some
-serious problems with many systems designed to provide security for
-anti-government groups.</p>
-
-<p>This post is partially in a response to <a href="http://blog.cryptographyengineering.com/2013/03/here-come-encryption-apps.html">Matt Green's</a>
-post about encryption apps. The secrecy provided by encryption applications,
-primarily privacy of communication content, is not sufficient to protect against
-even minimal monitoring. Any anti-government activity in a modern environment, e.g.
-one involving mobile phones and the internet, needs to include anonymity first and
-foremost.</p>
-
-<h2>The Sources</h2>
-
-<p><a href="http://www.guardian.co.uk/world/feedarticle/9958834">This article</a> provides
-some of the details about the tradecraft of the spy network, and how it
-failed. The focus is on how the agents were contacted by their handlers and
-how this was used to uncover the whole network. <a href="http://www.ufppc.org/us-a-world-news-mainmenu-35/10702-news-three-us-spy-rings-broken-in-lebanon-a-iran.html">Another site</a>
-provides a large collection of related articles which fills in some additional
-details.</p>
-
-<h2>The Tradecraft (Probably, maybe)</h2>
-
-<p><strong>NOTE:</strong> This information is based on newspaper articles, so it is of limited
-accuracy. However, it seems like reasonable tradecraft practices that even
-amateurs would devise and is thus presented for analysis here.</p>
-
-<ul>
-<li><p><strong>Dedicated mobile phone</strong>
-  The agents had a mobile phone used specifically for communication with
-  their handler. This phone was kept in a static location waiting for
-  contact, and possibly spent a lot of time switched off.</p></li>
-<li><p><strong>Pre-arranged meeting place</strong>
-  The agents had a meeting location (allegedly at a Pizza Hut) where
-  they met their handlers. This location was (allegedly) reused for
-  multiple agents and multiple meetings.</p></li>
-<li><p><strong>Signalling code word</strong>
-  Contact by the handler to the agent was via a code word (allegedly: "PIZZA!"),
-  which was meaningless by itself but also contextually anomalous.</p></li>
-</ul>
-
-
-<h2>Well, thats one way to do it</h2>
-
-<p>The adversary, Hezbollah, used access to the telephone company logs (they have those),
-and searched for atypical mobile phone usage patterns:</p>
-
-<ul>
-<li>phones that only receive a few calls / messages over long periods of time</li>
-<li>mobile phones that are never mobile</li>
-<li>weird / unusual messages (PIZZA!!)</li>
-</ul>
-
-
-<p>That is, they were looking for phones that were kept at home, turned on
-occasionally, and only received calls/sms infrequently. The exact usage pattern
-one would expect for a mobile that is used exclusively for a handler to contact
-an agent.</p>
-
-<p>This data gave Hezbollah a general location (down to the apartment complex) of
-where the agents were located. Next, the adversary correlated the location
-data with the home addresses of members who had access to secret information.
-They conducted surveillance on those members and discovered they were using a
-Pizza Hut to meet with their handlers.</p>
-
-<p><strong>Speculation</strong>
-Finally, the adversary was able to continually monitor the meeting location
-and detect other members of the spy network meeting with their handlers. The
-CIA is known for over using the same locations for meetings [1].</p>
-
-<p>[1] <a href="http://www.amazon.com/The-C-I-Desk-Counterintelligence-Cubicle/dp/1608447391">The C.I. Desk</a></p>
-
-<h2>Computer says No</h2>
-
-<p>The problems with these tradecraft practises are pretty obvious from a
-counterintelligence analysis. They are anomalous (atypical mobile phone use)
-and they are rigidly predictable (reusing the same meeting location).</p>
-
-<p>For encryption applications used by anti-government forces this provides a
-clear blueprint for action - look normal. Even basic monitoring of traffic
-will reveal anomalous activity which can be used to identify who needs to be
-watched more closely.</p>
-
-<h2>Conclusion</h2>
-
-<p>Hiding anomalous activity is hard, but vitally important. The problem with
-many security systems based purely on secrecy is that their usage is itself
-anomalous. It singles out and attracts attention to the users. If the
-adversary doesn't know who those users are initially, they can cross correlate
-real world data with the suspicious activity and narrow their focus to real
-people. Those people can, and will, end up dead.</p>
 ]]></content>
   </entry>
   

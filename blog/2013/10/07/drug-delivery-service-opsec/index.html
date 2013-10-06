@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Drug Delivery Service OPSEC - Hacker OPSEC</title>
+  <meta name="author" content="the grugq">
+
+  
+  <meta name="description" content="Drug Delivery Service Operational Security Some interesting lessons on how a modern New York City drug delivery service
+uses basic tradecraft to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://grugq.github.com/blog/2013/10/07/drug-delivery-service-opsec">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Hacker OPSEC" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Hacker OPSEC</a></h1>
+  
+    <h2>STFU is the best policy.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:grugq.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/docs/">Docs</a></li>
+  <li><a href="/presentations/">Presentations</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><a href="/contact/">Contact</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Drug Delivery Service OPSEC</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-07T06:41:00+07:00" pubdate data-updated="true">Oct 7<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h1>Drug Delivery Service Operational Security</h1>
+
+<p>Some interesting lessons on how a modern New York City drug delivery service
+uses basic tradecraft to create a reasonable security posture.</p>
+
+<h2>The Source</h2>
+
+<p>This <a href="http://www.vice.com/read/confessions-of-a-drug-dealers-delivery-service-guy">Vice article</a>
+provides the source of the information for this blog post. Using some
+basic background knowledge on how covert groups operate, it is simple to parse
+and analyze the drug delivery service tradecraft.</p>
+
+<h2>Recruitment</h2>
+
+<blockquote><p>a friend of mine solicited hardcore drugs for a Manhattan drug kingpin, who was looking for a new pot delivery guy. My friend encouraged me to try out for the job.</p></blockquote>
+
+<p>As with many covert groups, the recruitment process relied on personal connections.
+This <strong>social network</strong> grounded approach to expanding a covert organisation
+is generally good for initial security. The recruits are unlikely to be agents
+sent to infiltrate the organistation as the long standing social ties between
+members and recruits both establishes trust and serves as <strong>vetting</strong>.</p>
+
+<p>Developing a covert organisation based on <strong>social network</strong> ties provides a
+means of rapid expansion and easy security clearance. The downside is that once
+a single member of the organisation is compromised, the adversarial security forces
+can easily roll up the whole network. The poor compartmentation of a <strong>social network</strong>
+based covert organisation is its Achilles heel. The security of the organisation
+is critically dependent on the security of each individual member.</p>
+
+<p><strong>ProTip:</strong> Expand your covert network with individuals who are passionate about
+your ideological beliefs. Ensure strong compartmentation, starting with recruitment.</p>
+
+<h2>Leverage</h2>
+
+<blockquote><p>He asked me to provide documentation of my current address and phone number as an insurance policy. If I ran out on him, he warned me he’d hold my friends responsible for the deficit funds and/or drugs.</p></blockquote>
+
+<p>The principal of the organisation &#8220;Nathan&#8221; requires that the recruit provide
+a verifiable address and means of contact, along with dire warnings of consequences
+in the case of infractions. This is very basic control principles, typical of
+covert organisations.</p>
+
+<p>The major security problem with this approach, of course, is that the records
+maintained by the network&#8217;s principal are a high value target for the adversary.
+Compromise of the principal&#8217;s records will lead to total collapse of the network,
+and interdiction for every member involved. There is chance of escape.</p>
+
+<p><strong>ProTip:</strong> No logs, no crime. Do not keep records of the members of your covert
+organisation. These records are extremely sensitive.</p>
+
+<h2>Operational Actions</h2>
+
+<blockquote><p> the transaction and exit should be as swift as possible. “You aren&#8217;t here to hang out,” she said. “It&#8217;s not a social call, and they aren&#8217;t your friends. You want to walk in and be friendly and make conversation but also get to the business at hand and get out of there quickly.”</p></blockquote>
+
+<p>The illicit operation, the drug sale, is kept intended to be rapid and minimize
+the period of vulnerability for both parties. Interestingly, this is possibly a
+poor choice if the threat is surveillance. There are few reasons a random individual
+would enter a domicile for a short duration. Also of note, the covert organisation
+provides no reasonable cover story for why the agent (the drug courier) is entering
+the residence of the client. A simple &#8220;what were you doing?&#8221; type question would
+likely completely blow the whole operation.</p>
+
+<p><strong>ProTip:</strong> Minimising the period of vulnerability improves the chances of operational
+success. Always make sure your agents are capable of delivering plausible cover
+stories. <strong>Cover for action</strong></p>
+
+<h2>Cover for Status</h2>
+
+<blockquote><p>Nathan forced me to wear a button-up shirt and slacks, shave my face, and keep my hair conservatively short. He believed this uniform would attract little attention as I walked around with thousands of dollars worth of pot in a laptop case slung over my shoulder.</p></blockquote>
+
+<p>The covert organisation has, surprisingly enough, chosen to enforce a uniform
+that makes their agents blend in with the mainstream. This is completely inline
+with the typical operational disguises employed by covert organistations operating
+in controlled territory the world over. (See: Moscow Rules <code>go with the flow</code>;
+Murphy&#8217;s Laws of War: <code>don't stand out, it draws fire</code>)</p>
+
+<p><strong>ProTip:</strong> They got this one exactly right.</p>
+
+<h2>All phones are bugged</h2>
+
+<blockquote><p>Although I used my flip-phone constantly at work, I was never given clients&#8217; addresses over the phone. Clients calls would go to a dispatcher—a third party who took the call, traced the number through a database of numbers, and then returned the call from a different phone to confirm their request for drugs. After their request was confirmed, I received a call from another phone. The dispatcher only told me, “You got Nick,” or “You got Lucy.” I was banned from responding with anything besides a murmured “OK.”</p></blockquote>
+
+<h2>OPSEC FAIL: attracting attention</h2>
+
+<blockquote><p>Each day I was given a stipend of $40 for cabs. No one knew if I didn’t spend the $40. Instead of taking cabs, I ran around in a frantic state that negated every other measure I took to not draw unwanted attention</p></blockquote>
+
+<p>This is an instance of <strong>preference divergence</strong>, a common problem for covert
+organisations. The financial resources provided to the agent of the principal
+are siphoned off and directed towards non-operational uses (the drug courier
+skims and pockets his cab stipend.) There doesn&#8217;t appear to be any consequence
+to this operational security failure, however it jeopardizes the entire organisation.
+If &#8220;Nathan&#8221; were a more disciplined principal he would monitor his agents more
+closely and ensure they are conforming to the organisational security requirements.
+Strangely, drug dealers are not strict disciplinarians.</p>
+
+<p><strong>ProTip:</strong> if the securit of the entire organisation is dependent on the security
+of each individual agent &#8211; enforce the operational security requirements strictly!</p>
+
+<h2>Aliases</h2>
+
+<blockquote><p> I shook his hand and said, “I&#8217;m Jack.” He gave me a knowing grin. “So that&#8217;s the name you&#8217;re using?” he asked.</p></blockquote>
+
+<p>The agent is using an alias to provide pseudonymity from malicious clients. This
+provides some minimal level of security. It is definitely better than not having
+any cover at all. However, as noted above, it should be combined with a robust
+cover story for why the agent is visiting a residential home for a brief period.</p>
+
+<h2>Discharging the agent</h2>
+
+<p>After a promotion, the drug courier decides to find a new line of work. If the
+organisation was stricter in their OPSEC practices, the departure of an agent
+wouldn&#8217;t place anyone else in jeopardy. As it stands, it seems clear that the
+agent who is now drawing attention to himself by writing about his experience
+in a national magazine(!) still retains sufficiently sensitive information to
+unravel the network.</p>
+
+<p><strong>ProTip:</strong> compartment early, compartment often. It is safer than any alternative.</p>
+
+<h2>TL;DR</h2>
+
+<p>Compartment your covert organisation from recruitment through to operational
+action so that when your agents leave or are compromised they are unable
+to compromise the organisation. Ensure that your operational activities have
+good <strong>cover for status</strong> (e.g. a disguise) and <strong>cover for action</strong> (e.g. a strong cover story).
+Strong compartmentation, strong cover, and be aware of the risks of using social networks
+for building a covert organisation.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">the grugq</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-07T06:41:00+07:00" pubdate data-updated="true">Oct 7<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/opsec/'>OPSEC</a>, <a class='category' href='/blog/categories/counterintelligence/'>counterintelligence</a>, <a class='category' href='/blog/categories/drug-delivery-service/'>drug delivery service</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/10/05/thru-a-portal-darkly/" title="Previous Post: Thru a PORTAL Darkly">&laquo; Thru a PORTAL Darkly</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/10/07/drug-delivery-service-opsec/">Drug Delivery Service OPSEC</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/05/thru-a-portal-darkly/">Thru a PORTAL Darkly</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/14/you-cant-get-there-from-here/">You Can't Get There From Here</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("thegrugq", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/thegrugq">@thegrugq</a></p>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/grugq">@grugq</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'grugq',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - the grugq -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
