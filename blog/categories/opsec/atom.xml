@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OPSEC | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/opsec/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-10-07T07:33:31+07:00</updated>
+  <updated>2013-10-09T19:46:01+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,169 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[It was DPR]]></title>
+    <link href="http://grugq.github.com/blog/2013/10/09/it-was-dpr/"/>
+    <updated>2013-10-09T19:44:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/10/09/it-was-dpr</id>
+    <content type="html"><![CDATA[<h2>Give it to me straight, dr the grugq</h2>
+
+<p>Generally, it appears that Ross Ulbricht was applying his economic and
+techno-libertarian philosophy to real life. As his project grew, his security
+posture improved -- too late. The most serious mistakes that Ross Ulbricht made
+were made during the period Jan 2011 - Oct 2011. A full timeline of the events
+in the Complaint is available on <a href="http://grugq.tumblr.com/post/62914009002/silk-road-investigation-timeline">my tumblr</a>.</p>
+
+<p><strong>NOTE:</strong> This is an abridged version of a longer post pulling out the lessons learned
+from the <a href="http://grugq.tumblr.com/post/62909883417/ulricht-indictment-aka-dread-pirate-roberts-aka-silk">Silk Road Complaint</a> of 27th September 2013. This post will only list the OPSEC errors,
+rather than explore them in detail.</p>
+
+<h2>The OPSEC Failures</h2>
+
+<p>The fundamental error is poor compartmentation. Ross Ulbricht, the real person
+and the online persona (Google+, LinkedIn, etc), and the Dread Pirate Roberts
+persona share ideological views and geographic locations. There is contamination
+between the two personas. Most of these seem to be due to the organic evolution
+of the Silk Road venture, where early naive Ulbricht makes mistakes that later
+smarter DPR wouldn't. Unfortunately, the later DPR is more ideologically
+extreme and consequently less savvy about mainstream society.</p>
+
+<ol>
+<li>Poor Compartmentation</li>
+<li>Profiling</li>
+<li>Geographic Location</li>
+<li>Isolation</li>
+</ol>
+
+
+<h3>Poor Compartmentation</h3>
+
+<ul>
+<li>Contamination: seriously fatal links created between personas
+
+<ul>
+<li><strong>Silk Road</strong> + <strong>altoid</strong>: Shroomery, BitcoinTalk forums</li>
+<li><strong>altoid</strong> + <strong>rossulbricht@gmail.com</strong>: BitcoinTalk</li>
+<li><strong>Ross Ulbricht</strong> + <strong>frosty@frosty[.com]</strong>: StackOverflow</li>
+<li><strong>frosty@frosty</strong> + <strong>Silk Road</strong>: Silk Road server admin SSH key</li>
+</ul>
+</li>
+</ul>
+
+
+<p>The compartmentation failures are somewhat pervasive, in particular the ideological
+"Austrian School of Economics" and the mises.org site. However two particular
+contamination errors stand out:</p>
+
+<ol>
+<li><strong>Silk Road</strong> --> <strong>altoid</strong> --> <strong>rossulbricht@gmail.com</strong> link in 2011</li>
+<li><strong>Ross Ulbricht</strong> --> <strong>frosty@frosty.com</strong> --> <strong>Silk Road</strong> server link in 2013</li>
+</ol>
+
+
+<p>The first of these failures happened because the <strong>altoid</strong> persona used to
+promoted <strong>Silk Road</strong> was poorly fleshed out (no email address). Ross did not
+put the plumbing in place and backstop his <strong>altoid</strong> cover. Then he joined and
+started the BitcoinTalk community and started participating. This left him with
+his guard down and he revealed a great deal of profiling information about his
+project and beliefs. Many of his posts are about Silk Road infrastructure or
+his mises.org influenced economic theories. After participating for 10 months
+he finally made the <strong>fatal OPSEC error</strong> of posting his personal email address.</p>
+
+<p>The second error was poor compartmentation of his online Ross Ulbricht persona,
+the tech savvy San Francisco based startup guy, and "frosty" the system admin
+of the server hosting the Silk Road site. His poor compartmentation, likely
+using the same computer for both personal and business use, and his
+limited backstopping of the DPR/altoid/frosty persona meant that any error was
+fatal.</p>
+
+<p>These two errors combine to link Silk Road with Ross Ulbricht, and Ross Ulbricht
+with Silk Road.</p>
+
+<h3>"I'll take Profiles for $300, Alex" : "Too much in common" : "What do Ulbricht and DPR share?"</h3>
+
+<ul>
+<li>Profiling: Ross Ulbricht talks and acts like Dread Pirate Roberts
+
+<ul>
+<li>LinkedIn profile</li>
+<li>Timezone leakage: private messages, <a href="http://media.encrypted.cc/files/dpr_posts_pdt.png">forum posting times</a></li>
+<li>BitcoinTalk <strong>altoid</strong> <a href="http://grugq.tumblr.com/post/62919678278/osint-case-study-ross-ulbricht-aka-dread-pirate">posts about</a>: economics (mises.org), security, programming</li>
+<li>Silk Road Forum <strong>Dread Pirate Roberts</strong> -> Mises + "Austrian School of Economics"</li>
+<li>Mises.org <strong>Ross Ulbricht</strong> account</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Ross Ulbricht, the person, was an active participant in the mises.org website
+and the BitcoinTalk forums. In both cases he was deeply committed to the
+"Austrian School of Economics", something the Dread Pirate Roberts was also a
+huge fan of. The <strong>altoid</strong> cover alias, linked directly to Ross Ulbricht,
+frequently talked about bitcoin security and PHP programming. He is, based on
+his posts, clearly invovled in running some sort of PHP based bitcoin using
+venture that requires high security. Sort of like the <strong>Silk Road</strong> site.</p>
+
+<ul>
+<li>Geographic Location
+
+<ul>
+<li>Silk Road web server administered over VPN from a server</li>
+<li>VPN server IP stored in the Silk Road PHP source code</li>
+<li>VPN server accessed from a location <code>15240 cm</code> (<code>500 ft</code>) from a location that accessed the Ross Ulbricht GMail account.</li>
+</ul>
+</li>
+</ul>
+
+
+<p>The location of the Dread Pirate Roberts was something of an open secret. It is
+clear that he was based in the west coast of the US. Ulbricht was located
+in San Francisco at the same time as DPR, as proved by his large online
+footprint: Google+, YouTube, GMail.</p>
+
+<h2>Isolation is bad, mmmkay</h2>
+
+<ul>
+<li>Isolation without relief
+
+<ul>
+<li>Rented room under assumed name</li>
+<li>No "mainstream" social circle to realign with social mores</li>
+<li>No peers to talk to, only Silk Road forum members and admins</li>
+</ul>
+</li>
+</ul>
+
+
+<p>After the <strong>altoid</strong> persona is retired from BitcoinTalk, Ulbricht migrates
+his social interaction to a more extreme community: the Silk Road forums. This
+appears to have been his "scene", where he interacted with people and
+cultivated friends (including an impressive array of undercover law
+enforcement officials).</p>
+
+<p>The underground life forced on Ulbricht as the Dread Pirate Roberts led to
+the major problem of isolation. Human beings are social animals. We require
+social interaction to maintain a healthy mental state. The strict
+security of DPR required isolation, leaving Ross Ulbricht living his social
+life on forums with niche ideological views, initially BitcointTalk (in 2011)
+and then the Silk Road forums. Isolation from mainstream society is known to
+lead to ideological extremism as members of the niche community self-reinforce
+their ideological tendencies. Consequently, they are less able to understand
+mainstream society's ideas, beliefs and morals. This is dangerous. This
+isolation leads him to rationalize hiring online hitmen to preserve the
+Silk Road community is morally acceptable.</p>
+
+<h2>What have we learned?</h2>
+
+<p>So, the Dread Pirate Roberts Complaint basically tells us nothing that we didn't
+already <a href="http://www.slideshare.net/grugq/opsec-for-hackers">know about OPSEC</a>.
+There are some lessons learned which can be used to harden OPSEC practices going
+forward. The main things are still, strong compartmentation, use Tor
+all the time, avoid leaking profiling information, and finally it is
+prudent to regularly migrate to new cover personas.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Drug Delivery Service OPSEC]]></title>
@@ -482,90 +645,6 @@ activity: it is <strong>compartmented</strong>. Associating the activity of that
 even with full and complete global internet monitoring (and 0day attacks) with a
 specific individual should be difficult. [<strong>NOTE:</strong> don't count on this if you
 happen to be the new <em>al Quaida</em> #3].</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[the paddy factor]]></title>
-    <link href="http://grugq.github.com/blog/2013/03/18/the-paddy-factor/"/>
-    <updated>2013-03-18T09:51:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/03/18/the-paddy-factor</id>
-    <content type="html"><![CDATA[<p>The <strong>Paddy Factor</strong> was a disparaging term used by the British security
-forces to refer to poor OPSEC practices by the Provisional IRA (PIRA)
-in the early 1970s. Much of this terrible counter intelligence posture was due
-to a limited number of easily avoidable activities that combined to compromise
-many Provos:</p>
-
-<ul>
-<li><p><strong>Self incrimination</strong></p>
-
-<ul>
-<li>PIRA members would congregate in pubs and sing IRA songs.</li>
-<li>They would boast about their IRA operations while drunk in pubs.</li>
-<li>They would reply with a nod and a wink to friendly inquiries about their
-activities, making it easy for informants to identify them.</li>
-<li>They would march in pro-IRA rallies.</li>
-</ul>
-
-
-<p>  <strong>Problem:</strong> The adversary was able to easily identify (some) PIRA
-  members. Once the adversary identifies members of an organisation,
-  they will investigate and monitor them to uncover other members.</p></li>
-<li><p><strong>Contamination</strong>
-  PIRA members would associate with each other when not on operations.
-  In intel parlance this is called "pre-operational contact", and it is
-  to be avoided. The reason is that any surveillance on one member will
-  reveal the other members of the group. This is a form of <em>contamination</em>.</p></li>
-</ul>
-
-
-<p>In short, some (many?) members of the Provisional IRA made their affiliation
-publically known by bragging about their operations in public places. This
-made them known to the adversary (the British security forces), who were then
-able to monitor those known PIRA members. Later, at political events such as
-rallies, these known PIRA members would hang out and chat with their unknown
-underground brethren. This made the underground members known to the adversary,
-with the obvious negative consequences.</p>
-
-<h2>Link Analysis and You</h2>
-
-<p>Knowing only a single node in a network, e.g. one member of an organisation,
-and monitoring which other nodes it contacts with gives insight into
-membership of the graph. The police, for example, use a variety of monitoring
-techniques to build up <em>phone trees</em> which map out organisational relationships.</p>
-
-<p>This form of analysis, mapping associations between nodes in a network (e.g.
-membership in an organisation) is called link analysis. It can be used against
-communication end points (e.g. mobile phones, email addresses), which are then
-associated with individuals. For example, link analysis of mobile phone numbers
-and contact address books of drug dealers is used to determine hierarchical
-information about their distribution networks. Link analysis is a very powerful
-method of understanding relationships and being able to link "chatter" between
-nodes as activity related to an organisation.</p>
-
-<h2>How to unlink</h2>
-
-<p>One solution to making link analysis harder and less useful is to create
-unique nodes for each connection. Done successfuly, this creates link graph is
-only 2 nodes and 1 edge. In practise, this means that every connection between
-peers should be unique to that connection, i.e. create a new jabber identity for
-each associate you have. Do not share these jabber IDs between different <em>friends</em>.
-The rule is simple: 1 friend, 1 jabber ID.</p>
-
-<p>These node to node links should be changed regularly as well. The old nodes
-must never contact the new nodes. That will contaminate them, create a link
-that associates them together. New clean break each time.</p>
-
-<h2>Conclusion</h2>
-
-<p>It is possible to defeat link analysis, but it takes discipline and is hard to
-do successfully. Every single communications end point must be unique and
-dedicated to only one other end point. These end points must never contaminate
-each other by interacting or mentioning other end points. This will inhibit
-creating a <em>phone tree</em>, or link analysis chart of organisation membership.</p>
-
-<p><strong>Warning:</strong> unlinking will not prevent traffic flow analysis, fingerprinting,
-or many other techniques from linking comms end points. But it is square one.</p>
 ]]></content>
   </entry>
   

@@ -9,8 +9,8 @@
   <meta name="author" content="the grugq">
 
   
-  <meta name="description" content="Some interesting lessons on how a modern New York City drug delivery service
-uses basic tradecraft to create a reasonable security posture. The &hellip;">
+  <meta name="description" content="Give it to me straight, dr the grugq Generally, it appears that Ross Ulbricht was applying his economic and
+techno-libertarian philosophy to real &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +69,194 @@ uses basic tradecraft to create a reasonable security posture. The &hellip;">
   <div id="main">
     <div id="content">
       
+
+
+    <article class="post">
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/09/it-was-dpr/">It Was DPR</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-09T19:44:00+07:00" pubdate data-updated="true">Oct 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Give it to me straight, dr the grugq</h2>
+
+<p>Generally, it appears that Ross Ulbricht was applying his economic and
+techno-libertarian philosophy to real life. As his project grew, his security
+posture improved &#8211; too late. The most serious mistakes that Ross Ulbricht made
+were made during the period Jan 2011 - Oct 2011. A full timeline of the events
+in the Complaint is available on <a href="http://grugq.tumblr.com/post/62914009002/silk-road-investigation-timeline">my tumblr</a>.</p>
+
+<p><strong>NOTE:</strong> This is an abridged version of a longer post pulling out the lessons learned
+from the <a href="http://grugq.tumblr.com/post/62909883417/ulricht-indictment-aka-dread-pirate-roberts-aka-silk">Silk Road Complaint</a> of 27th September 2013. This post will only list the OPSEC errors,
+rather than explore them in detail.</p>
+
+<h2>The OPSEC Failures</h2>
+
+<p>The fundamental error is poor compartmentation. Ross Ulbricht, the real person
+and the online persona (Google+, LinkedIn, etc), and the Dread Pirate Roberts
+persona share ideological views and geographic locations. There is contamination
+between the two personas. Most of these seem to be due to the organic evolution
+of the Silk Road venture, where early naive Ulbricht makes mistakes that later
+smarter DPR wouldn&#8217;t. Unfortunately, the later DPR is more ideologically
+extreme and consequently less savvy about mainstream society.</p>
+
+<ol>
+<li>Poor Compartmentation</li>
+<li>Profiling</li>
+<li>Geographic Location</li>
+<li>Isolation</li>
+</ol>
+
+
+<h3>Poor Compartmentation</h3>
+
+<ul>
+<li>Contamination: seriously fatal links created between personas
+
+<ul>
+<li><strong>Silk Road</strong> + <strong>altoid</strong>: Shroomery, BitcoinTalk forums</li>
+<li><strong>altoid</strong> + <strong>rossulbricht@gmail.com</strong>: BitcoinTalk</li>
+<li><strong>Ross Ulbricht</strong> + <strong>frosty@frosty[.com]</strong>: StackOverflow</li>
+<li><strong>frosty@frosty</strong> + <strong>Silk Road</strong>: Silk Road server admin SSH key</li>
+</ul>
+</li>
+</ul>
+
+
+<p>The compartmentation failures are somewhat pervasive, in particular the ideological
+&#8220;Austrian School of Economics&#8221; and the mises.org site. However two particular
+contamination errors stand out:</p>
+
+<ol>
+<li><strong>Silk Road</strong> &#8211;> <strong>altoid</strong> &#8211;> <strong>rossulbricht@gmail.com</strong> link in 2011</li>
+<li><strong>Ross Ulbricht</strong> &#8211;> <strong>frosty@frosty.com</strong> &#8211;> <strong>Silk Road</strong> server link in 2013</li>
+</ol>
+
+
+<p>The first of these failures happened because the <strong>altoid</strong> persona used to
+promoted <strong>Silk Road</strong> was poorly fleshed out (no email address). Ross did not
+put the plumbing in place and backstop his <strong>altoid</strong> cover. Then he joined and
+started the BitcoinTalk community and started participating. This left him with
+his guard down and he revealed a great deal of profiling information about his
+project and beliefs. Many of his posts are about Silk Road infrastructure or
+his mises.org influenced economic theories. After participating for 10 months
+he finally made the <strong>fatal OPSEC error</strong> of posting his personal email address.</p>
+
+<p>The second error was poor compartmentation of his online Ross Ulbricht persona,
+the tech savvy San Francisco based startup guy, and &#8220;frosty&#8221; the system admin
+of the server hosting the Silk Road site. His poor compartmentation, likely
+using the same computer for both personal and business use, and his
+limited backstopping of the DPR/altoid/frosty persona meant that any error was
+fatal.</p>
+
+<p>These two errors combine to link Silk Road with Ross Ulbricht, and Ross Ulbricht
+with Silk Road.</p>
+
+<h3>&#8220;I&#8217;ll take Profiles for $300, Alex&#8221; : &#8220;Too much in common&#8221; : &#8220;What do Ulbricht and DPR share?&#8221;</h3>
+
+<ul>
+<li>Profiling: Ross Ulbricht talks and acts like Dread Pirate Roberts
+
+<ul>
+<li>LinkedIn profile</li>
+<li>Timezone leakage: private messages, <a href="http://media.encrypted.cc/files/dpr_posts_pdt.png">forum posting times</a></li>
+<li>BitcoinTalk <strong>altoid</strong> <a href="http://grugq.tumblr.com/post/62919678278/osint-case-study-ross-ulbricht-aka-dread-pirate">posts about</a>: economics (mises.org), security, programming</li>
+<li>Silk Road Forum <strong>Dread Pirate Roberts</strong> -> Mises + &#8220;Austrian School of Economics&#8221;</li>
+<li>Mises.org <strong>Ross Ulbricht</strong> account</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Ross Ulbricht, the person, was an active participant in the mises.org website
+and the BitcoinTalk forums. In both cases he was deeply committed to the
+&#8220;Austrian School of Economics&#8221;, something the Dread Pirate Roberts was also a
+huge fan of. The <strong>altoid</strong> cover alias, linked directly to Ross Ulbricht,
+frequently talked about bitcoin security and PHP programming. He is, based on
+his posts, clearly invovled in running some sort of PHP based bitcoin using
+venture that requires high security. Sort of like the <strong>Silk Road</strong> site.</p>
+
+<ul>
+<li>Geographic Location
+
+<ul>
+<li>Silk Road web server administered over VPN from a server</li>
+<li>VPN server IP stored in the Silk Road PHP source code</li>
+<li>VPN server accessed from a location <code>15240 cm</code> (<code>500 ft</code>) from a location that accessed the Ross Ulbricht GMail account.</li>
+</ul>
+</li>
+</ul>
+
+
+<p>The location of the Dread Pirate Roberts was something of an open secret. It is
+clear that he was based in the west coast of the US. Ulbricht was located
+in San Francisco at the same time as DPR, as proved by his large online
+footprint: Google+, YouTube, GMail.</p>
+
+<h2>Isolation is bad, mmmkay</h2>
+
+<ul>
+<li>Isolation without relief
+
+<ul>
+<li>Rented room under assumed name</li>
+<li>No &#8220;mainstream&#8221; social circle to realign with social mores</li>
+<li>No peers to talk to, only Silk Road forum members and admins</li>
+</ul>
+</li>
+</ul>
+
+
+<p>After the <strong>altoid</strong> persona is retired from BitcoinTalk, Ulbricht migrates
+his social interaction to a more extreme community: the Silk Road forums. This
+appears to have been his &#8220;scene&#8221;, where he interacted with people and
+cultivated friends (including an impressive array of undercover law
+enforcement officials).</p>
+
+<p>The underground life forced on Ulbricht as the Dread Pirate Roberts led to
+the major problem of isolation. Human beings are social animals. We require
+social interaction to maintain a healthy mental state. The strict
+security of DPR required isolation, leaving Ross Ulbricht living his social
+life on forums with niche ideological views, initially BitcointTalk (in 2011)
+and then the Silk Road forums. Isolation from mainstream society is known to
+lead to ideological extremism as members of the niche community self-reinforce
+their ideological tendencies. Consequently, they are less able to understand
+mainstream society&#8217;s ideas, beliefs and morals. This is dangerous. This
+isolation leads him to rationalize hiring online hitmen to preserve the
+Silk Road community is morally acceptable.</p>
+
+<h2>What have we learned?</h2>
+
+<p>So, the Dread Pirate Roberts Complaint basically tells us nothing that we didn&#8217;t
+already <a href="http://www.slideshare.net/grugq/opsec-for-hackers">know about OPSEC</a>.
+There are some lessons learned which can be used to harden OPSEC practices going
+forward. The main things are still, strong compartmentation, use Tor
+all the time, avoid leaking profiling information, and finally it is
+prudent to regularly migrate to new cover personas.</p>
+</div>
+  
+  
+
+</article>
 
 
     <article class="post">
