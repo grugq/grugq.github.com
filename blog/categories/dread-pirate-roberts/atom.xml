@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dread Pirate Roberts | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/dread-pirate-roberts/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-10-09T19:47:54+07:00</updated>
+  <updated>2013-10-09T21:42:47+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -51,7 +51,7 @@ extreme and consequently less savvy about mainstream society.</p>
 <h3>Poor Compartmentation</h3>
 
 <ul>
-<li>Contamination: seriously fatal links created between personas
+<li><strong>Contamination</strong>: seriously fatal links created between personas
 
 <ul>
 <li><strong>Silk Road</strong> + <strong>altoid</strong>: Shroomery, BitcoinTalk forums</li>
@@ -74,19 +74,20 @@ contamination errors stand out:</p>
 
 
 <p>The first of these failures happened because the <strong>altoid</strong> persona used to
-promoted <strong>Silk Road</strong> was poorly fleshed out (no email address). Ross did not
-put the plumbing in place and backstop his <strong>altoid</strong> cover. Then he joined and
-started the BitcoinTalk community and started participating. This left him with
-his guard down and he revealed a great deal of profiling information about his
-project and beliefs. Many of his posts are about Silk Road infrastructure or
-his mises.org influenced economic theories. After participating for 10 months
-he finally made the <strong>fatal OPSEC error</strong> of posting his personal email address.</p>
+promoted <strong>Silk Road</strong> was poorly fleshed out (e.g. no email address). Ross did not
+put the plumbing in place to backstop his <strong>altoid</strong> cover. He then joined the
+BitcoinTalk community using this contaminated cover. His participation and search
+for social validation left him with his guard down. Consequently, he revealed a
+great deal of profiling information about his project and beliefs. Many of his
+posts are about Silk Road infrastructure or his mises.org influenced economic
+theories. After participating for 10 months he finally made the
+<strong>fatal OPSEC error</strong> of posting his personal email address.</p>
 
 <p>The second error was poor compartmentation of his online Ross Ulbricht persona,
 the tech savvy San Francisco based startup guy, and "frosty" the system admin
 of the server hosting the Silk Road site. His poor compartmentation, likely
 using the same computer for both personal and business use, and his
-limited backstopping of the DPR/altoid/frosty persona meant that any error was
+limited backstopping of the DPR/altoid/frosty persona meant that any error would be
 fatal.</p>
 
 <p>These two errors combine to link Silk Road with Ross Ulbricht, and Ross Ulbricht
@@ -95,7 +96,7 @@ with Silk Road.</p>
 <h3>"I'll take Profiles for $300, Alex" : "Too much in common" : "What do Ulbricht and DPR share?"</h3>
 
 <ul>
-<li>Profiling: Ross Ulbricht talks and acts like Dread Pirate Roberts
+<li><strong>Profiling</strong>: Ross Ulbricht talks and acts like Dread Pirate Roberts
 
 <ul>
 <li>LinkedIn profile</li>
@@ -165,14 +166,19 @@ mainstream society's ideas, beliefs and morals. This is dangerous. This
 isolation leads him to rationalize hiring online hitmen to preserve the
 Silk Road community is morally acceptable.</p>
 
+<p>Apparently the only source of social validation and ego gratification that Ross
+had was a group of bitcoin libertarians, drug seekers, drug dealers and undercover
+cops. This is not a healthy social environment conducive to a balanced state of
+mental health.</p>
+
 <h2>What have we learned?</h2>
 
 <p>So, the Dread Pirate Roberts Complaint basically tells us nothing that we didn't
 already <a href="http://www.slideshare.net/grugq/opsec-for-hackers">know about OPSEC</a>.
 There are some lessons learned which can be used to harden OPSEC practices going
-forward. The main things are still, strong compartmentation, use Tor
-all the time, avoid leaking profiling information, and finally it is
-prudent to regularly migrate to new cover personas.</p>
+forward. The main things are still: strong compartmentation; use Tor
+all the time; avoid leaking profiling information, and it is prudent to
+regularly migrate to new cover personas.</p>
 ]]></content>
   </entry>
   
