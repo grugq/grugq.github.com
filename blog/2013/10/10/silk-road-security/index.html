@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Silk Road Security - Hacker OPSEC</title>
+  <meta name="author" content="the grugq">
+
+  
+  <meta name="description" content="Counterintelligence Lessons for Drug Dealers NOTE Events have overtaken my slow writing speed. This post was in the works
+before the Silk Road bust &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://grugq.github.com/blog/2013/10/10/silk-road-security">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Hacker OPSEC" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Hacker OPSEC</a></h1>
+  
+    <h2>STFU is the best policy.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:grugq.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/docs/">Docs</a></li>
+  <li><a href="/presentations/">Presentations</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><a href="/contact/">Contact</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Silk Road Security</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-10T18:53:00+07:00" pubdate data-updated="true">Oct 10<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>Counterintelligence Lessons for Drug Dealers</h2>
+
+<p><strong>NOTE</strong> Events have overtaken my slow writing speed. This post was in the works
+before the Silk Road bust in September 2013. I&#8217;m uploading it anyway because it
+has some useful information, however there seems little point in finish it now.</p>
+
+<p>The dealers on Silk Road ship a large amount of illegal products around the world, and it is clear that they&#8217;re successful at it. However, the US Postal service has been aware that drug dealers user their service for shipping illegal substances and has developed guidelines for determining suspect packages efficiently. Unfortunately for them, those guidelines have leaked and this allows someone abusing the US mail as an illicit distribution channel to evade the USP&#8217;s checks.</p>
+
+<h2>Suspicious Post Guidelines</h2>
+
+<p>The actual <a href="http://teknopolitik.tumblr.com/post/48178417204/fbi-law-enforcement-bulletin-via-findarticles">guidelines for suspicious packages</a> list a number of major indicators that the inspectors look for. This guide is somewhat outdated, and a <a href="http://www.orlandocriminaldefenseattorneyblog.com/2012/05/drug-trafficking-via-express-m.html">revised version</a> has also be leaked. In both cases, the <strong>triggers</strong> and the reasoning behind them are similar.</p>
+
+<h3>FBI Profiling Criteria</h3>
+
+<ol>
+<li>Heavy taping along the seams;</li>
+<li>poor preparation for mailing;</li>
+<li>uneven weight distribution;</li>
+<li>apparent package reuse; and</li>
+<li>labels that are handwritten, contain misspellings, originate from a drug-source State, indicate person-to-person not business-to-individual mail, have a return zip code that does not match the accepting post office zip code, a fictitious return address, names of senders or recipients with features in common (John Smith, e.g.) and having no connection to either address</li>
+</ol>
+
+
+<h3>Drug Mail Profile</h3>
+
+<ol>
+<li>the use of Express Mail,
+
+<ul>
+<li>Express Mail is primarily used by businesses for document delivery.</li>
+</ul>
+</li>
+<li>the weight of the package,
+
+<ul>
+<li>drug traffickers are mailing approximately one kilo of cocaine per package, plus some dummy weights</li>
+</ul>
+</li>
+<li>the package is sent from Puerto Rico, a known drug source location,</li>
+<li>the package was mailed from a post office address outside of the zip code on the return address,</li>
+<li>an Accurint check reveals that no one by the sender&#8217;s name lived at the return address,
+
+<ul>
+<li>Police will also check Google and Facebook to get more information</li>
+</ul>
+</li>
+<li>the package is heavily taped at all seams
+
+<ul>
+<li>heavy taping may or may not help evade detection by drug sniffing dogs&#8211;but we know one thing for sure&#8211;it certainly helps draw police attention to the package!</li>
+</ul>
+</li>
+<li>the label is handwritten
+
+<ul>
+<li>Since most Express Mail is business-to-business, or business-to-client, labels that aren&#8217;t typed are suspect</li>
+</ul>
+</li>
+</ol>
+
+
+<h3>Collated</h3>
+
+<p>Anything that looks like someone is sending slightly over an even metric weight of <em>something</em>, from a known suspect location, to another person, in an old heavily taped package with a fake return address. Sounds like bad tradecraft.</p>
+
+<ol>
+<li>Suspicious packaging
+
+<ul>
+<li>Heavy taping</li>
+<li>Package reuse</li>
+</ul>
+</li>
+<li>Not business mail
+
+<ul>
+<li>No printed label</li>
+<li>Clearly not documents</li>
+<li>Individual to individual</li>
+</ul>
+</li>
+<li>Known suspicious origin
+
+<ul>
+<li>Occasionally specific post offices</li>
+<li>Specific countries (Puerto Rico)</li>
+</ul>
+</li>
+<li>Flimsy &#8220;return address&#8221; cover
+
+<ul>
+<li>Fake name</li>
+<li>Mismatched name + address</li>
+<li>Mismatched address + zipcode</li>
+</ul>
+</li>
+</ol>
+
+
+<p>Main points to take away:</p>
+
+<ul>
+<li>drug packages appear different from normal mail</li>
+<li>many factors are contribute to creating a plausible cover/alias.</li>
+<li>The packaging of a drug shipment provides a cover, which needs to be backstopped.</li>
+</ul>
+
+
+<p>Don&#8217;t make shit up, do your research and steal an identity with a real address.</p>
+
+<h2>Backstop your cover</h2>
+
+<p>When creating a cover, make sure it is as fully fleshed out as possible. This means developing supporting evidence to bolster the validity of the cover. In intelligence lingo, this is called backstopping.</p>
+
+<p>A backstopped cover is one where checks to verify the authenticity of the cover story are verifiable. For example, if the cover story includes a name, there are matching identity documents; if there is an phone number, it connects to someone who will substantiate the cover story; if there is an address, it exists. The old Soviet illegals used to spend years developing their cover and backstopping them. They&#8217;d live for a few years in a country they claimed to be immigrating from, so they would have the memories, experience and verifiable evidence that they were from there.</p>
+
+<p>If you are going to use a cover (you probably should), then put in the effort to create a backstop. The complexity and depth of that backstop are dependant on how deeply the cover will be investigated. Remember though, it is better to have too much, than not enough&#8230;</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">the grugq</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-10T18:53:00+07:00" pubdate data-updated="true">Oct 10<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ci/'>CI</a>, <a class='category' href='/blog/categories/opsec/'>OPSEC</a>, <a class='category' href='/blog/categories/silk-road/'>Silk Road</a>, <a class='category' href='/blog/categories/counterintelligence/'>counterintelligence</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/10/09/it-was-dpr/" title="Previous Post: It was DPR, in the Tor HS, with the BTC">&laquo; It was DPR, in the Tor HS, with the BTC</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/10/10/silk-road-security/">Silk Road Security</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/09/it-was-dpr/">It Was DPR, in the Tor HS, With the BTC</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/07/drug-delivery-service-opsec/">Drug Delivery Service OPSEC</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("thegrugq", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/thegrugq">@thegrugq</a></p>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/grugq">@grugq</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'grugq',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - the grugq -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
