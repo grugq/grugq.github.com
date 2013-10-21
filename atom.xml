@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-10-10T19:02:40+07:00</updated>
+  <updated>2013-10-21T19:11:32+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Observations on OPSEC]]></title>
+    <link href="http://grugq.github.com/blog/2013/10/21/observations-on-opsec/"/>
+    <updated>2013-10-21T19:03:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/10/21/observations-on-opsec</id>
+    <content type="html"><![CDATA[<p>Briefly, I would like to highlight some important considerations for good OPSEC. Firstly, OPSEC is a mode of operating, not a tool or a collection of tools. Secondly, OPSEC comes at a cost, and a significant part of that cost is efficiency. OPSEC is slow. Finally, maintaining a strong security posture (i.e. “good OPSEC”) for long periods of time is very stressful, even for professionally trained espionage officers.</p>
+
+<p>Learning good OPSEC requires internalizing the behavioural changes required to continually maintain a strong security posture. The operational activities have to become habit, because the small things matter, and every careless mistake can compromise security. The only way to develop good OPSEC habits, good security hygiene, is to practice. Make the foolish beginners mistakes during a practice session, rather than in the field. Two relevant sayings:</p>
+
+<ul>
+<li>Amateurs practice until they get it right, professionals practice until they can’t get it wrong</li>
+<li>The more you sweat in peace, the less you bleed in war</li>
+</ul>
+
+
+<p>After developing good security hygiene habits, the second most difficult thing about good OPSEC is learning patience. Increased OPSEC security comes at the cost of efficiency, primarily in communication time-frames. The OPSEC mechanisms that must be in place to reduce the risks during communication add latency. As a result, communication takes significantly longer and is less reliable. Obviously, this is more of an issue with time sensitive operations than those that have more generous deadlines.</p>
+
+<p>The single greatest security risk is communication between operatives. Clandestine agencies, such as the CIA, MI6, DGSE, etc. will work incredibly hard to minimize the risks surrounding communication with their recruited agents. In the simplest form, this involves a 2-4 hour “surveillance detection route” (SDR) to see if they are “in the black” before they perform any operational activity. This is on top of the hours of planning for the operation itself (note: these are minimums, operations requiring high security might take weeks or months of planning, and 12 hour SDRs).</p>
+
+<p>The technology that exists to facilitate information security, e.g. encryption, is important, but it is not sufficient or even the starting point for robust OPSEC. By all means, learn to use encryption software correctly and in a properly secure fashion. However, it is more important to compartment sensitive activities and structure your operational environment for impact containment than
+install use particular software.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Silk Road Security]]></title>
