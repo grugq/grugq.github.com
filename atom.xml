@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-10-21T19:11:32+07:00</updated>
+  <updated>2013-11-04T01:09:25+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[OPSEC isn't security through obscurity]]></title>
+    <link href="http://grugq.github.com/blog/2013/11/04/opsec-isnt-security-through-obscurity/"/>
+    <updated>2013-11-04T01:04:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/11/04/opsec-isnt-security-through-obscurity</id>
+    <content type="html"><![CDATA[<h2>Kerckoff&#8217;s Principle and OPSEC</h2>
+
+<p>A common source for the idea that &#8220;security through obscurity is bad&#8221; is <a href="http://en.wikipedia.org/wiki/Kerckhoffs%27_principle">Kerckoffs&#8217; principle</a> which states that: <code>A cryptosystem should be secure even if everything about the system, except the key, is public knowledge</code>. OPSEC as a system of security is sometimes confused with &#8220;security through obscurity&#8221;. This is not the case. Such thinking reflects a confusion of both the problem with opaque security systems and the foundations of OPSEC.</p>
+
+<h2>OPSEC is a System</h2>
+
+<p>The way to clear this confusion, I believe, is to point out that OPSEC is a security system, not any one specific practice. The system itself is open source, in that we know how and why the various techniques and practices work. For example, the tradecraft technique of a <a href="http://en.wikipedia.org/wiki/Dead_drop">dead drop</a> is public knowledge. The security of a dead drop is not that no one knows how they work, but rather the adversary does not know <strong>where</strong> a specific dead drop is locate, nor <strong>when</strong> that dead drop is being serviced (loaded or unload). That information, primarily the location of that dead drop, is the <strong>secret key</strong> to the dead drop security system. This information is what must remain secret for the dead drop to remain secure.</p>
+
+<h2>Why OPSEC Works</h2>
+
+<p>So OPSEC as a system of security does not violate Kerckoff&#8217;s principle, and is not &#8220;security through obscurity&#8221;. The specifics of any one application of OPSEC techniques provide security, but those are analogous to the private key to the system. If they are compromised, then security they provide will be be compromised.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Observations on OPSEC]]></title>

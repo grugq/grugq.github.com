@@ -9,7 +9,7 @@
   <meta name="author" content="the grugq">
 
   
-  <meta name="description" content="Briefly, I would like to highlight some important considerations for good OPSEC. Firstly, OPSEC is a mode of operating, not a tool or a collection of &hellip;">
+  <meta name="description" content="Kerckoff&#8217;s Principle and OPSEC A common source for the idea that &#8220;security through obscurity is bad&#8221; is Kerckoffs&#8217; principle &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,50 @@
   <div id="main">
     <div id="content">
       
+
+
+    <article class="post">
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/04/opsec-isnt-security-through-obscurity/">OPSEC Isn&#8217;t Security Through Obscurity</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-04T01:04:00+07:00" pubdate data-updated="true">Nov 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Kerckoff&#8217;s Principle and OPSEC</h2>
+
+<p>A common source for the idea that &#8220;security through obscurity is bad&#8221; is <a href="http://en.wikipedia.org/wiki/Kerckhoffs%27_principle">Kerckoffs&#8217; principle</a> which states that: <code>A cryptosystem should be secure even if everything about the system, except the key, is public knowledge</code>. OPSEC as a system of security is sometimes confused with &#8220;security through obscurity&#8221;. This is not the case. Such thinking reflects a confusion of both the problem with opaque security systems and the foundations of OPSEC.</p>
+
+<h2>OPSEC is a System</h2>
+
+<p>The way to clear this confusion, I believe, is to point out that OPSEC is a security system, not any one specific practice. The system itself is open source, in that we know how and why the various techniques and practices work. For example, the tradecraft technique of a <a href="http://en.wikipedia.org/wiki/Dead_drop">dead drop</a> is public knowledge. The security of a dead drop is not that no one knows how they work, but rather the adversary does not know <strong>where</strong> a specific dead drop is locate, nor <strong>when</strong> that dead drop is being serviced (loaded or unload). That information, primarily the location of that dead drop, is the <strong>secret key</strong> to the dead drop security system. This information is what must remain secret for the dead drop to remain secure.</p>
+
+<h2>Why OPSEC Works</h2>
+
+<p>So OPSEC as a system of security does not violate Kerckoff&#8217;s principle, and is not &#8220;security through obscurity&#8221;. The specifics of any one application of OPSEC techniques provide security, but those are analogous to the private key to the system. If they are compromised, then security they provide will be be compromised.</p>
+</div>
+  
+  
+
+</article>
 
 
     <article class="post">
@@ -1191,133 +1235,6 @@ creating a <em>phone tree</em>, or link analysis chart of organisation membershi
 
 <p><strong>Warning:</strong> unlinking will not prevent traffic flow analysis, fingerprinting,
 or many other techniques from linking comms end points. But it is square one.</p>
-</div>
-  
-  
-
-</article>
-
-
-    <article class="post">
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/12/anonymity-is-hard/">Anonymity Is Hard</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-12T21:05:00+07:00" pubdate data-updated="true">Mar 12<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Anonymity in the real world is very hard</h2>
-
-<p>In late 2011 Hezbollah rolled up a CIA spy ring in Lebanon. This provides an
-interesting lesson in CIA tradecraft and real world counterintelligence. Close
-examination of the techniques used to track down the agents will reveal some
-serious problems with many systems designed to provide security for
-anti-government groups.</p>
-
-<p>This post is partially in a response to <a href="http://blog.cryptographyengineering.com/2013/03/here-come-encryption-apps.html">Matt Green&#8217;s</a>
-post about encryption apps. The secrecy provided by encryption applications,
-primarily privacy of communication content, is not sufficient to protect against
-even minimal monitoring. Any anti-government activity in a modern environment, e.g.
-one involving mobile phones and the internet, needs to include anonymity first and
-foremost.</p>
-
-<h2>The Sources</h2>
-
-<p><a href="http://www.guardian.co.uk/world/feedarticle/9958834">This article</a> provides
-some of the details about the tradecraft of the spy network, and how it
-failed. The focus is on how the agents were contacted by their handlers and
-how this was used to uncover the whole network. <a href="http://www.ufppc.org/us-a-world-news-mainmenu-35/10702-news-three-us-spy-rings-broken-in-lebanon-a-iran.html">Another site</a>
-provides a large collection of related articles which fills in some additional
-details.</p>
-
-<h2>The Tradecraft (Probably, maybe)</h2>
-
-<p><strong>NOTE:</strong> This information is based on newspaper articles, so it is of limited
-accuracy. However, it seems like reasonable tradecraft practices that even
-amateurs would devise and is thus presented for analysis here.</p>
-
-<ul>
-<li><p><strong>Dedicated mobile phone</strong>
-  The agents had a mobile phone used specifically for communication with
-  their handler. This phone was kept in a static location waiting for
-  contact, and possibly spent a lot of time switched off.</p></li>
-<li><p><strong>Pre-arranged meeting place</strong>
-  The agents had a meeting location (allegedly at a Pizza Hut) where
-  they met their handlers. This location was (allegedly) reused for
-  multiple agents and multiple meetings.</p></li>
-<li><p><strong>Signalling code word</strong>
-  Contact by the handler to the agent was via a code word (allegedly: &#8220;PIZZA!&#8221;),
-  which was meaningless by itself but also contextually anomalous.</p></li>
-</ul>
-
-
-<h2>Well, thats one way to do it</h2>
-
-<p>The adversary, Hezbollah, used access to the telephone company logs (they have those),
-and searched for atypical mobile phone usage patterns:</p>
-
-<ul>
-<li>phones that only receive a few calls / messages over long periods of time</li>
-<li>mobile phones that are never mobile</li>
-<li>weird / unusual messages (PIZZA!!)</li>
-</ul>
-
-
-<p>That is, they were looking for phones that were kept at home, turned on
-occasionally, and only received calls/sms infrequently. The exact usage pattern
-one would expect for a mobile that is used exclusively for a handler to contact
-an agent.</p>
-
-<p>This data gave Hezbollah a general location (down to the apartment complex) of
-where the agents were located. Next, the adversary correlated the location
-data with the home addresses of members who had access to secret information.
-They conducted surveillance on those members and discovered they were using a
-Pizza Hut to meet with their handlers.</p>
-
-<p><strong>Speculation</strong>
-Finally, the adversary was able to continually monitor the meeting location
-and detect other members of the spy network meeting with their handlers. The
-CIA is known for over using the same locations for meetings [1].</p>
-
-<p>[1] <a href="http://www.amazon.com/The-C-I-Desk-Counterintelligence-Cubicle/dp/1608447391">The C.I. Desk</a></p>
-
-<h2>Computer says No</h2>
-
-<p>The problems with these tradecraft practises are pretty obvious from a
-counterintelligence analysis. They are anomalous (atypical mobile phone use)
-and they are rigidly predictable (reusing the same meeting location).</p>
-
-<p>For encryption applications used by anti-government forces this provides a
-clear blueprint for action - look normal. Even basic monitoring of traffic
-will reveal anomalous activity which can be used to identify who needs to be
-watched more closely.</p>
-
-<h2>Conclusion</h2>
-
-<p>Hiding anomalous activity is hard, but vitally important. The problem with
-many security systems based purely on secrecy is that their usage is itself
-anomalous. It singles out and attracts attention to the users. If the
-adversary doesn&#8217;t know who those users are initially, they can cross correlate
-real world data with the suspicious activity and narrow their focus to real
-people. Those people can, and will, end up dead.</p>
 </div>
   
   
