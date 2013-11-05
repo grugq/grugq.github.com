@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-11-04T01:09:25+07:00</updated>
+  <updated>2013-11-06T06:52:32+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -18,7 +18,13 @@
     <link href="http://grugq.github.com/blog/2013/11/04/opsec-isnt-security-through-obscurity/"/>
     <updated>2013-11-04T01:04:00+07:00</updated>
     <id>http://grugq.github.com/blog/2013/11/04/opsec-isnt-security-through-obscurity</id>
-    <content type="html"><![CDATA[<h2>Kerckoff&#8217;s Principle and OPSEC</h2>
+    <content type="html"><![CDATA[<h2>OPSEC revisited</h2>
+
+<blockquote><p>The goal of OPSEC is to control information about your capabilities and intentions to keep them from being exploited by your adversary.</p></blockquote>
+
+<p>In typical hacker fashion, the term OPSEC has come to mean more than just information about capabilities and intentions, but also personal information about the yourself.</p>
+
+<h2>Kerckoff&#8217;s Principle and OPSEC</h2>
 
 <p>A common source for the idea that &#8220;security through obscurity is bad&#8221; is <a href="http://en.wikipedia.org/wiki/Kerckhoffs%27_principle">Kerckoffs&#8217; principle</a> which states that: <code>A cryptosystem should be secure even if everything about the system, except the key, is public knowledge</code>. OPSEC as a system of security is sometimes confused with &#8220;security through obscurity&#8221;. This is not the case. Such thinking reflects a confusion of both the problem with opaque security systems and the foundations of OPSEC.</p>
 
