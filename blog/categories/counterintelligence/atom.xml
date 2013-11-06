@@ -4,7 +4,7 @@
   <title><![CDATA[Category: counterintelligence | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/counterintelligence/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-11-06T13:16:48+07:00</updated>
+  <updated>2013-11-06T13:33:28+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -25,6 +25,13 @@
 <li><p><a href="http://www.oss.net/dynamaster/file_archive/100102/0a947a77d762061cc87ec541c2d2dcc7/2010-01-02%20Dulles%20on%20Tradecraft%20via%20Srodes.pdf">Allen Dulle's 73 Rules of Spycraft</a> :: This is the handbook of how to live and operate securely. It is 50 years old and it has aged remarkably well. Read it. Study it. This will be on the test.</p></li>
 <li><p><a href="http://www.dtic.mil/cgi-bin/GetTRDoc?AD=ADA505161">Clandestine Cellular Networks</a> :: This paper deals primarily with the lessons learned from fighting insurgents, but it is extremely valuable as a handbook on tradecraft. I previously posted just the tradecraft <a href="http://grugq.github.io/resources/tradecraft-howto.pdf">chapter</a> for people who don't want to slog through all of it. I suggest reading all of it.</p></li>
 <li><p><a href="http://igcc3.ucsd.edu/research/security/DACOR/presentations/Shapiro.pdf">The Terrorists Challenge: Security, Efficiency, Control</a> :: This paper examines the primary trade offs that need to be made when operating a covert organisation. If you have multiple people working in secret, managing them and their work requires making tradeoffs between security, efficiency and control. This paper will help you to understand those tradeoffs.</p></li>
+</ul>
+
+
+<h3>Optional</h3>
+
+<ul>
+<li><a href="http://www.tandfonline.com/doi/pdf/10.1080/10576100802670803">A Study of al Quaeda's use of Intelligence and Counterintelligence</a> :: This pulls a lot of the information above into a single case study of a covert (terrorist) organisation planning and conducting an operation. Anything else you can lay your hands on by the author I recommend as well.</li>
 </ul>
 
 ]]></content>
