@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Morris Worm OPSEC lessons - Hacker OPSEC</title>
+  <title>required reading - Hacker OPSEC</title>
   <meta name="author" content="the grugq">
 
   
-  <meta name="description" content="25th Anniversary of STFU about your computer crimes Reading this interview with the prosecutor of Robert Morris Jr about the Morris Worm there are a &hellip;">
+  <meta name="description" content="This is a short list of articles and papers that you absolutely must read if you want to understand OPSEC. Terrorist Group Counterintelligence :: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://grugq.github.com/blog/2013/11/06/morris-worm-opsec-lessons">
+  <link rel="canonical" href="http://grugq.github.com/blog/2013/11/06/required-reading">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Hacker OPSEC" type="application/atom+xml">
@@ -72,7 +72,7 @@
   
   <header>
     
-      <h1 class="entry-title">Morris Worm OPSEC Lessons</h1>
+      <h1 class="entry-title">Required Reading</h1>
     
     
       <p class="meta">
@@ -88,44 +88,22 @@
   
 
 
-<time datetime="2013-11-06T04:08:00+07:00" pubdate data-updated="true">Nov 6<span>th</span>, 2013</time>
+<time datetime="2013-11-06T07:23:00+07:00" pubdate data-updated="true">Nov 6<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h2>25th Anniversary of STFU about your computer crimes</h2>
+<div class="entry-content"><p>This is a short list of articles and papers that you absolutely must read if you want to understand OPSEC.</p>
 
-<p>Reading <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2013/11/05/heres-what-the-morris-worm-prosecutor-thinks-about-aaron-swartz/">this interview</a> with the prosecutor of Robert Morris Jr about the Morris Worm there are a few cool OPSEC lessons we can learn.</p>
+<ul>
+<li><p><a href="http://repository.library.georgetown.edu/bitstream/handle/10822/553096/mobleyBlake.pdf?sequence=1">Terrorist Group Counterintelligence</a> :: This is the thesis which later became the book <a href="http://www.amazon.com/Terrorism-Counterintelligence-Terrorist-Detection-Irregular/dp/0231158769">Terrorism and Counterintelligence</a>. Read at least one of them (the thesis is free).</p></li>
+<li><p><a href="http://www.oss.net/dynamaster/file_archive/100102/0a947a77d762061cc87ec541c2d2dcc7/2010-01-02%20Dulles%20on%20Tradecraft%20via%20Srodes.pdf">Allen Dulle&#8217;s 73 Rules of Spycraft</a> :: This is the handbook of how to live and operate securely. Its 50 years old and it has aged remarkably well. Read it. Study it. This will be on the test.</p></li>
+<li><p><a href="www.dtic.mil/cgi-bin/GetTRDoc?AD=ADA505161">Clandestine Cellular Networks</a> :: This paper deals primarily with the lessons learned from fighting insurgents, but it is extremely valuable as a handbook on tradecraft. I previously posted just the tradecraft <a href="http://grugq.github.io/resources/tradecraft-howto.pdf">chapter</a> for people who don&#8217;t want to slog through all of it. I suggest reading all of it.</p></li>
+<li><p><a href="http://igcc3.ucsd.edu/research/security/DACOR/presentations/Shapiro.pdf">The Terrorists Challenge: Security, Efficiency, Control</a> :: This paper examines the primary trade offs that need to be made when operating a covert organisation. If you have multiple people working in secret, managing them and their work requires making tradeoffs between security, efficiency and control. This paper will help you to understand those tradeoffs.</p></li>
+</ul>
 
-<h2>How was Morris caught?</h2>
-
-<blockquote><p>One way was with computer forensics. Tracing back the source of the worm. The second way was one of Morris&#8217;s friends told The New York Times in response to some articles that John Markoff was writing he inadvertently gave his initials.</p></blockquote>
-
-<p>There were a couple of ways that he was discovered. The first was the forensic analysis of the worm itself, and tracing that back to the original infection point. This sort of evidence shows where to look (the original infection), but it does not provide enough information to successfully prosecute. It is circumstantial so far, and given some careful sanitisation of the original box, it would be a very hard case to prove.</p>
-
-<p>The far more damaging way that Morris was caught was via an OSINT case officer doing HUMINT collection (a reporter interviewing people about the worm). The journo managed to elicit information about the worm&#8217;s author (his initials). This is the sort of extremely damaging information leakage that happens when there is poor OPSEC. There was no anti-interrogation training provided to the members of the Morris cell (i.e. all his friends who knew about the development of the worm).</p>
-
-<h2>Deny everything. Admit nothing. Or, you know, not.</h2>
-
-<blockquote><p>he did testify that he wrote the worm. He came in and testified, &#8220;I did it, and I&#8217;m sorry.&#8221; I turned to my co-counsel and asked, &#8220;Should I prove he didn&#8217;t do it or he&#8217;s not sorry?&#8221;</p></blockquote>
-
-<p>When the prosecution has to prove that you committed a felonious act, it is a lot easier for them when you <strong>confess</strong> on the stand. I can&#8217;t second guess the decisions of Morris&#8217; legal counsel, but unless you are instructed to do so by your lawyer: STFU.</p>
-
-<h2>The Morris Cell and &#8220;Need to know&#8221;</h2>
-
-<blockquote><p>We talked to his friends. His friends were witnesses for us. They didn&#8217;t have a choice.
-There was a core group. &#8230;one of the meetings where Robert Morris was discussing the worm occurred at a Legal Seafood in Kendall Square&#8230;
-He talked about how it was developed, how it worked, what vulnerabilities it exploited. At one point he was at a meeting back at Harvard, he got so excited that he literally jumped up on a table pacing back and forth on the table explaining how it worked&#8230;</p></blockquote>
-
-<p>The close friends of Robert Morris, the Morris Cell, were fully briefed on all aspects of the worm. Its capabilities, its functionality, and its author&#8217;s real identity. None of the other members of the cell were actively exposed to the risks of the operation. They had no &#8220;need to know&#8221;.</p>
-
-<p>This failure to STFU, to properly compartment the design and development of the worm, was a key factor leading to his capture and prosecution. Fortunately, things worked out well for him, in the long run.</p>
-
-<h2>How to evaluate &#8220;Need to know&#8221;</h2>
-
-<p>The rule of thumb is: <em>if someone is actively sharing the risk, they have a need to know</em>. This need to know is, of course, restricted to only those aspects of the operation in which they are actively involved.</p>
 </div>
 
 
@@ -148,12 +126,12 @@ He talked about how it was developed, how it worked, what vulnerabilities it exp
   
 
 
-<time datetime="2013-11-06T04:08:00+07:00" pubdate data-updated="true">Nov 6<span>th</span>, 2013</time>
+<time datetime="2013-11-06T07:23:00+07:00" pubdate data-updated="true">Nov 6<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/opsec/'>OPSEC</a>
+    <a class='category' href='/blog/categories/opsec/'>OPSEC</a>, <a class='category' href='/blog/categories/counterintelligence/'>counterintelligence</a>, <a class='category' href='/blog/categories/spycraft/'>spycraft</a>, <a class='category' href='/blog/categories/terrorism/'>terrorism</a>, <a class='category' href='/blog/categories/tradecraft/'>tradecraft</a>
   
 </span>
 
@@ -169,10 +147,8 @@ He talked about how it was developed, how it worked, what vulnerabilities it exp
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/11/04/opsec-isnt-security-through-obscurity/" title="Previous Post: OPSEC isn't security through obscurity">&laquo; OPSEC isn't security through obscurity</a>
+        <a class="basic-alignment left" href="/blog/2013/11/06/morris-worm-opsec-lessons/" title="Previous Post: Morris Worm OPSEC lessons">&laquo; Morris Worm OPSEC lessons</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/11/06/required-reading/" title="Next Post: required reading">required reading &raquo;</a>
       
     </p>
   </footer>

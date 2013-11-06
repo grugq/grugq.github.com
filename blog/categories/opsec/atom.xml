@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OPSEC | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/opsec/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-11-06T06:52:47+07:00</updated>
+  <updated>2013-11-06T12:11:40+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[required reading]]></title>
+    <link href="http://grugq.github.com/blog/2013/11/06/required-reading/"/>
+    <updated>2013-11-06T07:23:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/11/06/required-reading</id>
+    <content type="html"><![CDATA[<p>This is a short list of articles and papers that you absolutely must read if you want to understand OPSEC.</p>
+
+<ul>
+<li><p><a href="http://repository.library.georgetown.edu/bitstream/handle/10822/553096/mobleyBlake.pdf?sequence=1">Terrorist Group Counterintelligence</a> :: This is the thesis which later became the book <a href="http://www.amazon.com/Terrorism-Counterintelligence-Terrorist-Detection-Irregular/dp/0231158769">Terrorism and Counterintelligence</a>. Read at least one of them (the thesis is free).</p></li>
+<li><p><a href="http://www.oss.net/dynamaster/file_archive/100102/0a947a77d762061cc87ec541c2d2dcc7/2010-01-02%20Dulles%20on%20Tradecraft%20via%20Srodes.pdf">Allen Dulle's 73 Rules of Spycraft</a> :: This is the handbook of how to live and operate securely. Its 50 years old and it has aged remarkably well. Read it. Study it. This will be on the test.</p></li>
+<li><p><a href="www.dtic.mil/cgi-bin/GetTRDoc?AD=ADA505161">Clandestine Cellular Networks</a> :: This paper deals primarily with the lessons learned from fighting insurgents, but it is extremely valuable as a handbook on tradecraft. I previously posted just the tradecraft <a href="http://grugq.github.io/resources/tradecraft-howto.pdf">chapter</a> for people who don't want to slog through all of it. I suggest reading all of it.</p></li>
+<li><p><a href="http://igcc3.ucsd.edu/research/security/DACOR/presentations/Shapiro.pdf">The Terrorists Challenge: Security, Efficiency, Control</a> :: This paper examines the primary trade offs that need to be made when operating a covert organisation. If you have multiple people working in secret, managing them and their work requires making tradeoffs between security, efficiency and control. This paper will help you to understand those tradeoffs.</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Morris Worm OPSEC lessons]]></title>
@@ -223,175 +240,6 @@ has some useful information, however there seems little point in finish it now.<
 <p>A backstopped cover is one where checks to verify the authenticity of the cover story are verifiable. For example, if the cover story includes a name, there are matching identity documents; if there is an phone number, it connects to someone who will substantiate the cover story; if there is an address, it exists. The old Soviet illegals used to spend years developing their cover and backstopping them. They'd live for a few years in a country they claimed to be immigrating from, so they would have the memories, experience and verifiable evidence that they were from there.</p>
 
 <p>If you are going to use a cover (you probably should), then put in the effort to create a backstop. The complexity and depth of that backstop are dependant on how deeply the cover will be investigated. Remember though, it is better to have too much, than not enough...</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[It was DPR, in the Tor HS, with the BTC]]></title>
-    <link href="http://grugq.github.com/blog/2013/10/09/it-was-dpr/"/>
-    <updated>2013-10-09T19:44:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/10/09/it-was-dpr</id>
-    <content type="html"><![CDATA[<h2>Give it to me straight, dr the grugq</h2>
-
-<p>Generally, it appears that Ross Ulbricht was applying his economic and
-techno-libertarian philosophy to real life. As his project grew, his security
-posture improved -- too late. The most serious mistakes that Ross Ulbricht made
-were made during the period Jan 2011 - Oct 2011. A full timeline of the events
-in the Complaint is available on <a href="http://grugq.tumblr.com/post/62914009002/silk-road-investigation-timeline">my tumblr</a>.</p>
-
-<p><strong>NOTE:</strong> This is an abridged version of a longer post pulling out the lessons learned
-from the <a href="http://grugq.tumblr.com/post/62909883417/ulricht-indictment-aka-dread-pirate-roberts-aka-silk">Silk Road Complaint</a> of 27th September 2013. This post will only list the OPSEC errors,
-rather than explore them in detail.</p>
-
-<h2>The OPSEC Failures</h2>
-
-<p>The fundamental error is poor compartmentation. Ross Ulbricht, the real person
-and the online persona (Google+, LinkedIn, etc), and the Dread Pirate Roberts
-persona share ideological views and geographic locations. There is contamination
-between the two personas. Most of these seem to be due to the organic evolution
-of the Silk Road venture, where early naive Ulbricht makes mistakes that later
-smarter DPR wouldn't. Unfortunately, the later DPR is more ideologically
-extreme and consequently less savvy about mainstream society.</p>
-
-<ol>
-<li>Poor Compartmentation</li>
-<li>Profiling</li>
-<li>Geographic Location</li>
-<li>Isolation</li>
-</ol>
-
-
-<h3>Poor Compartmentation</h3>
-
-<ul>
-<li><strong>Contamination</strong>: seriously fatal links created between personas
-
-<ul>
-<li><strong>Silk Road</strong> + <strong>altoid</strong>: Shroomery, BitcoinTalk forums</li>
-<li><strong>altoid</strong> + <strong>rossulbricht@gmail.com</strong>: BitcoinTalk</li>
-<li><strong>Ross Ulbricht</strong> + <strong>frosty@frosty[.com]</strong>: StackOverflow</li>
-<li><strong>frosty@frosty</strong> + <strong>Silk Road</strong>: Silk Road server admin SSH key</li>
-</ul>
-</li>
-</ul>
-
-
-<p>The compartmentation failures are somewhat pervasive, in particular the ideological
-"Austrian School of Economics" and the mises.org site. However two particular
-contamination errors stand out:</p>
-
-<ol>
-<li><strong>Silk Road</strong> --> <strong>altoid</strong> --> <strong>rossulbricht@gmail.com</strong> link in 2011</li>
-<li><strong>Ross Ulbricht</strong> --> <strong>frosty@frosty.com</strong> --> <strong>Silk Road</strong> server link in 2013</li>
-</ol>
-
-
-<p>The first of these failures happened because the <strong>altoid</strong> persona used to
-promoted <strong>Silk Road</strong> was poorly fleshed out (e.g. no email address). Ross did not
-put the plumbing in place to backstop his <strong>altoid</strong> cover. He then joined the
-BitcoinTalk community using this contaminated cover. His participation and search
-for social validation left him with his guard down. Consequently, he revealed a
-great deal of profiling information about his project and beliefs. Many of his
-posts are about Silk Road infrastructure or his mises.org influenced economic
-theories. After participating for 10 months he finally made the
-<strong>fatal OPSEC error</strong> of posting his personal email address.</p>
-
-<p>The second error was poor compartmentation of his online Ross Ulbricht persona,
-the tech savvy San Francisco based startup guy, and "frosty" the system admin
-of the server hosting the Silk Road site. His poor compartmentation, likely
-using the same computer for both personal and business use, and his
-limited backstopping of the DPR/altoid/frosty persona meant that any error would be
-fatal.</p>
-
-<p>These two errors combine to link Silk Road with Ross Ulbricht, and Ross Ulbricht
-with Silk Road.</p>
-
-<h3>"I'll take Profiles for $300, Alex" : "Too much in common" : "What do Ulbricht and DPR share?"</h3>
-
-<ul>
-<li><strong>Profiling</strong>: Ross Ulbricht talks and acts like Dread Pirate Roberts
-
-<ul>
-<li>LinkedIn profile</li>
-<li>Timezone leakage: private messages, <a href="http://media.encrypted.cc/files/dpr_posts_pdt.png">forum posting times</a></li>
-<li>BitcoinTalk <strong>altoid</strong> <a href="http://grugq.tumblr.com/post/62919678278/osint-case-study-ross-ulbricht-aka-dread-pirate">posts about</a>: economics (mises.org), security, programming</li>
-<li>Silk Road Forum <strong>Dread Pirate Roberts</strong> -> Mises + "Austrian School of Economics"</li>
-<li>Mises.org <strong>Ross Ulbricht</strong> account</li>
-</ul>
-</li>
-</ul>
-
-
-<p>Ross Ulbricht, the person, was an active participant in the mises.org website
-and the BitcoinTalk forums. In both cases he was deeply committed to the
-"Austrian School of Economics", something the Dread Pirate Roberts was also a
-huge fan of. The <strong>altoid</strong> cover alias, linked directly to Ross Ulbricht,
-frequently talked about bitcoin security and PHP programming. He is, based on
-his posts, clearly invovled in running some sort of PHP based bitcoin using
-venture that requires high security. Sort of like the <strong>Silk Road</strong> site.</p>
-
-<ul>
-<li>Geographic Location
-
-<ul>
-<li>Silk Road web server administered over VPN from a server</li>
-<li>VPN server IP stored in the Silk Road PHP source code</li>
-<li>VPN server accessed from a location <code>15240 cm</code> (<code>500 ft</code>) from a location that accessed the Ross Ulbricht GMail account.</li>
-</ul>
-</li>
-</ul>
-
-
-<p>The location of the Dread Pirate Roberts was something of an open secret. It is
-clear that he was based in the west coast of the US. Ulbricht was located
-in San Francisco at the same time as DPR, as proved by his large online
-footprint: Google+, YouTube, GMail.</p>
-
-<h2>Isolation is bad, mmmkay</h2>
-
-<ul>
-<li>Isolation without relief
-
-<ul>
-<li>Rented room under assumed name</li>
-<li>No "mainstream" social circle to realign with social mores</li>
-<li>No peers to talk to, only Silk Road forum members and admins</li>
-</ul>
-</li>
-</ul>
-
-
-<p>After the <strong>altoid</strong> persona is retired from BitcoinTalk, Ulbricht migrates
-his social interaction to a more extreme community: the Silk Road forums. This
-appears to have been his "scene", where he interacted with people and
-cultivated friends (including an impressive array of undercover law
-enforcement officials).</p>
-
-<p>The underground life forced on Ulbricht as the Dread Pirate Roberts led to
-the major problem of isolation. Human beings are social animals. We require
-social interaction to maintain a healthy mental state. The strict
-security of DPR required isolation, leaving Ross Ulbricht living his social
-life on forums with niche ideological views, initially BitcointTalk (in 2011)
-and then the Silk Road forums. Isolation from mainstream society is known to
-lead to ideological extremism as members of the niche community self-reinforce
-their ideological tendencies. Consequently, they are less able to understand
-mainstream society's ideas, beliefs and morals. This is dangerous. This
-isolation leads him to rationalize hiring online hitmen to preserve the
-Silk Road community is morally acceptable.</p>
-
-<p>Apparently the only source of social validation and ego gratification that Ross
-had was a group of bitcoin libertarians, drug seekers, drug dealers and undercover
-cops. This is not a healthy social environment conducive to a balanced state of
-mental health.</p>
-
-<h2>What have we learned?</h2>
-
-<p>So, the Dread Pirate Roberts Complaint basically tells us nothing that we didn't
-already <a href="http://www.slideshare.net/grugq/opsec-for-hackers">know about OPSEC</a>.
-There are some lessons learned which can be used to harden OPSEC practices going
-forward. The main things are still: strong compartmentation; use Tor
-all the time; avoid leaking profiling information, and it is prudent to
-regularly migrate to new cover personas.</p>
 ]]></content>
   </entry>
   

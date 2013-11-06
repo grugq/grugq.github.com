@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tradecraft | Hacker OPSEC]]></title>
+  <link href="http://grugq.github.com/blog/categories/tradecraft/atom.xml" rel="self"/>
+  <link href="http://grugq.github.com/"/>
+  <updated>2013-11-06T12:11:40+07:00</updated>
+  <id>http://grugq.github.com/</id>
+  <author>
+    <name><![CDATA[the grugq]]></name>
+    <email><![CDATA[the.grugq@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[required reading]]></title>
+    <link href="http://grugq.github.com/blog/2013/11/06/required-reading/"/>
+    <updated>2013-11-06T07:23:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/11/06/required-reading</id>
+    <content type="html"><![CDATA[<p>This is a short list of articles and papers that you absolutely must read if you want to understand OPSEC.</p>
+
+<ul>
+<li><p><a href="http://repository.library.georgetown.edu/bitstream/handle/10822/553096/mobleyBlake.pdf?sequence=1">Terrorist Group Counterintelligence</a> :: This is the thesis which later became the book <a href="http://www.amazon.com/Terrorism-Counterintelligence-Terrorist-Detection-Irregular/dp/0231158769">Terrorism and Counterintelligence</a>. Read at least one of them (the thesis is free).</p></li>
+<li><p><a href="http://www.oss.net/dynamaster/file_archive/100102/0a947a77d762061cc87ec541c2d2dcc7/2010-01-02%20Dulles%20on%20Tradecraft%20via%20Srodes.pdf">Allen Dulle's 73 Rules of Spycraft</a> :: This is the handbook of how to live and operate securely. Its 50 years old and it has aged remarkably well. Read it. Study it. This will be on the test.</p></li>
+<li><p><a href="www.dtic.mil/cgi-bin/GetTRDoc?AD=ADA505161">Clandestine Cellular Networks</a> :: This paper deals primarily with the lessons learned from fighting insurgents, but it is extremely valuable as a handbook on tradecraft. I previously posted just the tradecraft <a href="http://grugq.github.io/resources/tradecraft-howto.pdf">chapter</a> for people who don't want to slog through all of it. I suggest reading all of it.</p></li>
+<li><p><a href="http://igcc3.ucsd.edu/research/security/DACOR/presentations/Shapiro.pdf">The Terrorists Challenge: Security, Efficiency, Control</a> :: This paper examines the primary trade offs that need to be made when operating a covert organisation. If you have multiple people working in secret, managing them and their work requires making tradeoffs between security, efficiency and control. This paper will help you to understand those tradeoffs.</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
