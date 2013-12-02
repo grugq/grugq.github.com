@@ -4,7 +4,7 @@
   <title><![CDATA[Category: intelligence | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/intelligence/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-12-03T05:56:46+07:00</updated>
+  <updated>2013-12-03T06:11:37+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -57,12 +57,16 @@ example?</p>
 
 <h2>Challenges? More Like Opportunities!</h2>
 
-<p>Hackers are facing some very serious challenges now:
-* they lack organistations for collecting intelligence and knowledge about their adversary;
-* they face off against the adversary one at a time,
-* they learn very poorly from prior mistakes
-* they don't even know what skills they need,
-* and perhaps most dangerously, they aren't even aware they're in the game</p>
+<p>Hackers are facing some very serious challenges now:</p>
+
+<ul>
+<li>they lack organistations for collecting intelligence and knowledge about their adversary;</li>
+<li>they face off against the adversary one at a time,</li>
+<li>they learn very poorly from prior mistakes</li>
+<li>they don't even know what skills they need,</li>
+<li>and perhaps most dangerously, they aren't even aware they're in the game</li>
+</ul>
+
 
 <p>It is amusing how many people think that interrogations involve violence and
 torture. Successful elicitation far more frequently involves whiskey,
