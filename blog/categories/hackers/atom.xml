@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: hackers | Hacker OPSEC]]></title>
+  <link href="http://grugq.github.com/blog/categories/hackers/atom.xml" rel="self"/>
+  <link href="http://grugq.github.com/"/>
+  <updated>2013-12-03T05:56:46+07:00</updated>
+  <id>http://grugq.github.com/</id>
+  <author>
+    <name><![CDATA[the grugq]]></name>
+    <email><![CDATA[the.grugq@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Win at Kung Fu and Hacking]]></title>
+    <link href="http://grugq.github.com/blog/2013/11/22/challenges-for-hackers/"/>
+    <updated>2013-11-22T20:02:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/11/22/challenges-for-hackers</id>
+    <content type="html"><![CDATA[<h2>Everybody Was Hack Foo Fighting</h2>
+
+<p>I'm going to discuss a serious problem with the organisational structure and
+social dynamics of the hacker community, and why this puts hackers at risk.
+Hackers operate essentially the same way as the henchmen in a kung fu movie:
+they attack the hero one by one by one... always losing. This is a terrible
+way of developing a robust core of knowledge about what techniques work,
+which techniques fail, and why.</p>
+
+<h2>Organisational Learning for Dummies</h2>
+
+<p>There are two types of knowledge: individual, and organisational. Hackers are
+very individualistic, and the knowledge they acquire tends to be very
+practical; experience based. There are few hacker organisations that seek to
+collect, retain, test and spread knowledge. The organistations that do crop up
+are either some zines, which are knowledge artefacts that transmit techne, or
+hacker groups, which share tool chains and experience. However, these hacker
+groups have very short lifespans (measured in months and single digit years,
+not decades). They are compartmented in that there is some effort made to
+retain the group's proprietary information, but internally they usually
+have a very poor security posture. They are social groups in many ways, so
+they are heavily compromised. As we say in infosec "crunchy on the outside,
+chewy in the middle".</p>
+
+<p>Their opposition, the intelligence agencies and law enforcement departments,
+have decades of organisational history and knowledge. The individual members
+can display wide ranges of skill and competence, but the resources and core
+knowledge of the organisation dwarf what any individual hacker has available.
+Many of the skills that a hacker needs to learn, his clandestine tradecraft
+and OPSEC, are the sort of skills that organisations are excellent at
+developing and disseminating. These are not very good skillsets for an
+individual to learn through trial and error, because those errors have
+significant negative consequences. An organisation can afford to lose people
+as it learns how to deal with the adversary; and individual cannot afford to
+make a similar sacrifice -- afterall, who would benefit from your negative
+example?</p>
+
+<h2>Challenges? More Like Opportunities!</h2>
+
+<p>Hackers are facing some very serious challenges now:
+* they lack organistations for collecting intelligence and knowledge about their adversary;
+* they face off against the adversary one at a time,
+* they learn very poorly from prior mistakes
+* they don't even know what skills they need,
+* and perhaps most dangerously, they aren't even aware they're in the game</p>
+
+<p>It is amusing how many people think that interrogations involve violence and
+torture. Successful elicitation far more frequently involves whiskey,
+flattery, playing dumb, and being doubtful ("<em>really? I didn't know it was
+possible to do that. You must be pretty damn smart to have figured it
+out...</em>").</p>
+
+<h2>Winning at Secrets</h2>
+
+<p>There needs to be more information available on the techniques used during
+investigations, as well as before they begin. There needs to be documentation
+on how to evade those techniques, and why those evasions are successful. That
+knowledge needs to be captured and dissemminated out to those who can use it.</p>
+]]></content>
+  </entry>
+  
+</feed>

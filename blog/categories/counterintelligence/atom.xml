@@ -4,7 +4,7 @@
   <title><![CDATA[Category: counterintelligence | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/counterintelligence/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-11-19T10:34:01+07:00</updated>
+  <updated>2013-12-03T05:56:46+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,72 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Win at Kung Fu and Hacking]]></title>
+    <link href="http://grugq.github.com/blog/2013/11/22/challenges-for-hackers/"/>
+    <updated>2013-11-22T20:02:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/11/22/challenges-for-hackers</id>
+    <content type="html"><![CDATA[<h2>Everybody Was Hack Foo Fighting</h2>
+
+<p>I'm going to discuss a serious problem with the organisational structure and
+social dynamics of the hacker community, and why this puts hackers at risk.
+Hackers operate essentially the same way as the henchmen in a kung fu movie:
+they attack the hero one by one by one... always losing. This is a terrible
+way of developing a robust core of knowledge about what techniques work,
+which techniques fail, and why.</p>
+
+<h2>Organisational Learning for Dummies</h2>
+
+<p>There are two types of knowledge: individual, and organisational. Hackers are
+very individualistic, and the knowledge they acquire tends to be very
+practical; experience based. There are few hacker organisations that seek to
+collect, retain, test and spread knowledge. The organistations that do crop up
+are either some zines, which are knowledge artefacts that transmit techne, or
+hacker groups, which share tool chains and experience. However, these hacker
+groups have very short lifespans (measured in months and single digit years,
+not decades). They are compartmented in that there is some effort made to
+retain the group's proprietary information, but internally they usually
+have a very poor security posture. They are social groups in many ways, so
+they are heavily compromised. As we say in infosec "crunchy on the outside,
+chewy in the middle".</p>
+
+<p>Their opposition, the intelligence agencies and law enforcement departments,
+have decades of organisational history and knowledge. The individual members
+can display wide ranges of skill and competence, but the resources and core
+knowledge of the organisation dwarf what any individual hacker has available.
+Many of the skills that a hacker needs to learn, his clandestine tradecraft
+and OPSEC, are the sort of skills that organisations are excellent at
+developing and disseminating. These are not very good skillsets for an
+individual to learn through trial and error, because those errors have
+significant negative consequences. An organisation can afford to lose people
+as it learns how to deal with the adversary; and individual cannot afford to
+make a similar sacrifice -- afterall, who would benefit from your negative
+example?</p>
+
+<h2>Challenges? More Like Opportunities!</h2>
+
+<p>Hackers are facing some very serious challenges now:
+* they lack organistations for collecting intelligence and knowledge about their adversary;
+* they face off against the adversary one at a time,
+* they learn very poorly from prior mistakes
+* they don't even know what skills they need,
+* and perhaps most dangerously, they aren't even aware they're in the game</p>
+
+<p>It is amusing how many people think that interrogations involve violence and
+torture. Successful elicitation far more frequently involves whiskey,
+flattery, playing dumb, and being doubtful ("<em>really? I didn't know it was
+possible to do that. You must be pretty damn smart to have figured it
+out...</em>").</p>
+
+<h2>Winning at Secrets</h2>
+
+<p>There needs to be more information available on the techniques used during
+investigations, as well as before they begin. There needs to be documentation
+on how to evade those techniques, and why those evasions are successful. That
+knowledge needs to be captured and dissemminated out to those who can use it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[required reading]]></title>
@@ -352,147 +418,6 @@ That said, most of what will sink people is poor OPSEC, not poor SIGSEC. The mor
 <h2>Counterintelligence Cliff Notes</h2>
 
 <p>So, to reiterate, choosing a technology first and then relying on it for security is completely ass backwards. To do things properly, operate in this order. Figure out what you are trying to protect (and from whom), separate it from everything else, and then select tools, techniques and procedures that will enable you to protect it.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ignorance is strength]]></title>
-    <link href="http://grugq.github.com/blog/2013/06/13/ignorance-is-strength/"/>
-    <updated>2013-06-13T01:02:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/06/13/ignorance-is-strength</id>
-    <content type="html"><![CDATA[<p><blockquote><p>Seven, this rule is so underrated<br/>Keep your family and business completely separated</p><footer><strong>Biggie Smalls</strong> <cite>Counterintelligence Theory and Practice for Crack Dealers</cite></footer></blockquote></p>
-
-<h2>Guerrillas, Terrorists, Narcos, Spooks, and You</h2>
-
-<p>Guerrillas, terrorists, narcos and spooks the world over have learned the hard
-way how to keep their illicit activity safe from their opponents. The same principles
-of counterintelligence (CI) that help protect them from death can
-be applied to protect you from your adversary. If you engage in behavior
-that carries the risk of negative consequences from an adversary, you will need
-to develop and implement a robust CI program. This post will explain the foundations of
-strong OPSEC, a critical part of just such a program.</p>
-
-<h2>Establish Cells, or Live in One</h2>
-
-<p>The cornerstone of any solid counterintelligence program is <strong>compartmentation</strong>.
-Compartmentation is the separation of information, including people and activities,
-into discreet cells. These cells must have no interaction, access, or knowledge
-of each other. Enforcing ignorance between different cells prevents any one
-compartment from containing too much sensitive information. If any single cell
-is compromised, such as by an informant, the limitats of the damage will be at
-the boundaries of the cell.</p>
-
-<p>Now, compartmenting an entire organisation is a difficult feat, and can
-seriously impede the ability of the organisation to learn and adapt to changing circumstance.
-However, these are are not concerns that we need to address for an individual
-who is compartmenting their personal life from their illicit activity.</p>
-
-<p>Spooks, such as CIA case officiers, or KGB illegals, compartment their illicit
-activity (spying) from their "regular" lives. The first part of this is, of course,
-keeping their mouths shut about their illicit activities! There are many other
-important parts of tradecraft which are beyond the scope of this post. But remember,
-when you are compartmenting your life, the <strong>first rule</strong> is to never discuss your
-illicit activities with anyone outside of that <strong>compartment</strong>.</p>
-
-<h2>Compartmentation For Dummies</h2>
-
-<p>This will cover a basic set of guidelines for compartmenting a particular online
-activity. In our hypothetical scenario there are two people, Alice and Bob (natch),
-who want to exchange information with each other. They are deathly afraid that
-the adversary will learn (in ascending order of risk to Alice):</p>
-
-<ul>
-<li>Two people have been in contact (low risk)</li>
-<li>Bob has been in contact with someone (medium risk)</li>
-<li>Alice has been in contact with someone (high risk)</li>
-<li>Alice has been in contact with Bob (extreme risk)</li>
-</ul>
-
-
-<p>While this guideline is a starting point for someone who seeks to conduct illicit
-activity under hostile internet surveillance it is not concrete set of rules.
-When developing a CI program you must evaluate the threats and risks to yourself
-and create a custom set of tools and procedures that address your needs. The
-specific SOP that you develop for will differ from the outline below, but if it
-is to be resilient against the adversary it must be based on some form of compartmentation.</p>
-
-<h2>Step 1: Cleanliness is Next to Not-Being-in-Jailiness.</h2>
-
-<p>Alice must purchase new dedicated equipment used exclusively for communicating
-with Bob. This means, buy a new laptop. Don't bother with a new virtual machine,
-that isn't sufficiently compartmented. Any existing equipment that Alice owns
-might already be compromised and is therefore not safe against potential monitoring.</p>
-
-<p>The software installed should be the bare minimum of generic utilities required
-to do the communications. Here is an example setup:</p>
-
-<ul>
-<li>Laptop (cover the webcam with tape, disable the mic if possible)</li>
-<li>Virtualization Software (VBox, VMware, Parallels, etc)</li>
-<li>Ubuntu installed in the VM (disable all the logging + reporting)</li>
-<li>Recommended Software:
-
-<ul>
-<li>Tor Browser bundle</li>
-<li>PGP (generate and store new keys on a USB drive)</li>
-<li>OTR enabled chat client</li>
-</ul>
-</li>
-<li>Snapshot the VM</li>
-</ul>
-
-
-<p>This is the base platform that Alice will use when contacting Bob. Obviously,
-Bob should go through the same process (if he faces similar risks, or is concerned
-about Alice's wellbeing).</p>
-
-<p>The usernames and hostnames used should be generic, not associated with Alice's
-real name, location, place of work, etc. If the VM is compromised, there will be
-no identifying information, or keys that can be used to decrypt previous comms.
-If the VM is escaped and the adversary has access to the host, again, there will
-be no identifying information. The host machine has only the virtualization software
-on it. Use full disk encryption on the host machine, probably on the VM, use
-different passwords between the two, and keep the machine fully powered off when
-not in immediate active use.</p>
-
-<h2>Step 2: Take a Trip</h2>
-
-<p><blockquote><p>Number 5: never sell no crack where you rest at<br/>I don't care if they want a ounce, tell 'em "bounce!"</p><footer><strong>Biggie Smalls</strong> <cite>Counterintelligence Theory and Practice for Crack Dealers</cite></footer></blockquote></p>
-
-<p>Alice must ensure that every single time she contacts Bob, or checks for contact
-from Bob, she is in a location which is not linked to her. Additionally, she must
-use an internet connection which is not linked to her, for example a public WiFi
-or a prepaid 3G card.</p>
-
-<p>When Alice goes to contact Bob, she must ensure that she does not carry any device
-which will transmit her physical location. For example, her mobile phone(s). Leave
-it at home.</p>
-
-<h2>Step 3: UnlinkedIn</h2>
-
-<p>After Alice has used her dedicated machine to communicate with Bob, she should
-revert the VM snapshot to the pristine state from right after she installed. This
-should limit the ability of the adversary to persist after a compromise (provided
-they didn't escape the VM).</p>
-
-<p>The <em>converse-with-Bob</em> machine must be used with new accounts created specifically
-for, and exclusively to, converse with Bob. These accounts must be created from
-the new machine, and never be used for anything else except Bob related activity.
-Alice must create new accounts that don't have any links to her real identity.
-For email, one option is a <a href="http://www.tormail.net">TorMail</a> account. For instant
-messaging there is either Cryptocat over Tor, or create a new Jabber
-account such as with <a href="http://jabber.ccc.de">jabber.ccc.de</a>.</p>
-
-<h2>Concluding Thoughts</h2>
-
-<p>The core concept to take away here is: separate identity, with equipment and
-accounts, used only for one activity. The essense of compartmentation is separation
-without contamination. My strong recommendation is to use: a virgin machine, with
-virgin accounts, to contact the target. This machine is used exclusively for this one
-activity: it is <strong>compartmented</strong>. Associating the activity of that online entity,
-even with full and complete global internet monitoring (and 0day attacks) with a
-specific individual should be difficult. [<strong>NOTE:</strong> don't count on this if you
-happen to be the new <em>al Quaida</em> #3].</p>
 ]]></content>
   </entry>
   

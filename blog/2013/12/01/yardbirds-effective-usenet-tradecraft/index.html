@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Yardbird's Effective Usenet Tradecraft - Hacker OPSEC</title>
+  <meta name="author" content="the grugq">
+
+  
+  <meta name="description" content="Survival in an Extremely Adversarial Environment If your secure communications platform isn&#8217;t being used by terrorists and pedophiles, you&# &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://grugq.github.com/blog/2013/12/01/yardbirds-effective-usenet-tradecraft">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Hacker OPSEC" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Hacker OPSEC</a></h1>
+  
+    <h2>STFU is the best policy.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:grugq.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/docs/">Docs</a></li>
+  <li><a href="/presentations/">Presentations</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><a href="/contact/">Contact</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Yardbird's Effective Usenet Tradecraft</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-01T07:15:00+07:00" pubdate data-updated="true">Dec 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h1>Survival in an Extremely Adversarial Environment</h1>
+
+<blockquote><p>If your secure communications platform isn&#8217;t being used by terrorists and pedophiles, you&#8217;re probably doing it wrong. &#8211; [REDACTED]</p></blockquote>
+
+<p>A few years ago a group of child pornographers was infiltrated by police who were
+able to monitor, interact, and aggressively investigate the members. Despite
+engaging in a 15 month undercover operation, only one in three of the pedophiles
+were successfully apprehended. The majority, including the now infamous leader
+<em>Yardbird</em>, escaped capture. The dismal success rate of the law enforcement
+officials was due entirely to the strict security rules followed by the group.</p>
+
+<p>This post will examine those rules, the reasons for their success, and what
+problems the group faced which necessitated those rules.</p>
+
+<h2>Covert Organisations, Seen One, Seen &#8216;em All</h2>
+
+<p>All covert organisations face a similar set of problems as they attempt to execute
+on their fundamental mission &#8211; to <strong>continue to exist</strong>. A covert organization
+in an adversarial environment faces a number of organisational challenges and
+constraints. Fundamentally how it handles trade-offs between operational
+security and efficiency mandates how its group members perform their operational
+activities. Strong OPSEC means low efficiency, while high efficiency necessitates
+weak OPSEC. The strength of the oppositional forces dictate the minimum security requirements of the covert organisation.</p>
+
+<p>Examining the operational activities, those actions the organisation must engage
+in to self perpetuate, allows us to explore the operational security decisions
+within their environmental context.</p>
+
+<h3>Operational Activities:</h3>
+
+<ol>
+<li>Distribution of Child Abuse Content</li>
+<li>Communication and Coordinate Action</li>
+<li>Fund raising</li>
+<li>Recruitment and Vetting</li>
+</ol>
+
+
+<p>Pretty typical activities for a clandestine group. Besides their core defining
+operational activity, they have a communications channel, fund raising and
+membership management.</p>
+
+<h2>Security Forces Interdict Moron Pedo</h2>
+
+<p>Mr Castleman, of affidavit fame, was apparently engaged in child abuse image
+distribution outside the <em>enterprise</em>. This activity, which was conducted
+without the protection of an anonymisation platform (e.g. Tor) and was registered
+to his real identity.</p>
+
+<p>During his plea bargain phase, Mr Castleman turned informant on the <em>enterprise</em>
+and provided the police with complete archival logs and access</p>
+
+<h2>A Frustrating Infiltration</h2>
+
+<p>The law enforcement authorities were about to completely penetrate the <em>enterprise</em>
+for a 15 month period from 2006-08-31 through 2007-12-15. During that time the
+group&#8217;s posted 400,000 images and 1,1000 videos. The <em>enterprise</em> had approximately
+45 active members, although <a href="http://alt.privacy.anon-server.narkive.com/VRl3dTFH/the-fourth-of-yardbird-s-chums-grabs-his-ankles">independent observers</a> have claimed this is low with
+the real membership anywhere from 48 to 61.</p>
+
+<p>The total number of arrests was 14, or somewhere around 1/3rd. A fully staffed,
+highly motivated, well trained adversarial force with complete penetration of
+a large complacent group was only about to achieve a one in three success rate.
+The majority of those successes were achieved due to group members being insufficiently
+cautious and violating the <em>enterprise</em> security rules. Obviously, these security
+rules are extremely resilient against adversarial assault.</p>
+
+<h2>Operational Activity: Distribution</h2>
+
+<p>The <em>enterprise</em> was careful to ensure that the location of the encrypted files
+containing child abuse images was a different newsgroup. They compartmented their
+commo from their file sharing. As an additional, although superfluous step, the
+<em>enterprise</em> would apparently alter the sequence number of the split binary
+uploads so that reassembly would be hampered. What this cumbersome step added
+beyond the existing PGP encryption.</p>
+
+<h2>Operational Activity: Communications</h2>
+
+<p>The <em>enterprise</em> would use the primary newsgroup, at the start of the investigation
+<code>alt.anonymous.messages</code>, to announce the location of a media cache for group
+members. The communications newsgroup is always reserved strictly for communications.
+The announcements regarding new downloads provided detailed instructions as to
+the location of the child abuse content, plus how to download, assemble and decrypt it.</p>
+
+<h2>Operational Activity: Recruitment</h2>
+
+<p>The <em>enterprise</em> expanded by allowing new members to join. There were clear
+guidelines, procedures and rules for expansion. First there is a background
+check to ensure that the prospective member is an established and active
+participant in the wider community of child abuse image traders. Then an exhisting
+member has to invite the prospect to the group. Finally, to demonstrate both
+their deep involvement in the activity and to prove they are not an infiltrating
+police, they must pass a timed written test.</p>
+
+<h3>Vetting</h3>
+
+<ul>
+<li>Demonstrate active participation in the &#8220;trading scene&#8221;</li>
+<li>Invited by existing member</li>
+<li>Must exhibit deep domain specific knowledge via timed written test</li>
+</ul>
+
+
+<h2>Rules for Radicals</h2>
+
+<ul>
+<li>Never reveal true identity to another member of the group</li>
+<li>Never communicate with another member of the group outside the usenet channel</li>
+<li>Group membership remains strictly within the confines of the Internet
+
+<ul>
+<li>No member can positively identify another</li>
+</ul>
+</li>
+<li>Members do not reveal personally identifying information</li>
+<li>Primary communications newsgroup is migrated regularly
+
+<ul>
+<li>If a member violates a security rule, e.g. fails to encrypt a message</li>
+<li>Periodically to reduce chance of law enforcement discovery</li>
+</ul>
+</li>
+<li><strong>Newsgroup Migration</strong>
+
+<ul>
+<li>Create new PGP key pair, so there is no contamination linking them</li>
+<li>Create a new nickname
+
+<ul>
+<li>Nickname theme selected by <em>Yardbird</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Root of Success</h2>
+
+<p>The reason the majority of the group was able to avoid capture was in a small way
+due to the technology they were using (Tor), but mostly it was adherence to the
+security rules of the group. They did not reveal information to each other. The
+law enforcement authorities were able to get logs of all their communications
+traffic, plus logs of their IP addresses they used for posting. Everyone that
+used Tor (as per the recommendation of <em>Yardbird</em>) was anonymous at the IP
+layer. This protected them from a subpoena revealing their identity.</p>
+
+<p>The use of PGP was essentially a No-OP in this case. It excluded the general
+public from accessing the content of the communications traffic and the child
+abuse videos and images. It did not protect the traffic against analysis by the
+opposition (who had successfully infiltrated the group). The encryption was not
+a factor in their successful evasion. Rather, it was the content of the messages,
+controlled and dictated by the security rules, which protected their secrets.</p>
+
+<h2>Lessons Learned</h2>
+
+<p>Guarding secrets involves not sharing them. Encryption can only ever protect the
+content of a communique. Real security must start with the content itself, and
+then use encryption as an additional layer.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">the grugq</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-01T07:15:00+07:00" pubdate data-updated="true">Dec 1<span>st</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/aam/'>AAM</a>, <a class='category' href='/blog/categories/opsec/'>OPSEC</a>, <a class='category' href='/blog/categories/pgp/'>PGP</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/11/22/challenges-for-hackers/" title="Previous Post: How to Win at Kung Fu and Hacking">&laquo; How to Win at Kung Fu and Hacking</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/12/01/yardbirds-effective-usenet-tradecraft/">Yardbird's Effective Usenet Tradecraft</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/22/challenges-for-hackers/">How to Win at Kung Fu and Hacking</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/06/required-reading/">Required Reading</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("thegrugq", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/thegrugq">@thegrugq</a></p>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/grugq">@grugq</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'grugq',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - the grugq -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

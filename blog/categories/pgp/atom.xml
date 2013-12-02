@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: PGP | Hacker OPSEC]]></title>
+  <link href="http://grugq.github.com/blog/categories/pgp/atom.xml" rel="self"/>
+  <link href="http://grugq.github.com/"/>
+  <updated>2013-12-03T05:56:46+07:00</updated>
+  <id>http://grugq.github.com/</id>
+  <author>
+    <name><![CDATA[the grugq]]></name>
+    <email><![CDATA[the.grugq@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Yardbird's Effective Usenet Tradecraft]]></title>
+    <link href="http://grugq.github.com/blog/2013/12/01/yardbirds-effective-usenet-tradecraft/"/>
+    <updated>2013-12-01T07:15:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/12/01/yardbirds-effective-usenet-tradecraft</id>
+    <content type="html"><![CDATA[<h1>Survival in an Extremely Adversarial Environment</h1>
+
+<blockquote><p>If your secure communications platform isn't being used by terrorists and pedophiles, you're probably doing it wrong. -- [REDACTED]</p></blockquote>
+
+<p>A few years ago a group of child pornographers was infiltrated by police who were
+able to monitor, interact, and aggressively investigate the members. Despite
+engaging in a 15 month undercover operation, only one in three of the pedophiles
+were successfully apprehended. The majority, including the now infamous leader
+<em>Yardbird</em>, escaped capture. The dismal success rate of the law enforcement
+officials was due entirely to the strict security rules followed by the group.</p>
+
+<p>This post will examine those rules, the reasons for their success, and what
+problems the group faced which necessitated those rules.</p>
+
+<h2>Covert Organisations, Seen One, Seen 'em All</h2>
+
+<p>All covert organisations face a similar set of problems as they attempt to execute
+on their fundamental mission -- to <strong>continue to exist</strong>. A covert organization
+in an adversarial environment faces a number of organisational challenges and
+constraints. Fundamentally how it handles trade-offs between operational
+security and efficiency mandates how its group members perform their operational
+activities. Strong OPSEC means low efficiency, while high efficiency necessitates
+weak OPSEC. The strength of the oppositional forces dictate the minimum security requirements of the covert organisation.</p>
+
+<p>Examining the operational activities, those actions the organisation must engage
+in to self perpetuate, allows us to explore the operational security decisions
+within their environmental context.</p>
+
+<h3>Operational Activities:</h3>
+
+<ol>
+<li>Distribution of Child Abuse Content</li>
+<li>Communication and Coordinate Action</li>
+<li>Fund raising</li>
+<li>Recruitment and Vetting</li>
+</ol>
+
+
+<p>Pretty typical activities for a clandestine group. Besides their core defining
+operational activity, they have a communications channel, fund raising and
+membership management.</p>
+
+<h2>Security Forces Interdict Moron Pedo</h2>
+
+<p>Mr Castleman, of affidavit fame, was apparently engaged in child abuse image
+distribution outside the <em>enterprise</em>. This activity, which was conducted
+without the protection of an anonymisation platform (e.g. Tor) and was registered
+to his real identity.</p>
+
+<p>During his plea bargain phase, Mr Castleman turned informant on the <em>enterprise</em>
+and provided the police with complete archival logs and access</p>
+
+<h2>A Frustrating Infiltration</h2>
+
+<p>The law enforcement authorities were about to completely penetrate the <em>enterprise</em>
+for a 15 month period from 2006-08-31 through 2007-12-15. During that time the
+group's posted 400,000 images and 1,1000 videos. The <em>enterprise</em> had approximately
+45 active members, although <a href="http://alt.privacy.anon-server.narkive.com/VRl3dTFH/the-fourth-of-yardbird-s-chums-grabs-his-ankles">independent observers</a> have claimed this is low with
+the real membership anywhere from 48 to 61.</p>
+
+<p>The total number of arrests was 14, or somewhere around 1/3rd. A fully staffed,
+highly motivated, well trained adversarial force with complete penetration of
+a large complacent group was only about to achieve a one in three success rate.
+The majority of those successes were achieved due to group members being insufficiently
+cautious and violating the <em>enterprise</em> security rules. Obviously, these security
+rules are extremely resilient against adversarial assault.</p>
+
+<h2>Operational Activity: Distribution</h2>
+
+<p>The <em>enterprise</em> was careful to ensure that the location of the encrypted files
+containing child abuse images was a different newsgroup. They compartmented their
+commo from their file sharing. As an additional, although superfluous step, the
+<em>enterprise</em> would apparently alter the sequence number of the split binary
+uploads so that reassembly would be hampered. What this cumbersome step added
+beyond the existing PGP encryption.</p>
+
+<h2>Operational Activity: Communications</h2>
+
+<p>The <em>enterprise</em> would use the primary newsgroup, at the start of the investigation
+<code>alt.anonymous.messages</code>, to announce the location of a media cache for group
+members. The communications newsgroup is always reserved strictly for communications.
+The announcements regarding new downloads provided detailed instructions as to
+the location of the child abuse content, plus how to download, assemble and decrypt it.</p>
+
+<h2>Operational Activity: Recruitment</h2>
+
+<p>The <em>enterprise</em> expanded by allowing new members to join. There were clear
+guidelines, procedures and rules for expansion. First there is a background
+check to ensure that the prospective member is an established and active
+participant in the wider community of child abuse image traders. Then an exhisting
+member has to invite the prospect to the group. Finally, to demonstrate both
+their deep involvement in the activity and to prove they are not an infiltrating
+police, they must pass a timed written test.</p>
+
+<h3>Vetting</h3>
+
+<ul>
+<li>Demonstrate active participation in the "trading scene"</li>
+<li>Invited by existing member</li>
+<li>Must exhibit deep domain specific knowledge via timed written test</li>
+</ul>
+
+
+<h2>Rules for Radicals</h2>
+
+<ul>
+<li>Never reveal true identity to another member of the group</li>
+<li>Never communicate with another member of the group outside the usenet channel</li>
+<li>Group membership remains strictly within the confines of the Internet
+
+<ul>
+<li>No member can positively identify another</li>
+</ul>
+</li>
+<li>Members do not reveal personally identifying information</li>
+<li>Primary communications newsgroup is migrated regularly
+
+<ul>
+<li>If a member violates a security rule, e.g. fails to encrypt a message</li>
+<li>Periodically to reduce chance of law enforcement discovery</li>
+</ul>
+</li>
+<li><strong>Newsgroup Migration</strong>
+
+<ul>
+<li>Create new PGP key pair, so there is no contamination linking them</li>
+<li>Create a new nickname
+
+<ul>
+<li>Nickname theme selected by <em>Yardbird</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Root of Success</h2>
+
+<p>The reason the majority of the group was able to avoid capture was in a small way
+due to the technology they were using (Tor), but mostly it was adherence to the
+security rules of the group. They did not reveal information to each other. The
+law enforcement authorities were able to get logs of all their communications
+traffic, plus logs of their IP addresses they used for posting. Everyone that
+used Tor (as per the recommendation of <em>Yardbird</em>) was anonymous at the IP
+layer. This protected them from a subpoena revealing their identity.</p>
+
+<p>The use of PGP was essentially a No-OP in this case. It excluded the general
+public from accessing the content of the communications traffic and the child
+abuse videos and images. It did not protect the traffic against analysis by the
+opposition (who had successfully infiltrated the group). The encryption was not
+a factor in their successful evasion. Rather, it was the content of the messages,
+controlled and dictated by the security rules, which protected their secrets.</p>
+
+<h2>Lessons Learned</h2>
+
+<p>Guarding secrets involves not sharing them. Encryption can only ever protect the
+content of a communique. Real security must start with the content itself, and
+then use encryption as an additional layer.</p>
+]]></content>
+  </entry>
+  
+</feed>

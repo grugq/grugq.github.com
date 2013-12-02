@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OPSEC | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/opsec/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-11-19T10:34:01+07:00</updated>
+  <updated>2013-12-03T05:56:46+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,239 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Yardbird's Effective Usenet Tradecraft]]></title>
+    <link href="http://grugq.github.com/blog/2013/12/01/yardbirds-effective-usenet-tradecraft/"/>
+    <updated>2013-12-01T07:15:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/12/01/yardbirds-effective-usenet-tradecraft</id>
+    <content type="html"><![CDATA[<h1>Survival in an Extremely Adversarial Environment</h1>
+
+<blockquote><p>If your secure communications platform isn't being used by terrorists and pedophiles, you're probably doing it wrong. -- [REDACTED]</p></blockquote>
+
+<p>A few years ago a group of child pornographers was infiltrated by police who were
+able to monitor, interact, and aggressively investigate the members. Despite
+engaging in a 15 month undercover operation, only one in three of the pedophiles
+were successfully apprehended. The majority, including the now infamous leader
+<em>Yardbird</em>, escaped capture. The dismal success rate of the law enforcement
+officials was due entirely to the strict security rules followed by the group.</p>
+
+<p>This post will examine those rules, the reasons for their success, and what
+problems the group faced which necessitated those rules.</p>
+
+<h2>Covert Organisations, Seen One, Seen 'em All</h2>
+
+<p>All covert organisations face a similar set of problems as they attempt to execute
+on their fundamental mission -- to <strong>continue to exist</strong>. A covert organization
+in an adversarial environment faces a number of organisational challenges and
+constraints. Fundamentally how it handles trade-offs between operational
+security and efficiency mandates how its group members perform their operational
+activities. Strong OPSEC means low efficiency, while high efficiency necessitates
+weak OPSEC. The strength of the oppositional forces dictate the minimum security requirements of the covert organisation.</p>
+
+<p>Examining the operational activities, those actions the organisation must engage
+in to self perpetuate, allows us to explore the operational security decisions
+within their environmental context.</p>
+
+<h3>Operational Activities:</h3>
+
+<ol>
+<li>Distribution of Child Abuse Content</li>
+<li>Communication and Coordinate Action</li>
+<li>Fund raising</li>
+<li>Recruitment and Vetting</li>
+</ol>
+
+
+<p>Pretty typical activities for a clandestine group. Besides their core defining
+operational activity, they have a communications channel, fund raising and
+membership management.</p>
+
+<h2>Security Forces Interdict Moron Pedo</h2>
+
+<p>Mr Castleman, of affidavit fame, was apparently engaged in child abuse image
+distribution outside the <em>enterprise</em>. This activity, which was conducted
+without the protection of an anonymisation platform (e.g. Tor) and was registered
+to his real identity.</p>
+
+<p>During his plea bargain phase, Mr Castleman turned informant on the <em>enterprise</em>
+and provided the police with complete archival logs and access</p>
+
+<h2>A Frustrating Infiltration</h2>
+
+<p>The law enforcement authorities were about to completely penetrate the <em>enterprise</em>
+for a 15 month period from 2006-08-31 through 2007-12-15. During that time the
+group's posted 400,000 images and 1,1000 videos. The <em>enterprise</em> had approximately
+45 active members, although <a href="http://alt.privacy.anon-server.narkive.com/VRl3dTFH/the-fourth-of-yardbird-s-chums-grabs-his-ankles">independent observers</a> have claimed this is low with
+the real membership anywhere from 48 to 61.</p>
+
+<p>The total number of arrests was 14, or somewhere around 1/3rd. A fully staffed,
+highly motivated, well trained adversarial force with complete penetration of
+a large complacent group was only about to achieve a one in three success rate.
+The majority of those successes were achieved due to group members being insufficiently
+cautious and violating the <em>enterprise</em> security rules. Obviously, these security
+rules are extremely resilient against adversarial assault.</p>
+
+<h2>Operational Activity: Distribution</h2>
+
+<p>The <em>enterprise</em> was careful to ensure that the location of the encrypted files
+containing child abuse images was a different newsgroup. They compartmented their
+commo from their file sharing. As an additional, although superfluous step, the
+<em>enterprise</em> would apparently alter the sequence number of the split binary
+uploads so that reassembly would be hampered. What this cumbersome step added
+beyond the existing PGP encryption.</p>
+
+<h2>Operational Activity: Communications</h2>
+
+<p>The <em>enterprise</em> would use the primary newsgroup, at the start of the investigation
+<code>alt.anonymous.messages</code>, to announce the location of a media cache for group
+members. The communications newsgroup is always reserved strictly for communications.
+The announcements regarding new downloads provided detailed instructions as to
+the location of the child abuse content, plus how to download, assemble and decrypt it.</p>
+
+<h2>Operational Activity: Recruitment</h2>
+
+<p>The <em>enterprise</em> expanded by allowing new members to join. There were clear
+guidelines, procedures and rules for expansion. First there is a background
+check to ensure that the prospective member is an established and active
+participant in the wider community of child abuse image traders. Then an exhisting
+member has to invite the prospect to the group. Finally, to demonstrate both
+their deep involvement in the activity and to prove they are not an infiltrating
+police, they must pass a timed written test.</p>
+
+<h3>Vetting</h3>
+
+<ul>
+<li>Demonstrate active participation in the "trading scene"</li>
+<li>Invited by existing member</li>
+<li>Must exhibit deep domain specific knowledge via timed written test</li>
+</ul>
+
+
+<h2>Rules for Radicals</h2>
+
+<ul>
+<li>Never reveal true identity to another member of the group</li>
+<li>Never communicate with another member of the group outside the usenet channel</li>
+<li>Group membership remains strictly within the confines of the Internet
+
+<ul>
+<li>No member can positively identify another</li>
+</ul>
+</li>
+<li>Members do not reveal personally identifying information</li>
+<li>Primary communications newsgroup is migrated regularly
+
+<ul>
+<li>If a member violates a security rule, e.g. fails to encrypt a message</li>
+<li>Periodically to reduce chance of law enforcement discovery</li>
+</ul>
+</li>
+<li><strong>Newsgroup Migration</strong>
+
+<ul>
+<li>Create new PGP key pair, so there is no contamination linking them</li>
+<li>Create a new nickname
+
+<ul>
+<li>Nickname theme selected by <em>Yardbird</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Root of Success</h2>
+
+<p>The reason the majority of the group was able to avoid capture was in a small way
+due to the technology they were using (Tor), but mostly it was adherence to the
+security rules of the group. They did not reveal information to each other. The
+law enforcement authorities were able to get logs of all their communications
+traffic, plus logs of their IP addresses they used for posting. Everyone that
+used Tor (as per the recommendation of <em>Yardbird</em>) was anonymous at the IP
+layer. This protected them from a subpoena revealing their identity.</p>
+
+<p>The use of PGP was essentially a No-OP in this case. It excluded the general
+public from accessing the content of the communications traffic and the child
+abuse videos and images. It did not protect the traffic against analysis by the
+opposition (who had successfully infiltrated the group). The encryption was not
+a factor in their successful evasion. Rather, it was the content of the messages,
+controlled and dictated by the security rules, which protected their secrets.</p>
+
+<h2>Lessons Learned</h2>
+
+<p>Guarding secrets involves not sharing them. Encryption can only ever protect the
+content of a communique. Real security must start with the content itself, and
+then use encryption as an additional layer.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Win at Kung Fu and Hacking]]></title>
+    <link href="http://grugq.github.com/blog/2013/11/22/challenges-for-hackers/"/>
+    <updated>2013-11-22T20:02:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/11/22/challenges-for-hackers</id>
+    <content type="html"><![CDATA[<h2>Everybody Was Hack Foo Fighting</h2>
+
+<p>I'm going to discuss a serious problem with the organisational structure and
+social dynamics of the hacker community, and why this puts hackers at risk.
+Hackers operate essentially the same way as the henchmen in a kung fu movie:
+they attack the hero one by one by one... always losing. This is a terrible
+way of developing a robust core of knowledge about what techniques work,
+which techniques fail, and why.</p>
+
+<h2>Organisational Learning for Dummies</h2>
+
+<p>There are two types of knowledge: individual, and organisational. Hackers are
+very individualistic, and the knowledge they acquire tends to be very
+practical; experience based. There are few hacker organisations that seek to
+collect, retain, test and spread knowledge. The organistations that do crop up
+are either some zines, which are knowledge artefacts that transmit techne, or
+hacker groups, which share tool chains and experience. However, these hacker
+groups have very short lifespans (measured in months and single digit years,
+not decades). They are compartmented in that there is some effort made to
+retain the group's proprietary information, but internally they usually
+have a very poor security posture. They are social groups in many ways, so
+they are heavily compromised. As we say in infosec "crunchy on the outside,
+chewy in the middle".</p>
+
+<p>Their opposition, the intelligence agencies and law enforcement departments,
+have decades of organisational history and knowledge. The individual members
+can display wide ranges of skill and competence, but the resources and core
+knowledge of the organisation dwarf what any individual hacker has available.
+Many of the skills that a hacker needs to learn, his clandestine tradecraft
+and OPSEC, are the sort of skills that organisations are excellent at
+developing and disseminating. These are not very good skillsets for an
+individual to learn through trial and error, because those errors have
+significant negative consequences. An organisation can afford to lose people
+as it learns how to deal with the adversary; and individual cannot afford to
+make a similar sacrifice -- afterall, who would benefit from your negative
+example?</p>
+
+<h2>Challenges? More Like Opportunities!</h2>
+
+<p>Hackers are facing some very serious challenges now:
+* they lack organistations for collecting intelligence and knowledge about their adversary;
+* they face off against the adversary one at a time,
+* they learn very poorly from prior mistakes
+* they don't even know what skills they need,
+* and perhaps most dangerously, they aren't even aware they're in the game</p>
+
+<p>It is amusing how many people think that interrogations involve violence and
+torture. Successful elicitation far more frequently involves whiskey,
+flattery, playing dumb, and being doubtful ("<em>really? I didn't know it was
+possible to do that. You must be pretty damn smart to have figured it
+out...</em>").</p>
+
+<h2>Winning at Secrets</h2>
+
+<p>There needs to be more information available on the techniques used during
+investigations, as well as before they begin. There needs to be documentation
+on how to evade those techniques, and why those evasions are successful. That
+knowledge needs to be captured and dissemminated out to those who can use it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[required reading]]></title>
@@ -98,155 +331,6 @@ He talked about how it was developed, how it worked, what vulnerabilities it exp
 <h2>Why OPSEC Works</h2>
 
 <p>So OPSEC as a system of security does not violate Kerckoff's principle, and is not "security through obscurity". The specifics of any one application of OPSEC techniques provide security, but those are analogous to the private key to the system. If they are compromised, then security they provide will be be compromised.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Observations on OPSEC]]></title>
-    <link href="http://grugq.github.com/blog/2013/10/21/observations-on-opsec/"/>
-    <updated>2013-10-21T19:03:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/10/21/observations-on-opsec</id>
-    <content type="html"><![CDATA[<p>Briefly, I would like to highlight some important considerations for good OPSEC. Firstly, OPSEC is a mode of operating, not a tool or a collection of tools. Secondly, OPSEC comes at a cost, and a significant part of that cost is efficiency. OPSEC is slow. Finally, maintaining a strong security posture (i.e. “good OPSEC”) for long periods of time is very stressful, even for professionally trained espionage officers.</p>
-
-<p>Learning good OPSEC requires internalizing the behavioural changes required to continually maintain a strong security posture. The operational activities have to become habit, because the small things matter, and every careless mistake can compromise security. The only way to develop good OPSEC habits, good security hygiene, is to practice. Make the foolish beginners mistakes during a practice session, rather than in the field. Two relevant sayings:</p>
-
-<ul>
-<li>Amateurs practice until they get it right, professionals practice until they can’t get it wrong</li>
-<li>The more you sweat in peace, the less you bleed in war</li>
-</ul>
-
-
-<p>After developing good security hygiene habits, the second most difficult thing about good OPSEC is learning patience. Increased OPSEC security comes at the cost of efficiency, primarily in communication time-frames. The OPSEC mechanisms that must be in place to reduce the risks during communication add latency. As a result, communication takes significantly longer and is less reliable. Obviously, this is more of an issue with time sensitive operations than those that have more generous deadlines.</p>
-
-<p>The single greatest security risk is communication between operatives. Clandestine agencies, such as the CIA, MI6, DGSE, etc. will work incredibly hard to minimize the risks surrounding communication with their recruited agents. In the simplest form, this involves a 2-4 hour “surveillance detection route” (SDR) to see if they are “in the black” before they perform any operational activity. This is on top of the hours of planning for the operation itself (note: these are minimums, operations requiring high security might take weeks or months of planning, and 12 hour SDRs).</p>
-
-<p>The technology that exists to facilitate information security, e.g. encryption, is important, but it is not sufficient or even the starting point for robust OPSEC. By all means, learn to use encryption software correctly and in a properly secure fashion. However, it is more important to compartment sensitive activities and structure your operational environment for impact containment than
-install use particular software.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Silk Road Security]]></title>
-    <link href="http://grugq.github.com/blog/2013/10/10/silk-road-security/"/>
-    <updated>2013-10-10T18:53:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/10/10/silk-road-security</id>
-    <content type="html"><![CDATA[<h2>Counterintelligence Lessons for Drug Dealers</h2>
-
-<p><strong>NOTE</strong> Events have overtaken my slow writing speed. This post was in the works
-before the Silk Road bust in September 2013. I'm uploading it anyway because it
-has some useful information, however there seems little point in finish it now.</p>
-
-<p>The dealers on Silk Road ship a large amount of illegal products around the world, and it is clear that they're successful at it. However, the US Postal service has been aware that drug dealers user their service for shipping illegal substances and has developed guidelines for determining suspect packages efficiently. Unfortunately for them, those guidelines have leaked and this allows someone abusing the US mail as an illicit distribution channel to evade the USP's checks.</p>
-
-<h2>Suspicious Post Guidelines</h2>
-
-<p>The actual <a href="http://teknopolitik.tumblr.com/post/48178417204/fbi-law-enforcement-bulletin-via-findarticles">guidelines for suspicious packages</a> list a number of major indicators that the inspectors look for. This guide is somewhat outdated, and a <a href="http://www.orlandocriminaldefenseattorneyblog.com/2012/05/drug-trafficking-via-express-m.html">revised version</a> has also be leaked. In both cases, the <strong>triggers</strong> and the reasoning behind them are similar.</p>
-
-<h3>FBI Profiling Criteria</h3>
-
-<ol>
-<li>Heavy taping along the seams;</li>
-<li>poor preparation for mailing;</li>
-<li>uneven weight distribution;</li>
-<li>apparent package reuse; and</li>
-<li>labels that are handwritten, contain misspellings, originate from a drug-source State, indicate person-to-person not business-to-individual mail, have a return zip code that does not match the accepting post office zip code, a fictitious return address, names of senders or recipients with features in common (John Smith, e.g.) and having no connection to either address</li>
-</ol>
-
-
-<h3>Drug Mail Profile</h3>
-
-<ol>
-<li>the use of Express Mail,
-
-<ul>
-<li>Express Mail is primarily used by businesses for document delivery.</li>
-</ul>
-</li>
-<li>the weight of the package,
-
-<ul>
-<li>drug traffickers are mailing approximately one kilo of cocaine per package, plus some dummy weights</li>
-</ul>
-</li>
-<li>the package is sent from Puerto Rico, a known drug source location,</li>
-<li>the package was mailed from a post office address outside of the zip code on the return address,</li>
-<li>an Accurint check reveals that no one by the sender's name lived at the return address,
-
-<ul>
-<li>Police will also check Google and Facebook to get more information</li>
-</ul>
-</li>
-<li>the package is heavily taped at all seams
-
-<ul>
-<li>heavy taping may or may not help evade detection by drug sniffing dogs--but we know one thing for sure--it certainly helps draw police attention to the package!</li>
-</ul>
-</li>
-<li>the label is handwritten
-
-<ul>
-<li>Since most Express Mail is business-to-business, or business-to-client, labels that aren't typed are suspect</li>
-</ul>
-</li>
-</ol>
-
-
-<h3>Collated</h3>
-
-<p>Anything that looks like someone is sending slightly over an even metric weight of <em>something</em>, from a known suspect location, to another person, in an old heavily taped package with a fake return address. Sounds like bad tradecraft.</p>
-
-<ol>
-<li>Suspicious packaging
-
-<ul>
-<li>Heavy taping</li>
-<li>Package reuse</li>
-</ul>
-</li>
-<li>Not business mail
-
-<ul>
-<li>No printed label</li>
-<li>Clearly not documents</li>
-<li>Individual to individual</li>
-</ul>
-</li>
-<li>Known suspicious origin
-
-<ul>
-<li>Occasionally specific post offices</li>
-<li>Specific countries (Puerto Rico)</li>
-</ul>
-</li>
-<li>Flimsy "return address" cover
-
-<ul>
-<li>Fake name</li>
-<li>Mismatched name + address</li>
-<li>Mismatched address + zipcode</li>
-</ul>
-</li>
-</ol>
-
-
-<p>Main points to take away:</p>
-
-<ul>
-<li>drug packages appear different from normal mail</li>
-<li>many factors are contribute to creating a plausible cover/alias.</li>
-<li>The packaging of a drug shipment provides a cover, which needs to be backstopped.</li>
-</ul>
-
-
-<p>Don't make shit up, do your research and steal an identity with a real address.</p>
-
-<h2>Backstop your cover</h2>
-
-<p>When creating a cover, make sure it is as fully fleshed out as possible. This means developing supporting evidence to bolster the validity of the cover. In intelligence lingo, this is called backstopping.</p>
-
-<p>A backstopped cover is one where checks to verify the authenticity of the cover story are verifiable. For example, if the cover story includes a name, there are matching identity documents; if there is an phone number, it connects to someone who will substantiate the cover story; if there is an address, it exists. The old Soviet illegals used to spend years developing their cover and backstopping them. They'd live for a few years in a country they claimed to be immigrating from, so they would have the memories, experience and verifiable evidence that they were from there.</p>
-
-<p>If you are going to use a cover (you probably should), then put in the effort to create a backstop. The complexity and depth of that backstop are dependant on how deeply the cover will be investigated. Remember though, it is better to have too much, than not enough...</p>
 ]]></content>
   </entry>
   
