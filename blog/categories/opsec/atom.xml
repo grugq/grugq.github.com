@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OPSEC | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/opsec/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-12-04T01:23:33+07:00</updated>
+  <updated>2013-12-04T01:59:29+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -32,6 +32,9 @@ officials was due entirely to the strict security rules followed by the group.</
 <p>This post will examine those rules, the reasons for their success, and the
 problems the group faced which necessitated those rules.</p>
 
+<p>(An examination of the group's security from a slightly different perspective
+was conducted by <code>Baal</code> and is available <a href="dee.su/uploads/baal.html">here</a>)</p>
+
 <h2>Covert Organizations, Seen One, Seen 'em All</h2>
 
 <p>All covert organizations face a similar set of problems as they attempt to execute
@@ -49,14 +52,14 @@ within their environmental context.</p>
 
 <h3>Operational Activities:</h3>
 
-<p>The <em>Yardbird</em> child abuse media group had a number of core goals that had to be
-addressed to continue operation: they needed to distribute their child abuse
-content to their members; communicate between members; raise funds to acquire
-new content; recruit new members (presumably for access to additional child abuse
-content).</p>
+<p>The <em>Yardbird</em> child abuse content group (hereafter also called the <em>enterprise</em>)
+had a number of core goals that had to be addressed to continue operation: they
+needed to distribute their child abuse content to members; communicate between
+members; raise funds to acquire new content; recruit new members (presumably for
+access to additional child abuse content).</p>
 
-<p>Explicitly stated, here is an enumerated list of the operational activities that
-the group had to engage in to self perpetuate.</p>
+<p>Explicitly stated, this is an enumerated list of the operational activities that
+the group <strong>had</strong> to engage in to self perpetuate.</p>
 
 <ol>
 <li>Distribution of Child Abuse Content</li>
@@ -66,19 +69,19 @@ the group had to engage in to self perpetuate.</p>
 </ol>
 
 
-<p>Pretty typical activities for a clandestine group. Besides their core defining
-operational activity, they have a communications channel, fund raising and
-membership management.</p>
+<p>Except for the first issue (strategically significant only to this group),
+these are pretty typical activities for a clandestine organization. Besides their
+defining operational activity, they need a communications channel, fund raising
+capability, and membership management processes.</p>
 
-<h2>Security Forces Interdict Moron Pedo</h2>
+<h2>Opposition Success: The Penetration</h2>
 
-<p>Mr Castleman, of affidavit fame, was apparently engaged in child abuse image
-distribution outside the <em>enterprise</em>. This activity, which was conducted
-without the protection of an anonymisation platform (e.g. Tor) and was registered
-to his real identity.</p>
+<p>The law enforcement authorities caught a pedophile distribution child abuse
+content. He is a member of the <em>Yardbird</em> group and offers up complete access
+to the group, along with archival logs, in exchange for leniency.</p>
 
-<p>During his plea bargain phase, Mr Castleman turned informant on the <em>enterprise</em>
-and provided the police with complete archival logs and access</p>
+<p>All of the information about this group comes from the <a href="https://drive.google.com/file/d/0Bzt0K7_O4qyqMi0ycjZFdzhxYTA/edit?usp=sharing">Castleman Affidavit</a>,
+the <code>Baal</code> <a href="dee.su/uploads/baal.html">analysis</a>, and some <code>Baal</code> <a href="http://alt.privacy.anon-server.narkive.com/VRl3dTFH/the-fourth-of-yardbird-s-chums-grabs-his-ankles">follow ups</a>.</p>
 
 <h2>A Frustrating Infiltration</h2>
 
@@ -95,14 +98,26 @@ The majority of those successes were achieved due to group members being insuffi
 cautious and violating the <em>enterprise</em> security rules. Obviously, these security
 rules are extremely resilient against adversarial assault.</p>
 
+<p>The members who were caught were those who violated the security SOP of the group:</p>
+
+<ul>
+<li>Accessing a newsgroup server without using Tor (e.g. VPN, or directly)</li>
+<li>Revealing personal details about themselves</li>
+<li>Contacting each other outside the group's secure comms channel</li>
+</ul>
+
+
 <h2>Operational Activity: Distribution</h2>
 
 <p>The <em>enterprise</em> was careful to ensure that the location of the encrypted files
-containing child abuse images was a different newsgroup. They compartmented their
+containing child abuse images was a different newsgroup from the communications
+newsgroup. One possible reason is to unlink the obvious encrypted group discussion
+from the larger encrypted content posts. That is, they compartmented their
 commo from their file sharing. As an additional, although superfluous step, the
 <em>enterprise</em> would apparently alter the sequence number of the split binary
 uploads so that reassembly would be hampered. What this cumbersome step added
-beyond the existing PGP encryption.</p>
+beyond the existing PGP encryption is unclear (if your adversary can break PGP
+they can probably figure out the order some files).</p>
 
 <h2>Operational Activity: Communications</h2>
 
@@ -112,15 +127,26 @@ members. The communications newsgroup is always reserved strictly for communicat
 The announcements regarding new downloads provided detailed instructions as to
 the location of the child abuse content, plus how to download, assemble and decrypt it.</p>
 
+<p>The group used a single shared PGP key for all members. On the one hand, this
+would completely negate the security provided by PGP if the key falls into the
+wrong hands. It also limits the groups ability to expel a member who transgresses
+the rules and needs to be punished. On the other hand, the use of a shared key
+makes key management significantly easier which is a serious concern when you
+need to rekey every few months. Additionally, using only one key reduces the
+ability of the adversary to determine group size by examining the PGP packets.
+It also removes the potential for a group member to reuse a key that is linked
+to their real identity. See <a href="http://ritter.vg/blog-deanonymizing_amm.html">this excellent</a> presentation for more details on those attacks.</p>
+
 <h2>Operational Activity: Recruitment</h2>
 
 <p>The <em>enterprise</em> expanded by allowing new members to join. There were clear
-guidelines, procedures and rules for expansion. First there is a background
-check to ensure that the prospective member is an established and active
-participant in the wider community of child abuse image traders. Then an exhisting
+guidelines, procedures and rules for expansion. First there was a background
+check to ensure that the prospective member was an established and active
+participant in the wider community of child abuse image traders. Then an existing
 member has to invite the prospect to the group. Finally, to demonstrate both
-their deep involvement in the activity and to prove they are not an infiltrating
-police, they must pass a timed written test.</p>
+their deep involvement in the activity and to prove they are not an undercover
+cop, they must pass a timed written test on the minutiae of various child abuse
+victims and media.</p>
 
 <h3>Vetting</h3>
 
@@ -131,7 +157,7 @@ police, they must pass a timed written test.</p>
 </ul>
 
 
-<h2>Rules for Radicals</h2>
+<h2>Security Rules that Work</h2>
 
 <ul>
 <li>Never reveal true identity to another member of the group</li>
@@ -150,11 +176,11 @@ police, they must pass a timed written test.</p>
 <li>Periodically to reduce chance of law enforcement discovery</li>
 </ul>
 </li>
-<li><strong>Newsgroup Migration</strong>
+<li>On each <strong>newsgroup migration</strong>
 
 <ul>
-<li>Create new PGP key pair, so there is no contamination linking them</li>
-<li>Create a new nickname
+<li>Create new PGP key pair, unlinking from previous messages</li>
+<li>Each member creates a new nickname
 
 <ul>
 <li>Nickname theme selected by <em>Yardbird</em></li>
@@ -168,16 +194,20 @@ police, they must pass a timed written test.</p>
 <h2>Root of Success</h2>
 
 <p>The reason the majority of the group was able to avoid capture was in a small way
-due to the technology they were using (Tor), but mostly it was adherence to the
-security rules of the group. They did not reveal information to each other. The
+due to the technology they were using (Tor), but primarily it was adherence to the
+security rules of the group. They had very good OPSEC and they followed it
+consistently. Fundamentally, they had complete compartmentation within the group
+-- they did not reveal information to each other. The
 law enforcement authorities were able to get logs of all their communications
 traffic, plus logs of their IP addresses they used for posting. Everyone that
 used Tor (as per the recommendation of <em>Yardbird</em>) was anonymous at the IP
-layer. This protected them from a subpoena revealing their identity.</p>
+layer. This protected them from a subpoena revealing their identity. As long as
+there was no additional information that they had revealed about themselves in
+their messages, they were secure against the opposition.</p>
 
 <p>The use of PGP was essentially a No-OP in this case. It excluded the general
-public from accessing the content of the communications traffic and the child
-abuse videos and images. It did not protect the traffic against analysis by the
+public from accessing the content of the communications traffic (and the child
+abuse videos and images). It did not protect the traffic against analysis by the
 opposition (who had successfully infiltrated the group). The encryption was not
 a factor in their successful evasion. Rather, it was the content of the messages,
 controlled and dictated by the security rules, which protected their secrets.</p>
