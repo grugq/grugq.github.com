@@ -4,7 +4,7 @@
   <title><![CDATA[Category: PGP | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/pgp/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-12-03T06:11:37+07:00</updated>
+  <updated>2013-12-04T01:23:33+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -29,24 +29,34 @@ were successfully apprehended. The majority, including the now infamous leader
 <em>Yardbird</em>, escaped capture. The dismal success rate of the law enforcement
 officials was due entirely to the strict security rules followed by the group.</p>
 
-<p>This post will examine those rules, the reasons for their success, and what
+<p>This post will examine those rules, the reasons for their success, and the
 problems the group faced which necessitated those rules.</p>
 
-<h2>Covert Organisations, Seen One, Seen 'em All</h2>
+<h2>Covert Organizations, Seen One, Seen 'em All</h2>
 
-<p>All covert organisations face a similar set of problems as they attempt to execute
+<p>All covert organizations face a similar set of problems as they attempt to execute
 on their fundamental mission -- to <strong>continue to exist</strong>. A covert organization
-in an adversarial environment faces a number of organisational challenges and
+in an adversarial environment faces a number of organizational challenges and
 constraints. Fundamentally how it handles trade-offs between operational
-security and efficiency mandates how its group members perform their operational
+security and efficiency mandates how group members perform their operational
 activities. Strong OPSEC means low efficiency, while high efficiency necessitates
-weak OPSEC. The strength of the oppositional forces dictate the minimum security requirements of the covert organisation.</p>
+weak OPSEC. The strength of the oppositional forces dictate the minimum security
+requirements of the covert organization.</p>
 
-<p>Examining the operational activities, those actions the organisation must engage
-in to self perpetuate, allows us to explore the operational security decisions
+<p>Examining the operational activities -- those actions the organization must engage
+in to self perpetuate -- allows us to evaluate their operational security decisions
 within their environmental context.</p>
 
 <h3>Operational Activities:</h3>
+
+<p>The <em>Yardbird</em> child abuse media group had a number of core goals that had to be
+addressed to continue operation: they needed to distribute their child abuse
+content to their members; communicate between members; raise funds to acquire
+new content; recruit new members (presumably for access to additional child abuse
+content).</p>
+
+<p>Explicitly stated, here is an enumerated list of the operational activities that
+the group had to engage in to self perpetuate.</p>
 
 <ol>
 <li>Distribution of Child Abuse Content</li>
@@ -177,6 +187,20 @@ controlled and dictated by the security rules, which protected their secrets.</p
 <p>Guarding secrets involves not sharing them. Encryption can only ever protect the
 content of a communique. Real security must start with the content itself, and
 then use encryption as an additional layer.</p>
+
+<h3>Note from the Editor</h3>
+
+<p>(Feel free to skip this part if you don't think studying how child pornographers
+avoid capture is relevant)</p>
+
+<p>When analyzing the activities of groups operating in an adversarial environment to learn what works, what doesn't, and why, (unfortunately) the pool of covert organisations is somewhat limited: intelligence agencies; terrorist groups; hacker crews; narcos; insurgents; child pornographers... Few other groups face such a hostile operating environment that their security measures are really "tested".</p>
+
+<p>The group examined in this post had an incredibly effective set of security practices. They imposed strict compartmentation, regularly migrated identities and locations, required consistent Tor and PGP use, etc. They had legitimate punishments for people who transgressed the rules (expulsion) and they survived a massive investigation effort. Clearly, they were doing something right (actually a number of things).
+Just as clearly, they are reprehensible people who engage in activity that is immoral and unethical, by any measure. (Paying for child pornography to be produced is flat out wrong, regardless on where you stand on the spectrum of <a href="http://falkvinge.net/2012/05/23/cynicism-redefined-why-the-copyright-lobby-loves-child-porn/">opinions regarding child porn laws</a>).</p>
+
+<p>The thing is, there are basically no nice people who provide case studies of OPSEC practices. Most are engaged in violence, serious drug trafficking (at the "kill people for interfering" level), theft and manipulation of human beings, etc. Thats the nature of the beast.</p>
+
+<p>People with well funded, trained and motivated adversaries have the strongest incentives to practice the highest level of security. They're the ones to learn from.</p>
 ]]></content>
   </entry>
   
