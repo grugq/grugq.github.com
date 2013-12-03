@@ -4,7 +4,7 @@
   <title><![CDATA[Category: intelligence | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/intelligence/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-12-04T01:59:29+07:00</updated>
+  <updated>2013-12-04T02:03:02+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -23,8 +23,8 @@
 <p>I'm going to discuss a serious problem with the organisational structure and
 social dynamics of the hacker community, and why this puts hackers at risk.
 Hackers operate essentially the same way as the henchmen in a kung fu movie:
-they attack the hero one by one by one... always losing. This is a terrible
-way of developing a robust core of knowledge about what techniques work,
+they attack the adversary one by one by one... always losing. This is a terrible
+way of developing a robust core of knowledge about which OPSEC techniques work,
 which techniques fail, and why.</p>
 
 <h2>Organisational Learning for Dummies</h2>
@@ -51,7 +51,7 @@ and OPSEC, are the sort of skills that organisations are excellent at
 developing and disseminating. These are not very good skillsets for an
 individual to learn through trial and error, because those errors have
 significant negative consequences. An organisation can afford to lose people
-as it learns how to deal with the adversary; and individual cannot afford to
+as it learns how to deal with the adversary; an individual cannot afford to
 make a similar sacrifice -- afterall, who would benefit from your negative
 example?</p>
 
