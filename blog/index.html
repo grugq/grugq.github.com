@@ -9,7 +9,7 @@
   <meta name="author" content="the grugq">
 
   
-  <meta name="description" content="Survival in an Extremely Adversarial Environment If your secure communications platform isn&#8217;t being used by terrorists and pedophiles, you&# &hellip;">
+  <meta name="description" content="Of Bomb Threats and Tor Recently (December 16th, 2013) there was a bomb threat at Harvard University, during finals week. The threat was a hoax, and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,216 @@
   <div id="main">
     <div id="content">
       
+
+
+    <article class="post">
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/12/21/in-search-of-opsec-magic-sauce/">In Search of OPSEC Magic Sauce</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-21T06:34:00+07:00" pubdate data-updated="true">Dec 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1>Of Bomb Threats and Tor</h1>
+
+<p>Recently (December 16th, 2013) there was a <a href="http://www.thecrimson.com/article/2013/12/16/unconfirmed-reports-explosives-four-buildings/">bomb threat at Harvard University</a>, during finals week. The threat was a hoax, and the <a href="http://www.thecrimson.com/article/2013/12/17/student-charged-bomb-threat/">FBI got their man</a> that very night. The <a href="https://drive.google.com/file/d/0Bzt0K7_O4qyqUlEtd2pUWE42amM/edit?usp=sharing">affidavit is here</a>.</p>
+
+<p>This post will look at the tools and techniques the operative used to attempt
+to hide his actions, why they failed, and what he should&#8217;ve done to improve his
+OPSEC. As a hint: I provided an outline of what he should&#8217;ve done 6 months
+ago in <a href="http://grugq.github.io/blog/2013/06/13/ignorance-is-strength/">&#8220;<strong>ignorance is strength</strong>&#8221;</a>.</p>
+
+<h2>Strategic Objectives: Avoid Final Exam</h2>
+
+<p>Strategically, the principal behind this operation (Eldo Kim) was attempting to avoid taking
+a Final Exam scheduled for the morning of December 16th. To accomplish his objectives
+he designed an operation that would cause an evacuation of the building where he
+was to take his final. Rather than recruit an agent
+and delegate the execution of the operation, the principal decided to do it himself.</p>
+
+<p>This was not an enlightened decision.</p>
+
+<h2>The Structure of Things (for values of Things = &#8220;Operations&#8221;)</h2>
+
+<p>All offensive operations share a similar core structure. This structure has been
+known for a long time in the military, but is rarely applied in other fields.
+Operations have distinct phases that they move through as the progress from vague
+idea, to concrete plan, thru execution and onto the escape.</p>
+
+<p>The outline framework for an operation, all of the phases, is the following:</p>
+
+<ol>
+<li>Target Selection</li>
+<li>Planning (and Surveillance)</li>
+<li>Deployment</li>
+<li>Execution</li>
+<li>Escape and Evasion</li>
+</ol>
+
+
+<p>This framework is frequently used when discecting a terrorist attack post mortem,
+allowing the security forces to identify the agents involved in each phase. Idealy,
+the security forces want to remove the people involved in the <em>Target Selection</em>
+and <em>Planning</em> stages. These people tend to be the principals, and are more
+valuable than the agents who actually perpetrate the attack.</p>
+
+<p>For hacker groups, the operational phases are rarely acknowledged, and followed
+in an adhoc manner. Primarily because few hackers are aware of them. It would be
+beneficial for hackers to understand the structure of preparing an operation
+thoroughly, but that is an issue we&#8217;ll address another day.</p>
+
+<p>As an aside, it is worth noting that these operational phases apply to a
+consultancy making a sale, providing a service, dropping a deliverable, and then
+vanishing. ;)</p>
+
+<h2>College Kids are Inexperienced, News at 11.</h2>
+
+<p>All real criminals know that the most important part of an operation is the
+get away, the <em>git</em> (as it used to be called). Of course, real criminals don&#8217;t
+go to Harvard University (although there&#8217;s an argument to be made that some
+graduate from there), and so poor Eldo Kim had no one to teach him the criticality
+of the final stage of an operation: <strong>Escape and Evasion</strong>.</p>
+
+<h2>Operation &#8220;Doomed to Failure&#8221;</h2>
+
+<h3>Target Selection</h3>
+
+<p>The strategic target was the hall hosting the final exam. Tactically, the
+principal selected &#8220;email addresses at random&#8221; to recieve a bomb threat intended
+to force an evacuation of the hall.</p>
+
+<h3>Planning</h3>
+
+<p>This step appears to have been focussed solely on the technical requirements of
+masking the origination of the threatening emails. However, insufficient resources
+were devoted to this phase, and therefore it was fundamentally flawed. The
+operative chose to use GuerrillaMail to send the emails, however as GuerrillaMail
+includes the source IP of the sender, he also chose Tor to mask his IP address.</p>
+
+<h3>Deployment and Execution</h3>
+
+<p>The operative used an ad hoc approach to his operational design, and as a result
+he made a fatal error. Here is his operational plan:</p>
+
+<p>Use Tor to connect to GuerrillaMail. Send an email to a target email address.
+Create a new account for GuerrillaMail</p>
+
+<ul>
+<li>Obtain Tor Browser Bundle</li>
+<li>Select target email addresses &#8220;randomly&#8221; [see para 11]</li>
+<li><p>Compose email:
+  shrapnel bombs placed in:</p>
+
+<p>  science center
+  sever hall
+  emerson hall
+  thayer hall</p>
+
+<p>  2/4. guess correctly.</p>
+
+<p>  be quick for they will go off soon</p></li>
+<li>For each target email address
+
+<ul>
+<li>Create new GuerillaMail &#8220;account&#8221;</li>
+<li>Send email (<a href="https://www.guerrillamail.com/compose">using this</a>)</li>
+</ul>
+</li>
+</ul>
+
+
+<p>For security, the operative chose to rely on a pseudonymous email tool and the
+Tor anonymity network. It is likely that he used the Tor Browser Bundle rather
+than the TAILS distribution (see: para 11). Provided he closed the tab between
+each session, there should be no forensic evidence left on the laptop.</p>
+
+<p><strong>NOTE:</strong> When using <strong>Tor Browser Bundle</strong> close all the tabs and exit the
+application when you are done. The TBB will clean up thoroughly after itself,
+<em>but only on exit</em>! When you are done, shut it down.</p>
+
+<h3>Escape and Evasion</h3>
+
+<p>There was nothing at all done for this phase.</p>
+
+<h2>Counterintelligence: Know your Adversary</h2>
+
+<p>A study of the methods of investigation used by the law enforcement officials
+engaged to investigate bomb threats would have been beneficial for Mr Kim. He
+would have realised that they would target the likely suspects, attempt to
+narrow the suspect pool down to the minimum set, then start interviewing. The
+more strongly the evidence points to a set of suspects, the more aggressive the
+interviews will be. From &#8220;do you know anything about&#8230;&#8221; to &#8220;We have all the
+evidence we need, why don&#8217;t you make it easy for yourself?&#8221;</p>
+
+<p>Initially the suspects for the case would have been any student scheduled to
+take an exam
+at one of the targeted halls. This is doubtless a large number, and without any
+specific information to go on, the chance of interviewing all of them is slim.
+If, however, the FBI did interview all of them, the questioning would be general
+and undirected, rather than specific and probing. An amateur, like Kim, who kept
+his cool and simply denied any knowledge of the hoax would have had a reasonable
+chance of evading suspicion.</p>
+
+<p>Knowing the investigative techniques of his adversary would have allowed Kim to
+design an operation that provided for a reliable escape and evasion phase. He
+would have used an unmonitored network, in an unmonitored location near by the
+school, to send his threats. This would have left the suspect pool extremely
+large &#8211; &#8220;everyone&#8221;.</p>
+
+<p>When planning an operation, know how the adversary will respond. This will allow
+you to factor that response into your planning. If you do not know how your
+adversary will respond, then their response will be a surprise. Do not allow
+the reactive force to surprise you.</p>
+
+<h2>There is no OPSEC magic sauce</h2>
+
+<p><strong>What He Should Have Done</strong> the content and context of the threat make it clear
+that the originator of the emails was a student (or possibly a professor/TA trying
+to avoid grading exams). The important thing to hide is <strong>which</strong> student, not
+that it was a student. Therefore simply using a nearby cafe with free wifi should
+have been sufficient to mask the specific identity of the operative. Assuming:</p>
+
+<ul>
+<li>there are cafe&#8217;s that do not know the operative by sight,</li>
+<li>there are cafe&#8217;s that are not monitored by CCTV (where a hat, don&#8217;t look up),</li>
+<li>that he wore a simple disguise to reduce the recall of the witnesses (look generic), and</li>
+<li>that a college kid in a cafe at 8am during Finals week is not unusual</li>
+</ul>
+
+
+<p>Using Tor from the college campus was a fatal error. The pool of suspects was
+immediately reduced to &#8220;everyone that used Tor during the time the bomb threats
+were sent&#8221;. Since Silk Road v1 has been shut down, that is obviously going to be
+a small number.</p>
+
+<h2>Lets call it half a win</h2>
+
+<p>Strategically, the operation was successful. Eldo Kim will not have to take his
+final exam. Or, indeed, other final exams he might not be prepared for. However,
+it is hard to imagine this is the outcome he was hoping for.</p>
+</div>
+  
+  
+
+</article>
 
 
     <article class="post">
@@ -1126,169 +1336,6 @@ to compromise the organisation. Ensure that your operational activities have
 good <strong>cover for status</strong> (e.g. a disguise) and <strong>cover for action</strong> (e.g. a strong cover story).
 Strong compartmentation, strong cover, and be aware of the risks of using social networks
 for building a covert organisation.</p>
-</div>
-  
-  
-
-</article>
-
-
-    <article class="post">
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/05/thru-a-portal-darkly/">Thru a PORTAL Darkly</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-05T15:08:00+07:00" pubdate data-updated="true">Oct 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>The Design and Implementation of P.O.R.T.A.L</h2>
-
-<p>The <strong>P</strong>ersonal <strong>O</strong>nion <strong>R</strong>outer <strong>T</strong>o <strong>A</strong>ssure <strong>L</strong>iberty is designed
-to protect the user by isolating their computer behind a router that forces all
-traffic over the Tor network.</p>
-
-<h2>PORTAL Gooooooooooooooaaaaaaaaaaals!!!!!!</h2>
-
-<p>The goal of the PORTAL project is to create a compartmented network segment
-that can <strong>only</strong> send data to the Tor network. To accomplish this the PORTAL
-device itself is physically isolated and locked down to prevent malicious
-tampering originating from the protected network. So if the user&#8217;s computer is
-compromised by malware, the malware is unable to modify the Tor software or
-configuration, nor can it directly access the Internet (completely
-preventing IP address leakage). Additionally, the PORTAL is configured to fail
-close &#8211; if the connection to Tor drops, the user loses their Internet access.
-Finally, the PORTAL is &#8220;idiot proof&#8221;, simply turn it on and it works.</p>
-
-<h2>The Implementation, the Pain, the Horror</h2>
-
-<p>The initial requirement was to develop PORTAL for a small personal sized router,
-such as the TP-Link 703N, 3040, or M1U. All of these devices are small, portable
-and support the OpenWRT open source router firmware. Unfortunately, it turns out
-that &#8220;small&#8221; and &#8220;portable&#8221; is synonymous with &#8220;weak&#8221; and &#8220;underpowered&#8221;.</p>
-
-<p>Unfortunately, Tor is quite resource intensive for an embedded device. Tor uses 16MB of RAM
-and for complete functionality (requiring the GeoIP database) it occupies slightly
-over 1.2MB of <code>squashfs</code> space. The stock TP-LINK routers have only 4MB of flash
-and 16MB of RAM (later models have increased RAM). This caused a lot of problems
-when building early versions. A bare bones OpenWRT system stripped down to just
-support an Internet uplink USB device occupies 3.2MB of <code>squashfs</code> space. Using
-the power of math we see: <code>3.2 + 1.2 &gt; 4.0</code>. Fuck.</p>
-
-<h3>Enter The Dragon, or Chinese Hackers to the Rescue</h3>
-
-<p>Fortunately, the TP-LINK routers are not just small, they are also extremely hackable. They are very popular
-with hackers who have modified the hardware and expanded the capabilities of the
-stock device. I got in contact with a Chinese hacker who has upgraded the
-TP-LINK 703N to 16MB of flash and 64MB of RAM. Sweet. Using these modified routers
-development of the PORTAL became much much easier.</p>
-
-<h2>PORTAL System Architecture</h2>
-
-<p>The PORTAL requires a minimum of two network interfaces: one for the Internet
-uplink, and one for the isolated network segment. In order to protect the PORTAL from
-tampering from malware (or malicious users), it also requires a third administration
-interface. This can be either a serial console, or physical connection. The reason
-not to use WiFi for the administration network is that that would expose the
-administration interface to anyone within WiFi range, including potentially the
-user&#8217;s compromised laptop&#8217;s WiFi card.</p>
-
-<h3>Three Interfaces to Rule Them All</h3>
-
-<p>The requirement to protect the PORTAL from a malicious user caused some problems
-since the device hardware has very limited interfaces. The TP-LINK 703N has only:</p>
-
-<pre><code>* 1 x USB 2.0
-* 1 x 100MB ethernet
-* 1 x onboard wifi
-</code></pre>
-
-<p>All available interfaces are required to get us to the three networks we need:</p>
-
-<pre><code>* Tor: isolated proxy interface
-    * Tor SOCKS proxy
-    * Tor Transparent TCP proxy
-    * Tor Transparent DNS proxy
-    * DHCP (optional)
-* Admin: configuration management interface
-    * ssh
-    * https (optional)
-    * DHCP (optional)
-* Internet: uplink connection interface
-    * No services
-</code></pre>
-
-<h2>Operational PORTAL</h2>
-
-<p>After the user has configured the <code>Internet</code>, and whatever other adjustments they
-wish to make, they shouldn&#8217;t need to connect to the <code>Admin</code> interface again. This
-leaves us with a very hard target for any attacker who wishes to unmask us
-(modulo any issues with Tor itself).</p>
-
-<p>The PORTAL has been hardened to make it significantly more difficult for the user
-to make a mistake, or for an attacker to subvert the Tor protections. From the
-<code>Tor</code> network the only exposed ports are Tor&#8217;s DNS proxy, TCP proxy, and SOCKS.
-Optionally, you can use DHCP on this network.</p>
-
-<p>If, somehow, the firewall doesn&#8217;t work properly, you&#8217;re still safe because the
-PORTAL doesn&#8217;t actually route packets. The <em>only</em> way you can reach the Internet
-(regardless of which interface you&#8217;re connected to) is via Tor. This stops stupid
-mistakes, such as connecting to the <code>Admin</code> interface and forgetting to swap to
-the <code>Tor</code> network. Don&#8217;t worry, you can&#8217;t do that, it won&#8217;t work, you&#8217;re welcome.</p>
-
-<p>Final hardening is left up to the user who will have to assign the <code>Admin</code> and
-<code>Tor</code> networks to physical interfaces. There are security trade offs either way.</p>
-
-<ul>
-<li><p>Medium Security:</p>
-
-<ul>
-<li><code>Tor</code> = WiFi</li>
-<li><code>Admin</code> = Ethernet</li>
-<li>pros: ease of use</li>
-<li>cons: pre-Tor plaintext will be broadcast over the AEther (see: Hammond)</li>
-</ul>
-</li>
-<li><p>Maximum Security:</p>
-
-<ul>
-<li><code>Tor</code> = Ethernet</li>
-<li><code>Admin</code> = WiFi</li>
-<li>pros: ultra secure</li>
-<li>cons: if an attacker cracks your WPA2 PSK, they&#8217;ll have access to your
-    management sshd. Of course, they&#8217;ll be so physically close to you
-    at that point, leaking your IP is the least of your worries.</li>
-<li><strong>NOTE:</strong> remote the WiFi card from your computer to block access via
-      malware compromise</li>
-</ul>
-</li>
-</ul>
-
-
-<h2>Just Do It</h2>
-
-<p>The PORTAL project has been migrated to the RaspberryPi, which has more power
-to support Tor. It requires more configuration, which is something I&#8217;ll work on,
-however the ease of acquisition of the RPi makes this the current platform of
-choice. So go install <a href="http://github.com/grugq/PORTALofPi">PORTAL of Pi</a> and
-compartment all of your sensitive operational activities inside an isolated Tor network.</p>
 </div>
   
   
