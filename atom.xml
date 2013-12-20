@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-12-21T06:35:23+07:00</updated>
+  <updated>2013-12-21T06:49:38+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -23,9 +23,14 @@
 <p>Recently (December 16th, 2013) there was a <a href="http://www.thecrimson.com/article/2013/12/16/unconfirmed-reports-explosives-four-buildings/">bomb threat at Harvard University</a>, during finals week. The threat was a hoax, and the <a href="http://www.thecrimson.com/article/2013/12/17/student-charged-bomb-threat/">FBI got their man</a> that very night. The <a href="https://drive.google.com/file/d/0Bzt0K7_O4qyqUlEtd2pUWE42amM/edit?usp=sharing">affidavit is here</a>.</p>
 
 <p>This post will look at the tools and techniques the operative used to attempt
-to hide his actions, why they failed, and what he should&#8217;ve done to improve his
+to hide his actions, why he failed, and what he should&#8217;ve done to improve his
 OPSEC. As a hint: I provided an outline of what he should&#8217;ve done 6 months
 ago in <a href="http://grugq.github.io/blog/2013/06/13/ignorance-is-strength/">&#8220;<strong>ignorance is strength</strong>&#8221;</a>.</p>
+
+<p><strong>Disclaimer:</strong> This post is to outline why OPSEC is so difficult to get right,
+even for people who go to Harvard. I am not encouraging any illegal behaviour,
+but instead analyzing how OPSEC precautions can be so difficult to get right.
+Don&#8217;t send bomb threats.</p>
 
 <h2>Strategic Objectives: Avoid Final Exam</h2>
 
@@ -37,12 +42,12 @@ and delegate the execution of the operation, the principal decided to do it hims
 
 <p>This was not an enlightened decision.</p>
 
-<h2>The Structure of Things (for values of Things = &#8220;Operations&#8221;)</h2>
+<h2>The Structure of All Things (for values of Things = &#8220;Operations&#8221;)</h2>
 
 <p>All offensive operations share a similar core structure. This structure has been
 known for a long time in the military, but is rarely applied in other fields.
-Operations have distinct phases that they move through as the progress from vague
-idea, to concrete plan, thru execution and onto the escape.</p>
+Operations have distinct phases that they move through as they progress from vague
+idea, to concrete plan, through execution and, finally, onto the escape.</p>
 
 <p>The outline framework for an operation, all of the phases, is the following:</p>
 
@@ -62,7 +67,7 @@ and <em>Planning</em> stages. These people tend to be the principals, and are mo
 valuable than the agents who actually perpetrate the attack.</p>
 
 <p>For hacker groups, the operational phases are rarely acknowledged, and followed
-in an adhoc manner. Primarily because few hackers are aware of them. It would be
+in an ad hoc manner. Primarily because few hackers are aware of them. It would be
 beneficial for hackers to understand the structure of preparing an operation
 thoroughly, but that is an issue we&#8217;ll address another day.</p>
 
@@ -79,22 +84,6 @@ graduate from there), and so poor Eldo Kim had no one to teach him the criticali
 of the final stage of an operation: <strong>Escape and Evasion</strong>.</p>
 
 <h2>Operation &#8220;Doomed to Failure&#8221;</h2>
-
-<h3>Target Selection</h3>
-
-<p>The strategic target was the hall hosting the final exam. Tactically, the
-principal selected &#8220;email addresses at random&#8221; to recieve a bomb threat intended
-to force an evacuation of the hall.</p>
-
-<h3>Planning</h3>
-
-<p>This step appears to have been focussed solely on the technical requirements of
-masking the origination of the threatening emails. However, insufficient resources
-were devoted to this phase, and therefore it was fundamentally flawed. The
-operative chose to use GuerrillaMail to send the emails, however as GuerrillaMail
-includes the source IP of the sender, he also chose Tor to mask his IP address.</p>
-
-<h3>Deployment and Execution</h3>
 
 <p>The operative used an ad hoc approach to his operational design, and as a result
 he made a fatal error. Here is his operational plan:</p>
@@ -134,6 +123,25 @@ each session, there should be no forensic evidence left on the laptop.</p>
 <p><strong>NOTE:</strong> When using <strong>Tor Browser Bundle</strong> close all the tabs and exit the
 application when you are done. The TBB will clean up thoroughly after itself,
 <em>but only on exit</em>! When you are done, shut it down.</p>
+
+<h3>Target Selection</h3>
+
+<p>The strategic target was the hall hosting the final exam. Tactically, the
+principal selected &#8220;email addresses at random&#8221; to recieve a bomb threat intended
+to force an evacuation of the hall, along with a number of other cover locations.</p>
+
+<h3>Planning</h3>
+
+<p>This step appears to have been focussed solely on the technical requirements of
+masking the origination of the threatening emails. However, insufficient resources
+were devoted to this phase, and therefore it was fundamentally flawed.</p>
+
+<h3>Deployment and Execution</h3>
+
+<p>The operative chose to use GuerrillaMail to send the emails, and because
+GuerrillaMail reveals the source IP of the sender, he also chose Tor to mask his
+IP address. However, he used a monitored network to access Tor, which severely
+limits the anonymity provided by Tor. This error was to prove fatal.</p>
 
 <h3>Escape and Evasion</h3>
 
