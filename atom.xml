@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-12-21T06:49:38+07:00</updated>
+  <updated>2013-12-21T07:14:30+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[In Search of OPSEC Magic Sauce]]></title>
+    <title type="html"><![CDATA[In Search Of Opsec Magic Sauce]]></title>
     <link href="http://grugq.github.com/blog/2013/12/21/in-search-of-opsec-magic-sauce/"/>
-    <updated>2013-12-21T06:34:00+07:00</updated>
+    <updated>2013-12-21T00:00:00+07:00</updated>
     <id>http://grugq.github.com/blog/2013/12/21/in-search-of-opsec-magic-sauce</id>
-    <content type="html"><![CDATA[<h1>Of Bomb Threats and Tor</h1>
+    <content type="html"><![CDATA[<p>f Bomb Threats and Tor</p>
 
 <p>Recently (December 16th, 2013) there was a <a href="http://www.thecrimson.com/article/2013/12/16/unconfirmed-reports-explosives-four-buildings/">bomb threat at Harvard University</a>, during finals week. The threat was a hoax, and the <a href="http://www.thecrimson.com/article/2013/12/17/student-charged-bomb-threat/">FBI got their man</a> that very night. The <a href="https://drive.google.com/file/d/0Bzt0K7_O4qyqUlEtd2pUWE42amM/edit?usp=sharing">affidavit is here</a>.</p>
 
@@ -88,23 +88,10 @@ of the final stage of an operation: <strong>Escape and Evasion</strong>.</p>
 <p>The operative used an ad hoc approach to his operational design, and as a result
 he made a fatal error. Here is his operational plan:</p>
 
-<p>Use Tor to connect to GuerrillaMail. Send an email to a target email address.
-Create a new account for GuerrillaMail</p>
-
 <ul>
 <li>Obtain Tor Browser Bundle</li>
 <li>Select target email addresses &#8220;randomly&#8221; [see para 11]</li>
-<li><p>Compose email:
-  shrapnel bombs placed in:</p>
-
-<p>  science center
-  sever hall
-  emerson hall
-  thayer hall</p>
-
-<p>  2/4. guess correctly.</p>
-
-<p>  be quick for they will go off soon</p></li>
+<li>Compose email</li>
 <li>For each target email address
 
 <ul>
@@ -116,40 +103,71 @@ Create a new account for GuerrillaMail</p>
 
 
 <p>For security, the operative chose to rely on a pseudonymous email tool and the
-Tor anonymity network. It is likely that he used the Tor Browser Bundle rather
+Tor anonymity network. He used the Tor Browser Bundle on OSX rather
 than the TAILS distribution (see: para 11). Provided he closed the tab between
 each session, there should be no forensic evidence left on the laptop.</p>
 
 <p><strong>NOTE:</strong> When using <strong>Tor Browser Bundle</strong> close all the tabs and exit the
 application when you are done. The TBB will clean up thoroughly after itself,
-<em>but only on exit</em>! When you are done, shut it down.</p>
+<em>but only on exit</em>! When you are done, shut it down. Runa&#8217;s <a href="https://research.torproject.org/techreports/tbb-forensic-analysis-2013-06-28.pdf">paper</a> explores this in
+detail.</p>
 
-<h3>Target Selection</h3>
+<h3>Phase 1: Target Selection</h3>
 
 <p>The strategic target was the hall hosting the final exam. Tactically, the
 principal selected &#8220;email addresses at random&#8221; to recieve a bomb threat intended
 to force an evacuation of the hall, along with a number of other cover locations.</p>
 
-<h3>Planning</h3>
+<h3>Phase 2: Planning</h3>
 
 <p>This step appears to have been focussed solely on the technical requirements of
 masking the origination of the threatening emails. However, insufficient resources
 were devoted to this phase, and therefore it was fundamentally flawed.</p>
 
-<h3>Deployment and Execution</h3>
+<p>Here is the email he sent:</p>
+
+<blockquote><p>shrapnel bombs placed in:</p>
+
+<p>science center
+sever hall
+emerson hall
+thayer hall</p>
+
+<p>2/4. guess correctly.</p>
+
+<p>be quick for they will go off soon</p></blockquote>
+
+<p>Clearly he intended to provide cover locations, and he attempted to prolong the
+bomb search by suggesting that some locations where legitimately bomb free. It
+is standard operating procedure for bomb threats to be investigated thoroughly
+and in parallel.</p>
+
+<h3>Phase 3: Deployment</h3>
 
 <p>The operative chose to use GuerrillaMail to send the emails, and because
 GuerrillaMail reveals the source IP of the sender, he also chose Tor to mask his
 IP address. However, he used a monitored network to access Tor, which severely
 limits the anonymity provided by Tor. This error was to prove fatal.</p>
 
-<h3>Escape and Evasion</h3>
+<h3>Phase 4: Execution</h3>
 
-<p>There was nothing at all done for this phase.</p>
+<p>Kim used the Harvard University wifi network. To gain access, he had to login
+with his username and password. The university monitors and logs all network
+activity. This was the fatal error. He authenticated to the network, his IP was
+used to access Tor, and this information was logged.</p>
+
+<p>When the incident was investigated the FBI was able to pull the logs and determine
+not just whether anyone had accessed Tor, but exactly <strong>who</strong> had accessed Tor.</p>
+
+<h3>Phase 5: Escape and Evasion</h3>
+
+<p>There was nothing at all done for this phase. It is worth noting that there is
+little he could have done to prepare for an interview by seasoned professional
+FBI interrogators. As an amateur, he stood approximately zero chance of surviving.</p>
 
 <h2>Counterintelligence: Know your Adversary</h2>
 
-<p>A study of the methods of investigation used by the law enforcement officials
+<p>A study of the investigation methods used by the law enforcement officials
 engaged to investigate bomb threats would have been beneficial for Mr Kim. He
 would have realised that they would target the likely suspects, attempt to
 narrow the suspect pool down to the minimum set, then start interviewing. The
@@ -179,7 +197,7 @@ the reactive force to surprise you.</p>
 
 <h2>There is no OPSEC magic sauce</h2>
 
-<p><strong>What He Should Have Done</strong> the content and context of the threat make it clear
+<p>The content and context of the threat make it clear
 that the originator of the emails was a student (or possibly a professor/TA trying
 to avoid grading exams). The important thing to hide is <strong>which</strong> student, not
 that it was a student. Therefore simply using a nearby cafe with free wifi should
@@ -187,7 +205,7 @@ have been sufficient to mask the specific identity of the operative. Assuming:</
 
 <ul>
 <li>there are cafe&#8217;s that do not know the operative by sight,</li>
-<li>there are cafe&#8217;s that are not monitored by CCTV (where a hat, don&#8217;t look up),</li>
+<li>there are cafe&#8217;s that are not monitored by CCTV (wear a hat, don&#8217;t look up),</li>
 <li>that he wore a simple disguise to reduce the recall of the witnesses (look generic), and</li>
 <li>that a college kid in a cafe at 8am during Finals week is not unusual</li>
 </ul>
@@ -203,6 +221,16 @@ a small number.</p>
 <p>Strategically, the operation was successful. Eldo Kim will not have to take his
 final exam. Or, indeed, other final exams he might not be prepared for. However,
 it is hard to imagine this is the outcome he was hoping for.</p>
+
+<hr />
+
+<p>layout: post
+title: &#8220;In Search of OPSEC Magic Sauce&#8221;
+date: 2013-12-21 06:34
+comments: false
+published: true</p>
+
+<h2>categories: [OPSEC, CI, counterintelligence, operational design, Harvard Bomb Hoax]</h2>
 ]]></content>
   </entry>
   

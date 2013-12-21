@@ -1,101 +1,4 @@
-
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>In Search of OPSEC Magic Sauce - Hacker OPSEC</title>
-  <meta name="author" content="the grugq">
-
-  
-  <meta name="description" content="Of Bomb Threats and Tor Recently (December 16th, 2013) there was a bomb threat at Harvard University, during finals week. The threat was a hoax, and &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://grugq.github.com/blog/2013/12/21/in-search-of-opsec-magic-sauce">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Hacker OPSEC" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Hacker OPSEC</a></h1>
-  
-    <h2>STFU is the best policy.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:grugq.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/docs/">Docs</a></li>
-  <li><a href="/presentations/">Presentations</a></li>
-  <li><a href="/resources/">Resources</a></li>
-  <li><a href="/contact/">Contact</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
-    
-      <h1 class="entry-title">In Search of OPSEC Magic Sauce</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-21T06:34:00+07:00" pubdate data-updated="true">Dec 21<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><h1>Of Bomb Threats and Tor</h1>
+<p>f Bomb Threats and Tor</p>
 
 <p>Recently (December 16th, 2013) there was a <a href="http://www.thecrimson.com/article/2013/12/16/unconfirmed-reports-explosives-four-buildings/">bomb threat at Harvard University</a>, during finals week. The threat was a hoax, and the <a href="http://www.thecrimson.com/article/2013/12/17/student-charged-bomb-threat/">FBI got their man</a> that very night. The <a href="https://drive.google.com/file/d/0Bzt0K7_O4qyqUlEtd2pUWE42amM/edit?usp=sharing">affidavit is here</a>.</p>
 
@@ -165,23 +68,10 @@ of the final stage of an operation: <strong>Escape and Evasion</strong>.</p>
 <p>The operative used an ad hoc approach to his operational design, and as a result
 he made a fatal error. Here is his operational plan:</p>
 
-<p>Use Tor to connect to GuerrillaMail. Send an email to a target email address.
-Create a new account for GuerrillaMail</p>
-
 <ul>
 <li>Obtain Tor Browser Bundle</li>
 <li>Select target email addresses &#8220;randomly&#8221; [see para 11]</li>
-<li><p>Compose email:
-  shrapnel bombs placed in:</p>
-
-<p>  science center
-  sever hall
-  emerson hall
-  thayer hall</p>
-
-<p>  2/4. guess correctly.</p>
-
-<p>  be quick for they will go off soon</p></li>
+<li>Compose email</li>
 <li>For each target email address
 
 <ul>
@@ -193,40 +83,71 @@ Create a new account for GuerrillaMail</p>
 
 
 <p>For security, the operative chose to rely on a pseudonymous email tool and the
-Tor anonymity network. It is likely that he used the Tor Browser Bundle rather
+Tor anonymity network. He used the Tor Browser Bundle on OSX rather
 than the TAILS distribution (see: para 11). Provided he closed the tab between
 each session, there should be no forensic evidence left on the laptop.</p>
 
 <p><strong>NOTE:</strong> When using <strong>Tor Browser Bundle</strong> close all the tabs and exit the
 application when you are done. The TBB will clean up thoroughly after itself,
-<em>but only on exit</em>! When you are done, shut it down.</p>
+<em>but only on exit</em>! When you are done, shut it down. Runa&#8217;s <a href="https://research.torproject.org/techreports/tbb-forensic-analysis-2013-06-28.pdf">paper</a> explores this in
+detail.</p>
 
-<h3>Target Selection</h3>
+<h3>Phase 1: Target Selection</h3>
 
 <p>The strategic target was the hall hosting the final exam. Tactically, the
 principal selected &#8220;email addresses at random&#8221; to recieve a bomb threat intended
 to force an evacuation of the hall, along with a number of other cover locations.</p>
 
-<h3>Planning</h3>
+<h3>Phase 2: Planning</h3>
 
 <p>This step appears to have been focussed solely on the technical requirements of
 masking the origination of the threatening emails. However, insufficient resources
 were devoted to this phase, and therefore it was fundamentally flawed.</p>
 
-<h3>Deployment and Execution</h3>
+<p>Here is the email he sent:</p>
+
+<blockquote><p>shrapnel bombs placed in:</p>
+
+<p>science center
+sever hall
+emerson hall
+thayer hall</p>
+
+<p>2/4. guess correctly.</p>
+
+<p>be quick for they will go off soon</p></blockquote>
+
+<p>Clearly he intended to provide cover locations, and he attempted to prolong the
+bomb search by suggesting that some locations where legitimately bomb free. It
+is standard operating procedure for bomb threats to be investigated thoroughly
+and in parallel.</p>
+
+<h3>Phase 3: Deployment</h3>
 
 <p>The operative chose to use GuerrillaMail to send the emails, and because
 GuerrillaMail reveals the source IP of the sender, he also chose Tor to mask his
 IP address. However, he used a monitored network to access Tor, which severely
 limits the anonymity provided by Tor. This error was to prove fatal.</p>
 
-<h3>Escape and Evasion</h3>
+<h3>Phase 4: Execution</h3>
 
-<p>There was nothing at all done for this phase.</p>
+<p>Kim used the Harvard University wifi network. To gain access, he had to login
+with his username and password. The university monitors and logs all network
+activity. This was the fatal error. He authenticated to the network, his IP was
+used to access Tor, and this information was logged.</p>
+
+<p>When the incident was investigated the FBI was able to pull the logs and determine
+not just whether anyone had accessed Tor, but exactly <strong>who</strong> had accessed Tor.</p>
+
+<h3>Phase 5: Escape and Evasion</h3>
+
+<p>There was nothing at all done for this phase. It is worth noting that there is
+little he could have done to prepare for an interview by seasoned professional
+FBI interrogators. As an amateur, he stood approximately zero chance of surviving.</p>
 
 <h2>Counterintelligence: Know your Adversary</h2>
 
-<p>A study of the methods of investigation used by the law enforcement officials
+<p>A study of the investigation methods used by the law enforcement officials
 engaged to investigate bomb threats would have been beneficial for Mr Kim. He
 would have realised that they would target the likely suspects, attempt to
 narrow the suspect pool down to the minimum set, then start interviewing. The
@@ -256,7 +177,7 @@ the reactive force to surprise you.</p>
 
 <h2>There is no OPSEC magic sauce</h2>
 
-<p><strong>What He Should Have Done</strong> the content and context of the threat make it clear
+<p>The content and context of the threat make it clear
 that the originator of the emails was a student (or possibly a professor/TA trying
 to avoid grading exams). The important thing to hide is <strong>which</strong> student, not
 that it was a student. Therefore simply using a nearby cafe with free wifi should
@@ -264,7 +185,7 @@ have been sufficient to mask the specific identity of the operative. Assuming:</
 
 <ul>
 <li>there are cafe&#8217;s that do not know the operative by sight,</li>
-<li>there are cafe&#8217;s that are not monitored by CCTV (where a hat, don&#8217;t look up),</li>
+<li>there are cafe&#8217;s that are not monitored by CCTV (wear a hat, don&#8217;t look up),</li>
 <li>that he wore a simple disguise to reduce the recall of the witnesses (look generic), and</li>
 <li>that a college kid in a cafe at 8am during Finals week is not unusual</li>
 </ul>
@@ -280,149 +201,13 @@ a small number.</p>
 <p>Strategically, the operation was successful. Eldo Kim will not have to take his
 final exam. Or, indeed, other final exams he might not be prepared for. However,
 it is hard to imagine this is the outcome he was hoping for.</p>
-</div>
 
+<hr />
 
-  <footer>
-    <p class="meta">
-      
-  
+<p>layout: post
+title: &#8220;In Search of OPSEC Magic Sauce&#8221;
+date: 2013-12-21 06:34
+comments: false
+published: true</p>
 
-<span class="byline author vcard">Posted by <span class="fn">the grugq</span></span>
-
-      
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-21T06:34:00+07:00" pubdate data-updated="true">Dec 21<span>st</span>, 2013</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/ci/'>CI</a>, <a class='category' href='/blog/categories/harvard-bomb-hoax/'>Harvard Bomb Hoax</a>, <a class='category' href='/blog/categories/opsec/'>OPSEC</a>, <a class='category' href='/blog/categories/counterintelligence/'>counterintelligence</a>, <a class='category' href='/blog/categories/operational-design/'>operational design</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2013/12/01/yardbirds-effective-usenet-tradecraft/" title="Previous Post: Yardbird's Effective Usenet Tradecraft">&laquo; Yardbird's Effective Usenet Tradecraft</a>
-      
-      
-    </p>
-  </footer>
-</article>
-
-</div>
-
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/12/21/in-search-of-opsec-magic-sauce/">In Search of OPSEC Magic Sauce</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/12/01/yardbirds-effective-usenet-tradecraft/">Yardbird's Effective Usenet Tradecraft</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/22/challenges-for-hackers/">How to Win at Kung Fu and Hacking</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("thegrugq", , );
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <p>Follow <a href="http://twitter.com/thegrugq">@thegrugq</a></p>
-  
-</section>
-
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/grugq">@grugq</a> on GitHub
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'grugq',
-            count: 3,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-  
-</aside>
-
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - the grugq -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
+<h2>categories: [OPSEC, CI, counterintelligence, operational design, Harvard Bomb Hoax]</h2>
