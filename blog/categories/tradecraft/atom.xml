@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tradecraft | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/tradecraft/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-12-22T21:00:54+07:00</updated>
+  <updated>2013-12-22T21:02:42+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Codes, What Are They Good For?]]></title>
-    <link href="http://grugq.github.com/blog/2013/11/22/codes-what-are-they-good-for/"/>
-    <updated>2013-11-22T20:00:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/11/22/codes-what-are-they-good-for</id>
+    <link href="http://grugq.github.com/blog/2013/12/21/codes-what-are-they-good-for/"/>
+    <updated>2013-12-21T20:00:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/12/21/codes-what-are-they-good-for</id>
     <content type="html"><![CDATA[<h2>What is a Secure Communication?</h2>
 
 <p>The goals of secure communications are the following. Some of these are surprisingly difficult to achieve:</p>
