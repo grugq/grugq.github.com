@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-12-21T09:39:52+07:00</updated>
+  <updated>2013-12-22T19:01:22+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -529,6 +529,64 @@ out&#8230;</em>&#8221;).</p>
 investigations, as well as before they begin. There needs to be documentation
 on how to evade those techniques, and why those evasions are successful. That
 knowledge needs to be captured and dissemminated out to those who can use it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Codes, What Are They Good For?]]></title>
+    <link href="http://grugq.github.com/blog/2013/11/22/codes-what-are-they-good-for/"/>
+    <updated>2013-11-22T20:00:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/11/22/codes-what-are-they-good-for</id>
+    <content type="html"><![CDATA[<p>The goals of secure communications are the following. Some of these are surprisingly difficult to achieve:</p>
+
+<ol>
+<li>Make the <strong>content</strong> of a message <strong>unreadable</strong> to parties other than the intended one(s)</li>
+<li>Make the <strong>meaning</strong> of a message <strong>inaccessible</strong> to parties other than the intended one(s)</li>
+<li>Avoid <strong>traffic analysis</strong> —don’t let other parties know that a connection exists between the communicating parties</li>
+<li>Avoid <strong>knowledge of the communication</strong>—don’t let other parties know the communication channel or pathway exists</li>
+</ol>
+
+
+<p>The first and second objectives can be accomplished using some combination of <strong>cryptograph</strong> and <strong>coding</strong>.</p>
+
+<ul>
+<li><strong>Cryptography</strong> systems that use transformation processes to turn <em>signal into noise</em>, by obscuring the symbols used for communication</li>
+<li><strong>Coding</strong> systems that substitute or alter meaning, and thus hide the real message</li>
+</ul>
+
+
+<p>Codes are extremely useful mechanisms for sending small messages, although as they are <em>plain text</em> their hidden mean can be revealed once the <em>key</em> is cracked. Another issue with codes is that they are inflexible, compared to a cipher system. Coding requires pre-arranged mappings of meanings (what symbols or words translate to what), or at least pre-arranged mechanisms to derive the mappings (e.g., book codes).</p>
+
+<p>To be effective, a code must maintain <strong>proper grammar</strong>, be <strong>consistent</strong>, and fit a <strong>plausible</strong> pretext. If it fits these requirements, and is used appropriately (briefly, consistently, with cover for action) then a code system is an excellent choice for simple signalling purposes.</p>
+
+<p>There are problems when codes are used inconsistently. For example, some <a href="http://www.wmob.com/cast.html">mafia codes</a> used oblique references to the boss as &#8220;aunt&#8221;, or &#8220;Aunt Julia&#8221;. This was very ineffective when they suffered from pronoun slippage and called their &#8220;aunt&#8221; &#8220;he&#8221;.</p>
+
+<ul>
+<li>&#8220;Ah, Aunt Julia said he wanted to help me out, too.&#8221;</li>
+</ul>
+
+
+<p>When using a code to refer to a classified subject, even though unclassified terms
+are used, the subject is still classified. This is a breach of security. See
+the US Army <a href="http://www.ncms-isp.org/documents/COMSEC_Material.pdf">handbook on COMSEC</a>
+section dealing with <em>ATTEMPTS TO DISGUISE INFORMATION</em> (Section 8.4).</p>
+
+<blockquote><p>“Talking around” is a
+technique in which you try to get the information across to the recipient in a
+manner you believe will protect it. However, no matter how much you try to
+change words about a classified or sensitive subject, it is still classified or
+sensitive.</p>
+
+<p>self-made reference system. This is an
+attempt to encipher your conversation by using your own system. This system
+rarely works because few people are clever enough to refer to an item of
+information without actually revealing names, subjects, or other pertinent
+information that would reveal the classified or sensitive meaning</p></blockquote>
+
+<p>These are concerns to keep in mind when developing a code system for discussing
+sensitive information.</p>
+
+<p>Codes: keep them generic, keep them consistent, limit their use to simple signalling.</p>
 ]]></content>
   </entry>
   

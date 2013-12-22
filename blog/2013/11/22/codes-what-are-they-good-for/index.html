@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>How to Win at Kung Fu and Hacking - Hacker OPSEC</title>
+  <title>Codes, What Are They Good For? - Hacker OPSEC</title>
   <meta name="author" content="the grugq">
 
   
-  <meta name="description" content="Everybody Was Hack Foo Fighting I&#8217;m going to discuss a serious problem with the organisational structure and
-social dynamics of the hacker &hellip;">
+  <meta name="description" content="The goals of secure communications are the following. Some of these are surprisingly difficult to achieve: Make the content of a message unreadable &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ social dynamics of the hacker &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://grugq.github.com/blog/2013/11/22/challenges-for-hackers">
+  <link rel="canonical" href="http://grugq.github.com/blog/2013/11/22/codes-what-are-they-good-for">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Hacker OPSEC" type="application/atom+xml">
@@ -73,7 +72,7 @@ social dynamics of the hacker &hellip;">
   
   <header>
     
-      <h1 class="entry-title">How to Win at Kung Fu and Hacking</h1>
+      <h1 class="entry-title">Codes, What Are They Good For?</h1>
     
     
       <p class="meta">
@@ -89,75 +88,63 @@ social dynamics of the hacker &hellip;">
   
 
 
-<time datetime="2013-11-22T20:02:00+07:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
+<time datetime="2013-11-22T20:00:00+07:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h2>Everybody Was Hack Foo Fighting</h2>
+<div class="entry-content"><p>The goals of secure communications are the following. Some of these are surprisingly difficult to achieve:</p>
 
-<p>I&#8217;m going to discuss a serious problem with the organisational structure and
-social dynamics of the hacker community, and why this puts hackers at risk.
-Hackers operate essentially the same way as the henchmen in a kung fu movie:
-they attack the adversary one by one by one&#8230; always losing. This is a terrible
-way of developing a robust core of knowledge about which OPSEC techniques work,
-which techniques fail, and why.</p>
+<ol>
+<li>Make the <strong>content</strong> of a message <strong>unreadable</strong> to parties other than the intended one(s)</li>
+<li>Make the <strong>meaning</strong> of a message <strong>inaccessible</strong> to parties other than the intended one(s)</li>
+<li>Avoid <strong>traffic analysis</strong> —don’t let other parties know that a connection exists between the communicating parties</li>
+<li>Avoid <strong>knowledge of the communication</strong>—don’t let other parties know the communication channel or pathway exists</li>
+</ol>
 
-<h2>Organisational Learning for Dummies</h2>
 
-<p>There are two types of knowledge: individual, and organisational. Hackers are
-very individualistic, and the knowledge they acquire tends to be very
-practical; experience based. There are few hacker organisations that seek to
-collect, retain, test and spread knowledge. The organistations that do crop up
-are either some zines, which are knowledge artefacts that transmit techne, or
-hacker groups, which share tool chains and experience. However, these hacker
-groups have very short lifespans (measured in months and single digit years,
-not decades). They are compartmented in that there is some effort made to
-retain the group&#8217;s proprietary information, but internally they usually
-have a very poor security posture. They are social groups in many ways, so
-they are heavily compromised. As we say in infosec &#8220;crunchy on the outside,
-chewy in the middle&#8221;.</p>
-
-<p>Their opposition, the intelligence agencies and law enforcement departments,
-have decades of organisational history and knowledge. The individual members
-can display wide ranges of skill and competence, but the resources and core
-knowledge of the organisation dwarf what any individual hacker has available.
-Many of the skills that a hacker needs to learn, his clandestine tradecraft
-and OPSEC, are the sort of skills that organisations are excellent at
-developing and disseminating. These are not very good skillsets for an
-individual to learn through trial and error, because those errors have
-significant negative consequences. An organisation can afford to lose people
-as it learns how to deal with the adversary; an individual cannot afford to
-make a similar sacrifice &#8211; afterall, who would benefit from your negative
-example?</p>
-
-<h2>Challenges? More Like Opportunities!</h2>
-
-<p>Hackers are facing some very serious challenges now:</p>
+<p>The first and second objectives can be accomplished using some combination of <strong>cryptograph</strong> and <strong>coding</strong>.</p>
 
 <ul>
-<li>they lack organistations for collecting intelligence and knowledge about their adversary;</li>
-<li>they face off against the adversary one at a time,</li>
-<li>they learn very poorly from prior mistakes</li>
-<li>they don&#8217;t even know what skills they need,</li>
-<li>and perhaps most dangerously, they aren&#8217;t even aware they&#8217;re in the game</li>
+<li><strong>Cryptography</strong> systems that use transformation processes to turn <em>signal into noise</em>, by obscuring the symbols used for communication</li>
+<li><strong>Coding</strong> systems that substitute or alter meaning, and thus hide the real message</li>
 </ul>
 
 
-<p>It is amusing how many people think that interrogations involve violence and
-torture. Successful elicitation far more frequently involves whiskey,
-flattery, playing dumb, and being doubtful (&#8221;<em>really? I didn&#8217;t know it was
-possible to do that. You must be pretty damn smart to have figured it
-out&#8230;</em>&#8221;).</p>
+<p>Codes are extremely useful mechanisms for sending small messages, although as they are <em>plain text</em> their hidden mean can be revealed once the <em>key</em> is cracked. Another issue with codes is that they are inflexible, compared to a cipher system. Coding requires pre-arranged mappings of meanings (what symbols or words translate to what), or at least pre-arranged mechanisms to derive the mappings (e.g., book codes).</p>
 
-<h2>Winning at Secrets</h2>
+<p>To be effective, a code must maintain <strong>proper grammar</strong>, be <strong>consistent</strong>, and fit a <strong>plausible</strong> pretext. If it fits these requirements, and is used appropriately (briefly, consistently, with cover for action) then a code system is an excellent choice for simple signalling purposes.</p>
 
-<p>There needs to be more information available on the techniques used during
-investigations, as well as before they begin. There needs to be documentation
-on how to evade those techniques, and why those evasions are successful. That
-knowledge needs to be captured and dissemminated out to those who can use it.</p>
+<p>There are problems when codes are used inconsistently. For example, some <a href="http://www.wmob.com/cast.html">mafia codes</a> used oblique references to the boss as &#8220;aunt&#8221;, or &#8220;Aunt Julia&#8221;. This was very ineffective when they suffered from pronoun slippage and called their &#8220;aunt&#8221; &#8220;he&#8221;.</p>
+
+<ul>
+<li>&#8220;Ah, Aunt Julia said he wanted to help me out, too.&#8221;</li>
+</ul>
+
+
+<p>When using a code to refer to a classified subject, even though unclassified terms
+are used, the subject is still classified. This is a breach of security. See
+the US Army <a href="http://www.ncms-isp.org/documents/COMSEC_Material.pdf">handbook on COMSEC</a>
+section dealing with <em>ATTEMPTS TO DISGUISE INFORMATION</em> (Section 8.4).</p>
+
+<blockquote><p>“Talking around” is a
+technique in which you try to get the information across to the recipient in a
+manner you believe will protect it. However, no matter how much you try to
+change words about a classified or sensitive subject, it is still classified or
+sensitive.</p>
+
+<p>self-made reference system. This is an
+attempt to encipher your conversation by using your own system. This system
+rarely works because few people are clever enough to refer to an item of
+information without actually revealing names, subjects, or other pertinent
+information that would reveal the classified or sensitive meaning</p></blockquote>
+
+<p>These are concerns to keep in mind when developing a code system for discussing
+sensitive information.</p>
+
+<p>Codes: keep them generic, keep them consistent, limit their use to simple signalling.</p>
 </div>
 
 
@@ -180,12 +167,12 @@ knowledge needs to be captured and dissemminated out to those who can use it.</p
   
 
 
-<time datetime="2013-11-22T20:02:00+07:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
+<time datetime="2013-11-22T20:00:00+07:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/opsec/'>OPSEC</a>, <a class='category' href='/blog/categories/counterintelligence/'>counterintelligence</a>, <a class='category' href='/blog/categories/hackers/'>hackers</a>, <a class='category' href='/blog/categories/intelligence/'>intelligence</a>
+    <a class='category' href='/blog/categories/opsec/'>OPSEC</a>, <a class='category' href='/blog/categories/codes/'>codes</a>, <a class='category' href='/blog/categories/secure-communications/'>secure communications</a>, <a class='category' href='/blog/categories/tradecraft/'>tradecraft</a>
   
 </span>
 
@@ -201,10 +188,10 @@ knowledge needs to be captured and dissemminated out to those who can use it.</p
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/11/22/codes-what-are-they-good-for/" title="Previous Post: Codes, What Are They Good For?">&laquo; Codes, What Are They Good For?</a>
+        <a class="basic-alignment left" href="/blog/2013/11/06/required-reading/" title="Previous Post: required reading">&laquo; required reading</a>
       
       
-        <a class="basic-alignment right" href="/blog/2013/12/01/yardbirds-effective-usenet-tradecraft/" title="Next Post: Yardbird's Effective Usenet Tradecraft">Yardbird's Effective Usenet Tradecraft &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2013/11/22/challenges-for-hackers/" title="Next Post: How to Win at Kung Fu and Hacking">How to Win at Kung Fu and Hacking &raquo;</a>
       
     </p>
   </footer>

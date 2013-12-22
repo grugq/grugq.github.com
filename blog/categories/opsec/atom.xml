@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OPSEC | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/opsec/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-12-21T09:39:52+07:00</updated>
+  <updated>2013-12-22T19:01:22+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -305,6 +305,64 @@ knowledge needs to be captured and dissemminated out to those who can use it.</p
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Codes, What Are They Good For?]]></title>
+    <link href="http://grugq.github.com/blog/2013/11/22/codes-what-are-they-good-for/"/>
+    <updated>2013-11-22T20:00:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2013/11/22/codes-what-are-they-good-for</id>
+    <content type="html"><![CDATA[<p>The goals of secure communications are the following. Some of these are surprisingly difficult to achieve:</p>
+
+<ol>
+<li>Make the <strong>content</strong> of a message <strong>unreadable</strong> to parties other than the intended one(s)</li>
+<li>Make the <strong>meaning</strong> of a message <strong>inaccessible</strong> to parties other than the intended one(s)</li>
+<li>Avoid <strong>traffic analysis</strong> —don’t let other parties know that a connection exists between the communicating parties</li>
+<li>Avoid <strong>knowledge of the communication</strong>—don’t let other parties know the communication channel or pathway exists</li>
+</ol>
+
+
+<p>The first and second objectives can be accomplished using some combination of <strong>cryptograph</strong> and <strong>coding</strong>.</p>
+
+<ul>
+<li><strong>Cryptography</strong> systems that use transformation processes to turn <em>signal into noise</em>, by obscuring the symbols used for communication</li>
+<li><strong>Coding</strong> systems that substitute or alter meaning, and thus hide the real message</li>
+</ul>
+
+
+<p>Codes are extremely useful mechanisms for sending small messages, although as they are <em>plain text</em> their hidden mean can be revealed once the <em>key</em> is cracked. Another issue with codes is that they are inflexible, compared to a cipher system. Coding requires pre-arranged mappings of meanings (what symbols or words translate to what), or at least pre-arranged mechanisms to derive the mappings (e.g., book codes).</p>
+
+<p>To be effective, a code must maintain <strong>proper grammar</strong>, be <strong>consistent</strong>, and fit a <strong>plausible</strong> pretext. If it fits these requirements, and is used appropriately (briefly, consistently, with cover for action) then a code system is an excellent choice for simple signalling purposes.</p>
+
+<p>There are problems when codes are used inconsistently. For example, some <a href="http://www.wmob.com/cast.html">mafia codes</a> used oblique references to the boss as "aunt", or "Aunt Julia". This was very ineffective when they suffered from pronoun slippage and called their "aunt" "he".</p>
+
+<ul>
+<li>"Ah, Aunt Julia said he wanted to help me out, too."</li>
+</ul>
+
+
+<p>When using a code to refer to a classified subject, even though unclassified terms
+are used, the subject is still classified. This is a breach of security. See
+the US Army <a href="http://www.ncms-isp.org/documents/COMSEC_Material.pdf">handbook on COMSEC</a>
+section dealing with <em>ATTEMPTS TO DISGUISE INFORMATION</em> (Section 8.4).</p>
+
+<blockquote><p>“Talking around” is a
+technique in which you try to get the information across to the recipient in a
+manner you believe will protect it. However, no matter how much you try to
+change words about a classified or sensitive subject, it is still classified or
+sensitive.</p>
+
+<p>self-made reference system. This is an
+attempt to encipher your conversation by using your own system. This system
+rarely works because few people are clever enough to refer to an item of
+information without actually revealing names, subjects, or other pertinent
+information that would reveal the classified or sensitive meaning</p></blockquote>
+
+<p>These are concerns to keep in mind when developing a code system for discussing
+sensitive information.</p>
+
+<p>Codes: keep them generic, keep them consistent, limit their use to simple signalling.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[required reading]]></title>
     <link href="http://grugq.github.com/blog/2013/11/06/required-reading/"/>
     <updated>2013-11-06T07:23:00+07:00</updated>
@@ -364,31 +422,6 @@ He talked about how it was developed, how it worked, what vulnerabilities it exp
 <h2>How to evaluate "Need to know"</h2>
 
 <p>The rule of thumb is: <em>if someone is actively sharing the risk, they have a need to know</em>. This need to know is, of course, restricted to only those aspects of the operation in which they are actively involved.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[OPSEC isn't security through obscurity]]></title>
-    <link href="http://grugq.github.com/blog/2013/11/04/opsec-isnt-security-through-obscurity/"/>
-    <updated>2013-11-04T01:04:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/11/04/opsec-isnt-security-through-obscurity</id>
-    <content type="html"><![CDATA[<h2>OPSEC revisited</h2>
-
-<blockquote><p>The goal of OPSEC is to control information about your capabilities and intentions to keep them from being exploited by your adversary.</p></blockquote>
-
-<p>In typical hacker fashion, the term OPSEC has come to mean more than just information about capabilities and intentions, but also personal information about the yourself.</p>
-
-<h2>Kerckoff's Principle and OPSEC</h2>
-
-<p>A common source for the idea that "security through obscurity is bad" is <a href="http://en.wikipedia.org/wiki/Kerckhoffs%27_principle">Kerckoffs' principle</a> which states that: <code>A cryptosystem should be secure even if everything about the system, except the key, is public knowledge</code>. OPSEC as a system of security is sometimes confused with "security through obscurity". This is not the case. Such thinking reflects a confusion of both the problem with opaque security systems and the foundations of OPSEC.</p>
-
-<h2>OPSEC is a System</h2>
-
-<p>The way to clear this confusion, I believe, is to point out that OPSEC is a security system, not any one specific practice. The system itself is open source, in that we know how and why the various techniques and practices work. For example, the tradecraft technique of a <a href="http://en.wikipedia.org/wiki/Dead_drop">dead drop</a> is public knowledge. The security of a dead drop is not that no one knows how they work, but rather the adversary does not know <strong>where</strong> a specific dead drop is locate, nor <strong>when</strong> that dead drop is being serviced (loaded or unload). That information, primarily the location of that dead drop, is the <strong>secret key</strong> to the dead drop security system. This information is what must remain secret for the dead drop to remain secure.</p>
-
-<h2>Why OPSEC Works</h2>
-
-<p>So OPSEC as a system of security does not violate Kerckoff's principle, and is not "security through obscurity". The specifics of any one application of OPSEC techniques provide security, but those are analogous to the private key to the system. If they are compromised, then security they provide will be be compromised.</p>
 ]]></content>
   </entry>
   

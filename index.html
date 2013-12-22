@@ -675,6 +675,91 @@ knowledge needs to be captured and dissemminated out to those who can use it.</p
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2013/11/22/codes-what-are-they-good-for/">Codes, What Are They Good For?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-22T20:00:00+07:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The goals of secure communications are the following. Some of these are surprisingly difficult to achieve:</p>
+
+<ol>
+<li>Make the <strong>content</strong> of a message <strong>unreadable</strong> to parties other than the intended one(s)</li>
+<li>Make the <strong>meaning</strong> of a message <strong>inaccessible</strong> to parties other than the intended one(s)</li>
+<li>Avoid <strong>traffic analysis</strong> —don’t let other parties know that a connection exists between the communicating parties</li>
+<li>Avoid <strong>knowledge of the communication</strong>—don’t let other parties know the communication channel or pathway exists</li>
+</ol>
+
+
+<p>The first and second objectives can be accomplished using some combination of <strong>cryptograph</strong> and <strong>coding</strong>.</p>
+
+<ul>
+<li><strong>Cryptography</strong> systems that use transformation processes to turn <em>signal into noise</em>, by obscuring the symbols used for communication</li>
+<li><strong>Coding</strong> systems that substitute or alter meaning, and thus hide the real message</li>
+</ul>
+
+
+<p>Codes are extremely useful mechanisms for sending small messages, although as they are <em>plain text</em> their hidden mean can be revealed once the <em>key</em> is cracked. Another issue with codes is that they are inflexible, compared to a cipher system. Coding requires pre-arranged mappings of meanings (what symbols or words translate to what), or at least pre-arranged mechanisms to derive the mappings (e.g., book codes).</p>
+
+<p>To be effective, a code must maintain <strong>proper grammar</strong>, be <strong>consistent</strong>, and fit a <strong>plausible</strong> pretext. If it fits these requirements, and is used appropriately (briefly, consistently, with cover for action) then a code system is an excellent choice for simple signalling purposes.</p>
+
+<p>There are problems when codes are used inconsistently. For example, some <a href="http://www.wmob.com/cast.html">mafia codes</a> used oblique references to the boss as &#8220;aunt&#8221;, or &#8220;Aunt Julia&#8221;. This was very ineffective when they suffered from pronoun slippage and called their &#8220;aunt&#8221; &#8220;he&#8221;.</p>
+
+<ul>
+<li>&#8220;Ah, Aunt Julia said he wanted to help me out, too.&#8221;</li>
+</ul>
+
+
+<p>When using a code to refer to a classified subject, even though unclassified terms
+are used, the subject is still classified. This is a breach of security. See
+the US Army <a href="http://www.ncms-isp.org/documents/COMSEC_Material.pdf">handbook on COMSEC</a>
+section dealing with <em>ATTEMPTS TO DISGUISE INFORMATION</em> (Section 8.4).</p>
+
+<blockquote><p>“Talking around” is a
+technique in which you try to get the information across to the recipient in a
+manner you believe will protect it. However, no matter how much you try to
+change words about a classified or sensitive subject, it is still classified or
+sensitive.</p>
+
+<p>self-made reference system. This is an
+attempt to encipher your conversation by using your own system. This system
+rarely works because few people are clever enough to refer to an item of
+information without actually revealing names, subjects, or other pertinent
+information that would reveal the classified or sensitive meaning</p></blockquote>
+
+<p>These are concerns to keep in mind when developing a code system for discussing
+sensitive information.</p>
+
+<p>Codes: keep them generic, keep them consistent, limit their use to simple signalling.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2013/11/06/required-reading/">Required Reading</a></h1>
     
     
@@ -1231,174 +1316,6 @@ There are some lessons learned which can be used to harden OPSEC practices going
 forward. The main things are still: strong compartmentation; use Tor
 all the time; avoid leaking profiling information, and it is prudent to
 regularly migrate to new cover personas.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/07/drug-delivery-service-opsec/">Drug Delivery Service OPSEC</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-07T06:41:00+07:00" pubdate data-updated="true">Oct 7<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Some interesting lessons on how a modern New York City drug delivery service
-uses basic tradecraft to create a reasonable security posture.</p>
-
-<h2>The Source</h2>
-
-<p>This <a href="http://www.vice.com/read/confessions-of-a-drug-dealers-delivery-service-guy">Vice article</a>
-provides the source of the information for this blog post. Using some
-basic background knowledge on how covert groups operate, it is simple to parse
-and analyze the drug delivery service tradecraft.</p>
-
-<h2>Recruitment</h2>
-
-<blockquote><p>a friend of mine solicited hardcore drugs for a Manhattan drug kingpin, who was looking for a new pot delivery guy. My friend encouraged me to try out for the job.</p></blockquote>
-
-<p>As with many covert groups, the recruitment process relied on personal connections.
-This <strong>social network</strong> grounded approach to expanding a covert organisation
-is generally good for initial security. The recruits are unlikely to be agents
-sent to infiltrate the organistation as the long standing social ties between
-members and recruits both establishes trust and serves as <strong>vetting</strong>.</p>
-
-<p>Developing a covert organisation based on <strong>social network</strong> ties provides a
-means of rapid expansion and easy security clearance. The downside is that once
-a single member of the organisation is compromised, the adversarial security forces
-can easily roll up the whole network. The poor compartmentation of a <strong>social network</strong>
-based covert organisation is its Achilles heel. The security of the organisation
-is critically dependent on the security of each individual member.</p>
-
-<p><strong>ProTip:</strong> Expand your covert network with individuals who are passionate about
-your ideological beliefs. Ensure strong compartmentation, starting with recruitment.</p>
-
-<h2>Leverage</h2>
-
-<blockquote><p>He asked me to provide documentation of my current address and phone number as an insurance policy. If I ran out on him, he warned me he’d hold my friends responsible for the deficit funds and/or drugs.</p></blockquote>
-
-<p>The principal of the organisation &#8220;Nathan&#8221; requires that the recruit provide
-a verifiable address and means of contact, along with dire warnings of consequences
-in the case of infractions. This is very basic control principles, typical of
-covert organisations.</p>
-
-<p>The major security problem with this approach, of course, is that the records
-maintained by the network&#8217;s principal are a high value target for the adversary.
-Compromise of the principal&#8217;s records will lead to total collapse of the network,
-and interdiction for every member involved. There is no chance of evasion.</p>
-
-<p><strong>ProTip:</strong> No logs, no crime. Do not keep records of the members of your covert
-organisation. These records are extremely sensitive.</p>
-
-<h2>Operational Actions</h2>
-
-<blockquote><p> the transaction and exit should be as swift as possible. “You aren&#8217;t here to hang out,” she said. “It&#8217;s not a social call, and they aren&#8217;t your friends. You want to walk in and be friendly and make conversation but also get to the business at hand and get out of there quickly.”</p></blockquote>
-
-<p>The illicit operation, the drug sale, is intended to be rapid and minimize
-the period of vulnerability for both parties. Interestingly, this is possibly a
-poor choice if the threat is surveillance. There are few reasons a random individual
-would enter a domicile for a short duration. Also of note, the covert organisation
-provides no reasonable cover story for why the agent (the drug courier) is entering
-the residence of the client. A simple &#8220;what were you doing?&#8221; type question would
-likely completely blow the whole operation.</p>
-
-<p><strong>ProTip:</strong> Minimising the period of vulnerability improves the chances of operational
-success. Always make sure your agents are capable of delivering plausible cover
-stories. <strong>Cover for action</strong></p>
-
-<h2>Cover for Status</h2>
-
-<blockquote><p>Nathan forced me to wear a button-up shirt and slacks, shave my face, and keep my hair conservatively short. He believed this uniform would attract little attention as I walked around with thousands of dollars worth of pot in a laptop case slung over my shoulder.</p></blockquote>
-
-<p>The covert organisation has, surprisingly enough, chosen to enforce a uniform
-that makes their agents blend in with the mainstream. This is completely inline
-with the typical operational disguises employed by covert organistations operating
-in controlled territory the world over. (See: Moscow Rules <code>go with the flow</code>;
-Murphy&#8217;s Laws of War: <code>don't stand out, it draws fire</code>)</p>
-
-<p><strong>ProTip:</strong> They got this one exactly right.</p>
-
-<h2>All phones are bugged</h2>
-
-<blockquote><p>Although I used my flip-phone constantly at work, I was never given clients&#8217; addresses over the phone. Clients calls would go to a dispatcher—a third party who took the call, traced the number through a database of numbers, and then returned the call from a different phone to confirm their request for drugs. After their request was confirmed, I received a call from another phone. The dispatcher only told me, “You got Nick,” or “You got Lucy.” I was banned from responding with anything besides a murmured “OK.”</p></blockquote>
-
-<p>Each operational use of the phone provides the adversary with minimal value.
-There is a unique identifier for the client (e.g. &#8220;Lucy&#8221;), and the agent
-acknowledges receipt of the directive (&#8220;OK&#8221;). The dispatchers interaction
-with the client is itself run over multiple phone lines and kept to short,
-simple, normal statements.</p>
-
-<p><strong>ProTip:</strong> This is very much inline with all covert organisations&#8217;
-guidelines for using phones. Never use keywords, keep the content as vague as possible,
-minimize the period of vulnerability &#8211; get off the phone!</p>
-
-<h2>OPSEC FAIL: attracting attention</h2>
-
-<blockquote><p>Each day I was given a stipend of $40 for cabs. No one knew if I didn’t spend the $40. Instead of taking cabs, I ran around in a frantic state that negated every other measure I took to not draw unwanted attention</p></blockquote>
-
-<p>This is an instance of <strong>preference divergence</strong>, a common problem for covert
-organisations. The financial resources provided to the agent of the principal
-are siphoned off and directed towards non-operational uses (the drug courier
-skims and pockets his cab stipend.) There doesn&#8217;t appear to be any consequence
-to this operational security failure, however it jeopardizes the entire organisation.
-If &#8220;Nathan&#8221; were a more disciplined principal he would monitor his agents more
-closely and ensure they are conforming to the organisational security requirements.
-Strangely, drug dealers are not strict disciplinarians.</p>
-
-<p><strong>ProTip:</strong> if the securit of the entire organisation is dependent on the security
-of each individual agent &#8211; enforce the operational security requirements strictly!</p>
-
-<h2>Aliases</h2>
-
-<blockquote><p> I shook his hand and said, “I&#8217;m Jack.” He gave me a knowing grin. “So that&#8217;s the name you&#8217;re using?” he asked.</p></blockquote>
-
-<p>The agent is using an alias to provide pseudonymity from malicious clients. This
-provides some minimal level of security. It is definitely better than not having
-any cover at all. However, as noted above, it should be combined with a robust
-cover story for why the agent is visiting a residential home for a brief period.</p>
-
-<h2>Discharging the agent</h2>
-
-<p>After a promotion, the drug courier decides to find a new line of work. If the
-organisation was stricter in their OPSEC practices, the departure of an agent
-wouldn&#8217;t place anyone else in jeopardy. As it stands, it seems clear that the
-agent who is now drawing attention to himself by writing about his experience
-in a national magazine(!) still retains sufficiently sensitive information to
-unravel the network.</p>
-
-<p><strong>ProTip:</strong> compartment early, compartment often. It is safer than any alternative.</p>
-
-<h2>TL;DR</h2>
-
-<p>Compartment your covert organisation from recruitment through to operational
-action so that when your agents leave or are compromised they are unable
-to compromise the organisation. Ensure that your operational activities have
-good <strong>cover for status</strong> (e.g. a disguise) and <strong>cover for action</strong> (e.g. a strong cover story).
-Strong compartmentation, strong cover, and be aware of the risks of using social networks
-for building a covert organisation.</p>
 </div>
   
   
