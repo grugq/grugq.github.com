@@ -4,7 +4,7 @@
   <title><![CDATA[Category: codes | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/codes/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2013-12-22T19:01:22+07:00</updated>
+  <updated>2013-12-22T21:00:54+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -18,17 +18,24 @@
     <link href="http://grugq.github.com/blog/2013/11/22/codes-what-are-they-good-for/"/>
     <updated>2013-11-22T20:00:00+07:00</updated>
     <id>http://grugq.github.com/blog/2013/11/22/codes-what-are-they-good-for</id>
-    <content type="html"><![CDATA[<p>The goals of secure communications are the following. Some of these are surprisingly difficult to achieve:</p>
+    <content type="html"><![CDATA[<h2>What is a Secure Communication?</h2>
+
+<p>The goals of secure communications are the following. Some of these are surprisingly difficult to achieve:</p>
 
 <ol>
 <li>Make the <strong>content</strong> of a message <strong>unreadable</strong> to parties other than the intended one(s)</li>
 <li>Make the <strong>meaning</strong> of a message <strong>inaccessible</strong> to parties other than the intended one(s)</li>
-<li>Avoid <strong>traffic analysis</strong> —don’t let other parties know that a connection exists between the communicating parties</li>
-<li>Avoid <strong>knowledge of the communication</strong>—don’t let other parties know the communication channel or pathway exists</li>
+<li>Avoid <strong>traffic analysis</strong> — don’t let other parties know that a connection exists between the communicating parties</li>
+<li>Avoid <strong>knowledge of the communication</strong> — don’t let other parties know the communication channel or pathway exists</li>
 </ol>
 
 
-<p>The first and second objectives can be accomplished using some combination of <strong>cryptograph</strong> and <strong>coding</strong>.</p>
+<p>The first and second objectives can be accomplished using some combination of <strong>cryptography</strong> and <strong>coding</strong>. Unfortunately, this is the easy part. The more
+complicated and difficult component of a secure communications infrastructure is
+achieving the third and fourth objectives. For now, however, I will focus only
+on the first two issues: protecting content, and meaning.</p>
+
+<p>First lets define our terms so we can discuss the subject with clarity:</p>
 
 <ul>
 <li><strong>Cryptography</strong> systems that use transformation processes to turn <em>signal into noise</em>, by obscuring the symbols used for communication</li>
@@ -36,16 +43,101 @@
 </ul>
 
 
+<h2>The Eagle Has Landed</h2>
+
 <p>Codes are extremely useful mechanisms for sending small messages, although as they are <em>plain text</em> their hidden mean can be revealed once the <em>key</em> is cracked. Another issue with codes is that they are inflexible, compared to a cipher system. Coding requires pre-arranged mappings of meanings (what symbols or words translate to what), or at least pre-arranged mechanisms to derive the mappings (e.g., book codes).</p>
 
-<p>To be effective, a code must maintain <strong>proper grammar</strong>, be <strong>consistent</strong>, and fit a <strong>plausible</strong> pretext. If it fits these requirements, and is used appropriately (briefly, consistently, with cover for action) then a code system is an excellent choice for simple signalling purposes.</p>
+<p>To be effective, a code must maintain <strong>proper grammar</strong>, be <strong>consistent</strong>, and fit a <strong>plausible</strong> pretext. If it fits these requirements, and is used appropriately (briefly, consistently, with <a href="http://www.stratfor.com/weekly/20100616_watching_watchers"><em>cover for action</em></a>) then a code system is an excellent choice for simple signalling purposes.</p>
 
-<p>There are problems when codes are used inconsistently. For example, some <a href="http://www.wmob.com/cast.html">mafia codes</a> used oblique references to the boss as "aunt", or "Aunt Julia". This was very ineffective when they suffered from pronoun slippage and called their "aunt" "he".</p>
+<h3>Doing It Right</h3>
+
+<p>During World War II the BBC cooperated with the intelligence services to send
+open code signals to operatives in the occupied territories. These signals were
+prearranged with the operatives, and then sent out at two scheduled times. This
+signalling channel was used exclusively for indicating whether an operation was
+going to take place.</p>
+
+<p>The BBC would broadcast the signal for the first time at 1930, and then confirm
+the signal at 2115. If the operation had been canceled before the second scheduled
+signal window, the code phrase would not be repeated.</p>
+
+<p>During the early phase of the war, the code system was slightly more complex.
+There would be a positive code, and a negative code, for example: "Jeanne sends
+her greetings" might be a "go code", and "Jeanne says hello" might be the "abort
+code". Later this was simplified to just the positive code (a tradition that,
+apparently, the CIA still follows).</p>
+
+<h3>Doing It Wrong</h3>
+
+<p>There are problems when codes are used inconsistently. For example, some <a href="http://www.wmob.com/cast.html">mafia codes</a> used oblique references to the boss as "aunt", or "Aunt Julia". This was very ineffective when the mafioso suffered pronoun slippage and called their "aunt" "he".</p>
 
 <ul>
 <li>"Ah, Aunt Julia said he wanted to help me out, too."</li>
 </ul>
 
+
+<h2>Codes Gone Wild</h2>
+
+<p>I've collected some examples of <a href="http://grugq.tumblr.com/post/60890158036/al-qaedas-codes">real al Qaida codes</a> that were used actively used
+prior to the 9/11 attacks. Other types of basic open code are "business code",
+which is also used by some criminal groups, where the actors are refered to as
+business interests or rivals, and criminal activities are described as "projects"
+or other innocuous business terms.</p>
+
+<p>A simple code that was used by two KGB operatives was the phrase "I think we
+should go fishing now", which indicated that they should discuss business.</p>
+
+<h3>KGB Says What?</h3>
+
+<p>During the early stages of the KGB handling of their FBI penetration Hanssen,
+they had a mishap with locating and loading the deaddrop for his payment. To
+correct this error, they had to contact Hanssen by phone and use a code that was
+not pre-arranged (there was no contingency in place for "what happens if we cant
+find the dead drop"). The dead drop location was underneath a footbridge and the
+KGB operative had placed his load underneath the wrong corner.</p>
+
+<p>Since they had used a pretext of purchasing a used car for
+their initial contact, the KGB continued to use that pretext for their "oops!"
+communique. The KGB operative prepared his telephone conversation
+thoroughly before hand so that it would sound natural and plausible:</p>
+
+<blockquote><p>KGB: The car is still available for you as we have agreed last time, I prepared
+all the papers and left them on the same table. You didn't find them because I
+put them in another corner of the table.
+Hanssen: I see
+KGB: You shouldn't worry, everything is okay. The papers are with me now.
+Hanssen: Good
+KGB: I believe under these circumstances, its not necessary to make any changes
+concerning the place and time. Our company is reliable, and we are ready to
+give you a substantial discount which will be enclosed in the papers. Now,
+about the date of our meeting. I suggest that our meeting will take place
+without delay on Febuary 13, one, three, 1:00 PM. Okay? Feburary 13
+Hanssen: .... Okay.</p></blockquote>
+
+<p>The conversations is clearly stilted and strange, but no so strange as to draw
+attention to itself. It also doesn't reveal anything of the <strong>meaning</strong> that is
+being relayed.</p>
+
+<h3>Signaling Codes</h3>
+
+<p>When creating a signaling code, it is important that the pretext for the signal
+be broad and widely applicable. Generally it is better that the code be a
+specific subject, rather than a specific phrase. Phrases are easy to mixup,
+forget, or otherwise confuse. They are also more rigid and hard to work into
+a conversation. A subject, on the other hand, is very easy to raise and discuss
+in a plausible fashion without seeming forced or unnatural.</p>
+
+<p>A final short code example. This is a signaling code, adapted from a novel,
+however it accurately conveys how simple these codes can be. This is phone call
+between two colleagues, where <em>Alice</em> has to signal an emergency has occured:</p>
+
+<blockquote><p>Alice: Hi, sorry to call so late
+Bob: No problem
+Alice: Is our meeting scheduled for tomorrow at 8:30, or at 9?
+Bob: It is 8:30, bright and early.
+Alice: Ok, right. Just checking. Thanks, bye</p></blockquote>
+
+<h2>Open Codes Fail Open</h2>
 
 <p>When using a code to refer to a classified subject, even though unclassified terms
 are used, the subject is still classified. This is a breach of security. See
@@ -66,6 +158,8 @@ information that would reveal the classified or sensitive meaning</p></blockquot
 
 <p>These are concerns to keep in mind when developing a code system for discussing
 sensitive information.</p>
+
+<h2>Final Thoughts</h2>
 
 <p>Codes: keep them generic, keep them consistent, limit their use to simple signalling.</p>
 ]]></content>
