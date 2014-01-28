@@ -1,0 +1,320 @@
+More ELF buggery...
+
+To: bugtraq@securityfocus.com
+Subject: More ELF buggery...
+From: the grugq <grugq@gmx.net>
+Date: Sun, 26 May 2002 17:59:54 +0100
+Delivered-to: Weimer@CERT.Uni-Stuttgart.DE
+Delivered-to: mailing list bugtraq@securityfocus.com
+Delivered-to: moderator for bugtraq@securityfocus.com
+List-help: <mailto:bugtraq-help@securityfocus.com>
+List-id: <bugtraq.list-id.securityfocus.com>
+List-post: <mailto:bugtraq@securityfocus.com>
+List-subscribe: <mailto:bugtraq-subscribe@securityfocus.com>
+List-unsubscribe: <mailto:bugtraq-unsubscribe@securityfocus.com>
+Mailing-list: contact bugtraq-help@securityfocus.com; run by ezmlm
+User-agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.9) Gecko/20020313
+It has been some number of months since the release of "Subversive Dynamic
+Linking", and while the basic theory is still sound, the time has come to
+release a second technique for a parasite resolving symbols within a 
+host process image.
+This updated technique is cleaner, more portable, more technically correct
+and less detectable using no system calls at all.
+
+A process image is a collection of one or more objects mapped into a common
+address space. The dynamic linker co-ordinates symbol resolution, and
+effectively communication, between these objects. The linker uses a link_map
+structure to keep track of each object's location and symbol resolution 
+data.
+The link_map structure is pointed to by a reserved entry in the GOT of 
+each object and
+retrieved by the dynamic linker when required. The link_map structures are
+also linked together in a doubly linked list. This list is traversed by the
+dynamic linker when it attempts to resolve a symbol.
+
+A parasite is capable of utilizing the link_map list just as effectively as
+the dynamic linker. The attached code demonstrates how a parasite can
+trivially accomplish the tasks required to resolve a symbol using link_maps.
+This proof of concept code demonstrates: locating the ELF header of the
+host object with position independant code; locating the link_map structure,
+and traversing the list attempting to resolve the requested symbol 
+within each
+object.
+
+This code can be made small enough (< 400 bytes) to fit in larger shellcode,
+removing the need to hardcode addresses for library functions. This is 
+not the
+primary intent of the code, however the possibility for such use does exist.
+
+
+
+peace,
+
+grugq.
+
+
+Greets: mammon_, welcome back to the world of the gainfully employed;
+Doc Marvel, you don't call, you don't write, what am I? a mind reader?;
+gerado, nuevos amigo con IRC (something like that); J.H. allen, steve mac,
+deb and the other people I know won't read this (tell them, ok tore?); 
+pug and
+cathy, wtf are you coming over for beer?; the london office; halvar, scut,
+stealth, z, mgmma, lcamtuf, halfdead, pipacs, calvados, stone, spath, 
+psycho
+and all the evil people I know.
+
+
+/*
+ * Copyright (C) 2002 the grugq.
+ * All rights reserved.
+ *
+ * For educational purposes only.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+#include <elf.h>
+#define NULL	((void *)0)
+
+#define	PAGE_SIZE	4096
+// below is the real align(), but since we care about size, and we end up
+// walking down and will likely discard the rounded up value
+// we might as well use the cheat
+// #define	ALIGN(k, v)	(((k) + ((v) - 1)) & ~((v) - 1))
+
+#define PAGE_ALIGN(k)	((k) & ~(PAGE_SIZE - 1)) // the cheat page_align()
+
+/* a POSIX structure */
+struct link_map {
+	Elf32_Addr	  l_addr;
+	char		* l_name;
+	Elf32_Dyn	* l_ld;		/* .dynamic ptr */
+	struct link_map	* l_next,
+			* l_prev;
+};
+
+struct resolv {
+	Elf32_Word	* hash;
+	Elf32_Word	* chain;
+	Elf32_Sym	* symtab;
+	char		* strtab;
+	int		  num;
+};
+
+static int
+strmatch(const char *src1, const char *src2)
+{
+	register char	* s1 = src1,
+			* s2 = src2;
+
+	for (; *s1 == *s2; s1++, s2++)
+		if (*s1 == 0x00)
+			return (1);
+	return (0);
+}
+
+static inline struct resolv *
+build_resolv(struct link_map *l, struct resolv *r)
+{
+	Elf32_Dyn	* d;
+
+
+	/* we could have an implicit test for 0, knowing the value of DT_NULL
+	 * but that isn't as clean, and the asm code doesn't change... */
+	for (d = l->l_ld; d->d_tag != DT_NULL; d++) {
+		switch (d->d_tag) {
+		case DT_HASH:
+			{
+				Elf32_Word	* h;
+
+
+				/* whether an element is relocated seems to 
+				 * be an entirely platform dependant issue. */
+				h = (Elf32_Word *)
+					((char *)d->d_un.d_ptr+l->l_addr);
+
+				r->num = *h++; /* num buckets */
+					  h++; /* num chains */
+				r->hash = h;
+				r->chain = &h[r->num];
+			}
+			break;
+		case DT_STRTAB:
+			r->strtab = (char *)d->d_un.d_ptr;
+			break;
+		case DT_SYMTAB:
+			r->symtab = (Elf32_Sym *)d->d_un.d_ptr;
+			break;
+		default:
+			break;
+		}
+	}
+	return (r);
+}
+
+static void *
+resolve(char *sym_name, long hn, struct link_map *l)
+{
+	Elf32_Sym	* sym;
+	struct	resolv	* r;
+	long		  ndx;
+
+
+	/* XXX error checking is a waste of space in a parasite; size matters */
+	r = build_resolv(l, alloca(sizeof(*r)));
+
+	for (ndx = r->hash[ hn % r->num ]; ndx; ndx = r->chain[ ndx ]) {
+		sym = &r->symtab[ ndx ];
+
+		/* this check is optional */
+		if (ELF32_ST_TYPE(sym->st_info) != STT_FUNC)
+			continue;
+
+		if (strmatch(sym_name, r->strtab + sym->st_name))
+			return (((char *)l->l_addr) + sym->st_value);
+	}
+
+	return NULL;
+}
+
+static struct link_map *
+locate_link_map(void *my_base)
+{
+	Elf32_Ehdr	* e = (Elf32_Ehdr *)my_base;
+	Elf32_Phdr	* p;
+	Elf32_Dyn	* d;
+	Elf32_Word	* got;
+
+
+	p = (Elf32_Phdr *)((char *)e + e->e_phoff);
+
+	while (p++<(Elf32_Phdr *)((char*)p + (e->e_phnum * sizeof(Elf32_Phdr))))
+		if (p->p_type == PT_DYNAMIC)
+			break;
+
+	/* XXX error checking, see above */
+	/* 
+	if (p->p_type != PT_DYNAMIC)
+		return (NULL);
+	*/
+
+	for (d = (Elf32_Dyn *)p->p_vaddr; d->d_tag != DT_NULL; d++)
+		if (d->d_tag == DT_PLTGOT) {
+			got = (Elf32_Word *)d->d_un.d_ptr;
+			break;
+		}
+	/* XXX error check, see above */
+	/*
+	 if (got == NULL)
+	 	return (NULL);
+	*/
+
+	/* a platform dependant value. CPU architecture, not OS determined. */
+#define GOT_LM_PTR	1
+	return ((struct link_map *)got[GOT_LM_PTR]);
+}
+
+void *
+resolv(void *my_base, char *sym_name, long hn)
+{
+	struct link_map	* l;
+	void		* a;
+
+
+	/* scan link maps... */
+	l = locate_link_map(my_base);
+
+	/* hope that the list is NULL terminated */
+	while (l->l_prev)
+		l = l->l_prev;
+	
+	/* scan link maps for the symbol. slow, but technically correct. */
+	for (; l->l_next; l = l->l_next)
+		if ((a = resolve(sym_name, hn, l)))
+			return (a);
+
+	return (NULL);
+}
+
+static inline void *
+text_addr(void)
+{
+	void	* a;
+
+
+	/* This isn't the cleanest way of getting an address that our code
+	 */
+	__asm__ (
+		"	call	.Lnext	\n"
+		".Lnext:		\n"
+		"	pop	%%eax	\n"
+		: "=a" (a)
+		:
+	);
+
+	return ((void *)PAGE_ALIGN((long)a));
+}
+
+/* The value typically used on Linux i386 boxes is 0x08048000 */
+static void *
+locate_my_base(void)
+{
+	char	* a;
+
+
+	/* We really should do a signal() for SIGSEGV and ensure that if we 
+	 * miss the ELF header (for some reason) we dont segfault the host
+	 * process image */
+	for (a = text_addr();; a -= PAGE_SIZE) 
+		if (!memcmp(a, ELFMAG, SELFMAG))
+			return (a);
+
+	/* never reached. we either explode above, or get what we came for. */
+	return (NULL);
+}
+
+/* With size considerations it makes more sense to hardcode the elf_hash()
+ * value for a given symbol. This has the added benefit of improving
+ * execution speed. */
+unsigned long
+elf_hash(const char *name)
+{
+	unsigned long	h = 0, g;
+
+	while (*name) {
+		h = (h << 4) + *name++;
+
+		if ((g = h & 0xf0000000))
+			h ^= g >> 24;
+		h &= ~g;
+	}
+	return (h);
+}
+
+int
+main (void)
+{
+	unsigned long	  hn;
+	void	* my_addr;
+	char	* sym_name = "printf";
+	int	(*printf)(const char *, ...);
+
+
+	hn = elf_hash(sym_name);
+	my_addr = locate_my_base();
+	printf = resolv(my_addr, sym_name, hn);
+
+	(*printf)("Hello World\n");
+
+	return (0);
+}
