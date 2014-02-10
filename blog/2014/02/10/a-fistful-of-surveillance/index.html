@@ -9,7 +9,7 @@
   <meta name="author" content="the grugq">
 
   
-  <meta name="description" content="This is a short collection of notes I&#8217;ve put together on how you can be identified via your mobile phone. If you want to securely use a mobile &hellip;">
+  <meta name="description" content="The publication of this piece at The Intercept about NSA targeting via mobile phones prompted me to release this collection of notes. The article &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,7 +95,9 @@
   </header>
 
 
-<div class="entry-content"><p>This is a short collection of notes I&#8217;ve put together on how you can be identified via your mobile phone. If you want to securely use a mobile phone, you&#8217;ll need to use a burner. This is non-trivial. <a href="http://b3rn3d.herokuapp.com/blog/2014/01/22/burner-phone-best-practices/">Here&#8217;s a good guide</a>.</p>
+<div class="entry-content"><p>The publication of <a href="https://firstlook.org/theintercept/article/2014/02/10/the-nsas-secret-role/">this piece</a> at <a href="https://firstlook.org/theintercept/">The Intercept</a> about NSA targeting via mobile phones prompted me to release this collection of notes. The article wrongly promotes the idea that the SIM card is the only unique identifier in a mobile phone. I&#8217;ve enumerated the identifiers that exist, and they go far beyond the SIM card. At a minimum the physical identifiers of a mobile phone are the <a href="http://en.wikipedia.org/wiki/International_mobile_subscriber_identity">IMSI</a> and the <a href="http://en.wikipedia.org/wiki/International_Mobile_Station_Equipment_Identity">IMEI</a>, that is the SIM card and the mobile phone hardware itself.</p>
+
+<p>This is a short collection of notes I&#8217;ve put together on how you can be identified via your mobile phone. If you want to securely use a mobile phone, you&#8217;ll need to use a burner. This is non-trivial. <a href="http://b3rn3d.herokuapp.com/blog/2014/01/22/burner-phone-best-practices/">Here&#8217;s a good guide</a>.</p>
 
 <h2>Clandestine Mobile Phone Use</h2>
 
@@ -115,15 +117,15 @@
 
 <ul>
 <li>Specific location (home, place of work, etc.)</li>
-<li>mobility pattern (from home, via commuter route, to work) &#8211; very unique, 4 loc&#8217;s will identify 90%</li>
-<li>shared mobility pattern with a known device</li>
+<li><a href="http://www.nature.com/srep/2013/130325/srep01376/full/srep01376.html">Mobility pattern</a> (from home, via commuter route, to work) &#8211; very unique, 4 loc&#8217;s will identify 90%</li>
+<li>Paired mobility pattern with a known device (known as &#8220;mirroring&#8221;, when two devices or more devices travel together)</li>
 </ul>
 </li>
 <li><strong>Network</strong>
 
 <ul>
-<li>numbers dialed</li>
-<li>calls received</li>
+<li>numbers dialed (who you call)</li>
+<li>calls received (who calls you)</li>
 <li>calling pattern (numbers dialed, for how long, how frequently)</li>
 </ul>
 </li>
