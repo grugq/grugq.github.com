@@ -9,7 +9,7 @@
   <meta name="author" content="the grugq">
 
   
-  <meta name="description" content="What is a Secure Communication? The goals of secure communications are the following. Some of these are surprisingly difficult to achieve: Make the &hellip;">
+  <meta name="description" content="This is a short collection of notes I&#8217;ve put together on how you can be identified via your mobile phone. If you want to securely use a mobile &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +69,112 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/10/a-fistful-of-surveillance/">A Fistful of Surveillance</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-10T19:11:00+07:00" pubdate data-updated="true">Feb 10<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is a short collection of notes I&#8217;ve put together on how you can be identified via your mobile phone. If you want to securely use a mobile phone, you&#8217;ll need to use a burner. This is non-trivial. <a href="http://b3rn3d.herokuapp.com/blog/2014/01/22/burner-phone-best-practices/">Here&#8217;s a good guide</a>.</p>
+
+<h2>Clandestine Mobile Phone Use</h2>
+
+<p>Mobile phones should primarily be used for signalling, rather than for actually communicating operational information. Remember the golden rule of telephone conversations:</p>
+
+<ul>
+<li>keep it short</li>
+<li>keep it simple</li>
+<li>stick to your cover</li>
+</ul>
+
+
+<h2>Identifiers</h2>
+
+<ul>
+<li><strong>Location</strong>
+
+<ul>
+<li>Specific location (home, place of work, etc.)</li>
+<li>mobility pattern (from home, via commuter route, to work) &#8211; very unique, 4 loc&#8217;s will identify 90%</li>
+<li>shared mobility pattern with a known device</li>
+</ul>
+</li>
+<li><strong>Network</strong>
+
+<ul>
+<li>numbers dialed</li>
+<li>calls received</li>
+<li>calling pattern (numbers dialed, for how long, how frequently)</li>
+</ul>
+</li>
+<li><strong>Physical</strong>
+
+<ul>
+<li>IMEI (mobile phone device ID)</li>
+<li>IMSI (mobile phone telco subscriber ID)</li>
+</ul>
+</li>
+<li><strong>Content</strong>
+
+<ul>
+<li>Identifiers, e.g. names, locations</li>
+<li>Voice fingerprinting</li>
+<li>Keywords</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Mitigations</h2>
+
+<h3>Turn it OFF, for real.</h3>
+
+<p>Know how to turn the phone to a completely off state. This means removing the battery, taking out the SIM card and placing in a shielded bag (if possible). This <strong>really off</strong> state is how you store and transport the phone when not in use.</p>
+
+<p>A note on storage: it should not be at your house or anywhere that is directly linked to you.</p>
+
+<h3>Take a hike, buster</h3>
+
+<p>Where you use the phone is itself very important. Never use it at locations which are associated with you, that means never at home, never at the office/work, never at a friend&#8217;s house. Never have the phone in an <strong>ON</strong> state at locations that are associated with you, or your immediate social network. Never.</p>
+
+<p>Do not turn the phone in the same location as a phone associated with you. Make sure that your real phone is somewhere else, but not in an <strong>OFF</strong> state if possible. You don&#8217;t want the disappearance of one phone from the network to coincide with the appearance of another. Paired events are indicators of relation, and you want to avoid those as much as possible. You also want you regular phone to appear with a typical usage pattern, which means keeping it on as you normally would.</p>
+
+<h3>Contamination, avoid it</h3>
+
+<p>Never use different phones from the same location.</p>
+
+<p>Never carry phones for different compartments together (keep them turned off, batteries out)</p>
+
+<p>Never carry phones turned on over the same routes you normally take. Avoid patterns and predictability.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1230,202 +1336,6 @@ has some useful information, however there seems little point in finish it now.<
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/09/it-was-dpr/">It Was DPR, in the Tor HS, With the BTC</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-09T19:44:00+07:00" pubdate data-updated="true">Oct 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Give it to me straight, dr the grugq</h2>
-
-<p>Generally, it appears that Ross Ulbricht was applying his economic and
-techno-libertarian philosophy to real life. As his project grew, his security
-posture improved &#8211; too late. The most serious mistakes that Ross Ulbricht made
-were made during the period Jan 2011 - Oct 2011. A full timeline of the events
-in the Complaint is available on <a href="http://grugq.tumblr.com/post/62914009002/silk-road-investigation-timeline">my tumblr</a>.</p>
-
-<p><strong>NOTE:</strong> This is an abridged version of a longer post pulling out the lessons learned
-from the <a href="http://grugq.tumblr.com/post/62909883417/ulricht-indictment-aka-dread-pirate-roberts-aka-silk">Silk Road Complaint</a> of 27th September 2013. This post will only list the OPSEC errors,
-rather than explore them in detail.</p>
-
-<h2>The OPSEC Failures</h2>
-
-<p>The fundamental error is poor compartmentation. Ross Ulbricht, the real person
-and the online persona (Google+, LinkedIn, etc), and the Dread Pirate Roberts
-persona share ideological views and geographic locations. There is contamination
-between the two personas. Most of these seem to be due to the organic evolution
-of the Silk Road venture, where early naive Ulbricht makes mistakes that later
-smarter DPR wouldn&#8217;t. Unfortunately, the later DPR is more ideologically
-extreme and consequently less savvy about mainstream society.</p>
-
-<ol>
-<li>Poor Compartmentation</li>
-<li>Profiling</li>
-<li>Geographic Location</li>
-<li>Isolation</li>
-</ol>
-
-
-<h3>Poor Compartmentation</h3>
-
-<ul>
-<li><strong>Contamination</strong>: seriously fatal links created between personas
-
-<ul>
-<li><strong>Silk Road</strong> + <strong>altoid</strong>: Shroomery, BitcoinTalk forums</li>
-<li><strong>altoid</strong> + <strong>rossulbricht@gmail.com</strong>: BitcoinTalk</li>
-<li><strong>Ross Ulbricht</strong> + <strong>frosty@frosty[.com]</strong>: StackOverflow</li>
-<li><strong>frosty@frosty</strong> + <strong>Silk Road</strong>: Silk Road server admin SSH key</li>
-</ul>
-</li>
-</ul>
-
-
-<p>The compartmentation failures are somewhat pervasive, in particular the ideological
-&#8220;Austrian School of Economics&#8221; and the mises.org site. However two particular
-contamination errors stand out:</p>
-
-<ol>
-<li><strong>Silk Road</strong> &#8211;> <strong>altoid</strong> &#8211;> <strong>rossulbricht@gmail.com</strong> link in 2011</li>
-<li><strong>Ross Ulbricht</strong> &#8211;> <strong>frosty@frosty.com</strong> &#8211;> <strong>Silk Road</strong> server link in 2013</li>
-</ol>
-
-
-<p>The first of these failures happened because the <strong>altoid</strong> persona used to
-promoted <strong>Silk Road</strong> was poorly fleshed out (e.g. no email address). Ross did not
-put the plumbing in place to backstop his <strong>altoid</strong> cover. He then joined the
-BitcoinTalk community using this contaminated cover. His participation and search
-for social validation left him with his guard down. Consequently, he revealed a
-great deal of profiling information about his project and beliefs. Many of his
-posts are about Silk Road infrastructure or his mises.org influenced economic
-theories. After participating for 10 months he finally made the
-<strong>fatal OPSEC error</strong> of posting his personal email address.</p>
-
-<p>The second error was poor compartmentation of his online Ross Ulbricht persona,
-the tech savvy San Francisco based startup guy, and &#8220;frosty&#8221; the system admin
-of the server hosting the Silk Road site. His poor compartmentation, likely
-using the same computer for both personal and business use, and his
-limited backstopping of the DPR/altoid/frosty persona meant that any error would be
-fatal.</p>
-
-<p>These two errors combine to link Silk Road with Ross Ulbricht, and Ross Ulbricht
-with Silk Road.</p>
-
-<h3>&#8220;I&#8217;ll take Profiles for $300, Alex&#8221; : &#8220;Too much in common&#8221; : &#8220;What do Ulbricht and DPR share?&#8221;</h3>
-
-<ul>
-<li><strong>Profiling</strong>: Ross Ulbricht talks and acts like Dread Pirate Roberts
-
-<ul>
-<li>LinkedIn profile</li>
-<li>Timezone leakage: private messages, <a href="http://media.encrypted.cc/files/dpr_posts_pdt.png">forum posting times</a></li>
-<li>BitcoinTalk <strong>altoid</strong> <a href="http://grugq.tumblr.com/post/62919678278/osint-case-study-ross-ulbricht-aka-dread-pirate">posts about</a>: economics (mises.org), security, programming</li>
-<li>Silk Road Forum <strong>Dread Pirate Roberts</strong> -> Mises + &#8220;Austrian School of Economics&#8221;</li>
-<li>Mises.org <strong>Ross Ulbricht</strong> account</li>
-</ul>
-</li>
-</ul>
-
-
-<p>Ross Ulbricht, the person, was an active participant in the mises.org website
-and the BitcoinTalk forums. In both cases he was deeply committed to the
-&#8220;Austrian School of Economics&#8221;, something the Dread Pirate Roberts was also a
-huge fan of. The <strong>altoid</strong> cover alias, linked directly to Ross Ulbricht,
-frequently talked about bitcoin security and PHP programming. He is, based on
-his posts, clearly invovled in running some sort of PHP based bitcoin using
-venture that requires high security. Sort of like the <strong>Silk Road</strong> site.</p>
-
-<ul>
-<li>Geographic Location
-
-<ul>
-<li>Silk Road web server administered over VPN from a server</li>
-<li>VPN server IP stored in the Silk Road PHP source code</li>
-<li>VPN server accessed from a location <code>15240 cm</code> (<code>500 ft</code>) from a location that accessed the Ross Ulbricht GMail account.</li>
-</ul>
-</li>
-</ul>
-
-
-<p>The location of the Dread Pirate Roberts was something of an open secret. It is
-clear that he was based in the west coast of the US. Ulbricht was located
-in San Francisco at the same time as DPR, as proved by his large online
-footprint: Google+, YouTube, GMail.</p>
-
-<h2>Isolation is bad, mmmkay</h2>
-
-<ul>
-<li>Isolation without relief
-
-<ul>
-<li>Rented room under assumed name</li>
-<li>No &#8220;mainstream&#8221; social circle to realign with social mores</li>
-<li>No peers to talk to, only Silk Road forum members and admins</li>
-</ul>
-</li>
-</ul>
-
-
-<p>After the <strong>altoid</strong> persona is retired from BitcoinTalk, Ulbricht migrates
-his social interaction to a more extreme community: the Silk Road forums. This
-appears to have been his &#8220;scene&#8221;, where he interacted with people and
-cultivated friends (including an impressive array of undercover law
-enforcement officials).</p>
-
-<p>The underground life forced on Ulbricht as the Dread Pirate Roberts led to
-the major problem of isolation. Human beings are social animals. We require
-social interaction to maintain a healthy mental state. The strict
-security of DPR required isolation, leaving Ross Ulbricht living his social
-life on forums with niche ideological views, initially BitcointTalk (in 2011)
-and then the Silk Road forums. Isolation from mainstream society is known to
-lead to ideological extremism as members of the niche community self-reinforce
-their ideological tendencies. Consequently, they are less able to understand
-mainstream society&#8217;s ideas, beliefs and morals. This is dangerous. This
-isolation leads him to rationalize hiring online hitmen to preserve the
-Silk Road community is morally acceptable.</p>
-
-<p>Apparently the only source of social validation and ego gratification that Ross
-had was a group of bitcoin libertarians, drug seekers, drug dealers and undercover
-cops. This is not a healthy social environment conducive to a balanced state of
-mental health.</p>
-
-<h2>What have we learned?</h2>
-
-<p>So, the Dread Pirate Roberts Complaint basically tells us nothing that we didn&#8217;t
-already <a href="http://www.slideshare.net/grugq/opsec-for-hackers">know about OPSEC</a>.
-There are some lessons learned which can be used to harden OPSEC practices going
-forward. The main things are still: strong compartmentation; use Tor
-all the time; avoid leaking profiling information, and it is prudent to
-regularly migrate to new cover personas.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1441,15 +1351,15 @@ regularly migrate to new cover personas.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/02/10/a-fistful-of-surveillance/">A Fistful of Surveillance</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/12/21/codes-what-are-they-good-for/">Codes, What Are They Good For?</a>
       </li>
     
       <li class="post">
         <a href="/blog/2013/12/21/in-search-of-opsec-magic-sauce/">In Search of OPSEC Magic Sauce</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/12/01/yardbirds-effective-usenet-tradecraft/">Yardbird&#8217;s Effective Usenet Tradecraft</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2014-01-29T05:55:14+07:00</updated>
+  <updated>2014-02-10T19:15:18+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Fistful of Surveillance]]></title>
+    <link href="http://grugq.github.com/blog/2014/02/10/a-fistful-of-surveillance/"/>
+    <updated>2014-02-10T19:11:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2014/02/10/a-fistful-of-surveillance</id>
+    <content type="html"><![CDATA[<p>This is a short collection of notes I&#8217;ve put together on how you can be identified via your mobile phone. If you want to securely use a mobile phone, you&#8217;ll need to use a burner. This is non-trivial. <a href="http://b3rn3d.herokuapp.com/blog/2014/01/22/burner-phone-best-practices/">Here&#8217;s a good guide</a>.</p>
+
+<h2>Clandestine Mobile Phone Use</h2>
+
+<p>Mobile phones should primarily be used for signalling, rather than for actually communicating operational information. Remember the golden rule of telephone conversations:</p>
+
+<ul>
+<li>keep it short</li>
+<li>keep it simple</li>
+<li>stick to your cover</li>
+</ul>
+
+
+<h2>Identifiers</h2>
+
+<ul>
+<li><strong>Location</strong>
+
+<ul>
+<li>Specific location (home, place of work, etc.)</li>
+<li>mobility pattern (from home, via commuter route, to work) &#8211; very unique, 4 loc&#8217;s will identify 90%</li>
+<li>shared mobility pattern with a known device</li>
+</ul>
+</li>
+<li><strong>Network</strong>
+
+<ul>
+<li>numbers dialed</li>
+<li>calls received</li>
+<li>calling pattern (numbers dialed, for how long, how frequently)</li>
+</ul>
+</li>
+<li><strong>Physical</strong>
+
+<ul>
+<li>IMEI (mobile phone device ID)</li>
+<li>IMSI (mobile phone telco subscriber ID)</li>
+</ul>
+</li>
+<li><strong>Content</strong>
+
+<ul>
+<li>Identifiers, e.g. names, locations</li>
+<li>Voice fingerprinting</li>
+<li>Keywords</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Mitigations</h2>
+
+<h3>Turn it OFF, for real.</h3>
+
+<p>Know how to turn the phone to a completely off state. This means removing the battery, taking out the SIM card and placing in a shielded bag (if possible). This <strong>really off</strong> state is how you store and transport the phone when not in use.</p>
+
+<p>A note on storage: it should not be at your house or anywhere that is directly linked to you.</p>
+
+<h3>Take a hike, buster</h3>
+
+<p>Where you use the phone is itself very important. Never use it at locations which are associated with you, that means never at home, never at the office/work, never at a friend&#8217;s house. Never have the phone in an <strong>ON</strong> state at locations that are associated with you, or your immediate social network. Never.</p>
+
+<p>Do not turn the phone in the same location as a phone associated with you. Make sure that your real phone is somewhere else, but not in an <strong>OFF</strong> state if possible. You don&#8217;t want the disappearance of one phone from the network to coincide with the appearance of another. Paired events are indicators of relation, and you want to avoid those as much as possible. You also want you regular phone to appear with a typical usage pattern, which means keeping it on as you normally would.</p>
+
+<h3>Contamination, avoid it</h3>
+
+<p>Never use different phones from the same location.</p>
+
+<p>Never carry phones for different compartments together (keep them turned off, batteries out)</p>
+
+<p>Never carry phones turned on over the same routes you normally take. Avoid patterns and predictability.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Codes, What Are They Good For?]]></title>

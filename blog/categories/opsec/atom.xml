@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OPSEC | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/opsec/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2014-01-29T05:55:14+07:00</updated>
+  <updated>2014-02-10T19:15:18+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Fistful of Surveillance]]></title>
+    <link href="http://grugq.github.com/blog/2014/02/10/a-fistful-of-surveillance/"/>
+    <updated>2014-02-10T19:11:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2014/02/10/a-fistful-of-surveillance</id>
+    <content type="html"><![CDATA[<p>This is a short collection of notes I've put together on how you can be identified via your mobile phone. If you want to securely use a mobile phone, you'll need to use a burner. This is non-trivial. <a href="http://b3rn3d.herokuapp.com/blog/2014/01/22/burner-phone-best-practices/">Here's a good guide</a>.</p>
+
+<h2>Clandestine Mobile Phone Use</h2>
+
+<p>Mobile phones should primarily be used for signalling, rather than for actually communicating operational information. Remember the golden rule of telephone conversations:</p>
+
+<ul>
+<li>keep it short</li>
+<li>keep it simple</li>
+<li>stick to your cover</li>
+</ul>
+
+
+<h2>Identifiers</h2>
+
+<ul>
+<li><strong>Location</strong>
+
+<ul>
+<li>Specific location (home, place of work, etc.)</li>
+<li>mobility pattern (from home, via commuter route, to work) -- very unique, 4 loc's will identify 90%</li>
+<li>shared mobility pattern with a known device</li>
+</ul>
+</li>
+<li><strong>Network</strong>
+
+<ul>
+<li>numbers dialed</li>
+<li>calls received</li>
+<li>calling pattern (numbers dialed, for how long, how frequently)</li>
+</ul>
+</li>
+<li><strong>Physical</strong>
+
+<ul>
+<li>IMEI (mobile phone device ID)</li>
+<li>IMSI (mobile phone telco subscriber ID)</li>
+</ul>
+</li>
+<li><strong>Content</strong>
+
+<ul>
+<li>Identifiers, e.g. names, locations</li>
+<li>Voice fingerprinting</li>
+<li>Keywords</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Mitigations</h2>
+
+<h3>Turn it OFF, for real.</h3>
+
+<p>Know how to turn the phone to a completely off state. This means removing the battery, taking out the SIM card and placing in a shielded bag (if possible). This <strong>really off</strong> state is how you store and transport the phone when not in use.</p>
+
+<p>A note on storage: it should not be at your house or anywhere that is directly linked to you.</p>
+
+<h3>Take a hike, buster</h3>
+
+<p>Where you use the phone is itself very important. Never use it at locations which are associated with you, that means never at home, never at the office/work, never at a friend's house. Never have the phone in an <strong>ON</strong> state at locations that are associated with you, or your immediate social network. Never.</p>
+
+<p>Do not turn the phone in the same location as a phone associated with you. Make sure that your real phone is somewhere else, but not in an <strong>OFF</strong> state if possible. You don't want the disappearance of one phone from the network to coincide with the appearance of another. Paired events are indicators of relation, and you want to avoid those as much as possible. You also want you regular phone to appear with a typical usage pattern, which means keeping it on as you normally would.</p>
+
+<h3>Contamination, avoid it</h3>
+
+<p>Never use different phones from the same location.</p>
+
+<p>Never carry phones for different compartments together (keep them turned off, batteries out)</p>
+
+<p>Never carry phones turned on over the same routes you normally take. Avoid patterns and predictability.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Codes, What Are They Good For?]]></title>
@@ -486,45 +565,6 @@ knowledge needs to be captured and dissemminated out to those who can use it.</p
 <li><a href="http://www.tandfonline.com/doi/pdf/10.1080/10576100802670803">A Study of al Quaeda's use of Intelligence and Counterintelligence</a> :: This pulls a lot of the information above into a single case study of a covert (terrorist) organisation planning and conducting an operation. Anything else you can lay your hands on by the author I recommend as well.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Morris Worm OPSEC lessons]]></title>
-    <link href="http://grugq.github.com/blog/2013/11/06/morris-worm-opsec-lessons/"/>
-    <updated>2013-11-06T04:08:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/11/06/morris-worm-opsec-lessons</id>
-    <content type="html"><![CDATA[<h2>25th Anniversary of STFU about your computer crimes</h2>
-
-<p>Reading <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2013/11/05/heres-what-the-morris-worm-prosecutor-thinks-about-aaron-swartz/">this interview</a> with the prosecutor of Robert Morris Jr about the Morris Worm there are a few cool OPSEC lessons we can learn.</p>
-
-<h2>How was Morris caught?</h2>
-
-<blockquote><p>One way was with computer forensics. Tracing back the source of the worm. The second way was one of Morris's friends told The New York Times in response to some articles that John Markoff was writing he inadvertently gave his initials.</p></blockquote>
-
-<p>There were a couple of ways that he was discovered. The first was the forensic analysis of the worm itself, and tracing that back to the original infection point. This sort of evidence shows where to look (the original infection), but it does not provide enough information to successfully prosecute. It is circumstantial so far, and given some careful sanitisation of the original box, it would be a very hard case to prove.</p>
-
-<p>The far more damaging way that Morris was caught was via an OSINT case officer doing HUMINT collection (a reporter interviewing people about the worm). The journo managed to elicit information about the worm's author (his initials). This is the sort of extremely damaging information leakage that happens when there is poor OPSEC. There was no anti-interrogation training provided to the members of the Morris cell (i.e. all his friends who knew about the development of the worm).</p>
-
-<h2>Deny everything. Admit nothing. Or, you know, not.</h2>
-
-<blockquote><p>he did testify that he wrote the worm. He came in and testified, "I did it, and I'm sorry." I turned to my co-counsel and asked, "Should I prove he didn't do it or he's not sorry?"</p></blockquote>
-
-<p>When the prosecution has to prove that you committed a felonious act, it is a lot easier for them when you <strong>confess</strong> on the stand. I can't second guess the decisions of Morris' legal counsel, but unless you are instructed to do so by your lawyer: STFU.</p>
-
-<h2>The Morris Cell and "Need to know"</h2>
-
-<blockquote><p>We talked to his friends. His friends were witnesses for us. They didn't have a choice.
-There was a core group. ...one of the meetings where Robert Morris was discussing the worm occurred at a Legal Seafood in Kendall Square...
-He talked about how it was developed, how it worked, what vulnerabilities it exploited. At one point he was at a meeting back at Harvard, he got so excited that he literally jumped up on a table pacing back and forth on the table explaining how it worked...</p></blockquote>
-
-<p>The close friends of Robert Morris, the Morris Cell, were fully briefed on all aspects of the worm. Its capabilities, its functionality, and its author's real identity. None of the other members of the cell were actively exposed to the risks of the operation. They had no "need to know".</p>
-
-<p>This failure to STFU, to properly compartment the design and development of the worm, was a key factor leading to his capture and prosecution. Fortunately, things worked out well for him, in the long run.</p>
-
-<h2>How to evaluate "Need to know"</h2>
-
-<p>The rule of thumb is: <em>if someone is actively sharing the risk, they have a need to know</em>. This need to know is, of course, restricted to only those aspects of the operation in which they are actively involved.</p>
 ]]></content>
   </entry>
   
