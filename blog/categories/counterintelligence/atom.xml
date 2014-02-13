@@ -4,7 +4,7 @@
   <title><![CDATA[Category: counterintelligence | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/counterintelligence/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2014-02-11T14:03:53+07:00</updated>
+  <updated>2014-02-13T19:42:16+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,81 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[New York's Finest OPSEC]]></title>
+    <link href="http://grugq.github.com/blog/2014/02/13/new-yorks-finest-opsec/"/>
+    <updated>2014-02-13T19:35:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2014/02/13/new-yorks-finest-opsec</id>
+    <content type="html"><![CDATA[<h2>NYPD Social Media Investigation OPSEC</h2>
+
+<p>The NYPD created an operations formula for conducting undercover investigations on social media. The <a href="http://publicintelligence.net/nypd-social-network-investigations/">procedural document</a> reveals the operational security for these investigations. The security is founded on the use of an "online alias" (the officer's undercover account) and strict compartmentation. Given the capabilities of the adversaries that the NYPD faces this is probably sufficient security.</p>
+
+<p>It is a fascinating glimpse into the operational process of an investigation. Definitely worth reading to get a sense of what the police face when conducting an online investigation (hint: paperwork).</p>
+
+<h2>Core NYPD OPSEC</h2>
+
+<p>Fundamentally this is basic operational security grounded on compartmentation. The use of dedicated hardware, and pseudononymous internet access, allows the officer to create and operate an online undercover account without any links to the NYPD. The basic security precautions are designed to protect the officer's laptop from being compromised. A compromised laptop could enable the adversary to conduct a counterintelligence investigation.</p>
+
+<ul>
+<li>Compartmentation:
+
+<ul>
+<li>Use dedicated hardward and pseudononymous internet connection (laptop + "aircard")</li>
+<li>Avoid accounts, usernames, passwords associated with NYPD</li>
+<li>Avoid personal accounts and internet access</li>
+</ul>
+</li>
+<li>Basic Computer Security:
+
+<ul>
+<li>Delete "spam"</li>
+<li>Don't open attachments</li>
+<li>Exercise caution when clicking on links</li>
+</ul>
+</li>
+</ul>
+
+
+<p>This is very basic stuff, but should be more than sufficient against the adversaries that the NYPD pursues. These adversaries should not have access to any of the records of the phone company supplying the internet access.</p>
+
+<h2>Primary Document</h2>
+
+<p>Here is the information that is required to create the undercover account:</p>
+
+<blockquote><ol type="a">
+<li> Username (online alias)</li>
+<li> Identifiers and pedigree to be utilized for the online alias, such as email address, username and date of birth.</li>
+<li> Do not include password(s) for online alias and ensure password(s) are secured at all times.</li>
+<li> Indicate whether there is a need to requisition a Department laptop with aircard.</li>
+<li>Review photograph to be used in conjunction with online alias, if applicable.</li>
+<li> Consider the purpose for which the photograph is being used and the source of the photograph.</li>
+</ol>
+</blockquote>
+
+<p>Here is the full section dealing with operational security:</p>
+
+<blockquote><h2>Operational Considerations</h2>
+
+<p>When a member of the service accesses any social media site using a Department network connection, there is a risk that the Department can be identified as the user of the social media. Given this possibility of identification during an investigation, members of the service should be aware that Department issued laptops with aircards have been configured to avoid detection and are available from the Management Information Systems Division (MISD). A confidential Internet connection (e.g., Department laptop with aircard) will aid in maintaining confidentiality during an investigation. Members who require a laptop with aircard to complete the investigation shall contact MISD Help Desk, upon APPROVAL of investigation, and provide required information.</p>
+
+<p>In addition to using a Department laptop with aircard, members of the service are urged to take the following precautionary measures:</p>
+
+<ol type="a">
+<li>Avoid the use of a username or password that can be traced back to the member of the service or the Department;</li>
+<li>Exercise caution when clicking on links in tweets, posts, and online advertisements;</li>
+<li>Delete “spam” email without opening the email; and</li>
+<li>Never open attachments to email unless the sender is known to the member of the service.</li>
+</ol>
+
+
+<p>Furthermore, recognizing the ease with which information can be gathered from minimal effort from an Internet search, the Department advises members against the use of personal, family, or other non-Department Internet accounts or ISP access for Department business. Such access creates the possibility that the member’s identity may be exposed to others through simple search and counter-surveillance techniques.</p></blockquote>
+
+<h2>Conclusions</h2>
+
+<p>Undercover operations online rely on very basic operational security. Primarily compartmentation and reviews to ensure that the account isn't going to be associated with the NYPD.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Win at Kung Fu and Hacking]]></title>
@@ -370,58 +445,6 @@ to compromise the organisation. Ensure that your operational activities have
 good <strong>cover for status</strong> (e.g. a disguise) and <strong>cover for action</strong> (e.g. a strong cover story).
 Strong compartmentation, strong cover, and be aware of the risks of using social networks
 for building a covert organisation.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[you can't get there from here]]></title>
-    <link href="http://grugq.github.com/blog/2013/06/14/you-cant-get-there-from-here/"/>
-    <updated>2013-06-14T10:06:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/06/14/you-cant-get-there-from-here</id>
-    <content type="html"><![CDATA[<p>There have been some responses to my <a href="http://grugq.github.io/blog/2013/06/10/good-luck-with-that/">post</a> about the limitations of public
-countersurveillance tools. Most of them have focused on my statements about
-the limitations of the Tor network. I started to write a comment addressing one of the more coherent
-<a href="http://www.reddit.com/r/onions/comments/1g437b/the_surveillance_capability_of_the/cagw3vb">replies</a>
-but then decided to simply post it here instead.</p>
-
-<h2>Rebuttal</h2>
-
-<p>The responses all wandered slightly off topic from what my post was about. The point was that simply installing and running off the shelf counter-surveillance software is not sufficient against a nation state level adversary. Saying "Install Tor" or "Install I2P" is not the correct way to develop a counterintelligence program. It is not even the correct place to start. While those tools may be components of a CI program, but they are not sufficient in and of themselves.</p>
-
-<p>To expand on what I was getting at in the post, the core issue is that when Tor and I2P and other countersurveillance solutions are developed, they are developed with certain assumptions about the capabilities of the adversary. For example, Tor does not work against an adversary who has total information awareness about the traffic on the Internet. The assumption for Tor is "adversary can monitor a subset of all IP traffic", where subset usually equals "a single country". Because we, the public, do not know the real capabilities of the adversary, those assumptions might be (and in some cases, likely are) completely incorrect. In this example, it is widely suspected that the US has the capability to monitor a significant portion of global IP traffic, not just limited to a single country. At a minimum we can assume that they will be able to get traffic logs for 5 eyes members, and most likely for all of NATO.</p>
-
-<p>My article makes the claim that these off the shelf countersurveillance networks are insufficiently secure against nation state level adversaries. I also claim that we don't know the capabilities of those adversaries, and therefore cannot know what technology would evade their surveillance capabilities. I stand by both claims.</p>
-
-<p>My point regarding the cost of doubling the count of Tor exit nodes is simply that the financial cost of compromising the Tor network is not even a rounding error in a nation state budget. It is the equivalent of a portion  of the change found in the couch. Further more, Tor is not new. It isn't as if nation state level adversaries just woke up last week, "holy shit, this Tor thing! we better get on that!". It is conceivable that a nation state has been setting up cover organisations, using agents, and compromising existing hosts for years with the sole goal of subverting the security of the Tor system. We have no way of knowing this because we have limited/no knowledge of their capabilities. Which was exactly my point.</p>
-
-<h2>Evil Exit Nodes Unmasked me, and all I got was this lousy jail term</h2>
-
-<p>To address the specific objections about "all smart Tor users know to encrypt traffic to combat malicious exit nodes": yes malicious snooping nodes can be evaded provided you are using encryption to another termination point. This is why I've recommended using a VPN over Tor to mitigate against the monitoring that <em>is</em> done by evil exit nodes. However, an additional problem with a malicious exit node is simple traffic analysis, where the content of the data is irrelevant, but unmasking the end user is still possible. There are cases where unmasking an end user is sufficient, if they are going to "www.how-do-I-wage-jihad-in-the-usa.com.ir", for example. If we take the case of a nation state level adversary who can monitor all IP traffic within their country, and we combine that with the same adversary operating (or monitoring) a significant percentage of exit nodes, then that adversary can trivially unmask Tor users. The cost of this operation would be well within the budget of any respectable intelligence agency.</p>
-
-<h2>Backlash caused severe pain in my lower nonspecific</h2>
-
-<p>Regarding risk of backlash if it is known that a nation state has compromised all (or many) ISPs: Firstly, we can all agree that the compromise of an ISP is well within the scope of an intelligence agency. If you have been around the underground long enough, you know how many different people and groups have compromised Tier 1 ISPs. But regarding the "backlash", a nation state adversary will classify everything that could leak their tools, techniques and procedures. The means by which they collect information is usually as classified, or even more classified, than the information they collect. It is not likely that they would ever willingly allow this information to become known. Frequently intelligence agencies will classify information simply because revealing that they know it would reveal their collection capability, and thus compromise their ability to exploit that capability in the future.</p>
-
-<p>Which is what brings me back to the point I was getting at in the post. If you are engaged in activities which will put you up against a nation state level adversary, you have no knowledge of what their capabilities are. Fortunately for just about everyone (reading this), you do not have a nation state level adversary. A law enforcement agency, such as the FBI, will have access to some nation state level capabilities in certain circumstances. For example, if it was known that a trained al Quaida cell was operating in the continental US and using Tor for their communications platform, the NSA would very likely use whatever Tor unmasking capability they have to assist the FBI. They would do this in a blackbox fashion: get a request -> send a response. They would not reveal <em>how</em> they performed the unmasking because the FBI would not have people who are cleared for that information. (This is compartmentation in action.)</p>
-
-<p>As a thought experiment, imagine that Osama bin Laden was still alive and that he used the Tor network to do a Reddit AMA once a month. How long do you imagine it would take for the US to find and neutralize him? I posted <a href="https://twitter.com/thegrugq/status/344492461432926208">this question</a> on Twitter and, while responses varied, ex-NSA Global Network Exploitation Analyst Charlie Miller guessed <a href="https://twitter.com/0xcharlie/status/344498844161155072">one to two months</a>. I would be very surprised if it took more than three. This is because OBL <em>had</em> a <strong>nation state level adversary</strong>. You (probably) do not.</p>
-
-<h2>Good news everyone, nobody gives a fuck</h2>
-
-<p>There is good news, of course. Nation state level adversaries are concerned about nation state actors (and some non-nation state actors). They really don't have the resources to spend monitoring law enforcement issues. Unless you are a policy maker, a ranking military official, an intelligence officer/agent, a member of a known terrorist organisation, or have somehow otherwise ended up on a targeting list, the Intelligence Community (IC) really doesn't give a fuck about you. The product they produce for their clients - security cleared government officials - is documentation and analysis that helps these officials make informed policy decisions (or at least, that is the intention).</p>
-
-<h2>You Should OPSEC anyway</h2>
-
-<p>Now, as I advocate elsewhere, it is best to start your counterintelligence program early, because after you are targeted it is (usually) too late.</p>
-
-<p>My central recommendation on how to operate safely, whether you are a hacker, a spy, a whistleblower, or whatever, is to implement compartmentation first. Classify the data which is sensitive (e.g. your real identity and anything linked to your real identity) and segregate it from everything related to your illicit activity. Preferably, by physically separating onto different machines. When conducting the illicit activity, use your illicit activity equipment, and do it over an internet link that cannot be linked to you. By all means, use Tor, or I2P, or a VPN, or whatever. But that technology must not be your primary and only line of defence.</p>
-
-<p>This is how you do good CI. Develop a SOP that will protect your sensitive data even when things fail.
-That said, most of what will sink people is poor OPSEC, not poor SIGSEC. The more people that know about your illicit activity the higher the chance that Murphy will raise his head and it'll all end in tears.</p>
-
-<h2>Counterintelligence Cliff Notes</h2>
-
-<p>So, to reiterate, choosing a technology first and then relying on it for security is completely ass backwards. To do things properly, operate in this order. Figure out what you are trying to protect (and from whom), separate it from everything else, and then select tools, techniques and procedures that will enable you to protect it.</p>
 ]]></content>
   </entry>
   

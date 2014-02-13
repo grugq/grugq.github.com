@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2014-02-11T14:03:53+07:00</updated>
+  <updated>2014-02-13T19:42:16+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,81 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[New York's Finest OPSEC]]></title>
+    <link href="http://grugq.github.com/blog/2014/02/13/new-yorks-finest-opsec/"/>
+    <updated>2014-02-13T19:35:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2014/02/13/new-yorks-finest-opsec</id>
+    <content type="html"><![CDATA[<h2>NYPD Social Media Investigation OPSEC</h2>
+
+<p>The NYPD created an operations formula for conducting undercover investigations on social media. The <a href="http://publicintelligence.net/nypd-social-network-investigations/">procedural document</a> reveals the operational security for these investigations. The security is founded on the use of an &#8220;online alias&#8221; (the officer&#8217;s undercover account) and strict compartmentation. Given the capabilities of the adversaries that the NYPD faces this is probably sufficient security.</p>
+
+<p>It is a fascinating glimpse into the operational process of an investigation. Definitely worth reading to get a sense of what the police face when conducting an online investigation (hint: paperwork).</p>
+
+<h2>Core NYPD OPSEC</h2>
+
+<p>Fundamentally this is basic operational security grounded on compartmentation. The use of dedicated hardware, and pseudononymous internet access, allows the officer to create and operate an online undercover account without any links to the NYPD. The basic security precautions are designed to protect the officer&#8217;s laptop from being compromised. A compromised laptop could enable the adversary to conduct a counterintelligence investigation.</p>
+
+<ul>
+<li>Compartmentation:
+
+<ul>
+<li>Use dedicated hardward and pseudononymous internet connection (laptop + &#8220;aircard&#8221;)</li>
+<li>Avoid accounts, usernames, passwords associated with NYPD</li>
+<li>Avoid personal accounts and internet access</li>
+</ul>
+</li>
+<li>Basic Computer Security:
+
+<ul>
+<li>Delete &#8220;spam&#8221;</li>
+<li>Don&#8217;t open attachments</li>
+<li>Exercise caution when clicking on links</li>
+</ul>
+</li>
+</ul>
+
+
+<p>This is very basic stuff, but should be more than sufficient against the adversaries that the NYPD pursues. These adversaries should not have access to any of the records of the phone company supplying the internet access.</p>
+
+<h2>Primary Document</h2>
+
+<p>Here is the information that is required to create the undercover account:</p>
+
+<blockquote><ol type="a">
+<li> Username (online alias)</li>
+<li> Identifiers and pedigree to be utilized for the online alias, such as email address, username and date of birth.</li>
+<li> Do not include password(s) for online alias and ensure password(s) are secured at all times.</li>
+<li> Indicate whether there is a need to requisition a Department laptop with aircard.</li>
+<li>Review photograph to be used in conjunction with online alias, if applicable.</li>
+<li> Consider the purpose for which the photograph is being used and the source of the photograph.</li>
+</ol>
+</blockquote>
+
+<p>Here is the full section dealing with operational security:</p>
+
+<blockquote><h2>Operational Considerations</h2>
+
+<p>When a member of the service accesses any social media site using a Department network connection, there is a risk that the Department can be identified as the user of the social media. Given this possibility of identification during an investigation, members of the service should be aware that Department issued laptops with aircards have been configured to avoid detection and are available from the Management Information Systems Division (MISD). A confidential Internet connection (e.g., Department laptop with aircard) will aid in maintaining confidentiality during an investigation. Members who require a laptop with aircard to complete the investigation shall contact MISD Help Desk, upon APPROVAL of investigation, and provide required information.</p>
+
+<p>In addition to using a Department laptop with aircard, members of the service are urged to take the following precautionary measures:</p>
+
+<ol type="a">
+<li>Avoid the use of a username or password that can be traced back to the member of the service or the Department;</li>
+<li>Exercise caution when clicking on links in tweets, posts, and online advertisements;</li>
+<li>Delete “spam” email without opening the email; and</li>
+<li>Never open attachments to email unless the sender is known to the member of the service.</li>
+</ol>
+
+
+<p>Furthermore, recognizing the ease with which information can be gathered from minimal effort from an Internet search, the Department advises members against the use of personal, family, or other non-Department Internet accounts or ISP access for Department business. Such access creates the possibility that the member’s identity may be exposed to others through simple search and counter-surveillance techniques.</p></blockquote>
+
+<h2>Conclusions</h2>
+
+<p>Undercover operations online rely on very basic operational security. Primarily compartmentation and reviews to ensure that the account isn&#8217;t going to be associated with the NYPD.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A Fistful of Surveillance]]></title>
