@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OPSEC | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/opsec/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2014-05-19T18:38:51+07:00</updated>
+  <updated>2014-06-16T00:36:52+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,127 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[When In Doubt, It's A Tout]]></title>
+    <link href="http://grugq.github.com/blog/2014/06/16/when-in-doubt-its-a-tout/"/>
+    <updated>2014-06-16T00:25:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2014/06/16/when-in-doubt-its-a-tout</id>
+    <content type="html"><![CDATA[<h1>When in doubt, it's a tout</h1>
+
+<h2>Robust Operational Security Practices Aren't Enough</h2>
+
+<p>A British man, Lauri Love, has been <a href="http://www.theregister.co.uk/2014/02/28/lauri_love_us_federal_reserve_hacking_charges/">indicted for hacking</a>. The indictment
+is thin on details, but does have some interesting OPSEC insights that can be teased out by the patient reader.</p>
+
+<p>The <a href="http://www.justice.gov/usao/nj/Press/files/pdffiles/2013/Love,%20Lauri%20Indictment.pdf">indictment of Lauri Love</a> doesn't reveal much about how he was identified. There is some interesting info about the operational security measures taken by his crew, and they appear robust. The lack of information on how Mr Love was caught, along with the revelation of good security practices suggests one thing: informant.</p>
+
+<p>This post will only highlight the good operational security practices of the hacker group, since we don't know what the mistakes were.</p>
+
+<h2>Indictment Critical Analysis</h2>
+
+<p>The indictment lists four members of the crew:</p>
+
+<ol>
+<li>Lauri Love, "nsh", "peace", "route"</li>
+<li>CC-1 "in New South Wales, Australia"</li>
+<li>CC-2 "in Australia"</li>
+<li>CC-3 "in Sweden"</li>
+</ol>
+
+
+<p>If I were to venture a guess, I'd reckon that <em>CC-1</em> was caught first and became the informant used to take down the crew. I think this because <em>CC-1</em> has the most specific geographic information, and the others are more vague in their location. As if there was a lot of effort invested in locating <em>CC-1</em>, and then the investigation focussed in on Mr Love.</p>
+
+<h2>Timeline</h2>
+
+<ul>
+<li>October, 2012: Start of the conspiracy</li>
+<li>October 2, 2012: Army Network Enterprise Technology Command ("NETCOM") hack</li>
+<li>October 6, 2012: log of <code>nsh</code> on IRC discussing NETCOM hack with <em>CC-1</em>, later w/ <em>CC-2</em></li>
+<li>October 7-8, 2012: Army Contracting Command's Army Materiel Command ("ACC") SQLI hack</li>
+<li><p>October 10, 2012: LOVE discusses ACC hack on IRC</p></li>
+<li><p>October, 2013: End of the conspiracy</p></li>
+</ul>
+
+
+<h2>Hacking 101</h2>
+
+<p>The crew used scanners to locate vulnerable servers to exploit, and they shared the findings via their IRC.</p>
+
+<pre><code>peace: so can pivot and scan for other vulns [vulnerabilities] 
+peace: we might be able to get at real confidential shit
+</code></pre>
+
+<p>The crew used SQLI and ColdFusion exploits.</p>
+
+<p>The crew used proxies and <code>Tor</code> to mask the origins of their attacks.</p>
+
+<blockquote><p>conceal their attacks by disguising, through the use of Proxy Servers, the IP addresses from which their attacks originated. Defendant LOVE and the other Co-Conspirators further used the Tor network, which was an anonymizing proxy service, to hide their activities.</p></blockquote>
+
+<h2>Operational Security Measures</h2>
+
+<h3>Migration</h3>
+
+<p>The crew moved comms to new systems <strong>and</strong> changed their identities when they did so. This is a very good practice. Unfortunately, it appears that at least one member was logging the comms traffic. This created a security problem that could be exploited
+by the authorities.</p>
+
+<pre><code>route: consideration 1 : behaviour profile should not change 
+route: public side i mean 
+route: so whatever "normal", activities we do 
+route: should continue 
+route: but we move from this irc to better system 
+route: also 
+route: these nicks should change 
+route: i think 
+route: when we get on new communications 
+route: all new names
+</code></pre>
+
+<p><strong>OPSEC Violation</strong>: No logs, no crime. Do not keep any unnecessary logs. If
+there is operationally critical information, make a record of that information.
+Practically, this means: cut and paste into a file; keep that file encrypted.</p>
+
+<p><strong>OPSEC Lesson</strong>: Migrating communications infrastructure and changing identities
+regularly is a good idea. It creates chronologically compartmented silos of info
+that limit the impact of a compromise. It can provide plausible deniability,
+and it can reduce the severity of a compromise. Do not contaminate between the
+compartments. And, of course, ensure that each commo channel is secure.</p>
+
+<h3>Logistical Compartmentation</h3>
+
+<p>For at least some operations (all?) the crew spun up a new dedicated support
+server. This compartmented server was then discarded after use to minimize the
+connection to the group and any other operations. This is very effective OPSEC.</p>
+
+<pre><code>CC#2: but server must have no link to you or us
+peace: :)
+CC#2: when done we kill it
+CC#2: for this plan
+CC#2: we can reopen another one for other ongoing stuff
+CC#2: but once this plan done we need to make sure they cannot all trace it back to us
+</code></pre>
+
+<p><strong>OPSEC Lesson</strong>: Compartment as much as possible for each operation to avoid
+linking separate ops together. This also helps contain the damage if an operation
+is compromised and an investigation launched. Dedicated logistical infrastructure
+is best. Don't forget to santize it, both at the beginning and the end of the op.</p>
+
+<h2>Conclusion</h2>
+
+<p>Even a group with robust operational security practices is vulnerable to the oldest
+trick in the book: the informant. The take away lessons are slightly more interesting:</p>
+
+<ul>
+<li>Migrate comms and identity on a regular basis</li>
+<li>Never store incriminating logs</li>
+<li>Compartment heavily, and sanitize frequently</li>
+</ul>
+
+
+<p>So it is sad news for Mr Lauri Love facing hacking charges, but at least there're
+some valuable OPSEC lessons for the rest of us. Remember: No logs, no crime.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[New York's Finest OPSEC]]></title>
@@ -548,76 +669,6 @@ Just as clearly, they are reprehensible people who engage in activity that is im
 <p>The thing is, there are basically no nice people who provide case studies of OPSEC practices. Most are engaged in violence, serious drug trafficking (at the "kill people for interfering" level), theft and manipulation of human beings, etc. Thats the nature of the beast.</p>
 
 <p>People with well funded, trained and motivated adversaries have the strongest incentives to practice the highest level of security. They're the ones to learn from.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Win at Kung Fu and Hacking]]></title>
-    <link href="http://grugq.github.com/blog/2013/11/22/challenges-for-hackers/"/>
-    <updated>2013-11-22T20:02:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/11/22/challenges-for-hackers</id>
-    <content type="html"><![CDATA[<h2>Everybody Was Hack Foo Fighting</h2>
-
-<p>I'm going to discuss a serious problem with the organisational structure and
-social dynamics of the hacker community, and why this puts hackers at risk.
-Hackers operate essentially the same way as the henchmen in a kung fu movie:
-they attack the adversary one by one by one... always losing. This is a terrible
-way of developing a robust core of knowledge about which OPSEC techniques work,
-which techniques fail, and why.</p>
-
-<h2>Organisational Learning for Dummies</h2>
-
-<p>There are two types of knowledge: individual, and organisational. Hackers are
-very individualistic, and the knowledge they acquire tends to be very
-practical; experience based. There are few hacker organisations that seek to
-collect, retain, test and spread knowledge. The organistations that do crop up
-are either some zines, which are knowledge artefacts that transmit techne, or
-hacker groups, which share tool chains and experience. However, these hacker
-groups have very short lifespans (measured in months and single digit years,
-not decades). They are compartmented in that there is some effort made to
-retain the group's proprietary information, but internally they usually
-have a very poor security posture. They are social groups in many ways, so
-they are heavily compromised. As we say in infosec "crunchy on the outside,
-chewy in the middle".</p>
-
-<p>Their opposition, the intelligence agencies and law enforcement departments,
-have decades of organisational history and knowledge. The individual members
-can display wide ranges of skill and competence, but the resources and core
-knowledge of the organisation dwarf what any individual hacker has available.
-Many of the skills that a hacker needs to learn, his clandestine tradecraft
-and OPSEC, are the sort of skills that organisations are excellent at
-developing and disseminating. These are not very good skillsets for an
-individual to learn through trial and error, because those errors have
-significant negative consequences. An organisation can afford to lose people
-as it learns how to deal with the adversary; an individual cannot afford to
-make a similar sacrifice -- afterall, who would benefit from your negative
-example?</p>
-
-<h2>Challenges? More Like Opportunities!</h2>
-
-<p>Hackers are facing some very serious challenges now:</p>
-
-<ul>
-<li>they lack organistations for collecting intelligence and knowledge about their adversary;</li>
-<li>they face off against the adversary one at a time,</li>
-<li>they learn very poorly from prior mistakes</li>
-<li>they don't even know what skills they need,</li>
-<li>and perhaps most dangerously, they aren't even aware they're in the game</li>
-</ul>
-
-
-<p>It is amusing how many people think that interrogations involve violence and
-torture. Successful elicitation far more frequently involves whiskey,
-flattery, playing dumb, and being doubtful ("<em>really? I didn't know it was
-possible to do that. You must be pretty damn smart to have figured it
-out...</em>").</p>
-
-<h2>Winning at Secrets</h2>
-
-<p>There needs to be more information available on the techniques used during
-investigations, as well as before they begin. There needs to be documentation
-on how to evade those techniques, and why those evasions are successful. That
-knowledge needs to be captured and dissemminated out to those who can use it.</p>
 ]]></content>
   </entry>
   

@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>When In Doubt, It's A Tout - Hacker OPSEC</title>
+  <meta name="author" content="the grugq">
+
+  
+  <meta name="description" content="When in doubt, it&#8217;s a tout Robust Operational Security Practices Aren&#8217;t Enough A British man, Lauri Love, has been indicted for hacking. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://grugq.github.com/blog/2014/06/16/when-in-doubt-its-a-tout">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Hacker OPSEC" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Hacker OPSEC</a></h1>
+  
+    <h2>STFU is the best policy.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:grugq.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/docs/">Docs</a></li>
+  <li><a href="/presentations/">Presentations</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><a href="/contact/">Contact</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">When in Doubt, It's a Tout</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-16T00:25:00+07:00" pubdate data-updated="true">Jun 16<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h1>When in doubt, it&#8217;s a tout</h1>
+
+<h2>Robust Operational Security Practices Aren&#8217;t Enough</h2>
+
+<p>A British man, Lauri Love, has been <a href="http://www.theregister.co.uk/2014/02/28/lauri_love_us_federal_reserve_hacking_charges/">indicted for hacking</a>. The indictment
+is thin on details, but does have some interesting OPSEC insights that can be teased out by the patient reader.</p>
+
+<p>The <a href="http://www.justice.gov/usao/nj/Press/files/pdffiles/2013/Love,%20Lauri%20Indictment.pdf">indictment of Lauri Love</a> doesn&#8217;t reveal much about how he was identified. There is some interesting info about the operational security measures taken by his crew, and they appear robust. The lack of information on how Mr Love was caught, along with the revelation of good security practices suggests one thing: informant.</p>
+
+<p>This post will only highlight the good operational security practices of the hacker group, since we don&#8217;t know what the mistakes were.</p>
+
+<h2>Indictment Critical Analysis</h2>
+
+<p>The indictment lists four members of the crew:</p>
+
+<ol>
+<li>Lauri Love, &#8220;nsh&#8221;, &#8220;peace&#8221;, &#8220;route&#8221;</li>
+<li>CC-1 &#8220;in New South Wales, Australia&#8221;</li>
+<li>CC-2 &#8220;in Australia&#8221;</li>
+<li>CC-3 &#8220;in Sweden&#8221;</li>
+</ol>
+
+
+<p>If I were to venture a guess, I&#8217;d reckon that <em>CC-1</em> was caught first and became the informant used to take down the crew. I think this because <em>CC-1</em> has the most specific geographic information, and the others are more vague in their location. As if there was a lot of effort invested in locating <em>CC-1</em>, and then the investigation focussed in on Mr Love.</p>
+
+<h2>Timeline</h2>
+
+<ul>
+<li>October, 2012: Start of the conspiracy</li>
+<li>October 2, 2012: Army Network Enterprise Technology Command (&#8220;NETCOM&#8221;) hack</li>
+<li>October 6, 2012: log of <code>nsh</code> on IRC discussing NETCOM hack with <em>CC-1</em>, later w/ <em>CC-2</em></li>
+<li>October 7-8, 2012: Army Contracting Command&#8217;s Army Materiel Command (&#8220;ACC&#8221;) SQLI hack</li>
+<li><p>October 10, 2012: LOVE discusses ACC hack on IRC</p></li>
+<li><p>October, 2013: End of the conspiracy</p></li>
+</ul>
+
+
+<h2>Hacking 101</h2>
+
+<p>The crew used scanners to locate vulnerable servers to exploit, and they shared the findings via their IRC.</p>
+
+<pre><code>peace: so can pivot and scan for other vulns [vulnerabilities] 
+peace: we might be able to get at real confidential shit
+</code></pre>
+
+<p>The crew used SQLI and ColdFusion exploits.</p>
+
+<p>The crew used proxies and <code>Tor</code> to mask the origins of their attacks.</p>
+
+<blockquote><p>conceal their attacks by disguising, through the use of Proxy Servers, the IP addresses from which their attacks originated. Defendant LOVE and the other Co-Conspirators further used the Tor network, which was an anonymizing proxy service, to hide their activities.</p></blockquote>
+
+<h2>Operational Security Measures</h2>
+
+<h3>Migration</h3>
+
+<p>The crew moved comms to new systems <strong>and</strong> changed their identities when they did so. This is a very good practice. Unfortunately, it appears that at least one member was logging the comms traffic. This created a security problem that could be exploited
+by the authorities.</p>
+
+<pre><code>route: consideration 1 : behaviour profile should not change 
+route: public side i mean 
+route: so whatever "normal", activities we do 
+route: should continue 
+route: but we move from this irc to better system 
+route: also 
+route: these nicks should change 
+route: i think 
+route: when we get on new communications 
+route: all new names
+</code></pre>
+
+<p><strong>OPSEC Violation</strong>: No logs, no crime. Do not keep any unnecessary logs. If
+there is operationally critical information, make a record of that information.
+Practically, this means: cut and paste into a file; keep that file encrypted.</p>
+
+<p><strong>OPSEC Lesson</strong>: Migrating communications infrastructure and changing identities
+regularly is a good idea. It creates chronologically compartmented silos of info
+that limit the impact of a compromise. It can provide plausible deniability,
+and it can reduce the severity of a compromise. Do not contaminate between the
+compartments. And, of course, ensure that each commo channel is secure.</p>
+
+<h3>Logistical Compartmentation</h3>
+
+<p>For at least some operations (all?) the crew spun up a new dedicated support
+server. This compartmented server was then discarded after use to minimize the
+connection to the group and any other operations. This is very effective OPSEC.</p>
+
+<pre><code>CC#2: but server must have no link to you or us
+peace: :)
+CC#2: when done we kill it
+CC#2: for this plan
+CC#2: we can reopen another one for other ongoing stuff
+CC#2: but once this plan done we need to make sure they cannot all trace it back to us
+</code></pre>
+
+<p><strong>OPSEC Lesson</strong>: Compartment as much as possible for each operation to avoid
+linking separate ops together. This also helps contain the damage if an operation
+is compromised and an investigation launched. Dedicated logistical infrastructure
+is best. Don&#8217;t forget to santize it, both at the beginning and the end of the op.</p>
+
+<h2>Conclusion</h2>
+
+<p>Even a group with robust operational security practices is vulnerable to the oldest
+trick in the book: the informant. The take away lessons are slightly more interesting:</p>
+
+<ul>
+<li>Migrate comms and identity on a regular basis</li>
+<li>Never store incriminating logs</li>
+<li>Compartment heavily, and sanitize frequently</li>
+</ul>
+
+
+<p>So it is sad news for Mr Lauri Love facing hacking charges, but at least there&#8217;re
+some valuable OPSEC lessons for the rest of us. Remember: No logs, no crime.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">the grugq</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-16T00:25:00+07:00" pubdate data-updated="true">Jun 16<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/opsec/'>OPSEC</a>, <a class='category' href='/blog/categories/hacking/'>hacking</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/05/11/the-episode-17/" title="Previous Post: Episode 17">&laquo; Episode 17</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/06/16/when-in-doubt-its-a-tout/">When in Doubt, It's a Tout</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/the-episode-17/">Episode 17</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/13/new-yorks-finest-opsec/">New York's Finest OPSEC</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("thegrugq", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/thegrugq">@thegrugq</a></p>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/grugq">@grugq</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'grugq',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - the grugq -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

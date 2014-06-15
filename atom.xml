@@ -4,7 +4,7 @@
   <title><![CDATA[Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2014-05-19T18:38:51+07:00</updated>
+  <updated>2014-06-16T00:36:52+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -12,6 +12,127 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[When In Doubt, It's A Tout]]></title>
+    <link href="http://grugq.github.com/blog/2014/06/16/when-in-doubt-its-a-tout/"/>
+    <updated>2014-06-16T00:25:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2014/06/16/when-in-doubt-its-a-tout</id>
+    <content type="html"><![CDATA[<h1>When in doubt, it&#8217;s a tout</h1>
+
+<h2>Robust Operational Security Practices Aren&#8217;t Enough</h2>
+
+<p>A British man, Lauri Love, has been <a href="http://www.theregister.co.uk/2014/02/28/lauri_love_us_federal_reserve_hacking_charges/">indicted for hacking</a>. The indictment
+is thin on details, but does have some interesting OPSEC insights that can be teased out by the patient reader.</p>
+
+<p>The <a href="http://www.justice.gov/usao/nj/Press/files/pdffiles/2013/Love,%20Lauri%20Indictment.pdf">indictment of Lauri Love</a> doesn&#8217;t reveal much about how he was identified. There is some interesting info about the operational security measures taken by his crew, and they appear robust. The lack of information on how Mr Love was caught, along with the revelation of good security practices suggests one thing: informant.</p>
+
+<p>This post will only highlight the good operational security practices of the hacker group, since we don&#8217;t know what the mistakes were.</p>
+
+<h2>Indictment Critical Analysis</h2>
+
+<p>The indictment lists four members of the crew:</p>
+
+<ol>
+<li>Lauri Love, &#8220;nsh&#8221;, &#8220;peace&#8221;, &#8220;route&#8221;</li>
+<li>CC-1 &#8220;in New South Wales, Australia&#8221;</li>
+<li>CC-2 &#8220;in Australia&#8221;</li>
+<li>CC-3 &#8220;in Sweden&#8221;</li>
+</ol>
+
+
+<p>If I were to venture a guess, I&#8217;d reckon that <em>CC-1</em> was caught first and became the informant used to take down the crew. I think this because <em>CC-1</em> has the most specific geographic information, and the others are more vague in their location. As if there was a lot of effort invested in locating <em>CC-1</em>, and then the investigation focussed in on Mr Love.</p>
+
+<h2>Timeline</h2>
+
+<ul>
+<li>October, 2012: Start of the conspiracy</li>
+<li>October 2, 2012: Army Network Enterprise Technology Command (&#8220;NETCOM&#8221;) hack</li>
+<li>October 6, 2012: log of <code>nsh</code> on IRC discussing NETCOM hack with <em>CC-1</em>, later w/ <em>CC-2</em></li>
+<li>October 7-8, 2012: Army Contracting Command&#8217;s Army Materiel Command (&#8220;ACC&#8221;) SQLI hack</li>
+<li><p>October 10, 2012: LOVE discusses ACC hack on IRC</p></li>
+<li><p>October, 2013: End of the conspiracy</p></li>
+</ul>
+
+
+<h2>Hacking 101</h2>
+
+<p>The crew used scanners to locate vulnerable servers to exploit, and they shared the findings via their IRC.</p>
+
+<pre><code>peace: so can pivot and scan for other vulns [vulnerabilities] 
+peace: we might be able to get at real confidential shit
+</code></pre>
+
+<p>The crew used SQLI and ColdFusion exploits.</p>
+
+<p>The crew used proxies and <code>Tor</code> to mask the origins of their attacks.</p>
+
+<blockquote><p>conceal their attacks by disguising, through the use of Proxy Servers, the IP addresses from which their attacks originated. Defendant LOVE and the other Co-Conspirators further used the Tor network, which was an anonymizing proxy service, to hide their activities.</p></blockquote>
+
+<h2>Operational Security Measures</h2>
+
+<h3>Migration</h3>
+
+<p>The crew moved comms to new systems <strong>and</strong> changed their identities when they did so. This is a very good practice. Unfortunately, it appears that at least one member was logging the comms traffic. This created a security problem that could be exploited
+by the authorities.</p>
+
+<pre><code>route: consideration 1 : behaviour profile should not change 
+route: public side i mean 
+route: so whatever "normal", activities we do 
+route: should continue 
+route: but we move from this irc to better system 
+route: also 
+route: these nicks should change 
+route: i think 
+route: when we get on new communications 
+route: all new names
+</code></pre>
+
+<p><strong>OPSEC Violation</strong>: No logs, no crime. Do not keep any unnecessary logs. If
+there is operationally critical information, make a record of that information.
+Practically, this means: cut and paste into a file; keep that file encrypted.</p>
+
+<p><strong>OPSEC Lesson</strong>: Migrating communications infrastructure and changing identities
+regularly is a good idea. It creates chronologically compartmented silos of info
+that limit the impact of a compromise. It can provide plausible deniability,
+and it can reduce the severity of a compromise. Do not contaminate between the
+compartments. And, of course, ensure that each commo channel is secure.</p>
+
+<h3>Logistical Compartmentation</h3>
+
+<p>For at least some operations (all?) the crew spun up a new dedicated support
+server. This compartmented server was then discarded after use to minimize the
+connection to the group and any other operations. This is very effective OPSEC.</p>
+
+<pre><code>CC#2: but server must have no link to you or us
+peace: :)
+CC#2: when done we kill it
+CC#2: for this plan
+CC#2: we can reopen another one for other ongoing stuff
+CC#2: but once this plan done we need to make sure they cannot all trace it back to us
+</code></pre>
+
+<p><strong>OPSEC Lesson</strong>: Compartment as much as possible for each operation to avoid
+linking separate ops together. This also helps contain the damage if an operation
+is compromised and an investigation launched. Dedicated logistical infrastructure
+is best. Don&#8217;t forget to santize it, both at the beginning and the end of the op.</p>
+
+<h2>Conclusion</h2>
+
+<p>Even a group with robust operational security practices is vulnerable to the oldest
+trick in the book: the informant. The take away lessons are slightly more interesting:</p>
+
+<ul>
+<li>Migrate comms and identity on a regular basis</li>
+<li>Never store incriminating logs</li>
+<li>Compartment heavily, and sanitize frequently</li>
+</ul>
+
+
+<p>So it is sad news for Mr Lauri Love facing hacking charges, but at least there&#8217;re
+some valuable OPSEC lessons for the rest of us. Remember: No logs, no crime.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Episode 17]]></title>
@@ -1958,108 +2079,6 @@ creating a <em>phone tree</em>, or link analysis chart of organisation membershi
 
 <p><strong>Warning:</strong> unlinking will not prevent traffic flow analysis, fingerprinting,
 or many other techniques from linking comms end points. But it is square one.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[anonymity is hard]]></title>
-    <link href="http://grugq.github.com/blog/2013/03/12/anonymity-is-hard/"/>
-    <updated>2013-03-12T21:05:00+07:00</updated>
-    <id>http://grugq.github.com/blog/2013/03/12/anonymity-is-hard</id>
-    <content type="html"><![CDATA[<h2>Anonymity in the real world is very hard</h2>
-
-<p>In late 2011 Hezbollah rolled up a CIA spy ring in Lebanon. This provides an
-interesting lesson in CIA tradecraft and real world counterintelligence. Close
-examination of the techniques used to track down the agents will reveal some
-serious problems with many systems designed to provide security for
-anti-government groups.</p>
-
-<p>This post is partially in a response to <a href="http://blog.cryptographyengineering.com/2013/03/here-come-encryption-apps.html">Matt Green&#8217;s</a>
-post about encryption apps. The secrecy provided by encryption applications,
-primarily privacy of communication content, is not sufficient to protect against
-even minimal monitoring. Any anti-government activity in a modern environment, e.g.
-one involving mobile phones and the internet, needs to include anonymity first and
-foremost.</p>
-
-<h2>The Sources</h2>
-
-<p><a href="http://www.guardian.co.uk/world/feedarticle/9958834">This article</a> provides
-some of the details about the tradecraft of the spy network, and how it
-failed. The focus is on how the agents were contacted by their handlers and
-how this was used to uncover the whole network. <a href="http://www.ufppc.org/us-a-world-news-mainmenu-35/10702-news-three-us-spy-rings-broken-in-lebanon-a-iran.html">Another site</a>
-provides a large collection of related articles which fills in some additional
-details.</p>
-
-<h2>The Tradecraft (Probably, maybe)</h2>
-
-<p><strong>NOTE:</strong> This information is based on newspaper articles, so it is of limited
-accuracy. However, it seems like reasonable tradecraft practices that even
-amateurs would devise and is thus presented for analysis here.</p>
-
-<ul>
-<li><p><strong>Dedicated mobile phone</strong>
-  The agents had a mobile phone used specifically for communication with
-  their handler. This phone was kept in a static location waiting for
-  contact, and possibly spent a lot of time switched off.</p></li>
-<li><p><strong>Pre-arranged meeting place</strong>
-  The agents had a meeting location (allegedly at a Pizza Hut) where
-  they met their handlers. This location was (allegedly) reused for
-  multiple agents and multiple meetings.</p></li>
-<li><p><strong>Signalling code word</strong>
-  Contact by the handler to the agent was via a code word (allegedly: &#8220;PIZZA!&#8221;),
-  which was meaningless by itself but also contextually anomalous.</p></li>
-</ul>
-
-
-<h2>Well, thats one way to do it</h2>
-
-<p>The adversary, Hezbollah, used access to the telephone company logs (they have those),
-and searched for atypical mobile phone usage patterns:</p>
-
-<ul>
-<li>phones that only receive a few calls / messages over long periods of time</li>
-<li>mobile phones that are never mobile</li>
-<li>weird / unusual messages (PIZZA!!)</li>
-</ul>
-
-
-<p>That is, they were looking for phones that were kept at home, turned on
-occasionally, and only received calls/sms infrequently. The exact usage pattern
-one would expect for a mobile that is used exclusively for a handler to contact
-an agent.</p>
-
-<p>This data gave Hezbollah a general location (down to the apartment complex) of
-where the agents were located. Next, the adversary correlated the location
-data with the home addresses of members who had access to secret information.
-They conducted surveillance on those members and discovered they were using a
-Pizza Hut to meet with their handlers.</p>
-
-<p><strong>Speculation</strong>
-Finally, the adversary was able to continually monitor the meeting location
-and detect other members of the spy network meeting with their handlers. The
-CIA is known for over using the same locations for meetings [1].</p>
-
-<p>[1] <a href="http://www.amazon.com/The-C-I-Desk-Counterintelligence-Cubicle/dp/1608447391">The C.I. Desk</a></p>
-
-<h2>Computer says No</h2>
-
-<p>The problems with these tradecraft practises are pretty obvious from a
-counterintelligence analysis. They are anomalous (atypical mobile phone use)
-and they are rigidly predictable (reusing the same meeting location).</p>
-
-<p>For encryption applications used by anti-government forces this provides a
-clear blueprint for action - look normal. Even basic monitoring of traffic
-will reveal anomalous activity which can be used to identify who needs to be
-watched more closely.</p>
-
-<h2>Conclusion</h2>
-
-<p>Hiding anomalous activity is hard, but vitally important. The problem with
-many security systems based purely on secrecy is that their usage is itself
-anomalous. It singles out and attracts attention to the users. If the
-adversary doesn&#8217;t know who those users are initially, they can cross correlate
-real world data with the suspicious activity and narrow their focus to real
-people. Those people can, and will, end up dead.</p>
 ]]></content>
   </entry>
   
