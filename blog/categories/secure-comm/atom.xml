@@ -4,7 +4,7 @@
   <title><![CDATA[Category: secure comm | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/secure-comm/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2014-08-09T21:02:00+07:00</updated>
+  <updated>2014-08-09T21:04:35+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -19,15 +19,14 @@
     <updated>2014-08-09T20:41:00+07:00</updated>
     <id>http://grugq.github.com/blog/2014/08/09/jihadist-fan-crypto</id>
     <content type="html"><![CDATA[<p>Think of <em>Mujahideen Secrets</em> as a branded promotional tool, sort of
-like if Manchester United released a branded fan chat app. I <a href="http://grugq.tumblr.com/post/93584051363/how-al-qaeda-uses-encryption-post-snowden-part-2">wrote
-about this earlier</a>
-but wanted to expand on some ideas in more depth.</p>
-
-<h2>Web Warriors: Security Practices on Jihadi Web Forums</h2>
+like if Manchester United released a branded fan chat app.</p>
 
 <p>Although there has been a lot of FUD written about the encrypted messaging systems
 developed and promoted by jihadis groups, very little has focused on the how
-they are actually used.</p>
+they are actually used. I wrote <a href="http://grugq.tumblr.com/post/93584051363/how-al-qaeda-uses-encryption-post-snowden-part-2">some notes about this earlier</a>
+but wanted to expand on the subject in more depth.</p>
+
+<h2>Web Warriors: Security Practices on Jihadi Web Forums</h2>
 
 <p>There are a number of internet web forums that are used by supporters of the various
 jihadi groups fighting in the middle east. These sites are primarily cheerleading
