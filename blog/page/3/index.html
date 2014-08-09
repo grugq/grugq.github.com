@@ -9,8 +9,9 @@
   <meta name="author" content="the grugq">
 
   
-  <meta name="description" content="Anonymity in the real world is very hard In late 2011 Hezbollah rolled up a CIA spy ring in Lebanon. This provides an
-interesting lesson in CIA &hellip;">
+  <meta name="description" content="The Paddy Factor was a disparaging term used by the British security
+forces to refer to poor OPSEC practices by the Provisional IRA (PIRA)
+in the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,6 +71,117 @@ interesting lesson in CIA &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/03/18/the-paddy-factor/">The Paddy Factor</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-18T09:51:00+07:00" pubdate data-updated="true">Mar 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <strong>Paddy Factor</strong> was a disparaging term used by the British security
+forces to refer to poor OPSEC practices by the Provisional IRA (PIRA)
+in the early 1970s. Much of this terrible counter intelligence posture was due
+to a limited number of easily avoidable activities that combined to compromise
+many Provos:</p>
+
+<ul>
+<li><p><strong>Self incrimination</strong></p>
+
+<ul>
+<li>PIRA members would congregate in pubs and sing IRA songs.</li>
+<li>They would boast about their IRA operations while drunk in pubs.</li>
+<li>They would reply with a nod and a wink to friendly inquiries about their
+activities, making it easy for informants to identify them.</li>
+<li>They would march in pro-IRA rallies.</li>
+</ul>
+
+
+<p>  <strong>Problem:</strong> The adversary was able to easily identify (some) PIRA
+  members. Once the adversary identifies members of an organisation,
+  they will investigate and monitor them to uncover other members.</p></li>
+<li><p><strong>Contamination</strong>
+  PIRA members would associate with each other when not on operations.
+  In intel parlance this is called &#8220;pre-operational contact&#8221;, and it is
+  to be avoided. The reason is that any surveillance on one member will
+  reveal the other members of the group. This is a form of <em>contamination</em>.</p></li>
+</ul>
+
+
+<p>In short, some (many?) members of the Provisional IRA made their affiliation
+publically known by bragging about their operations in public places. This
+made them known to the adversary (the British security forces), who were then
+able to monitor those known PIRA members. Later, at political events such as
+rallies, these known PIRA members would hang out and chat with their unknown
+underground brethren. This made the underground members known to the adversary,
+with the obvious negative consequences.</p>
+
+<h2>Link Analysis and You</h2>
+
+<p>Knowing only a single node in a network, e.g. one member of an organisation,
+and monitoring which other nodes it contacts with gives insight into
+membership of the graph. The police, for example, use a variety of monitoring
+techniques to build up <em>phone trees</em> which map out organisational relationships.</p>
+
+<p>This form of analysis, mapping associations between nodes in a network (e.g.
+membership in an organisation) is called link analysis. It can be used against
+communication end points (e.g. mobile phones, email addresses), which are then
+associated with individuals. For example, link analysis of mobile phone numbers
+and contact address books of drug dealers is used to determine hierarchical
+information about their distribution networks. Link analysis is a very powerful
+method of understanding relationships and being able to link &#8220;chatter&#8221; between
+nodes as activity related to an organisation.</p>
+
+<h2>How to unlink</h2>
+
+<p>One solution to making link analysis harder and less useful is to create
+unique nodes for each connection. Done successfuly, this creates link graph is
+only 2 nodes and 1 edge. In practise, this means that every connection between
+peers should be unique to that connection, i.e. create a new jabber identity for
+each associate you have. Do not share these jabber IDs between different <em>friends</em>.
+The rule is simple: 1 friend, 1 jabber ID.</p>
+
+<p>These node to node links should be changed regularly as well. The old nodes
+must never contact the new nodes. That will contaminate them, create a link
+that associates them together. New clean break each time.</p>
+
+<h2>Conclusion</h2>
+
+<p>It is possible to defeat link analysis, but it takes discipline and is hard to
+do successfully. Every single communications end point must be unique and
+dedicated to only one other end point. These end points must never contaminate
+each other by interacting or mentioning other end points. This will inhibit
+creating a <em>phone tree</em>, or link analysis chart of organisation membership.</p>
+
+<p><strong>Warning:</strong> unlinking will not prevent traffic flow analysis, fingerprinting,
+or many other techniques from linking comms end points. But it is square one.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -353,15 +465,15 @@ against all but the highest level penetrations.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/08/09/jihadist-fan-crypto/">Jihadist Fan Crypto</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/06/16/when-in-doubt-its-a-tout/">When in Doubt, It&#8217;s a Tout</a>
       </li>
     
       <li class="post">
         <a href="/blog/2014/05/11/the-episode-17/">Episode 17</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/13/new-yorks-finest-opsec/">New York&#8217;s Finest OPSEC</a>
       </li>
     
   </ul>

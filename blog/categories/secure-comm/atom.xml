@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: secure comm | Hacker OPSEC]]></title>
+  <link href="http://grugq.github.com/blog/categories/secure-comm/atom.xml" rel="self"/>
+  <link href="http://grugq.github.com/"/>
+  <updated>2014-08-09T21:02:00+07:00</updated>
+  <id>http://grugq.github.com/</id>
+  <author>
+    <name><![CDATA[the grugq]]></name>
+    <email><![CDATA[the.grugq@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Jihadist Fan Crypto]]></title>
+    <link href="http://grugq.github.com/blog/2014/08/09/jihadist-fan-crypto/"/>
+    <updated>2014-08-09T20:41:00+07:00</updated>
+    <id>http://grugq.github.com/blog/2014/08/09/jihadist-fan-crypto</id>
+    <content type="html"><![CDATA[<p>Think of <em>Mujahideen Secrets</em> as a branded promotional tool, sort of
+like if Manchester United released a branded fan chat app. I <a href="http://grugq.tumblr.com/post/93584051363/how-al-qaeda-uses-encryption-post-snowden-part-2">wrote
+about this earlier</a>
+but wanted to expand on some ideas in more depth.</p>
+
+<h2>Web Warriors: Security Practices on Jihadi Web Forums</h2>
+
+<p>Although there has been a lot of FUD written about the encrypted messaging systems
+developed and promoted by jihadis groups, very little has focused on the how
+they are actually used.</p>
+
+<p>There are a number of internet web forums that are used by supporters of the various
+jihadi groups fighting in the middle east. These sites are primarily cheerleading
+and "in grouping" social networks, rather than opertational message boards.</p>
+
+<p>An important point to understand about these online forums is that they are about
+group dynamics. They provide a mechanism for people to feel like they are part
+of the struggle with a graded scale of committment. They dont actually getting
+their hands dirty or risking their lives.</p>
+
+<p>The sites all attempt to educate their users on security best practices, for example
+the Islamic State (nee ISIS) web forum heavily <a href="https://twitter.com/switch_d/status/484806826404618241/photo/1">promotes the use of TAILS</a>, AQAP <a href="https://twitter.com/switch_d/status/484809802363969538">advocates for Tor usage in a 9 page guide</a>. Despite
+this, few users actually bother with security precautions. Indeed, many continue
+to use Facebook and Skype as their <a href="https://twitter.com/Raed667/status/495791460915347456">primary communications channels</a> with fellow
+online jihadists.</p>
+
+<p>The encryption tools are branded software for self identifying
+jihadis to <a href="https://twitter.com/Raed667/status/495791831721213952">feel like they belong</a>.
+Indeed, other than the <a href="https://twitter.com/switch_d/status/495908728500404224">media outlets</a> who
+emphasise the use of the tools (branding and messaging), the actual jihadis have
+a hard time using the tools. Actual web jihadis <a href="https://twitter.com/switch_d/status/495909042490191872">complain of usability problems</a>
+that prevent them from using the tools.</p>
+
+<p>The media outlets for the different groups: IS, Nusra, AQ, all make sure that
+their followers know about their own branded encrypted messenger. Indeed, this
+is the primary clue to how these apps are actually used. They are branding tools
+that promote in-group sentiment. "I'm using the AQ encrypted messenger, so I am
+basically AQ". These tools deliberately identify the user as a jihadi associate,
+not by accident or due to bad security practice, but rather as a deliberate part
+of their value proposition. "Use our encrypted messaging app and you will securely
+let the world know that you are with us!"</p>
+
+<p>All of the major apps are simply branded wrappers around industry standard
+libraries, ciphers, and protocols. There is nothing particularly Islamic or
+Jihadist about them except the branding. That is because <strong>the branding is actually the point</strong>.
+These are just <a href="http://en.wikipedia.org/wiki/Signalling_theory">social signals</a>.
+Using AQAP's messaging tool is the rough equivalent of wearing a sports jersey.
+It signals to others that there is group identity. (Of course, given the outlaw
+nature of these groups it seems like an extremely poor life decision)</p>
+
+<p>These apps are not designed for actual clandestine operational use. They are for
+making a social statement. Signaling membership in a peer group. Despite this
+simple purpose for using the apps, there is still remarkably low uptake amongst
+the online jihadist set who still primarily rely on Facebook and Skype for comms.</p>
+
+<p>So if almost no one is using the encryption apps, and those that do are using them
+to signal membership in a broader organisation, what are the real jihadis using
+operationally? <strong>Facebook</strong>.</p>
+
+<h2>Jihadi Operational Covert Communications:</h2>
+
+<p>There was a Facebook account <a href="https://www.facebook.com/profile.php?id=100004481327363&amp;fref=ufi">"sniper head"</a> that was posting clear text, but coded, messages
+believed to be related to jihadi operations in Iraq. The account has been taken
+down and the guy running it <a href="https://translate.google.com/translate?hl=en&amp;sl=ar&amp;tl=en&amp;u=http%3A%2F%2Fwww.shemsfm.net%2Far%2Factualite%2F%D8%A7%D9%84%D9%82%D8%A8%D8%B6-%D8%B9%D9%84%D9%89-%D8%B5%D8%A7%D8%AD%D8%A8-%D8%B5%D9%81%D8%AD%D8%A9-%D9%82%D9%86%D8%A7%D8%B5-%D8%AE%D8%A7%D8%B1%D8%AC-%D8%B9%D9%86-%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86-87983">was arrested</a>.</p>
+
+<p>Here are some examples of what he was posting (<a href="http://pastebin.com/hT0DJT05">taken from here</a>):</p>
+
+<p><code>
+Eagle 1 group please change route to k :?via trees !.ch
+</code></p>
+
+<p><code>
+Refiling will be through the loaded mule same place of refiling thank you
+</code></p>
+
+<p><code>
+(Yesterdays posts (before today's attack))
+To all "units" please change direction towards .?k1 after 500m (meters?). Info came from scout about invaluable avant-post
+</code></p>
+
+<p><code>
+https://www.facebook.com/permalink.php?story_fbid=325792687580106&amp;id=100004481327363
+Expecting news in the coming days we promise heavy news(important), For those fighting Islam? wake up before it is too late you traitors and snitches you will regret your tyranny
+</code></p>
+
+<h2>Jihadi Encryption Is Overrated</h2>
+
+<p>The key take away is that the encrypted messaging apps from ISIS or AQAP are as
+operationaly relevant as an encrypted messaging app from Man U or Liverpool. It
+might be exciting for some hardcore fans who want to show their support, but the
+real players don't touch the stuff.</p>
+
+<p>Real jihadis use <a href="http://grugq.tumblr.com/post/68453478391/secure-communications">secure codes</a> and <a href="http://www.theguardian.com/world/2014/jun/15/iraq-isis-arrest-jihadists-wealth-power">couriers</a>, not some Android toy My First Crypto Chat.</p>
+]]></content>
+  </entry>
+  
+</feed>

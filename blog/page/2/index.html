@@ -9,7 +9,7 @@
   <meta name="author" content="the grugq">
 
   
-  <meta name="description" content="OPSEC revisited The goal of OPSEC is to control information about your capabilities and intentions to keep them from being exploited by your &hellip;">
+  <meta name="description" content="25th Anniversary of STFU about your computer crimes Reading this interview with the prosecutor of Robert Morris Jr about the Morris Worm there are a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +69,72 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/06/morris-worm-opsec-lessons/">Morris Worm OPSEC Lessons</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-06T04:08:00+07:00" pubdate data-updated="true">Nov 6<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>25th Anniversary of STFU about your computer crimes</h2>
+
+<p>Reading <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2013/11/05/heres-what-the-morris-worm-prosecutor-thinks-about-aaron-swartz/">this interview</a> with the prosecutor of Robert Morris Jr about the Morris Worm there are a few cool OPSEC lessons we can learn.</p>
+
+<h2>How was Morris caught?</h2>
+
+<blockquote><p>One way was with computer forensics. Tracing back the source of the worm. The second way was one of Morris&#8217;s friends told The New York Times in response to some articles that John Markoff was writing he inadvertently gave his initials.</p></blockquote>
+
+<p>There were a couple of ways that he was discovered. The first was the forensic analysis of the worm itself, and tracing that back to the original infection point. This sort of evidence shows where to look (the original infection), but it does not provide enough information to successfully prosecute. It is circumstantial so far, and given some careful sanitisation of the original box, it would be a very hard case to prove.</p>
+
+<p>The far more damaging way that Morris was caught was via an OSINT case officer doing HUMINT collection (a reporter interviewing people about the worm). The journo managed to elicit information about the worm&#8217;s author (his initials). This is the sort of extremely damaging information leakage that happens when there is poor OPSEC. There was no anti-interrogation training provided to the members of the Morris cell (i.e. all his friends who knew about the development of the worm).</p>
+
+<h2>Deny everything. Admit nothing. Or, you know, not.</h2>
+
+<blockquote><p>he did testify that he wrote the worm. He came in and testified, &#8220;I did it, and I&#8217;m sorry.&#8221; I turned to my co-counsel and asked, &#8220;Should I prove he didn&#8217;t do it or he&#8217;s not sorry?&#8221;</p></blockquote>
+
+<p>When the prosecution has to prove that you committed a felonious act, it is a lot easier for them when you <strong>confess</strong> on the stand. I can&#8217;t second guess the decisions of Morris&#8217; legal counsel, but unless you are instructed to do so by your lawyer: STFU.</p>
+
+<h2>The Morris Cell and &#8220;Need to know&#8221;</h2>
+
+<blockquote><p>We talked to his friends. His friends were witnesses for us. They didn&#8217;t have a choice.
+There was a core group. &#8230;one of the meetings where Robert Morris was discussing the worm occurred at a Legal Seafood in Kendall Square&#8230;
+He talked about how it was developed, how it worked, what vulnerabilities it exploited. At one point he was at a meeting back at Harvard, he got so excited that he literally jumped up on a table pacing back and forth on the table explaining how it worked&#8230;</p></blockquote>
+
+<p>The close friends of Robert Morris, the Morris Cell, were fully briefed on all aspects of the worm. Its capabilities, its functionality, and its author&#8217;s real identity. None of the other members of the cell were actively exposed to the risks of the operation. They had no &#8220;need to know&#8221;.</p>
+
+<p>This failure to STFU, to properly compartment the design and development of the worm, was a key factor leading to his capture and prosecution. Fortunately, things worked out well for him, in the long run.</p>
+
+<h2>How to evaluate &#8220;Need to know&#8221;</h2>
+
+<p>The rule of thumb is: <em>if someone is actively sharing the risk, they have a need to know</em>. This need to know is, of course, restricted to only those aspects of the operation in which they are actively involved.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1157,117 +1223,6 @@ happen to be the new <em>al Quaida</em> #3].</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/18/the-paddy-factor/">The Paddy Factor</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-18T09:51:00+07:00" pubdate data-updated="true">Mar 18<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The <strong>Paddy Factor</strong> was a disparaging term used by the British security
-forces to refer to poor OPSEC practices by the Provisional IRA (PIRA)
-in the early 1970s. Much of this terrible counter intelligence posture was due
-to a limited number of easily avoidable activities that combined to compromise
-many Provos:</p>
-
-<ul>
-<li><p><strong>Self incrimination</strong></p>
-
-<ul>
-<li>PIRA members would congregate in pubs and sing IRA songs.</li>
-<li>They would boast about their IRA operations while drunk in pubs.</li>
-<li>They would reply with a nod and a wink to friendly inquiries about their
-activities, making it easy for informants to identify them.</li>
-<li>They would march in pro-IRA rallies.</li>
-</ul>
-
-
-<p>  <strong>Problem:</strong> The adversary was able to easily identify (some) PIRA
-  members. Once the adversary identifies members of an organisation,
-  they will investigate and monitor them to uncover other members.</p></li>
-<li><p><strong>Contamination</strong>
-  PIRA members would associate with each other when not on operations.
-  In intel parlance this is called &#8220;pre-operational contact&#8221;, and it is
-  to be avoided. The reason is that any surveillance on one member will
-  reveal the other members of the group. This is a form of <em>contamination</em>.</p></li>
-</ul>
-
-
-<p>In short, some (many?) members of the Provisional IRA made their affiliation
-publically known by bragging about their operations in public places. This
-made them known to the adversary (the British security forces), who were then
-able to monitor those known PIRA members. Later, at political events such as
-rallies, these known PIRA members would hang out and chat with their unknown
-underground brethren. This made the underground members known to the adversary,
-with the obvious negative consequences.</p>
-
-<h2>Link Analysis and You</h2>
-
-<p>Knowing only a single node in a network, e.g. one member of an organisation,
-and monitoring which other nodes it contacts with gives insight into
-membership of the graph. The police, for example, use a variety of monitoring
-techniques to build up <em>phone trees</em> which map out organisational relationships.</p>
-
-<p>This form of analysis, mapping associations between nodes in a network (e.g.
-membership in an organisation) is called link analysis. It can be used against
-communication end points (e.g. mobile phones, email addresses), which are then
-associated with individuals. For example, link analysis of mobile phone numbers
-and contact address books of drug dealers is used to determine hierarchical
-information about their distribution networks. Link analysis is a very powerful
-method of understanding relationships and being able to link &#8220;chatter&#8221; between
-nodes as activity related to an organisation.</p>
-
-<h2>How to unlink</h2>
-
-<p>One solution to making link analysis harder and less useful is to create
-unique nodes for each connection. Done successfuly, this creates link graph is
-only 2 nodes and 1 edge. In practise, this means that every connection between
-peers should be unique to that connection, i.e. create a new jabber identity for
-each associate you have. Do not share these jabber IDs between different <em>friends</em>.
-The rule is simple: 1 friend, 1 jabber ID.</p>
-
-<p>These node to node links should be changed regularly as well. The old nodes
-must never contact the new nodes. That will contaminate them, create a link
-that associates them together. New clean break each time.</p>
-
-<h2>Conclusion</h2>
-
-<p>It is possible to defeat link analysis, but it takes discipline and is hard to
-do successfully. Every single communications end point must be unique and
-dedicated to only one other end point. These end points must never contaminate
-each other by interacting or mentioning other end points. This will inhibit
-creating a <em>phone tree</em>, or link analysis chart of organisation membership.</p>
-
-<p><strong>Warning:</strong> unlinking will not prevent traffic flow analysis, fingerprinting,
-or many other techniques from linking comms end points. But it is square one.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1285,15 +1240,15 @@ or many other techniques from linking comms end points. But it is square one.</p
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/08/09/jihadist-fan-crypto/">Jihadist Fan Crypto</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/06/16/when-in-doubt-its-a-tout/">When in Doubt, It&#8217;s a Tout</a>
       </li>
     
       <li class="post">
         <a href="/blog/2014/05/11/the-episode-17/">Episode 17</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/13/new-yorks-finest-opsec/">New York&#8217;s Finest OPSEC</a>
       </li>
     
   </ul>
