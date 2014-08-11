@@ -4,7 +4,7 @@
   <title><![CDATA[Category: secure comm | Hacker OPSEC]]></title>
   <link href="http://grugq.github.com/blog/categories/secure-comm/atom.xml" rel="self"/>
   <link href="http://grugq.github.com/"/>
-  <updated>2014-08-11T01:34:00+07:00</updated>
+  <updated>2014-08-12T03:15:20+07:00</updated>
   <id>http://grugq.github.com/</id>
   <author>
     <name><![CDATA[the grugq]]></name>
@@ -59,7 +59,7 @@ not by accident or due to bad security practice, but rather as a deliberate part
 of their value proposition. "Use our encrypted messaging app and you will securely
 let the world know that you are with us!"</p>
 
-<p><img src="../images/blog/jihobbyist_fan_club.jpg" alt="mujahideen secrets" /></p>
+<p><img src="/images/blog/jihobbyist_fan_club.jpg" alt="mujahideen secrets" /></p>
 
 <p>All of the major apps are simply branded wrappers around industry standard
 libraries, ciphers, and protocols. There is nothing particularly Islamic or
